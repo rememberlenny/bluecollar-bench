@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-702 Data/comm & security",
+  "element_code": "E-702",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-e-702-me-data-comm-security",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "data"
+    ],
+    [
+      "comm"
+    ],
+    [
+      "plenum"
+    ],
+    [
+      "riser"
+    ],
+    [
+      "cable"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T2 work setting, the evaluated element is E-702 Data/comm & security within 2.1 Electrical. The relevant subcategory is 2.1.7 Low Voltage & Specialty. The observed field condition is: plenum vs. riser cable in wrong space. The work is being assessed at the rough-complete lifecycle state with source anchors TIA-568, NEC 800. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "TIA-568",
+    "NEC 800"
+  ],
+  "subcategory": "2.1.7 Low Voltage & Specialty",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T2",
+  "title": "T2 E-702 Measurement & estimation"
+}

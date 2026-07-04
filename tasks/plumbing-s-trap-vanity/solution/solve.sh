@@ -11,6 +11,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
     "installed-defective",
     "non-compliant"
   ],
+  "s3_percent": 70,
   "findings": [
     "s-trap",
     "siphon trap seal",

@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-101 Spool erection & fit-up",
+  "element_code": "P-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t3-p-101-pa-bf-000-spool-erection-fit-up",
+  "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
+  "required_actions": [
+    [
+      "complete"
+    ],
+    [
+      "remaining"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "spool"
+    ],
+    [
+      "erection"
+    ],
+    [
+      "flange"
+    ],
+    [
+      "bolt"
+    ],
+    [
+      "hole"
+    ],
+    [
+      "complete"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is P-101 Spool erection & fit-up within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The observed field condition is: flange bolt-hole rotation wrong (two-holing missed). The work is being assessed at the rough-complete lifecycle state with source anchors ASME B31.3, project iso drawings. Treat this as roughly 70 percent complete until defects are corrected. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ASME B31.3",
+    "project iso drawings"
+  ],
+  "subcategory": "2.2.1 Process Piping (T1/T2)",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T3",
+  "title": "T3 P-101 Progress assessment coverage backfill"
+}

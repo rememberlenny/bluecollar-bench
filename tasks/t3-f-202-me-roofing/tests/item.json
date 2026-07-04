@@ -1,0 +1,62 @@
+{
+  "decision": "fail",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-202 Roofing",
+  "element_code": "F-202",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-f-202-me-roofing",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "roofing"
+    ],
+    [
+      "insufficient"
+    ],
+    [
+      "overhang"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is F-202 Roofing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The observed field condition is: insufficient overhang. The work is being assessed at the rough-complete lifecycle state with source anchors IRC R905, mfr specs. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R905",
+    "mfr specs"
+  ],
+  "subcategory": "2.6.2 Exterior Envelope",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T3",
+  "title": "T3 F-202 Measurement & estimation"
+}

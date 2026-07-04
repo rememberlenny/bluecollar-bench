@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-202 Suspension & steering",
+  "element_code": "A-202",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-a-202-fd-suspension-steering",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "suspension"
+    ],
+    [
+      "steering"
+    ],
+    [
+      "ball"
+    ],
+    [
+      "joint"
+    ],
+    [
+      "play"
+    ],
+    [
+      "fault"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "In a T4 work setting, the evaluated element is A-202 Suspension & steering within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.2 Chassis. The observed field condition is: ball joint play (video item - pry test). The work is being assessed at the in-service lifecycle state with source anchors OEM, alignment specs.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM",
+    "alignment specs"
+  ],
+  "subcategory": "2.9.2 Chassis",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "T4 A-202 Fault diagnosis"
+}

@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-303 Terminations & splices",
+  "element_code": "E-303",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-e-303-fd-terminations-splices",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "terminations"
+    ],
+    [
+      "splices"
+    ],
+    [
+      "splice"
+    ],
+    [
+      "outside"
+    ],
+    [
+      "fault"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "In a T1 work setting, the evaluated element is E-303 Terminations & splices within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The observed field condition is: splice outside box. The work is being assessed at the in-service lifecycle state with source anchors NEC 110.14.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 110.14"
+  ],
+  "subcategory": "2.1.3 Wire & Cable",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T1",
+  "title": "T1 E-303 Fault diagnosis"
+}

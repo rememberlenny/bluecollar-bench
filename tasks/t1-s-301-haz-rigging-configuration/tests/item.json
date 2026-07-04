@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-301 Rigging configuration",
+  "element_code": "S-301",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-s-301-haz-rigging-configuration",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "rigging"
+    ],
+    [
+      "configuration"
+    ],
+    [
+      "shackle"
+    ],
+    [
+      "side"
+    ],
+    [
+      "loaded"
+    ],
+    [
+      "hazard"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T1 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: shackle side-loaded. The work is being assessed at the in-progress lifecycle state with source anchors ASME B30, OSHA 1926.251.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ASME B30",
+    "OSHA 1926.251"
+  ],
+  "subcategory": "2.4.3 Rigging & Machinery Moving",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T1",
+  "title": "T1 S-301 Hazard spotting"
+}

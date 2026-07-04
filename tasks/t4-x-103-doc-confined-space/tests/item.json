@@ -1,0 +1,67 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-103 Confined space",
+  "element_code": "X-103",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-x-103-doc-confined-space",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "confined"
+    ],
+    [
+      "space"
+    ],
+    [
+      "meter"
+    ],
+    [
+      "readout"
+    ],
+    [
+      "interpretation"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T4 work setting, the evaluated element is X-103 Confined space within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: gas meter readout interpretation (O\u2082 19.0% - enter or not? FD/DOC). The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1910.146. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1910.146"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T4",
+  "title": "T4 X-103 Document interpretation"
+}

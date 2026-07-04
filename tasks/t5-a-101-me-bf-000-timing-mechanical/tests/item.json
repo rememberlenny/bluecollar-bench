@@ -1,0 +1,67 @@
+{
+  "decision": "fail",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-101 Timing & mechanical",
+  "element_code": "A-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t5-a-101-me-bf-000-timing-mechanical",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "timing"
+    ],
+    [
+      "mechanical"
+    ],
+    [
+      "timing"
+    ],
+    [
+      "marks"
+    ],
+    [
+      "misaligned"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T5 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The observed field condition is: timing marks misaligned by a tooth (photo of marks - ME/ID). The work is being assessed at the rough-complete lifecycle state with source anchors OEM service info. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM service info"
+  ],
+  "subcategory": "2.9.1 Engine & Drivetrain",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T5",
+  "title": "T5 A-101 Measurement & estimation coverage backfill"
+}

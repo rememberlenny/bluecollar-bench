@@ -1,7 +1,9 @@
 {
   "decision": "fail",
   "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
   "element": "U-101 Trench protection",
+  "element_code": "U-101",
   "forbidden": [
     [
       "continue"
@@ -12,6 +14,7 @@
       "is"
     ]
   ],
+  "generation": "curated",
   "id": "trench-protection-spoil-ladder",
   "prompt": "Identify the hazards and state whether work may continue.",
   "required_actions": [
@@ -58,12 +61,15 @@
   "s2_expected": [
     "non-compliant"
   ],
+  "s3_percent": 45,
   "scenario": "Workers are installing a sewer lateral in an approximately 6-foot-deep trench. The trench walls are nearly vertical with no trench box, shoring, or sloping. Spoil is piled within one foot of the edge. No ladder is visible within the photographed work area.",
   "source_refs": [
     "OSHA 1926 Subpart P",
     "U-101"
   ],
+  "subcategory": "",
   "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
   "tier": "T2",
   "title": "Trench protection: missing protective system"
 }

@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-301 Conductor selection & sizing",
+  "element_code": "E-301",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-e-301-cc-conductor-selection-sizing",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "conductor"
+    ],
+    [
+      "selection"
+    ],
+    [
+      "wrong"
+    ],
+    [
+      "insulation"
+    ],
+    [
+      "type"
+    ],
+    [
+      "non",
+      "compliant"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T4 work setting, the evaluated element is E-301 Conductor selection & sizing within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The observed field condition is: wrong insulation type for wet location. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 310, Table 310.16.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 310",
+    "Table 310.16"
+  ],
+  "subcategory": "2.1.3 Wire & Cable",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T4",
+  "title": "T4 E-301 Code/spec compliance"
+}

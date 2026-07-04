@@ -4,19 +4,20 @@ set -euo pipefail
 usage() {
   cat <<'EOF'
 Usage:
-  scripts/run_harbor.sh --agent <agent> --model <model> [--task <task-id>] [--extra "..."]
+  scripts/run_harbor.sh --agent <agent> --model <model> [--task <task-id>] [--n-concurrent N] [--extra "..."]
 
 Examples:
   scripts/run_harbor.sh --agent codex --model openai/gpt-5 --task electrical-panel-subpanel-defects
-  scripts/run_harbor.sh --agent claude-code --model anthropic/claude-sonnet-4-6
+  scripts/run_harbor.sh --agent claude-code --model anthropic/claude-sonnet-4-6 --n-concurrent 8
 
-If --task is omitted, every task under tasks/ is run sequentially.
+If --task is omitted, the repository dataset.toml is run as a Harbor dataset.
 EOF
 }
 
 AGENT=""
 MODEL=""
 TASK_ID=""
+N_CONCURRENT="4"
 EXTRA_ARGS=()
 
 while [[ $# -gt 0 ]]; do
@@ -31,6 +32,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     --task)
       TASK_ID="$2"
+      shift 2
+      ;;
+    --n-concurrent|-n)
+      N_CONCURRENT="$2"
       shift 2
       ;;
     --extra)
@@ -60,17 +65,10 @@ if ! command -v harbor >/dev/null 2>&1; then
   exit 127
 fi
 
-run_one() {
-  local task_path="$1"
-  echo "==> harbor run -p $task_path -a $AGENT -m $MODEL"
-  harbor run -p "$task_path" -a "$AGENT" -m "$MODEL" "${EXTRA_ARGS[@]}"
-}
-
 if [[ -n "$TASK_ID" ]]; then
-  run_one "tasks/$TASK_ID"
+  echo "==> harbor run -p tasks/$TASK_ID -a $AGENT -m $MODEL"
+  harbor run -p "tasks/$TASK_ID" -a "$AGENT" -m "$MODEL" -n "$N_CONCURRENT" "${EXTRA_ARGS[@]}"
 else
-  for task_path in tasks/*; do
-    [[ -d "$task_path" ]] || continue
-    run_one "$task_path"
-  done
+  echo "==> harbor run -p . -a $AGENT -m $MODEL -n $N_CONCURRENT"
+  harbor run -p . -a "$AGENT" -m "$MODEL" -n "$N_CONCURRENT" "${EXTRA_ARGS[@]}"
 fi

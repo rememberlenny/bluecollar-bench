@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-101 Lockout/Tagout",
+  "element_code": "X-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-x-101-haz-lockout-tagout",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "lockout"
+    ],
+    [
+      "tagout"
+    ],
+    [
+      "step"
+    ],
+    [
+      "verification"
+    ],
+    [
+      "hazard"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T3 work setting, the evaluated element is X-101 Lockout/Tagout within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: no try-step verification (SEQ). The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1910.147.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1910.147"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T3",
+  "title": "T3 X-101 Hazard spotting"
+}

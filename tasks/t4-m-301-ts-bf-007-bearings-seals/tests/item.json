@@ -1,0 +1,67 @@
+{
+  "decision": "fail",
+  "discipline": "2.7 Equipment & Machinery",
+  "discipline_code": "2.7",
+  "element": "M-301 Bearings & seals",
+  "element_code": "M-301",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t4-m-301-ts-bf-007-bearings-seals",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "bearings"
+    ],
+    [
+      "seals"
+    ],
+    [
+      "over"
+    ],
+    [
+      "greasing"
+    ],
+    [
+      "purged"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "In a T4 work setting, the evaluated element is M-301 Bearings & seals within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The observed field condition is: over-greasing (purged seal). The work is being assessed at the staged lifecycle state with source anchors SKF/Timken mounting guides. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "SKF/Timken mounting guides"
+  ],
+  "subcategory": "2.7.3 Rotating Equipment",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T4",
+  "title": "T4 M-301 Tool & material selection coverage backfill"
+}

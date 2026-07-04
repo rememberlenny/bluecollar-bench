@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Generate Harbor task directories from benchmark/items/seed_items.json."""
+"""Generate Harbor task directories from benchmark/items/items.json."""
 
 from __future__ import annotations
 
 import json
 import shutil
+import subprocess
+import sys
 import textwrap
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ITEMS_PATH = ROOT / "benchmark" / "items" / "seed_items.json"
+ITEMS_PATH = ROOT / "benchmark" / "items" / "items.json"
 TASKS_DIR = ROOT / "tasks"
 ORG = "bluecollar-bench"
 
@@ -97,7 +99,7 @@ def main() -> int:
         })
         return 0
 
-    schema_fields = ["decision", "risk", "findings", "actions"]
+    schema_fields = ["decision", "risk", "s1_state", "s2_conditions", "findings", "actions"]
     schema_score = sum(1 for field in schema_fields if field in answer) / len(schema_fields)
     text = flatten_answer(answer)
 
@@ -106,6 +108,14 @@ def main() -> int:
 
     risk_text = normalize(answer.get("risk", ""))
     risk_score = 1.0 if normalize(item["risk"]) == risk_text else 0.0
+
+    state_text = normalize(answer.get("s1_state", ""))
+    state_score = 1.0 if normalize(item["s1_state"]) == state_text else 0.0
+
+    s2_text = flatten_answer({"s2_conditions": answer.get("s2_conditions", [])})
+    expected_s2 = item.get("s2_expected", [])
+    s2_hits = sum(1 for condition in expected_s2 if normalize(condition) in s2_text)
+    s2_score = s2_hits / max(1, len(expected_s2))
 
     required_findings = item.get("required_findings", [])
     finding_hits = sum(1 for group in required_findings if group_present(text, group))
@@ -128,8 +138,10 @@ def main() -> int:
         0.10 * schema_score
         + 0.25 * decision_score
         + 0.15 * risk_score
-        + 0.35 * findings_score
-        + 0.15 * actions_score
+        + 0.10 * state_score
+        + 0.10 * s2_score
+        + 0.25 * findings_score
+        + 0.05 * actions_score
     )
     reward = min(raw_reward, safety_gate)
 
@@ -138,6 +150,8 @@ def main() -> int:
         "schema": round(schema_score, 4),
         "decision": round(decision_score, 4),
         "risk": round(risk_score, 4),
+        "s1_state": round(state_score, 4),
+        "s2_conditions": round(s2_score, 4),
         "findings": round(findings_score, 4),
         "actions": round(actions_score, 4),
         "safety_gate": round(safety_gate, 4),
@@ -220,6 +234,7 @@ def render_solution(item: dict) -> str:
         "risk": item["risk"],
         "s1_state": item["s1_state"],
         "s2_conditions": item["s2_expected"],
+        "s3_percent": item.get("s3_percent"),
         "findings": [" ".join(group) for group in item["required_findings"]],
         "actions": [" ".join(group) for group in item["required_actions"]],
         "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
@@ -237,7 +252,13 @@ JSON
 
 
 def render_task_toml(item: dict) -> str:
-    keywords = ["blue-collar", "trades", item["tier"].lower(), item["task_type"].lower()]
+    keywords = [
+        "blue-collar",
+        "trades",
+        item["tier"].lower(),
+        item["task_type"].lower(),
+        item.get("discipline_code", "").replace(".", "-"),
+    ]
     keywords_toml = ", ".join(json.dumps(k) for k in keywords)
     source_refs = ", ".join(json.dumps(ref) for ref in item["source_refs"])
     return textwrap.dedent(
@@ -258,9 +279,12 @@ def render_task_toml(item: dict) -> str:
         discipline = "{item["discipline"]}"
         element = "{item["element"]}"
         task_type = "{item["task_type"]}"
+        task_type_name = "{item.get("task_type_name", item["task_type"])}"
         s1_state = "{item["s1_state"]}"
+        s3_percent = {float(item.get("s3_percent", 0))}
         expected_decision = "{item["decision"]}"
         expected_risk = "{item["risk"]}"
+        generation = "{item.get("generation", "unknown")}"
         source_refs = [{source_refs}]
 
         [agent]
@@ -282,6 +306,8 @@ def render_task_toml(item: dict) -> str:
 
 
 def generate() -> None:
+    if not ITEMS_PATH.exists():
+        subprocess.run([sys.executable, str(ROOT / "scripts" / "build_item_catalog.py")], cwd=ROOT, check=True)
     items = json.loads(ITEMS_PATH.read_text(encoding="utf-8"))
     if TASKS_DIR.exists():
         shutil.rmtree(TASKS_DIR)

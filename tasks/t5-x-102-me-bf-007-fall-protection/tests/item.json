@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-102 Fall protection",
+  "element_code": "X-102",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t5-x-102-me-bf-007-fall-protection",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "fall"
+    ],
+    [
+      "protection"
+    ],
+    [
+      "frayed"
+    ],
+    [
+      "burned"
+    ],
+    [
+      "webbing"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T5 work setting, the evaluated element is X-102 Fall protection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: frayed/burned webbing. The work is being assessed at the rough-complete lifecycle state with source anchors OSHA 1926 Subpart M, 1910.140. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart M",
+    "1910.140"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T5",
+  "title": "T5 X-102 Measurement & estimation coverage backfill"
+}

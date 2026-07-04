@@ -1,0 +1,38 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/t5-e-602-id-equipment-bonding"
+description = "T5 E-602 Identification"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t5", "id", "2-1"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "t5-e-602-id-equipment-bonding"
+tier = "T5"
+discipline = "2.1 Electrical"
+element = "E-602 Equipment bonding"
+task_type = "ID"
+task_type_name = "Identification"
+s1_state = "rough-complete"
+s3_percent = 70.0
+expected_decision = "fail"
+expected_risk = "high"
+generation = "auto"
+source_refs = ["NEC 250.104", "250.30"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

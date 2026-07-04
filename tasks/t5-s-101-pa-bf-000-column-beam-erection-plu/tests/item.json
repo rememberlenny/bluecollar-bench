@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-101 Column/beam erection & plumb",
+  "element_code": "S-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t5-s-101-pa-bf-000-column-beam-erection-plu",
+  "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
+  "required_actions": [
+    [
+      "complete"
+    ],
+    [
+      "remaining"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "column"
+    ],
+    [
+      "beam"
+    ],
+    [
+      "temporary"
+    ],
+    [
+      "bracing"
+    ],
+    [
+      "removed"
+    ],
+    [
+      "complete"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T5 work setting, the evaluated element is S-101 Column/beam erection & plumb within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The observed field condition is: temporary bracing removed before decking/permanent stability. The work is being assessed at the rough-complete lifecycle state with source anchors AISC 303, OSHA 1926 Subpart R. Treat this as roughly 70 percent complete until defects are corrected. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "AISC 303",
+    "OSHA 1926 Subpart R"
+  ],
+  "subcategory": "2.4.1 Steel Erection",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T5",
+  "title": "T5 S-101 Progress assessment coverage backfill"
+}

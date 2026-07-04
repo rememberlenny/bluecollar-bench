@@ -1,7 +1,9 @@
 {
   "decision": "fail",
   "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
   "element": "H-201 Duct installation",
+  "element_code": "H-201",
   "forbidden": [
     [
       "pass"
@@ -14,6 +16,7 @@
       "ok"
     ]
   ],
+  "generation": "curated",
   "id": "duct-flex-sag-cloth-tape",
   "prompt": "Assess the installation quality and name the defects.",
   "required_actions": [
@@ -52,6 +55,7 @@
     "installed-defective",
     "non-compliant"
   ],
+  "s3_percent": 70,
   "scenario": "A basement supply branch uses flexible duct with visible sags between hangers. Several metal-to-flex joints are wrapped only with gray cloth duct tape; no mastic, UL-listed foil tape, or mechanical draw bands are visible. The homeowner says air comes out of the register, but the room is always cold.",
   "source_refs": [
     "IMC 603",
@@ -59,7 +63,9 @@
     "Manual D",
     "H-201"
   ],
+  "subcategory": "",
   "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
   "tier": "T3",
   "title": "Duct installation: flex sag and unsealed joints"
 }

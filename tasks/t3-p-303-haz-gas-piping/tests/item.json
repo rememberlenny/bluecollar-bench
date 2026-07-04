@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-303 Gas piping",
+  "element_code": "P-303",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-p-303-haz-gas-piping",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "piping"
+    ],
+    [
+      "csst"
+    ],
+    [
+      "bonded"
+    ],
+    [
+      "hazard"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T3 work setting, the evaluated element is P-303 Gas piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The observed field condition is: CSST not bonded. The work is being assessed at the in-progress lifecycle state with source anchors IFGC, NFPA 54.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IFGC",
+    "NFPA 54"
+  ],
+  "subcategory": "2.2.3 Plumbing - Supply",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T3",
+  "title": "T3 P-303 Hazard spotting"
+}

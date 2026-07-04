@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-304 Wire pulling (feeders & branch)",
+  "element_code": "E-304",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-e-304-ts-wire-pulling-feeders-branch",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "wire"
+    ],
+    [
+      "pulling"
+    ],
+    [
+      "lubricant"
+    ],
+    [
+      "long"
+    ],
+    [
+      "pull"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "In a T2 work setting, the evaluated element is E-304 Wire pulling (feeders & branch) within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The observed field condition is: no lubricant on long pull. The work is being assessed at the staged lifecycle state with source anchors NEC 200.6, 210.5 (identification).",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 200.6",
+    "210.5 (identification)"
+  ],
+  "subcategory": "2.1.3 Wire & Cable",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T2",
+  "title": "T2 E-304 Tool & material selection"
+}

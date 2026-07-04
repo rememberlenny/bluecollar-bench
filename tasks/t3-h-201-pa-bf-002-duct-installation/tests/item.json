@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-201 Duct installation",
+  "element_code": "H-201",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t3-h-201-pa-bf-002-duct-installation",
+  "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
+  "required_actions": [
+    [
+      "complete"
+    ],
+    [
+      "remaining"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "duct"
+    ],
+    [
+      "installation"
+    ],
+    [
+      "sagging"
+    ],
+    [
+      "flex"
+    ],
+    [
+      "between"
+    ],
+    [
+      "complete"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is H-201 Duct installation within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The observed field condition is: sagging flex (>\u00bd in/ft between supports). The work is being assessed at the rough-complete lifecycle state with source anchors IMC 603, SMACNA, Manual D. Treat this as roughly 70 percent complete until defects are corrected. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IMC 603",
+    "SMACNA",
+    "Manual D"
+  ],
+  "subcategory": "2.3.2 Distribution",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T3",
+  "title": "T3 H-201 Progress assessment coverage backfill"
+}

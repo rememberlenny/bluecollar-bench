@@ -1,0 +1,76 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-103 Overcurrent device selection & coordination",
+  "element_code": "E-103",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-e-103-cc-overcurrent-device-selection-coo",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "overcurrent"
+    ],
+    [
+      "device"
+    ],
+    [
+      "wrong"
+    ],
+    [
+      "breaker"
+    ],
+    [
+      "type"
+    ],
+    [
+      "non",
+      "compliant"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T2 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: wrong breaker type for panel (listing). The work is being assessed at the rough-complete lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 240",
+    "210.8",
+    "210.12",
+    "110.14(C) termination temp ratings"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T2",
+  "title": "T2 E-103 Code/spec compliance"
+}

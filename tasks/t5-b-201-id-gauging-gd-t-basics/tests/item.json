@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-201 Gauging & GD&T basics",
+  "element_code": "B-201",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t5-b-201-id-gauging-gd-t-basics",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "gauging"
+    ],
+    [
+      "basics"
+    ],
+    [
+      "datum"
+    ],
+    [
+      "scheme"
+    ],
+    [
+      "misunderstood"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T5 work setting, the evaluated element is B-201 Gauging & GD&T basics within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.2 Fitment & Tolerance. The observed field condition is: datum scheme misunderstood (part checked off wrong surface - DOC). The work is being assessed at the rough-complete lifecycle state with source anchors ASME Y14.5 (basic), gauge instructions.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "ASME Y14.5 (basic)",
+    "gauge instructions"
+  ],
+  "subcategory": "2.10.2 Fitment & Tolerance",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T5",
+  "title": "T5 B-201 Identification"
+}

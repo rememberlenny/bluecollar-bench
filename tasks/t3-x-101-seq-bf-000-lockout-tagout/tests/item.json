@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-101 Lockout/Tagout",
+  "element_code": "X-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t3-x-101-seq-bf-000-lockout-tagout",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "lockout"
+    ],
+    [
+      "tagout"
+    ],
+    [
+      "lock"
+    ],
+    [
+      "without"
+    ],
+    [
+      "without"
+    ],
+    [
+      "sequence"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T3 work setting, the evaluated element is X-101 Lockout/Tagout within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: lock without tag / tag without lock. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1910.147. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1910.147"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T3",
+  "title": "T3 X-101 Procedure sequencing coverage backfill"
+}

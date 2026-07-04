@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-401 Thermostats & sequences",
+  "element_code": "H-401",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-h-401-fd-thermostats-sequences",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "thermostats"
+    ],
+    [
+      "sequences"
+    ],
+    [
+      "heat"
+    ],
+    [
+      "pump"
+    ],
+    [
+      "reversing"
+    ],
+    [
+      "fault"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "In a T3 work setting, the evaluated element is H-401 Thermostats & sequences within 2.3 HVAC-R. The relevant subcategory is 2.3.4 Controls. The observed field condition is: heat pump O/B reversing valve config wrong (heats when calling cool). The work is being assessed at the in-service lifecycle state with source anchors mfr manuals.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr manuals"
+  ],
+  "subcategory": "2.3.4 Controls",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T3",
+  "title": "T3 H-401 Fault diagnosis"
+}

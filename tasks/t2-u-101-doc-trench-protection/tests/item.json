@@ -1,0 +1,67 @@
+{
+  "decision": "fail",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-101 Trench protection",
+  "element_code": "U-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-u-101-doc-trench-protection",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "trench"
+    ],
+    [
+      "protection"
+    ],
+    [
+      "trench"
+    ],
+    [
+      "void"
+    ],
+    [
+      "behind"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T2 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The observed field condition is: trench box void behind shield. The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1926 Subpart P. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart P"
+  ],
+  "subcategory": "2.11.1 Excavation & Trenching",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "T2 U-101 Document interpretation"
+}

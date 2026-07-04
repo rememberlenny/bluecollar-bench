@@ -1,0 +1,69 @@
+{
+  "decision": "fail",
+  "discipline": "2.8 Instrumentation & Controls",
+  "discipline_code": "2.8",
+  "element": "I-201 Calibration",
+  "element_code": "I-201",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-i-201-fd-calibration",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "calibration"
+    ],
+    [
+      "zero"
+    ],
+    [
+      "span"
+    ],
+    [
+      "error"
+    ],
+    [
+      "fault"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "In a T1 work setting, the evaluated element is I-201 Calibration within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.2 Calibration & Loop Checks. The observed field condition is: zero vs. span error diagnosis from cal sheet (FD+DOC). The work is being assessed at the in-service lifecycle state with source anchors ISA standards, site QC.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "ISA standards",
+    "site QC"
+  ],
+  "subcategory": "2.8.2 Calibration & Loop Checks",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T1",
+  "title": "T1 I-201 Fault diagnosis"
+}

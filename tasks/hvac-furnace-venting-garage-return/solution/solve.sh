@@ -11,6 +11,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
     "installed-defective",
     "non-compliant"
   ],
+  "s3_percent": 100,
   "findings": [
     "return air garage",
     "vent clearance combustible",

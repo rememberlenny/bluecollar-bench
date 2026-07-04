@@ -11,6 +11,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
     "degraded",
     "installed-defective"
   ],
+  "s3_percent": 85,
   "findings": [
     "rotor below minimum",
     "brake hose twisted",

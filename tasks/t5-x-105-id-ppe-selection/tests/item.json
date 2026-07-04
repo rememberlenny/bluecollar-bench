@@ -1,0 +1,65 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-105 PPE selection",
+  "element_code": "X-105",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t5-x-105-id-ppe-selection",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "selection"
+    ],
+    [
+      "voltage"
+    ],
+    [
+      "glove"
+    ],
+    [
+      "class"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T5 work setting, the evaluated element is X-105 PPE selection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: voltage glove class wrong or overdue. The work is being assessed at the rough-complete lifecycle state with source anchors NFPA 70E, OSHA 1910 Subpart I.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "NFPA 70E",
+    "OSHA 1910 Subpart I"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T5",
+  "title": "T5 X-105 Identification"
+}

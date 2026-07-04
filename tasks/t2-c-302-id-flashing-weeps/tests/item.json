@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.5 Concrete & Masonry",
+  "discipline_code": "2.5",
+  "element": "C-302 Flashing & weeps",
+  "element_code": "C-302",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-c-302-id-flashing-weeps",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "flashing"
+    ],
+    [
+      "weeps"
+    ],
+    [
+      "flashing"
+    ],
+    [
+      "lapped"
+    ],
+    [
+      "sealed"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T2 work setting, the evaluated element is C-302 Flashing & weeps within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.3 Masonry. The observed field condition is: flashing not lapped/sealed. The work is being assessed at the rough-complete lifecycle state with source anchors TMS 402, BIA tech notes.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "TMS 402",
+    "BIA tech notes"
+  ],
+  "subcategory": "2.5.3 Masonry",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T2",
+  "title": "T2 C-302 Identification"
+}

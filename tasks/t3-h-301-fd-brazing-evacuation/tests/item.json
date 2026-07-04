@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-301 Brazing & evacuation",
+  "element_code": "H-301",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-h-301-fd-brazing-evacuation",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "brazing"
+    ],
+    [
+      "evacuation"
+    ],
+    [
+      "schrader"
+    ],
+    [
+      "cores"
+    ],
+    [
+      "left"
+    ],
+    [
+      "fault"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "In a T3 work setting, the evaluated element is H-301 Brazing & evacuation within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The observed field condition is: Schrader cores left in during evacuation (SEQ). The work is being assessed at the in-service lifecycle state with source anchors mfr specs, ACCA, EPA 608.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr specs",
+    "ACCA",
+    "EPA 608"
+  ],
+  "subcategory": "2.3.3 Refrigeration Circuit",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T3",
+  "title": "T3 H-301 Fault diagnosis"
+}

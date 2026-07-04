@@ -1,0 +1,67 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-302 Charging & diagnostics",
+  "element_code": "H-302",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t2-h-302-doc-bf-005-charging-diagnostics",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "charging"
+    ],
+    [
+      "diagnostics"
+    ],
+    [
+      "sight"
+    ],
+    [
+      "glass"
+    ],
+    [
+      "bubbles"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T2 work setting, the evaluated element is H-302 Charging & diagnostics within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The observed field condition is: sight-glass bubbles misread. The work is being assessed at the tested/inspected lifecycle state with source anchors mfr charging charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr charging charts"
+  ],
+  "subcategory": "2.3.3 Refrigeration Circuit",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "T2 H-302 Document interpretation coverage backfill"
+}

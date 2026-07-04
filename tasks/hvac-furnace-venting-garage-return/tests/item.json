@@ -1,7 +1,9 @@
 {
   "decision": "fail",
   "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
   "element": "H-102 Furnace & venting",
+  "element_code": "H-102",
   "forbidden": [
     [
       "pass"
@@ -12,6 +14,7 @@
       "service"
     ]
   ],
+  "generation": "curated",
   "id": "hvac-furnace-venting-garage-return",
   "prompt": "Identify the safety and compliance issues and state whether the system should remain in service.",
   "required_actions": [
@@ -55,13 +58,16 @@
     "installed-defective",
     "non-compliant"
   ],
+  "s3_percent": 100,
   "scenario": "A gas furnace is installed in a closet that opens to an attached garage. The return-air grille is cut into the garage-facing wall. The single-wall metal vent connector passes within about one inch of exposed wood framing. The condensate tube from the coil runs upward for several inches before dropping to a floor drain.",
   "source_refs": [
     "IRC M1801",
     "NFPA 54",
     "H-102"
   ],
+  "subcategory": "",
   "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
   "tier": "T3",
   "title": "Furnace installation: venting and return-air hazards"
 }

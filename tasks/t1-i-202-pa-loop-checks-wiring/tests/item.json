@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.8 Instrumentation & Controls",
+  "discipline_code": "2.8",
+  "element": "I-202 Loop checks & wiring",
+  "element_code": "I-202",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-i-202-pa-loop-checks-wiring",
+  "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
+  "required_actions": [
+    [
+      "complete"
+    ],
+    [
+      "remaining"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "loop"
+    ],
+    [
+      "checks"
+    ],
+    [
+      "landed"
+    ],
+    [
+      "wrong"
+    ],
+    [
+      "terminal"
+    ],
+    [
+      "complete"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T1 work setting, the evaluated element is I-202 Loop checks & wiring within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.2 Calibration & Loop Checks. The observed field condition is: landed on wrong terminal. The work is being assessed at the rough-complete lifecycle state with source anchors loop drawings, ISA 5.1. Treat this as roughly 70 percent complete until defects are corrected.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "loop drawings",
+    "ISA 5.1"
+  ],
+  "subcategory": "2.8.2 Calibration & Loop Checks",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T1",
+  "title": "T1 I-202 Progress assessment"
+}

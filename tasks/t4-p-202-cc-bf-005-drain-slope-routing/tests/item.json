@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-202 Drain slope & routing",
+  "element_code": "P-202",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t4-p-202-cc-bf-005-drain-slope-routing",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "drain"
+    ],
+    [
+      "slope"
+    ],
+    [
+      "improper"
+    ],
+    [
+      "fitting"
+    ],
+    [
+      "direction"
+    ],
+    [
+      "non",
+      "compliant"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T4 work setting, the evaluated element is P-202 Drain slope & routing within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The observed field condition is: improper fitting direction (using a vent tee on its back for drainage). The work is being assessed at the rough-complete lifecycle state with source anchors IPC 704. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IPC 704"
+  ],
+  "subcategory": "2.2.2 Plumbing - DWV (T2/T3)",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T4",
+  "title": "T4 P-202 Code/spec compliance coverage backfill"
+}

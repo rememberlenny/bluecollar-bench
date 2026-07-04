@@ -1,0 +1,38 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/t3-f-101-doc-structural-framing"
+description = "T3 F-101 Document interpretation"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t3", "doc", "2-6"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "t3-f-101-doc-structural-framing"
+tier = "T3"
+discipline = "2.6 Carpentry & Finishes"
+element = "F-101 Structural framing"
+task_type = "DOC"
+task_type_name = "Document interpretation"
+s1_state = "tested/inspected"
+s3_percent = 85.0
+expected_decision = "fail"
+expected_risk = "medium"
+generation = "auto"
+source_refs = ["IRC R502", "R602"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

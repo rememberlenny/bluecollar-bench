@@ -1,0 +1,66 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-401 Receptacles & switches",
+  "element_code": "E-401",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-e-401-id-receptacles-switches",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "receptacles"
+    ],
+    [
+      "switches"
+    ],
+    [
+      "open"
+    ],
+    [
+      "ground"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T2 work setting, the evaluated element is E-401 Receptacles & switches within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The observed field condition is: open ground. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 210.8, 406.4, 406.9.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 210.8",
+    "406.4",
+    "406.9"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T2",
+  "title": "T2 E-401 Identification"
+}

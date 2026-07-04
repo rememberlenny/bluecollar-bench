@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-103 Confined space",
+  "element_code": "X-103",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-x-103-seq-confined-space",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "confined"
+    ],
+    [
+      "space"
+    ],
+    [
+      "permit"
+    ],
+    [
+      "expired"
+    ],
+    [
+      "shift"
+    ],
+    [
+      "sequence"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T4 work setting, the evaluated element is X-103 Confined space within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: permit expired mid-shift. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1910.146.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1910.146"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T4",
+  "title": "T4 X-103 Procedure sequencing"
+}

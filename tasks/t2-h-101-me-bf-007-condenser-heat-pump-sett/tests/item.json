@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-101 Condenser/heat pump setting",
+  "element_code": "H-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t2-h-101-me-bf-007-condenser-heat-pump-sett",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "condenser"
+    ],
+    [
+      "heat"
+    ],
+    [
+      "service"
+    ],
+    [
+      "disconnect"
+    ],
+    [
+      "within"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T2 work setting, the evaluated element is H-101 Condenser/heat pump setting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The observed field condition is: no service disconnect within sight. The work is being assessed at the rough-complete lifecycle state with source anchors mfr install manual, IMC/IRC M1401. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr install manual",
+    "IMC/IRC M1401"
+  ],
+  "subcategory": "2.3.1 Equipment Installation",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T2",
+  "title": "T2 H-101 Measurement & estimation coverage backfill"
+}

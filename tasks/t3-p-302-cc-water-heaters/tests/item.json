@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-302 Water heaters",
+  "element_code": "P-302",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-p-302-cc-water-heaters",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "water"
+    ],
+    [
+      "heaters"
+    ],
+    [
+      "discharge"
+    ],
+    [
+      "pipe"
+    ],
+    [
+      "missing"
+    ],
+    [
+      "non",
+      "compliant"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is P-302 Water heaters within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The observed field condition is: T&P discharge pipe missing/trapped/reduced/terminated too high. The work is being assessed at the rough-complete lifecycle state with source anchors IPC 504, IRC P2804.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IPC 504",
+    "IRC P2804"
+  ],
+  "subcategory": "2.2.3 Plumbing - Supply",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T3",
+  "title": "T3 P-302 Code/spec compliance"
+}

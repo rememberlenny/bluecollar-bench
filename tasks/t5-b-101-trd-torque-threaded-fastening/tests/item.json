@@ -1,0 +1,69 @@
+{
+  "decision": "fail",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-101 Torque & threaded fastening",
+  "element_code": "B-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t5-b-101-trd-torque-threaded-fastening",
+  "prompt": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
+  "required_actions": [
+    [
+      "reject",
+      "shortcut"
+    ],
+    [
+      "follow"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "torque"
+    ],
+    [
+      "threaded"
+    ],
+    [
+      "click"
+    ],
+    [
+      "wrench"
+    ],
+    [
+      "used"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T5 work setting, the evaluated element is B-101 Torque & threaded fastening within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.1 Fastening & Joining. The observed field condition is: click wrench used upside down/uncalibrated. The work is being assessed at the in-progress lifecycle state with source anchors OEM/engineering specs.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM/engineering specs"
+  ],
+  "subcategory": "2.10.1 Fastening & Joining",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T5",
+  "title": "T5 B-101 Tradeoff judgment"
+}

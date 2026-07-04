@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-302 Charging & diagnostics",
+  "element_code": "H-302",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-h-302-fd-charging-diagnostics",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "charging"
+    ],
+    [
+      "diagnostics"
+    ],
+    [
+      "charged"
+    ],
+    [
+      "beer"
+    ],
+    [
+      "cold"
+    ],
+    [
+      "fault"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "In a T4 work setting, the evaluated element is H-302 Charging & diagnostics within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The observed field condition is: charged to \"beer-can cold\" instead of subcool/superheat targets. The work is being assessed at the in-service lifecycle state with source anchors mfr charging charts.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr charging charts"
+  ],
+  "subcategory": "2.3.3 Refrigeration Circuit",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "T4 H-302 Fault diagnosis"
+}

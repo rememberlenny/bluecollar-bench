@@ -1,0 +1,38 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/t3-e-103-doc-overcurrent-device-selection-coo"
+description = "T3 E-103 Document interpretation"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t3", "doc", "2-1"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "t3-e-103-doc-overcurrent-device-selection-coo"
+tier = "T3"
+discipline = "2.1 Electrical"
+element = "E-103 Overcurrent device selection & coordination"
+task_type = "DOC"
+task_type_name = "Document interpretation"
+s1_state = "tested/inspected"
+s3_percent = 85.0
+expected_decision = "fail"
+expected_risk = "high"
+generation = "auto"
+source_refs = ["NEC 240", "210.8", "210.12", "110.14(C) termination temp ratings"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

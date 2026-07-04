@@ -1,0 +1,69 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-201 Duct installation",
+  "element_code": "H-201",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-h-201-me-duct-installation",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "duct"
+    ],
+    [
+      "installation"
+    ],
+    [
+      "crushed"
+    ],
+    [
+      "excessively"
+    ],
+    [
+      "long"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is H-201 Duct installation within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The observed field condition is: crushed or excessively long flex duct. The work is being assessed at the rough-complete lifecycle state with source anchors IMC 603, SMACNA, Manual D. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IMC 603",
+    "SMACNA",
+    "Manual D"
+  ],
+  "subcategory": "2.3.2 Distribution",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T3",
+  "title": "T3 H-201 Measurement & estimation"
+}

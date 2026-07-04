@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-301 Standard work execution",
+  "element_code": "B-301",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t1-b-301-seq-bf-003-standard-work-execution",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "standard"
+    ],
+    [
+      "work"
+    ],
+    [
+      "step"
+    ],
+    [
+      "order"
+    ],
+    [
+      "deviation"
+    ],
+    [
+      "sequence"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T1 work setting, the evaluated element is B-301 Standard work execution within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.3 Line Operations. The observed field condition is: step order deviation vs. standard work sheet (video + document = premier multimodal SEQ). The work is being assessed at the in-progress lifecycle state with source anchors site standard work, TWI. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "site standard work",
+    "TWI"
+  ],
+  "subcategory": "2.10.3 Line Operations",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T1",
+  "title": "T1 B-301 Procedure sequencing coverage backfill"
+}

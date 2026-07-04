@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import json
 import os
-import shutil
 import subprocess
 import sys
 import tempfile
@@ -82,16 +81,19 @@ def main() -> int:
         return 1
 
     failures: list[str] = []
-    for task_dir in sorted(p for p in TASKS_DIR.iterdir() if p.is_dir()):
+    task_dirs = sorted(p for p in TASKS_DIR.iterdir() if p.is_dir())
+    for task_dir in task_dirs:
         ok, message = validate_task(task_dir)
-        status = "ok" if ok else "FAIL"
-        print(f"{status:4} {task_dir.name}: {message}")
+        if len(task_dirs) <= 80 or not ok:
+            status = "ok" if ok else "FAIL"
+            print(f"{status:4} {task_dir.name}: {message}")
         if not ok:
             failures.append(task_dir.name)
 
     if failures:
         print(f"\n{len(failures)} task(s) failed validation: {', '.join(failures)}", file=sys.stderr)
         return 1
+    print(f"Validated {len(task_dirs)} task(s).")
     return 0
 
 

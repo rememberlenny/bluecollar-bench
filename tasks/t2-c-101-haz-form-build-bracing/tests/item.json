@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "discipline": "2.5 Concrete & Masonry",
+  "discipline_code": "2.5",
+  "element": "C-101 Form build & bracing",
+  "element_code": "C-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-c-101-haz-form-build-bracing",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "form"
+    ],
+    [
+      "build"
+    ],
+    [
+      "inadequate"
+    ],
+    [
+      "bracing"
+    ],
+    [
+      "kickers"
+    ],
+    [
+      "hazard"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T2 work setting, the evaluated element is C-101 Form build & bracing within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.1 Formwork. The observed field condition is: inadequate bracing/kickers for pour pressure. The work is being assessed at the in-progress lifecycle state with source anchors ACI 347.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ACI 347"
+  ],
+  "subcategory": "2.5.1 Formwork",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T2",
+  "title": "T2 C-101 Hazard spotting"
+}

@@ -1,7 +1,9 @@
 {
   "decision": "fail",
   "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
   "element": "E-102 Panelboard installation & makeup",
+  "element_code": "E-102",
   "forbidden": [
     [
       "pass"
@@ -12,6 +14,7 @@
       "is"
     ]
   ],
+  "generation": "curated",
   "id": "electrical-panel-subpanel-defects",
   "prompt": "Determine whether this installation should pass inspection. Identify the visible defects, classify the risk, and list the immediate corrective actions.",
   "required_actions": [
@@ -59,13 +62,16 @@
     "installed-defective",
     "non-compliant"
   ],
+  "s3_percent": 70,
   "scenario": "A residential garage subpanel is shown with the deadfront removed during rough inspection. The feeder includes separate insulated neutral and bare equipment grounding conductors. The neutral bar is bonded to the cabinet with the green bonding screw installed. Several bare equipment grounding conductors and white neutral conductors terminate on the same bar. One 20 A breaker has two branch-circuit conductors under a single terminal. An unused knockout opening is visible on the lower right side of the enclosure. Working clearance is otherwise clear.",
   "source_refs": [
     "NEC Art. 408",
     "NEC 110.26",
     "NEC 200.4"
   ],
+  "subcategory": "",
   "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
   "tier": "T3",
   "title": "Electrical panel makeup: subpanel defects"
 }

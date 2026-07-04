@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-301 Standard work execution",
+  "element_code": "B-301",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t5-b-301-trd-standard-work-execution",
+  "prompt": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
+  "required_actions": [
+    [
+      "reject",
+      "shortcut"
+    ],
+    [
+      "follow"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "standard"
+    ],
+    [
+      "work"
+    ],
+    [
+      "wrong"
+    ],
+    [
+      "part"
+    ],
+    [
+      "similar"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T5 work setting, the evaluated element is B-301 Standard work execution within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.3 Line Operations. The observed field condition is: wrong-part-similar-part (ID from bin photo). The work is being assessed at the in-progress lifecycle state with source anchors site standard work, TWI.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "site standard work",
+    "TWI"
+  ],
+  "subcategory": "2.10.3 Line Operations",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T5",
+  "title": "T5 B-301 Tradeoff judgment"
+}

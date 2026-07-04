@@ -10,6 +10,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   "s2_conditions": [
     "non-compliant"
   ],
+  "s3_percent": 45,
   "findings": [
     "6 foot trench",
     "no shoring",

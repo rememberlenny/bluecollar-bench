@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-201 Flashing & WRB integration",
+  "element_code": "F-201",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-f-201-cc-flashing-wrb-integration",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "flashing"
+    ],
+    [
+      "integration"
+    ],
+    [
+      "window"
+    ],
+    [
+      "flashing"
+    ],
+    [
+      "absent"
+    ],
+    [
+      "non",
+      "compliant"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The observed field condition is: window pan flashing absent. The work is being assessed at the rough-complete lifecycle state with source anchors IRC R703, mfr instructions.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R703",
+    "mfr instructions"
+  ],
+  "subcategory": "2.6.2 Exterior Envelope",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T3",
+  "title": "T3 F-201 Code/spec compliance"
+}

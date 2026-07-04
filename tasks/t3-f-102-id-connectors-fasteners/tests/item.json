@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-102 Connectors & fasteners",
+  "element_code": "F-102",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-f-102-id-connectors-fasteners",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "connectors"
+    ],
+    [
+      "fasteners"
+    ],
+    [
+      "roofing"
+    ],
+    [
+      "nails"
+    ],
+    [
+      "joist"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is F-102 Connectors & fasteners within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The observed field condition is: roofing nails in joist hangers (the classic - ID by head size/pattern). The work is being assessed at the rough-complete lifecycle state with source anchors Simpson catalogs, IRC.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "Simpson catalogs",
+    "IRC"
+  ],
+  "subcategory": "2.6.1 Rough Framing",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T3",
+  "title": "T3 F-102 Identification"
+}

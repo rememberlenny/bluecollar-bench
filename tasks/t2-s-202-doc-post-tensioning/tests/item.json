@@ -1,0 +1,67 @@
+{
+  "decision": "fail",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-202 Post-tensioning",
+  "element_code": "S-202",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-s-202-doc-post-tensioning",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "post"
+    ],
+    [
+      "tensioning"
+    ],
+    [
+      "elongation"
+    ],
+    [
+      "record"
+    ],
+    [
+      "calculated"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T2 work setting, the evaluated element is S-202 Post-tensioning within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.2 Reinforcing. The observed field condition is: elongation record vs. calculated mismatch (DOC). The work is being assessed at the tested/inspected lifecycle state with source anchors PTI. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "PTI"
+  ],
+  "subcategory": "2.4.2 Reinforcing",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "T2 S-202 Document interpretation"
+}

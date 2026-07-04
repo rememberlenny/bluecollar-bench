@@ -1,7 +1,9 @@
 {
   "decision": "fail",
   "discipline": "2.9 Automotive",
+  "discipline_code": "2.9",
   "element": "A-201 Brakes",
+  "element_code": "A-201",
   "forbidden": [
     [
       "pass"
@@ -13,6 +15,7 @@
       "firm"
     ]
   ],
+  "generation": "curated",
   "id": "automotive-brake-rotor-hose",
   "prompt": "Decide if the repair passes quality control and list the defects that matter.",
   "required_actions": [
@@ -53,12 +56,15 @@
     "degraded",
     "installed-defective"
   ],
+  "s3_percent": 85,
   "scenario": "After a front brake job, the left rotor measures 23.4 mm with a stamped minimum thickness of 24.0 mm. The caliper hose makes a half twist between the hard line and caliper when the wheels are straight. The pads are new and the pedal feels firm during a short parking-lot test.",
   "source_refs": [
     "OEM specs",
     "A-201"
   ],
+  "subcategory": "",
   "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
   "tier": "T4",
   "title": "Brake service: rotor and hose defects"
 }

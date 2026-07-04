@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-101 Structural framing",
+  "element_code": "F-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-f-101-me-structural-framing",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "structural"
+    ],
+    [
+      "framing"
+    ],
+    [
+      "notching"
+    ],
+    [
+      "boring"
+    ],
+    [
+      "beyond"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is F-101 Structural framing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The observed field condition is: notching/boring beyond IRC limits (notch depth vs. joist depth - measurable in photo). The work is being assessed at the rough-complete lifecycle state with source anchors IRC R502, R602. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R502",
+    "R602"
+  ],
+  "subcategory": "2.6.1 Rough Framing",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T3",
+  "title": "T3 F-101 Measurement & estimation"
+}

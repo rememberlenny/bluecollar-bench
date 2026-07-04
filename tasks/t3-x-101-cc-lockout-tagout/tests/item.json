@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-101 Lockout/Tagout",
+  "element_code": "X-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-x-101-cc-lockout-tagout",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "lockout"
+    ],
+    [
+      "tagout"
+    ],
+    [
+      "energy"
+    ],
+    [
+      "source"
+    ],
+    [
+      "missed"
+    ],
+    [
+      "non",
+      "compliant"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is X-101 Lockout/Tagout within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: energy source missed (stored hydraulic/gravity/capacitor). The work is being assessed at the rough-complete lifecycle state with source anchors OSHA 1910.147.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1910.147"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T3",
+  "title": "T3 X-101 Code/spec compliance"
+}

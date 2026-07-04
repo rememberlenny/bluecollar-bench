@@ -1,0 +1,169 @@
+{
+  "axes": {
+    "disciplines": {
+      "2.1": "Electrical",
+      "2.10": "Assembly & Fabrication",
+      "2.11": "Sitework & Utilities",
+      "2.12": "Safety & Rigging",
+      "2.2": "Mechanical - Piping & Plumbing",
+      "2.3": "HVAC-R",
+      "2.4": "Structural & Ironwork",
+      "2.5": "Concrete & Masonry",
+      "2.6": "Carpentry & Finishes",
+      "2.7": "Equipment & Machinery",
+      "2.8": "Instrumentation & Controls",
+      "2.9": "Automotive & Powertrain"
+    },
+    "task_types": {
+      "CC": "Code/spec compliance",
+      "DOC": "Document interpretation",
+      "FD": "Fault diagnosis",
+      "HAZ": "Hazard spotting",
+      "ID": "Identification",
+      "ME": "Measurement & estimation",
+      "PA": "Progress assessment",
+      "SEQ": "Procedure sequencing",
+      "TRD": "Tradeoff judgment",
+      "TS": "Tool & material selection"
+    },
+    "tiers": {
+      "T1": "Heavy Industrial",
+      "T2": "Commercial / Institutional",
+      "T3": "Residential / DIY",
+      "T4": "Field Service & Maintenance",
+      "T5": "Manufacturing / Assembly"
+    }
+  },
+  "coverage_matrix": {
+    "2.1": {
+      "T1": "core",
+      "T2": "core",
+      "T3": "core",
+      "T4": "core",
+      "T5": "secondary"
+    },
+    "2.10": {
+      "T1": "secondary",
+      "T2": "out",
+      "T3": "out",
+      "T4": "out",
+      "T5": "core"
+    },
+    "2.11": {
+      "T1": "core",
+      "T2": "core",
+      "T3": "secondary",
+      "T4": "secondary",
+      "T5": "out"
+    },
+    "2.12": {
+      "T1": "core",
+      "T2": "core",
+      "T3": "core",
+      "T4": "core",
+      "T5": "core"
+    },
+    "2.2": {
+      "T1": "core",
+      "T2": "core",
+      "T3": "core",
+      "T4": "core",
+      "T5": "secondary"
+    },
+    "2.3": {
+      "T1": "secondary",
+      "T2": "core",
+      "T3": "core",
+      "T4": "core",
+      "T5": "out"
+    },
+    "2.4": {
+      "T1": "core",
+      "T2": "core",
+      "T3": "secondary",
+      "T4": "out",
+      "T5": "core"
+    },
+    "2.5": {
+      "T1": "core",
+      "T2": "core",
+      "T3": "core",
+      "T4": "out",
+      "T5": "out"
+    },
+    "2.6": {
+      "T1": "out",
+      "T2": "core",
+      "T3": "core",
+      "T4": "secondary",
+      "T5": "secondary"
+    },
+    "2.7": {
+      "T1": "core",
+      "T2": "secondary",
+      "T3": "out",
+      "T4": "core",
+      "T5": "core"
+    },
+    "2.8": {
+      "T1": "core",
+      "T2": "secondary",
+      "T3": "out",
+      "T4": "secondary",
+      "T5": "core"
+    },
+    "2.9": {
+      "T1": "out",
+      "T2": "out",
+      "T3": "secondary",
+      "T4": "core",
+      "T5": "core"
+    }
+  },
+  "source_element_counts": {
+    "2.1": 25,
+    "2.10": 6,
+    "2.11": 4,
+    "2.12": 6,
+    "2.2": 11,
+    "2.3": 7,
+    "2.4": 7,
+    "2.5": 5,
+    "2.6": 7,
+    "2.7": 5,
+    "2.8": 4,
+    "2.9": 8
+  },
+  "state_model": {
+    "s1_lifecycle": [
+      "planned",
+      "staged",
+      "in-progress",
+      "rough-complete",
+      "tested/inspected",
+      "rework",
+      "accepted",
+      "in-service"
+    ],
+    "s2_conditions": [
+      "new",
+      "installed-correct",
+      "installed-defective",
+      "non-compliant",
+      "worn",
+      "degraded",
+      "failed"
+    ],
+    "s3_progress_percent_by_s1": {
+      "accepted": 95,
+      "in-progress": 45,
+      "in-service": 100,
+      "planned": 5,
+      "rework": 60,
+      "rough-complete": 70,
+      "staged": 15,
+      "tested/inspected": 85
+    }
+  },
+  "version": "0.1"
+}

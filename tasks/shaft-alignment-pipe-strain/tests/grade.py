@@ -72,7 +72,7 @@ def main() -> int:
         })
         return 0
 
-    schema_fields = ["decision", "risk", "findings", "actions"]
+    schema_fields = ["decision", "risk", "s1_state", "s2_conditions", "findings", "actions"]
     schema_score = sum(1 for field in schema_fields if field in answer) / len(schema_fields)
     text = flatten_answer(answer)
 
@@ -81,6 +81,14 @@ def main() -> int:
 
     risk_text = normalize(answer.get("risk", ""))
     risk_score = 1.0 if normalize(item["risk"]) == risk_text else 0.0
+
+    state_text = normalize(answer.get("s1_state", ""))
+    state_score = 1.0 if normalize(item["s1_state"]) == state_text else 0.0
+
+    s2_text = flatten_answer({"s2_conditions": answer.get("s2_conditions", [])})
+    expected_s2 = item.get("s2_expected", [])
+    s2_hits = sum(1 for condition in expected_s2 if normalize(condition) in s2_text)
+    s2_score = s2_hits / max(1, len(expected_s2))
 
     required_findings = item.get("required_findings", [])
     finding_hits = sum(1 for group in required_findings if group_present(text, group))
@@ -103,8 +111,10 @@ def main() -> int:
         0.10 * schema_score
         + 0.25 * decision_score
         + 0.15 * risk_score
-        + 0.35 * findings_score
-        + 0.15 * actions_score
+        + 0.10 * state_score
+        + 0.10 * s2_score
+        + 0.25 * findings_score
+        + 0.05 * actions_score
     )
     reward = min(raw_reward, safety_gate)
 
@@ -113,6 +123,8 @@ def main() -> int:
         "schema": round(schema_score, 4),
         "decision": round(decision_score, 4),
         "risk": round(risk_score, 4),
+        "s1_state": round(state_score, 4),
+        "s2_conditions": round(s2_score, 4),
         "findings": round(findings_score, 4),
         "actions": round(actions_score, 4),
         "safety_gate": round(safety_gate, 4),

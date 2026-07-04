@@ -1,0 +1,67 @@
+{
+  "decision": "fail",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-101 Timing & mechanical",
+  "element_code": "A-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-a-101-seq-timing-mechanical",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "timing"
+    ],
+    [
+      "mechanical"
+    ],
+    [
+      "plastigauge"
+    ],
+    [
+      "reading"
+    ],
+    [
+      "sequence"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T4 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The observed field condition is: plastigauge reading (ME). The work is being assessed at the in-progress lifecycle state with source anchors OEM service info.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM service info"
+  ],
+  "subcategory": "2.9.1 Engine & Drivetrain",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T4",
+  "title": "T4 A-101 Procedure sequencing"
+}

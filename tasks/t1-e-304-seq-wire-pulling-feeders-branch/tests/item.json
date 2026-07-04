@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-304 Wire pulling (feeders & branch)",
+  "element_code": "E-304",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-e-304-seq-wire-pulling-feeders-branch",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "wire"
+    ],
+    [
+      "pulling"
+    ],
+    [
+      "exceeded"
+    ],
+    [
+      "sidewall"
+    ],
+    [
+      "pressure"
+    ],
+    [
+      "sequence"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T1 work setting, the evaluated element is E-304 Wire pulling (feeders & branch) within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The observed field condition is: exceeded sidewall pressure/jamming (planning item). The work is being assessed at the in-progress lifecycle state with source anchors NEC 200.6, 210.5 (identification).",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 200.6",
+    "210.5 (identification)"
+  ],
+  "subcategory": "2.1.3 Wire & Cable",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T1",
+  "title": "T1 E-304 Procedure sequencing"
+}

@@ -1,0 +1,69 @@
+{
+  "decision": "fail",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-301 Diagnostics",
+  "element_code": "A-301",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-a-301-fd-diagnostics",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "diagnostics"
+    ],
+    [
+      "parasitic"
+    ],
+    [
+      "draw"
+    ],
+    [
+      "procedure"
+    ],
+    [
+      "fault"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "In a T4 work setting, the evaluated element is A-301 Diagnostics within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.3 Electrical & Electronics. The observed field condition is: parasitic draw procedure order (SEQ). The work is being assessed at the in-service lifecycle state with source anchors OEM service info, OBD-II standards.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM service info",
+    "OBD-II standards"
+  ],
+  "subcategory": "2.9.3 Electrical & Electronics",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "T4 A-301 Fault diagnosis"
+}

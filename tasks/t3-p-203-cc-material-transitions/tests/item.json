@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-203 Material transitions",
+  "element_code": "P-203",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-p-203-cc-material-transitions",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "material"
+    ],
+    [
+      "transitions"
+    ],
+    [
+      "glued"
+    ],
+    [
+      "with"
+    ],
+    [
+      "wrong"
+    ],
+    [
+      "non",
+      "compliant"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T3 work setting, the evaluated element is P-203 Material transitions within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The observed field condition is: ABS-to-PVC glued with wrong cement. The work is being assessed at the rough-complete lifecycle state with source anchors IPC, mfr listings.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IPC",
+    "mfr listings"
+  ],
+  "subcategory": "2.2.2 Plumbing - DWV (T2/T3)",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T3",
+  "title": "T3 P-203 Code/spec compliance"
+}

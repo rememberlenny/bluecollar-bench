@@ -1,0 +1,65 @@
+{
+  "decision": "fail",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-101 Spool erection & fit-up",
+  "element_code": "P-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-p-101-doc-spool-erection-fit-up",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "spool"
+    ],
+    [
+      "erection"
+    ],
+    [
+      "mismatch"
+    ],
+    [
+      "weld"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T1 work setting, the evaluated element is P-101 Spool erection & fit-up within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The observed field condition is: hi-lo mismatch at weld fit-up. The work is being assessed at the tested/inspected lifecycle state with source anchors ASME B31.3, project iso drawings. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ASME B31.3",
+    "project iso drawings"
+  ],
+  "subcategory": "2.2.1 Process Piping (T1/T2)",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T1",
+  "title": "T1 P-101 Document interpretation"
+}

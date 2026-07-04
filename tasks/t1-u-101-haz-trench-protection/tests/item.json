@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-101 Trench protection",
+  "element_code": "U-101",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-u-101-haz-trench-protection",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "trench"
+    ],
+    [
+      "protection"
+    ],
+    [
+      "unprotected"
+    ],
+    [
+      "trench"
+    ],
+    [
+      "with"
+    ],
+    [
+      "hazard"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T1 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The observed field condition is: unprotected trench \u22655 ft with workers in it. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart P.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart P"
+  ],
+  "subcategory": "2.11.1 Excavation & Trenching",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T1",
+  "title": "T1 U-101 Hazard spotting"
+}

@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-102 Production welding",
+  "element_code": "B-102",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "t1-b-102-me-bf-001-production-welding",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "production"
+    ],
+    [
+      "welding"
+    ],
+    [
+      "fillet"
+    ],
+    [
+      "gauge"
+    ],
+    [
+      "fail"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T1 work setting, the evaluated element is B-102 Production welding within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.1 Fastening & Joining. The observed field condition is: fillet gauge fail (ME). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1/D1.3, shop WPS. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "AWS D1.1/D1.3",
+    "shop WPS"
+  ],
+  "subcategory": "2.10.1 Fastening & Joining",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T1",
+  "title": "T1 B-102 Measurement & estimation coverage backfill"
+}

@@ -1,0 +1,38 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/t5-i-201-me-calibration"
+description = "T5 I-201 Measurement & estimation"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t5", "me", "2-8"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "t5-i-201-me-calibration"
+tier = "T5"
+discipline = "2.8 Instrumentation & Controls"
+element = "I-201 Calibration"
+task_type = "ME"
+task_type_name = "Measurement & estimation"
+s1_state = "rough-complete"
+s3_percent = 70.0
+expected_decision = "fail"
+expected_risk = "medium"
+generation = "auto"
+source_refs = ["ISA standards", "site QC"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

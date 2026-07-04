@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-103 Overcurrent device selection & coordination",
+  "element_code": "E-103",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-e-103-ts-overcurrent-device-selection-coo",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "overcurrent"
+    ],
+    [
+      "device"
+    ],
+    [
+      "breaker"
+    ],
+    [
+      "conductor"
+    ],
+    [
+      "ampacity"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "In a T1 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: breaker/conductor ampacity mismatch. The work is being assessed at the staged lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 240",
+    "210.8",
+    "210.12",
+    "110.14(C) termination temp ratings"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T1",
+  "title": "T1 E-103 Tool & material selection"
+}

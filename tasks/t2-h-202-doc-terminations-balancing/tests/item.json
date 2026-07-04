@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-202 Terminations & balancing",
+  "element_code": "H-202",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-h-202-doc-terminations-balancing",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "terminations"
+    ],
+    [
+      "balancing"
+    ],
+    [
+      "supply"
+    ],
+    [
+      "short"
+    ],
+    [
+      "circuiting"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T2 work setting, the evaluated element is H-202 Terminations & balancing within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The observed field condition is: supply short-circuiting to return. The work is being assessed at the tested/inspected lifecycle state with source anchors SMACNA, TAB reports. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "SMACNA",
+    "TAB reports"
+  ],
+  "subcategory": "2.3.2 Distribution",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "T2 H-202 Document interpretation"
+}

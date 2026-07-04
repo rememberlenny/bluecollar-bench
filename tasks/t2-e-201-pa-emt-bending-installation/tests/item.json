@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-201 EMT bending & installation",
+  "element_code": "E-201",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-e-201-pa-emt-bending-installation",
+  "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
+  "required_actions": [
+    [
+      "complete"
+    ],
+    [
+      "remaining"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "bending"
+    ],
+    [
+      "installation"
+    ],
+    [
+      "improper"
+    ],
+    [
+      "coupling"
+    ],
+    [
+      "engagement"
+    ],
+    [
+      "complete"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "In a T2 work setting, the evaluated element is E-201 EMT bending & installation within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: improper coupling engagement. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 358, Ch. 9 (fill). Treat this as roughly 70 percent complete until defects are corrected.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 358",
+    "Ch. 9 (fill)"
+  ],
+  "subcategory": "2.1.2 Raceway",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T2",
+  "title": "T2 E-201 Progress assessment"
+}

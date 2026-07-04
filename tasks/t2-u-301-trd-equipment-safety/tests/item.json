@@ -1,0 +1,69 @@
+{
+  "decision": "fail",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-301 Equipment safety",
+  "element_code": "U-301",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-u-301-trd-equipment-safety",
+  "prompt": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
+  "required_actions": [
+    [
+      "reject",
+      "shortcut"
+    ],
+    [
+      "follow"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "equipment"
+    ],
+    [
+      "safety"
+    ],
+    [
+      "spotter"
+    ],
+    [
+      "while"
+    ],
+    [
+      "backing"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T2 work setting, the evaluated element is U-301 Equipment safety within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.3 Heavy Equipment Operation. The observed field condition is: no spotter while backing near trench. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart O.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart O"
+  ],
+  "subcategory": "2.11.3 Heavy Equipment Operation",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T2",
+  "title": "T2 U-301 Tradeoff judgment"
+}

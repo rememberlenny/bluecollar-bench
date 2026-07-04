@@ -1,0 +1,64 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-401 Thermostats & sequences",
+  "element_code": "H-401",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-h-401-doc-thermostats-sequences",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "thermostats"
+    ],
+    [
+      "sequences"
+    ],
+    [
+      "heat"
+    ],
+    [
+      "locked"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T4 work setting, the evaluated element is H-401 Thermostats & sequences within 2.3 HVAC-R. The relevant subcategory is 2.3.4 Controls. The observed field condition is: aux heat locked on. The work is being assessed at the tested/inspected lifecycle state with source anchors mfr manuals. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr manuals"
+  ],
+  "subcategory": "2.3.4 Controls",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T4",
+  "title": "T4 H-401 Document interpretation"
+}

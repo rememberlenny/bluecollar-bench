@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-401 Thermostats & sequences",
+  "element_code": "H-401",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t4-h-401-seq-thermostats-sequences",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "thermostats"
+    ],
+    [
+      "sequences"
+    ],
+    [
+      "wire"
+    ],
+    [
+      "power"
+    ],
+    [
+      "stealing"
+    ],
+    [
+      "sequence"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T4 work setting, the evaluated element is H-401 Thermostats & sequences within 2.3 HVAC-R. The relevant subcategory is 2.3.4 Controls. The observed field condition is: no C-wire (power-stealing issues). The work is being assessed at the in-progress lifecycle state with source anchors mfr manuals.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr manuals"
+  ],
+  "subcategory": "2.3.4 Controls",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T4",
+  "title": "T4 H-401 Procedure sequencing"
+}

@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-102 Connectors & fasteners",
+  "element_code": "F-102",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-f-102-ts-connectors-fasteners",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "connectors"
+    ],
+    [
+      "fasteners"
+    ],
+    [
+      "wrong"
+    ],
+    [
+      "hanger"
+    ],
+    [
+      "joist"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "In a T2 work setting, the evaluated element is F-102 Connectors & fasteners within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The observed field condition is: wrong hanger for joist size. The work is being assessed at the staged lifecycle state with source anchors Simpson catalogs, IRC.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "Simpson catalogs",
+    "IRC"
+  ],
+  "subcategory": "2.6.1 Rough Framing",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T2",
+  "title": "T2 F-102 Tool & material selection"
+}

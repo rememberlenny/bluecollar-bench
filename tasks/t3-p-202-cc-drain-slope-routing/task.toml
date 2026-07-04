@@ -1,0 +1,38 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/t3-p-202-cc-drain-slope-routing"
+description = "T3 P-202 Code/spec compliance"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t3", "cc", "2-2"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "t3-p-202-cc-drain-slope-routing"
+tier = "T3"
+discipline = "2.2 Mechanical - Piping & Plumbing"
+element = "P-202 Drain slope & routing"
+task_type = "CC"
+task_type_name = "Code/spec compliance"
+s1_state = "rough-complete"
+s3_percent = 70.0
+expected_decision = "fail"
+expected_risk = "high"
+generation = "auto"
+source_refs = ["IPC 704"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

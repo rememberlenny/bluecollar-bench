@@ -1,0 +1,65 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-105 PPE selection",
+  "element_code": "X-105",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t3-x-105-ts-ppe-selection",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "selection"
+    ],
+    [
+      "flash"
+    ],
+    [
+      "rating"
+    ],
+    [
+      "below"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "In a T3 work setting, the evaluated element is X-105 PPE selection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: arc-flash rating below task category (label vs. clothing - DOC+ID). The work is being assessed at the staged lifecycle state with source anchors NFPA 70E, OSHA 1910 Subpart I.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "NFPA 70E",
+    "OSHA 1910 Subpart I"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T3",
+  "title": "T3 X-105 Tool & material selection"
+}

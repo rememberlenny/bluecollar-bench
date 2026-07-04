@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-102 Panelboard installation & makeup",
+  "element_code": "E-102",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-e-102-trd-panelboard-installation-makeup",
+  "prompt": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
+  "required_actions": [
+    [
+      "reject",
+      "shortcut"
+    ],
+    [
+      "follow"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "panelboard"
+    ],
+    [
+      "installation"
+    ],
+    [
+      "conductors"
+    ],
+    [
+      "crossing"
+    ],
+    [
+      "gutter"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "In a T2 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: conductors crossing bus gutter space. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 408",
+    "110.26 (working clearance)",
+    "200.4"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T2",
+  "title": "T2 E-102 Tradeoff judgment"
+}

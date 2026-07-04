@@ -1,0 +1,65 @@
+{
+  "decision": "fail",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-502 Lighting controls & emergency egress",
+  "element_code": "E-502",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t2-e-502-doc-lighting-controls-emergency-egre",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "lighting"
+    ],
+    [
+      "controls"
+    ],
+    [
+      "miswire"
+    ],
+    [
+      "diagnosis"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T2 work setting, the evaluated element is E-502 Lighting controls & emergency egress within 2.1 Electrical. The relevant subcategory is 2.1.5 Lighting. The observed field condition is: 3-way miswire diagnosis. The work is being assessed at the tested/inspected lifecycle state with source anchors NEC 700, NFPA 101. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 700",
+    "NFPA 101"
+  ],
+  "subcategory": "2.1.5 Lighting",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "T2 E-502 Document interpretation"
+}

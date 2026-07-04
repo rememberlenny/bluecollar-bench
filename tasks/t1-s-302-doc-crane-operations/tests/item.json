@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-302 Crane operations",
+  "element_code": "S-302",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "t1-s-302-doc-crane-operations",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "crane"
+    ],
+    [
+      "operations"
+    ],
+    [
+      "load"
+    ],
+    [
+      "rigging"
+    ],
+    [
+      "load"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "In a T1 work setting, the evaluated element is S-302 Crane operations within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: load + rigging vs. load chart at radius (DOC+ME). The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1926.1400, load charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926.1400",
+    "load charts"
+  ],
+  "subcategory": "2.4.3 Rigging & Machinery Moving",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T1",
+  "title": "T1 S-302 Document interpretation"
+}

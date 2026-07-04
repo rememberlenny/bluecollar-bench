@@ -1,7 +1,9 @@
 {
   "decision": "fail",
   "discipline": "2.2 Piping/Plumbing",
+  "discipline_code": "2.2",
   "element": "P-102 Flanged joints",
+  "element_code": "P-102",
   "forbidden": [
     [
       "ready",
@@ -12,6 +14,7 @@
       "pass"
     ]
   ],
+  "generation": "curated",
   "id": "flanged-joint-bolts-witness",
   "prompt": "Determine whether this joint is ready for test and what must be corrected.",
   "required_actions": [
@@ -56,13 +59,16 @@
   "s2_expected": [
     "installed-defective"
   ],
+  "s3_percent": 70,
   "scenario": "A process piping flange is shown before hydrotest. Two adjacent bolt holes are empty. The installed bolts have uneven thread projection, and no torque witness marks are visible. The gasket tag indicates the correct material for the service.",
   "source_refs": [
     "ASME PCC-1",
     "B16.5",
     "P-102"
   ],
+  "subcategory": "",
   "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
   "tier": "T1",
   "title": "Flanged joint: missing bolts and torque evidence"
 }
