@@ -1,0 +1,362 @@
+[
+  {
+    "id": "electrical-panel-subpanel-defects",
+    "title": "Electrical panel makeup: subpanel defects",
+    "tier": "T3",
+    "discipline": "2.1 Electrical",
+    "element": "E-102 Panelboard installation & makeup",
+    "task_type": "CC",
+    "s1_state": "rough-complete",
+    "s2_expected": ["installed-defective", "non-compliant"],
+    "risk": "critical",
+    "decision": "fail",
+    "scenario": "A residential garage subpanel is shown with the deadfront removed during rough inspection. The feeder includes separate insulated neutral and bare equipment grounding conductors. The neutral bar is bonded to the cabinet with the green bonding screw installed. Several bare equipment grounding conductors and white neutral conductors terminate on the same bar. One 20 A breaker has two branch-circuit conductors under a single terminal. An unused knockout opening is visible on the lower right side of the enclosure. Working clearance is otherwise clear.",
+    "prompt": "Determine whether this installation should pass inspection. Identify the visible defects, classify the risk, and list the immediate corrective actions.",
+    "required_findings": [
+      ["neutral", "ground", "subpanel", "bonded"],
+      ["double", "tap", "breaker"],
+      ["knockout", "opening"]
+    ],
+    "required_actions": [
+      ["remove", "bonding", "screw"],
+      ["separate", "neutral", "ground"],
+      ["single", "conductor", "terminal"],
+      ["install", "knockout", "filler"]
+    ],
+    "forbidden": [
+      ["pass"],
+      ["safe", "as", "is"]
+    ],
+    "source_refs": ["NEC Art. 408", "NEC 110.26", "NEC 200.4"]
+  },
+  {
+    "id": "plumbing-s-trap-vanity",
+    "title": "DWV trap and venting: vanity S-trap",
+    "tier": "T3",
+    "discipline": "2.2 Piping/Plumbing",
+    "element": "P-201 Traps & venting",
+    "task_type": "CC",
+    "s1_state": "rough-complete",
+    "s2_expected": ["installed-defective", "non-compliant"],
+    "risk": "high",
+    "decision": "fail",
+    "scenario": "A bathroom vanity drain drops vertically out of the sink tailpiece into a P-trap, then immediately turns downward through the cabinet floor with no horizontal trap arm before the vent connection. There is no visible cleanout. The homeowner says the trap holds water after the faucet runs but occasionally gurgles when the tub drains.",
+    "prompt": "Assess whether the drain configuration is acceptable and explain the likely failure mode.",
+    "required_findings": [
+      ["s-trap"],
+      ["siphon", "trap", "seal"],
+      ["missing", "cleanout"]
+    ],
+    "required_actions": [
+      ["reconfigure", "trap", "arm"],
+      ["connect", "vent"],
+      ["add", "cleanout"]
+    ],
+    "forbidden": [
+      ["pass"],
+      ["acceptable", "because", "holds", "water"]
+    ],
+    "source_refs": ["IPC/UPC", "P-201"]
+  },
+  {
+    "id": "hvac-furnace-venting-garage-return",
+    "title": "Furnace installation: venting and return-air hazards",
+    "tier": "T3",
+    "discipline": "2.3 HVAC-R",
+    "element": "H-102 Furnace & venting",
+    "task_type": "HAZ",
+    "s1_state": "in-service",
+    "s2_expected": ["installed-defective", "non-compliant"],
+    "risk": "critical",
+    "decision": "fail",
+    "scenario": "A gas furnace is installed in a closet that opens to an attached garage. The return-air grille is cut into the garage-facing wall. The single-wall metal vent connector passes within about one inch of exposed wood framing. The condensate tube from the coil runs upward for several inches before dropping to a floor drain.",
+    "prompt": "Identify the safety and compliance issues and state whether the system should remain in service.",
+    "required_findings": [
+      ["return", "air", "garage"],
+      ["vent", "clearance", "combustible"],
+      ["condensate", "slope"]
+    ],
+    "required_actions": [
+      ["shut", "down"],
+      ["relocate", "return"],
+      ["correct", "vent", "clearance"],
+      ["repipe", "condensate"]
+    ],
+    "forbidden": [
+      ["pass"],
+      ["remain", "in", "service"]
+    ],
+    "source_refs": ["IRC M1801", "NFPA 54", "H-102"]
+  },
+  {
+    "id": "structural-bolting-pretension",
+    "title": "Structural bolting: pretension evidence",
+    "tier": "T2",
+    "discipline": "2.4 Structural & Ironwork",
+    "element": "S-102 Structural bolting",
+    "task_type": "CC",
+    "s1_state": "rough-complete",
+    "s2_expected": ["installed-defective", "non-compliant"],
+    "risk": "high",
+    "decision": "fail",
+    "scenario": "A beam splice detail calls for pretensioned A325 bolts. The field photo shows several bolts with head markings that do not match the submitted bolt grade. No turn-of-nut match marks or DTI washer indications are visible. The inspector notes the crew described the joint as 'snug tight only' because the connection looked stable.",
+    "prompt": "Decide if this connection can be accepted and list what evidence or rework is needed.",
+    "required_findings": [
+      ["pretension"],
+      ["snug", "tight"],
+      ["wrong", "grade"],
+      ["match", "marks"]
+    ],
+    "required_actions": [
+      ["verify", "bolt", "grade"],
+      ["replace", "bolts"],
+      ["pretension"],
+      ["inspect"]
+    ],
+    "forbidden": [
+      ["accept"],
+      ["stable", "enough"]
+    ],
+    "source_refs": ["RCSC Specification", "S-102"]
+  },
+  {
+    "id": "rebar-slab-cover-chairs",
+    "title": "Rebar placement: cover and support",
+    "tier": "T2",
+    "discipline": "2.4 Structural & Ironwork",
+    "element": "S-201 Rebar placement",
+    "task_type": "PA",
+    "s1_state": "rough-complete",
+    "s2_expected": ["installed-defective"],
+    "risk": "high",
+    "decision": "fail",
+    "scenario": "A pre-pour photo shows a slab mat with reinforcing bars resting directly on the vapor barrier and soil in multiple areas. Chairs are missing along the near edge, and several bars are touching the side form. The placement drawing requires continuous bottom cover and lap splices are otherwise visible.",
+    "prompt": "Assess readiness for concrete placement, identify the defects, and estimate the lifecycle state.",
+    "required_findings": [
+      ["insufficient", "cover"],
+      ["missing", "chairs"],
+      ["bars", "touching", "form"]
+    ],
+    "required_actions": [
+      ["add", "chairs"],
+      ["restore", "cover"],
+      ["reinspect", "before", "pour"]
+    ],
+    "forbidden": [
+      ["ready", "to", "pour"],
+      ["pass"]
+    ],
+    "source_refs": ["ACI 318", "placing drawings", "S-201"]
+  },
+  {
+    "id": "loto-taped-breaker-no-try",
+    "title": "Lockout/tagout: taped breaker and no try step",
+    "tier": "T4",
+    "discipline": "2.12 Safety",
+    "element": "X-101 Lockout/Tagout",
+    "task_type": "SEQ",
+    "s1_state": "in-progress",
+    "s2_expected": ["non-compliant"],
+    "risk": "critical",
+    "decision": "fail",
+    "scenario": "A technician is preparing to service a conveyor. The disconnecting breaker is switched off and held with red tape but has no lock. A paper tag is taped to the panel door. The work order checklist skips verification of zero energy and does not mention stored mechanical energy in the raised conveyor section.",
+    "prompt": "Evaluate the LOTO sequence and state the minimum corrections before work can continue.",
+    "required_findings": [
+      ["breaker", "taped"],
+      ["no", "lock"],
+      ["no", "try", "verification"],
+      ["stored", "mechanical", "energy"]
+    ],
+    "required_actions": [
+      ["apply", "lock"],
+      ["tag"],
+      ["verify", "zero", "energy"],
+      ["control", "stored", "energy"]
+    ],
+    "forbidden": [
+      ["continue"],
+      ["tag", "alone", "sufficient"]
+    ],
+    "source_refs": ["OSHA 1910.147", "X-101"]
+  },
+  {
+    "id": "automotive-brake-rotor-hose",
+    "title": "Brake service: rotor and hose defects",
+    "tier": "T4",
+    "discipline": "2.9 Automotive",
+    "element": "A-201 Brakes",
+    "task_type": "FD",
+    "s1_state": "tested/inspected",
+    "s2_expected": ["degraded", "installed-defective"],
+    "risk": "high",
+    "decision": "fail",
+    "scenario": "After a front brake job, the left rotor measures 23.4 mm with a stamped minimum thickness of 24.0 mm. The caliper hose makes a half twist between the hard line and caliper when the wheels are straight. The pads are new and the pedal feels firm during a short parking-lot test.",
+    "prompt": "Decide if the repair passes quality control and list the defects that matter.",
+    "required_findings": [
+      ["rotor", "below", "minimum"],
+      ["brake", "hose", "twisted"],
+      ["pedal", "firm", "not", "sufficient"]
+    ],
+    "required_actions": [
+      ["replace", "rotor"],
+      ["correct", "hose"],
+      ["road", "test"]
+    ],
+    "forbidden": [
+      ["pass"],
+      ["safe", "because", "pedal", "firm"]
+    ],
+    "source_refs": ["OEM specs", "A-201"]
+  },
+  {
+    "id": "ev-service-disconnect-gloves",
+    "title": "EV high-voltage safety: incomplete isolation",
+    "tier": "T4",
+    "discipline": "2.9 Automotive",
+    "element": "A-401 High-voltage safety",
+    "task_type": "HAZ",
+    "s1_state": "in-progress",
+    "s2_expected": ["non-compliant"],
+    "risk": "critical",
+    "decision": "fail",
+    "scenario": "An EV battery service photo shows the orange service disconnect removed and placed on the cowl. The technician immediately begins removing the inverter cover. The class 0 gloves in use have a test date that expired nine months ago. No meter verification of absence of voltage is shown.",
+    "prompt": "Evaluate whether the high-voltage work can proceed and identify the required safety steps.",
+    "required_findings": [
+      ["wait", "time"],
+      ["verify", "absence", "voltage"],
+      ["gloves", "expired"],
+      ["orange", "high", "voltage"]
+    ],
+    "required_actions": [
+      ["stop", "work"],
+      ["wait"],
+      ["meter", "verify"],
+      ["use", "tested", "gloves"]
+    ],
+    "forbidden": [
+      ["proceed"],
+      ["disconnect", "alone", "enough"]
+    ],
+    "source_refs": ["OEM HV procedures", "A-401"]
+  },
+  {
+    "id": "duct-flex-sag-cloth-tape",
+    "title": "Duct installation: flex sag and unsealed joints",
+    "tier": "T3",
+    "discipline": "2.3 HVAC-R",
+    "element": "H-201 Duct installation",
+    "task_type": "CC",
+    "s1_state": "rough-complete",
+    "s2_expected": ["installed-defective", "non-compliant"],
+    "risk": "medium",
+    "decision": "fail",
+    "scenario": "A basement supply branch uses flexible duct with visible sags between hangers. Several metal-to-flex joints are wrapped only with gray cloth duct tape; no mastic, UL-listed foil tape, or mechanical draw bands are visible. The homeowner says air comes out of the register, but the room is always cold.",
+    "prompt": "Assess the installation quality and name the defects.",
+    "required_findings": [
+      ["flex", "duct", "sag"],
+      ["cloth", "duct", "tape"],
+      ["joints", "unsealed"]
+    ],
+    "required_actions": [
+      ["support", "flex"],
+      ["seal", "mastic"],
+      ["draw", "bands"]
+    ],
+    "forbidden": [
+      ["pass"],
+      ["air", "comes", "out", "therefore", "ok"]
+    ],
+    "source_refs": ["IMC 603", "SMACNA", "Manual D", "H-201"]
+  },
+  {
+    "id": "flanged-joint-bolts-witness",
+    "title": "Flanged joint: missing bolts and torque evidence",
+    "tier": "T1",
+    "discipline": "2.2 Piping/Plumbing",
+    "element": "P-102 Flanged joints",
+    "task_type": "CC",
+    "s1_state": "rough-complete",
+    "s2_expected": ["installed-defective"],
+    "risk": "high",
+    "decision": "fail",
+    "scenario": "A process piping flange is shown before hydrotest. Two adjacent bolt holes are empty. The installed bolts have uneven thread projection, and no torque witness marks are visible. The gasket tag indicates the correct material for the service.",
+    "prompt": "Determine whether this joint is ready for test and what must be corrected.",
+    "required_findings": [
+      ["incomplete", "bolt", "pattern"],
+      ["uneven", "thread", "projection"],
+      ["no", "torque", "witness"]
+    ],
+    "required_actions": [
+      ["install", "all", "bolts"],
+      ["torque", "sequence"],
+      ["mark", "witness"],
+      ["inspect", "before", "test"]
+    ],
+    "forbidden": [
+      ["ready", "for", "hydrotest"],
+      ["pass"]
+    ],
+    "source_refs": ["ASME PCC-1", "B16.5", "P-102"]
+  },
+  {
+    "id": "shaft-alignment-pipe-strain",
+    "title": "Shaft alignment: sequence and pipe strain",
+    "tier": "T1",
+    "discipline": "2.7 Equipment/Millwright",
+    "element": "M-201 Shaft alignment",
+    "task_type": "SEQ",
+    "s1_state": "in-progress",
+    "s2_expected": ["installed-defective"],
+    "risk": "medium",
+    "decision": "fail",
+    "scenario": "A pump and motor were laser-aligned while the suction and discharge piping were still disconnected. After piping was bolted up, the coupling gap changed visibly and the laser report was not repeated. The crew wants to grout the base and install the coupling guard.",
+    "prompt": "Evaluate the sequence and explain the likely problem before final acceptance.",
+    "required_findings": [
+      ["aligned", "before", "piping"],
+      ["pipe", "strain"],
+      ["coupling", "gap", "changed"],
+      ["alignment", "not", "repeated"]
+    ],
+    "required_actions": [
+      ["repeat", "alignment"],
+      ["relieve", "pipe", "strain"],
+      ["verify", "coupling", "gap"]
+    ],
+    "forbidden": [
+      ["accept"],
+      ["install", "guard", "now"]
+    ],
+    "source_refs": ["API 686", "M-201"]
+  },
+  {
+    "id": "trench-protection-spoil-ladder",
+    "title": "Trench protection: missing protective system",
+    "tier": "T2",
+    "discipline": "2.11 Sitework & Utilities",
+    "element": "U-101 Trench protection",
+    "task_type": "HAZ",
+    "s1_state": "in-progress",
+    "s2_expected": ["non-compliant"],
+    "risk": "critical",
+    "decision": "fail",
+    "scenario": "Workers are installing a sewer lateral in an approximately 6-foot-deep trench. The trench walls are nearly vertical with no trench box, shoring, or sloping. Spoil is piled within one foot of the edge. No ladder is visible within the photographed work area.",
+    "prompt": "Identify the hazards and state whether work may continue.",
+    "required_findings": [
+      ["6", "foot", "trench"],
+      ["no", "shoring"],
+      ["spoil", "within", "2", "ft"],
+      ["no", "ladder"]
+    ],
+    "required_actions": [
+      ["stop", "work"],
+      ["protective", "system"],
+      ["move", "spoil"],
+      ["provide", "ladder"]
+    ],
+    "forbidden": [
+      ["continue"],
+      ["safe", "as", "is"]
+    ],
+    "source_refs": ["OSHA 1926 Subpart P", "U-101"]
+  }
+]

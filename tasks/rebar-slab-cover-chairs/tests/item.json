@@ -1,0 +1,61 @@
+{
+  "decision": "fail",
+  "discipline": "2.4 Structural & Ironwork",
+  "element": "S-201 Rebar placement",
+  "forbidden": [
+    [
+      "ready",
+      "to",
+      "pour"
+    ],
+    [
+      "pass"
+    ]
+  ],
+  "id": "rebar-slab-cover-chairs",
+  "prompt": "Assess readiness for concrete placement, identify the defects, and estimate the lifecycle state.",
+  "required_actions": [
+    [
+      "add",
+      "chairs"
+    ],
+    [
+      "restore",
+      "cover"
+    ],
+    [
+      "reinspect",
+      "before",
+      "pour"
+    ]
+  ],
+  "required_findings": [
+    [
+      "insufficient",
+      "cover"
+    ],
+    [
+      "missing",
+      "chairs"
+    ],
+    [
+      "bars",
+      "touching",
+      "form"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "scenario": "A pre-pour photo shows a slab mat with reinforcing bars resting directly on the vapor barrier and soil in multiple areas. Chairs are missing along the near edge, and several bars are touching the side form. The placement drawing requires continuous bottom cover and lap splices are otherwise visible.",
+  "source_refs": [
+    "ACI 318",
+    "placing drawings",
+    "S-201"
+  ],
+  "task_type": "PA",
+  "tier": "T2",
+  "title": "Rebar placement: cover and support"
+}

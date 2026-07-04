@@ -1,0 +1,69 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety",
+  "element": "X-101 Lockout/Tagout",
+  "forbidden": [
+    [
+      "continue"
+    ],
+    [
+      "tag",
+      "alone",
+      "sufficient"
+    ]
+  ],
+  "id": "loto-taped-breaker-no-try",
+  "prompt": "Evaluate the LOTO sequence and state the minimum corrections before work can continue.",
+  "required_actions": [
+    [
+      "apply",
+      "lock"
+    ],
+    [
+      "tag"
+    ],
+    [
+      "verify",
+      "zero",
+      "energy"
+    ],
+    [
+      "control",
+      "stored",
+      "energy"
+    ]
+  ],
+  "required_findings": [
+    [
+      "breaker",
+      "taped"
+    ],
+    [
+      "no",
+      "lock"
+    ],
+    [
+      "no",
+      "try",
+      "verification"
+    ],
+    [
+      "stored",
+      "mechanical",
+      "energy"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "non-compliant"
+  ],
+  "scenario": "A technician is preparing to service a conveyor. The disconnecting breaker is switched off and held with red tape but has no lock. A paper tag is taped to the panel door. The work order checklist skips verification of zero energy and does not mention stored mechanical energy in the raised conveyor section.",
+  "source_refs": [
+    "OSHA 1910.147",
+    "X-101"
+  ],
+  "task_type": "SEQ",
+  "tier": "T4",
+  "title": "Lockout/tagout: taped breaker and no try step"
+}

@@ -1,0 +1,35 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/hvac-furnace-venting-garage-return"
+description = "Furnace installation: venting and return-air hazards"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t3", "haz"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "hvac-furnace-venting-garage-return"
+tier = "T3"
+discipline = "2.3 HVAC-R"
+element = "H-102 Furnace & venting"
+task_type = "HAZ"
+s1_state = "in-service"
+expected_decision = "fail"
+expected_risk = "critical"
+source_refs = ["IRC M1801", "NFPA 54", "H-102"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

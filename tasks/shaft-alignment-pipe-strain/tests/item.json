@@ -1,0 +1,67 @@
+{
+  "decision": "fail",
+  "discipline": "2.7 Equipment/Millwright",
+  "element": "M-201 Shaft alignment",
+  "forbidden": [
+    [
+      "accept"
+    ],
+    [
+      "install",
+      "guard",
+      "now"
+    ]
+  ],
+  "id": "shaft-alignment-pipe-strain",
+  "prompt": "Evaluate the sequence and explain the likely problem before final acceptance.",
+  "required_actions": [
+    [
+      "repeat",
+      "alignment"
+    ],
+    [
+      "relieve",
+      "pipe",
+      "strain"
+    ],
+    [
+      "verify",
+      "coupling",
+      "gap"
+    ]
+  ],
+  "required_findings": [
+    [
+      "aligned",
+      "before",
+      "piping"
+    ],
+    [
+      "pipe",
+      "strain"
+    ],
+    [
+      "coupling",
+      "gap",
+      "changed"
+    ],
+    [
+      "alignment",
+      "not",
+      "repeated"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "scenario": "A pump and motor were laser-aligned while the suction and discharge piping were still disconnected. After piping was bolted up, the coupling gap changed visibly and the laser report was not repeated. The crew wants to grout the base and install the coupling guard.",
+  "source_refs": [
+    "API 686",
+    "M-201"
+  ],
+  "task_type": "SEQ",
+  "tier": "T1",
+  "title": "Shaft alignment: sequence and pipe strain"
+}

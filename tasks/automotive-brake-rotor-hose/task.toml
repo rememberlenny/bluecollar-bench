@@ -1,0 +1,35 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/automotive-brake-rotor-hose"
+description = "Brake service: rotor and hose defects"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t4", "fd"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "automotive-brake-rotor-hose"
+tier = "T4"
+discipline = "2.9 Automotive"
+element = "A-201 Brakes"
+task_type = "FD"
+s1_state = "tested/inspected"
+expected_decision = "fail"
+expected_risk = "high"
+source_refs = ["OEM specs", "A-201"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

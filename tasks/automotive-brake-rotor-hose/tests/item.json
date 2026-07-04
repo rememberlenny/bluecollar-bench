@@ -1,0 +1,64 @@
+{
+  "decision": "fail",
+  "discipline": "2.9 Automotive",
+  "element": "A-201 Brakes",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "safe",
+      "because",
+      "pedal",
+      "firm"
+    ]
+  ],
+  "id": "automotive-brake-rotor-hose",
+  "prompt": "Decide if the repair passes quality control and list the defects that matter.",
+  "required_actions": [
+    [
+      "replace",
+      "rotor"
+    ],
+    [
+      "correct",
+      "hose"
+    ],
+    [
+      "road",
+      "test"
+    ]
+  ],
+  "required_findings": [
+    [
+      "rotor",
+      "below",
+      "minimum"
+    ],
+    [
+      "brake",
+      "hose",
+      "twisted"
+    ],
+    [
+      "pedal",
+      "firm",
+      "not",
+      "sufficient"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "degraded",
+    "installed-defective"
+  ],
+  "scenario": "After a front brake job, the left rotor measures 23.4 mm with a stamped minimum thickness of 24.0 mm. The caliper hose makes a half twist between the hard line and caliper when the wheels are straight. The pads are new and the pedal feels firm during a short parking-lot test.",
+  "source_refs": [
+    "OEM specs",
+    "A-201"
+  ],
+  "task_type": "FD",
+  "tier": "T4",
+  "title": "Brake service: rotor and hose defects"
+}

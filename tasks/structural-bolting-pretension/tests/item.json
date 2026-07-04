@@ -1,0 +1,64 @@
+{
+  "decision": "fail",
+  "discipline": "2.4 Structural & Ironwork",
+  "element": "S-102 Structural bolting",
+  "forbidden": [
+    [
+      "accept"
+    ],
+    [
+      "stable",
+      "enough"
+    ]
+  ],
+  "id": "structural-bolting-pretension",
+  "prompt": "Decide if this connection can be accepted and list what evidence or rework is needed.",
+  "required_actions": [
+    [
+      "verify",
+      "bolt",
+      "grade"
+    ],
+    [
+      "replace",
+      "bolts"
+    ],
+    [
+      "pretension"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "pretension"
+    ],
+    [
+      "snug",
+      "tight"
+    ],
+    [
+      "wrong",
+      "grade"
+    ],
+    [
+      "match",
+      "marks"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "scenario": "A beam splice detail calls for pretensioned A325 bolts. The field photo shows several bolts with head markings that do not match the submitted bolt grade. No turn-of-nut match marks or DTI washer indications are visible. The inspector notes the crew described the joint as 'snug tight only' because the connection looked stable.",
+  "source_refs": [
+    "RCSC Specification",
+    "S-102"
+  ],
+  "task_type": "CC",
+  "tier": "T2",
+  "title": "Structural bolting: pretension evidence"
+}

@@ -1,0 +1,61 @@
+{
+  "decision": "fail",
+  "discipline": "2.2 Piping/Plumbing",
+  "element": "P-201 Traps & venting",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "acceptable",
+      "because",
+      "holds",
+      "water"
+    ]
+  ],
+  "id": "plumbing-s-trap-vanity",
+  "prompt": "Assess whether the drain configuration is acceptable and explain the likely failure mode.",
+  "required_actions": [
+    [
+      "reconfigure",
+      "trap",
+      "arm"
+    ],
+    [
+      "connect",
+      "vent"
+    ],
+    [
+      "add",
+      "cleanout"
+    ]
+  ],
+  "required_findings": [
+    [
+      "s-trap"
+    ],
+    [
+      "siphon",
+      "trap",
+      "seal"
+    ],
+    [
+      "missing",
+      "cleanout"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "scenario": "A bathroom vanity drain drops vertically out of the sink tailpiece into a P-trap, then immediately turns downward through the cabinet floor with no horizontal trap arm before the vent connection. There is no visible cleanout. The homeowner says the trap holds water after the faucet runs but occasionally gurgles when the tub drains.",
+  "source_refs": [
+    "IPC/UPC",
+    "P-201"
+  ],
+  "task_type": "CC",
+  "tier": "T3",
+  "title": "DWV trap and venting: vanity S-trap"
+}

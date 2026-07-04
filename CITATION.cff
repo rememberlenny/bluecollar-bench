@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: Blue-Collar Benchmark
+message: If you use this benchmark, please cite this repository.
+type: software
+version: 0.1.0
+date-released: 2026-07-04
+authors:
+  - name: Blue-Collar Benchmark Maintainers
+license: Apache-2.0

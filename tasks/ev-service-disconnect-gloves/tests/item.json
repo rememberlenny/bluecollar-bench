@@ -1,0 +1,68 @@
+{
+  "decision": "fail",
+  "discipline": "2.9 Automotive",
+  "element": "A-401 High-voltage safety",
+  "forbidden": [
+    [
+      "proceed"
+    ],
+    [
+      "disconnect",
+      "alone",
+      "enough"
+    ]
+  ],
+  "id": "ev-service-disconnect-gloves",
+  "prompt": "Evaluate whether the high-voltage work can proceed and identify the required safety steps.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "wait"
+    ],
+    [
+      "meter",
+      "verify"
+    ],
+    [
+      "use",
+      "tested",
+      "gloves"
+    ]
+  ],
+  "required_findings": [
+    [
+      "wait",
+      "time"
+    ],
+    [
+      "verify",
+      "absence",
+      "voltage"
+    ],
+    [
+      "gloves",
+      "expired"
+    ],
+    [
+      "orange",
+      "high",
+      "voltage"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "non-compliant"
+  ],
+  "scenario": "An EV battery service photo shows the orange service disconnect removed and placed on the cowl. The technician immediately begins removing the inverter cover. The class 0 gloves in use have a test date that expired nine months ago. No meter verification of absence of voltage is shown.",
+  "source_refs": [
+    "OEM HV procedures",
+    "A-401"
+  ],
+  "task_type": "HAZ",
+  "tier": "T4",
+  "title": "EV high-voltage safety: incomplete isolation"
+}

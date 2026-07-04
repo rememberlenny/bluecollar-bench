@@ -1,0 +1,11 @@
+[project]
+name = "bluecollar-bench"
+version = "0.1.0"
+description = "Harbor tasks for a blue-collar trade-work AI benchmark."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+
+[tool.ruff]
+line-length = 120
