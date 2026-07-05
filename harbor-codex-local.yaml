@@ -1,0 +1,6 @@
+services:
+  main:
+    network_mode: host
+    security_opt:
+      - seccomp=unconfined
+      - apparmor=unconfined

@@ -21,6 +21,10 @@ DOCKERFILE = """\
 FROM python:3.13-slim
 
 WORKDIR /app
+RUN apt-get update \\
+    && apt-get install -y --no-install-recommends ca-certificates curl nodejs npm ripgrep \\
+    && npm install -g @openai/codex@latest \\
+    && rm -rf /var/lib/apt/lists/*
 RUN useradd -m agent && mkdir -p /app /logs/verifier /logs/agent && chmod -R 777 /app /logs
 """
 
@@ -296,7 +300,7 @@ def render_task_toml(item: dict) -> str:
         user = "root"
 
         [environment]
-        network_mode = "no-network"
+        network_mode = "public"
         build_timeout_sec = 600.0
         cpus = 1
         memory_mb = 1024

@@ -60,15 +60,19 @@ if [[ -z "$AGENT" || -z "$MODEL" ]]; then
   exit 2
 fi
 
-if ! command -v harbor >/dev/null 2>&1; then
+if command -v harbor >/dev/null 2>&1; then
+  HARBOR_BIN="$(command -v harbor)"
+elif [[ -x ".venv/bin/harbor" ]]; then
+  HARBOR_BIN=".venv/bin/harbor"
+else
   echo "harbor is not installed. Install with: uv tool install harbor" >&2
   exit 127
 fi
 
 if [[ -n "$TASK_ID" ]]; then
   echo "==> harbor run -p tasks/$TASK_ID -a $AGENT -m $MODEL"
-  harbor run -p "tasks/$TASK_ID" -a "$AGENT" -m "$MODEL" -n "$N_CONCURRENT" "${EXTRA_ARGS[@]}"
+  "$HARBOR_BIN" run -p "tasks/$TASK_ID" -a "$AGENT" -m "$MODEL" -n "$N_CONCURRENT" "${EXTRA_ARGS[@]}"
 else
   echo "==> harbor run -p . -a $AGENT -m $MODEL -n $N_CONCURRENT"
-  harbor run -p . -a "$AGENT" -m "$MODEL" -n "$N_CONCURRENT" "${EXTRA_ARGS[@]}"
+  "$HARBOR_BIN" run -p . -a "$AGENT" -m "$MODEL" -n "$N_CONCURRENT" "${EXTRA_ARGS[@]}"
 fi
