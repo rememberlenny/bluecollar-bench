@@ -1,0 +1,9 @@
+{
+  "catalog_sha256": "3d917f30ba6d3ee7811c082f3839aa0e2c3cc9e42578b1b7320a058b68901373",
+  "collected_at": "2026-07-05T23:21:23+00:00",
+  "git_commit": "5b2c706b62f28fee8bf1f7dd3e7232256fcacc3d",
+  "path": "benchmark/runs/gpt55_full_20260705_5b2c706",
+  "run": "gpt55_full_20260705_5b2c706",
+  "source_runs_dir": "/root/spaceship/bluecollar-bench/jobs/gpt55_full_20260705_5b2c706",
+  "tasks_scored": 1049
+}

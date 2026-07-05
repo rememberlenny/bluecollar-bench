@@ -69,6 +69,19 @@ def collect_rows(runs_dir: Path, by_id: dict[str, dict]) -> list[dict]:
     for reward_path in runs_dir.rglob("reward.json"):
         task_id = next((part for part in reversed(reward_path.parts) if part in task_ids), None)
         if not task_id:
+            trial_dir = reward_path.parents[1]
+            for metadata_path in [trial_dir / "result.json", trial_dir / "config.json"]:
+                try:
+                    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+                except Exception:
+                    continue
+                task_path = metadata.get("task_id", {}).get("path") or metadata.get("task", {}).get("path")
+                if task_path:
+                    candidate = Path(task_path).name
+                    if candidate in task_ids:
+                        task_id = candidate
+                        break
+        if not task_id:
             continue
         try:
             metrics = json.loads(reward_path.read_text(encoding="utf-8"))
