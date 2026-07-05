@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "permit",
-    "scope",
-    "exceeded"
+    "51b watch permit",
+    "smolder ignition fire combustible"
   ],
   "actions": [
     "correct",

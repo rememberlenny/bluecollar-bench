@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "belt tension off (deflection measurement - ME)",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-302 Belts, sheaves & couplings",
   "element_code": "M-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t4-m-302-ts-belts-sheaves-couplings",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "belt"
+      "tension",
+      "alignment",
+      "match"
     ],
     [
-      "tension"
-    ],
-    [
-      "deflection"
+      "slip",
+      "wear",
+      "vibration",
+      "throw"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T4 work setting, the evaluated element is M-302 Belts, sheaves & couplings within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The field notes describe visible cues consistent with: visible cue visible cue off (visible cue measurement - ME). The work is being assessed at the staged lifecycle state with source anchors mfr guides.",
+  "scenario": "In a T4 work setting, the evaluated element is M-302 Belts, sheaves & couplings within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The observed field condition is: belt tension off (deflection measurement - ME). The work is being assessed at the staged lifecycle state with source anchors mfr guides.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "mfr guides"

@@ -235,6 +235,11 @@ def render_instruction(item: dict) -> str:
             '  "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],',
             '  "s3_percent": 0,',
             '  "value": 0,',
+            '  "sound_source": "component or source of the sound, when asked",',
+            '  "confidence": 0.0,',
+            '  "event_time": 0.0,',
+            '  "rate": 0.0,',
+            '  "order": ["step-id", "..."],',
             '  "workable": ["activity ID", "..."],',
             '  "findings": ["short defect or hazard finding", "..."],',
             '  "actions": ["immediate corrective action", "..."],',
@@ -245,6 +250,7 @@ def render_instruction(item: dict) -> str:
             "",
             "Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.",
             "Use `value` for the numeric reading or computed quantity when the task asks for one.",
+            "Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.",
             "Use `workable` for a list of activity IDs when the task asks what work can still start.",
             "",
             "## Source anchors",
@@ -279,6 +285,18 @@ def render_solution(item: dict) -> str:
     }
     if isinstance(item.get("expected_value"), (int, float)):
         answer["value"] = item["expected_value"]
+    if isinstance(item.get("expected_rate"), (int, float)):
+        answer["rate"] = item["expected_rate"]
+    if isinstance(item.get("expected_event_time"), (int, float)):
+        answer["event_time"] = item["expected_event_time"]
+    if isinstance(item.get("expected_order"), list):
+        answer["order"] = item["expected_order"]
+    if isinstance(item.get("expected_sound_source"), str):
+        answer["sound_source"] = item["expected_sound_source"]
+    elif isinstance(item.get("expected_sound_source"), list) and item["expected_sound_source"]:
+        answer["sound_source"] = item["expected_sound_source"][0]
+    if any(key in item for key in ["expected_sound_source", "expected_rate", "expected_event_time", "expected_order"]):
+        answer["confidence"] = 1.0
     if item.get("expected_set") is not None:
         answer[item.get("set_field", "workable")] = item["expected_set"]
     payload = json.dumps(answer, indent=2)
@@ -305,10 +323,26 @@ def render_task_toml(item: dict) -> str:
     media_refs = ", ".join(json.dumps(entry if isinstance(entry, str) else entry.get("path", "")) for entry in item.get("media", []))
     expected_value = item.get("expected_value")
     value_tolerance = item.get("value_tolerance")
+    expected_rate = item.get("expected_rate")
+    rate_tolerance = item.get("rate_tolerance")
+    expected_event_time = item.get("expected_event_time")
+    event_time_tolerance = item.get("event_time_tolerance")
     expected_value_present = isinstance(expected_value, (int, float))
     value_tolerance_present = isinstance(value_tolerance, (int, float))
+    expected_rate_present = isinstance(expected_rate, (int, float))
+    rate_tolerance_present = isinstance(rate_tolerance, (int, float))
+    expected_event_time_present = isinstance(expected_event_time, (int, float))
+    event_time_tolerance_present = isinstance(event_time_tolerance, (int, float))
     expected_value_toml = str(float(expected_value)) if expected_value_present else "0.0"
     value_tolerance_toml = str(float(value_tolerance)) if value_tolerance_present else "0.0"
+    expected_rate_toml = str(float(expected_rate)) if expected_rate_present else "0.0"
+    rate_tolerance_toml = str(float(rate_tolerance)) if rate_tolerance_present else "0.0"
+    expected_event_time_toml = str(float(expected_event_time)) if expected_event_time_present else "0.0"
+    event_time_tolerance_toml = str(float(event_time_tolerance)) if event_time_tolerance_present else "0.0"
+    expected_order = ", ".join(json.dumps(step) for step in item.get("expected_order", []))
+    expected_sound_source = json.dumps(item.get("expected_sound_source", ""))
+    confusable_with = json.dumps(item.get("confusable_with", ""))
+    reduction_test = json.dumps(item.get("reduction_test", ""))
     return textwrap.dedent(
         f"""\
         schema_version = "1.3"
@@ -337,6 +371,16 @@ def render_task_toml(item: dict) -> str:
         expected_value_present = {str(expected_value_present).lower()}
         expected_value = {expected_value_toml}
         value_tolerance = {value_tolerance_toml}
+        expected_rate_present = {str(expected_rate_present).lower()}
+        expected_rate = {expected_rate_toml}
+        rate_tolerance = {rate_tolerance_toml}
+        expected_event_time_present = {str(expected_event_time_present).lower()}
+        expected_event_time = {expected_event_time_toml}
+        event_time_tolerance = {event_time_tolerance_toml}
+        expected_order = [{expected_order}]
+        expected_sound_source = {expected_sound_source}
+        confusable_with = {confusable_with}
+        reduction_test = {reduction_test}
         generation = "{item.get("generation", "unknown")}"
         source_refs = [{source_refs}]
 

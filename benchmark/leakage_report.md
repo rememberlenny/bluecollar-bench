@@ -1,11 +1,11 @@
 # Leakage Audit
 
-Total items: 1005
+Total items: 1049
 
 | Bucket | Items |
 |---|---:|
-| clean (<40%) | 969 |
-| partial (40-79%) | 36 |
+| clean (<40%) | 874 |
+| partial (40-79%) | 175 |
 | leaked (>=80%) | 0 |
 
 Leaked items reward scenario-echoing. Remediation: rewrite scenarios as

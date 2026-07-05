@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "gfci",
-    "missing",
-    "kitchen"
+    "406 210.8 gfci",
+    "shock polarity ground protection"
   ],
   "actions": [
     "diagnose",

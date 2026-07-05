@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "reverse",
-    "lapped",
-    "upper"
+    "shingle lap sequence",
+    "intrusion drainage rot behind"
   ],
   "actions": [
     "stop",

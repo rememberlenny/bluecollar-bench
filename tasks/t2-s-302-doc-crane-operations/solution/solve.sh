@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "rigging",
-    "radius"
+    "chart radius configuration",
+    "tip overload stability contact"
   ],
   "actions": [
     "compare",

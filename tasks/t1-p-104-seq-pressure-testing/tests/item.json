@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "instruments not isolated before hydro",
   "discipline": "2.2 Mechanical - Piping & Plumbing",
   "discipline_code": "2.2",
   "element": "P-104 Pressure testing",
   "element_code": "P-104",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-p-104-seq-pressure-testing",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "instruments"
+      "345",
+      "isolation",
+      "calibrated"
     ],
     [
-      "isolated"
-    ],
-    [
-      "hydro"
+      "overpressure",
+      "instrument",
+      "damage",
+      "energy"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is P-104 Pressure testing within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The field notes describe visible cues consistent with: visible cue not visible cue before visible cue. The work is being assessed at the in-progress lifecycle state with source anchors ASME B31.3 \u00a7345.",
+  "scenario": "In a T1 work setting, the evaluated element is P-104 Pressure testing within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The observed field condition is: instruments not isolated before hydro. The work is being assessed at the in-progress lifecycle state with source anchors ASME B31.3 \u00a7345.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ASME B31.3 \u00a7345"

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "no gap at floor",
   "discipline": "2.6 Carpentry & Finishes",
   "discipline_code": "2.6",
   "element": "F-301 Drywall & finishing",
   "element_code": "F-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-f-301-id-drywall-finishing",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
@@ -36,7 +39,15 @@
   ],
   "required_findings": [
     [
-      "floor"
+      "ga-216",
+      "spacing",
+      "rated"
+    ],
+    [
+      "cracking",
+      "sag",
+      "fire",
+      "integrity"
     ]
   ],
   "risk": "medium",
@@ -45,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is F-301 Drywall & finishing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The field notes describe visible cues consistent with: no gap at visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors GA-216, IRC.",
+  "scenario": "In a T3 work setting, the evaluated element is F-301 Drywall & finishing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The observed field condition is: no gap at floor. The work is being assessed at the rough-complete lifecycle state with source anchors GA-216, IRC.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "GA-216",

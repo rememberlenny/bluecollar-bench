@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "missing",
-    "guides",
-    "expansion"
+    "support travel guide",
+    "stress sag vibration load"
   ],
   "actions": [
     "diagnose",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "defect",
-    "passed",
-    "downstream"
+    "containment disposition andon",
+    "escape downstream quarantine customer"
   ],
   "actions": [
     "stop",

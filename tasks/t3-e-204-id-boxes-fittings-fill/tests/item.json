@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "<6 in",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-204 Boxes, fittings & fill",
   "element_code": "E-204",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-e-204-id-boxes-fittings-fill",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
@@ -36,10 +39,15 @@
   ],
   "required_findings": [
     [
-      "free"
+      "314",
+      "fill",
+      "volume"
     ],
     [
-      "conductor"
+      "overheat",
+      "damage",
+      "splice",
+      "accessibility"
     ]
   ],
   "risk": "medium",
@@ -48,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is E-204 Boxes, fittings & fill within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The field notes describe visible cues consistent with: <6 in. visible cue visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 314.16, 300.14, 314.28 (pull box sizing).",
+  "scenario": "In a T3 work setting, the evaluated element is E-204 Boxes, fittings & fill within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: <6 in. free conductor. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 314.16, 300.14, 314.28 (pull box sizing).",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 314.16",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "roofing",
-    "nails",
-    "joist"
+    "listed fastener schedule",
+    "withdrawal shear capacity uplift"
   ],
   "actions": [
     "identify",

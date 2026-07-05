@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "alignment done before final pipe connection (pipe strain - SEQ/TRD)",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-201 Shaft alignment",
   "element_code": "M-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "done"
+      "tolerance",
+      "soft",
+      "foot"
     ],
     [
-      "final"
-    ],
-    [
-      "pipe"
+      "vibration",
+      "coupling",
+      "bearing",
+      "wear"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T5 work setting, the evaluated element is M-201 Shaft alignment within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.2 Alignment. The field notes describe visible cues consistent with: alignment visible cue before visible cue visible cue connection (visible cue strain - SEQ/TRD). The work is being assessed at the tested/inspected lifecycle state with source anchors API 686, laser system manuals. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T5 work setting, the evaluated element is M-201 Shaft alignment within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.2 Alignment. The observed field condition is: alignment done before final pipe connection (pipe strain - SEQ/TRD). The work is being assessed at the tested/inspected lifecycle state with source anchors API 686, laser system manuals. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "API 686",

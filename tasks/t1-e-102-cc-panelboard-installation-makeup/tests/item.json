@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "double-tapped breakers (non-listed)",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-102 Panelboard installation & makeup",
   "element_code": "E-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-e-102-cc-panelboard-installation-makeup",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "double"
+      "408",
+      "listing",
+      "termination"
     ],
     [
-      "tapped"
-    ],
-    [
-      "breakers"
+      "overheat",
+      "fault",
+      "arc",
+      "misoperation"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: visible cue-visible cue visible cue (non-listed). The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4.",
+  "scenario": "In a T1 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: double-tapped breakers (non-listed). The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 408",

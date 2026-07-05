@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "insulation",
-    "contact"
+    "410 rating listed",
+    "heat fire insulation moisture"
   ],
   "actions": [
     "correct",

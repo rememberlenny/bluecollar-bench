@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "segregation from excessive drop height",
   "discipline": "2.5 Concrete & Masonry",
   "discipline_code": "2.5",
   "element": "C-201 Concrete placement",
   "element_code": "C-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-c-201-seq-concrete-placement",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "segregation"
+      "301",
+      "consolidation",
+      "placement"
     ],
     [
-      "excessive"
-    ],
-    [
-      "drop"
+      "honeycomb",
+      "segregation",
+      "cold",
+      "strength"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T3 work setting, the evaluated element is C-201 Concrete placement within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The field notes describe visible cues consistent with: visible cue from visible cue visible cue height. The work is being assessed at the in-progress lifecycle state with source anchors ACI 301, 304.",
+  "scenario": "In a T3 work setting, the evaluated element is C-201 Concrete placement within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The observed field condition is: segregation from excessive drop height. The work is being assessed at the in-progress lifecycle state with source anchors ACI 301, 304.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ACI 301",

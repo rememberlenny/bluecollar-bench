@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "CSST not bonded",
   "discipline": "2.2 Mechanical - Piping & Plumbing",
   "discipline_code": "2.2",
   "element": "P-303 Gas piping",
   "element_code": "P-303",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t4-p-303-haz-gas-piping",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,10 +41,15 @@
   ],
   "required_findings": [
     [
-      "csst"
+      "fuel",
+      "54",
+      "bond"
     ],
     [
-      "bonded"
+      "leak",
+      "ignition",
+      "debris",
+      "lightning"
     ]
   ],
   "risk": "critical",
@@ -51,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is P-303 Gas piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The field notes describe visible cues consistent with: visible cue not visible cue. The work is being assessed at the in-progress lifecycle state with source anchors IFGC, NFPA 54.",
+  "scenario": "In a T4 work setting, the evaluated element is P-303 Gas piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The observed field condition is: CSST not bonded. The work is being assessed at the in-progress lifecycle state with source anchors IFGC, NFPA 54.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IFGC",

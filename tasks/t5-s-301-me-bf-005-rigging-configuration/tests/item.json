@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "shackle side-loaded",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-301 Rigging configuration",
   "element_code": "S-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t5-s-301-me-bf-005-rigging-configuration",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "shackle"
+      "b30",
+      "angle",
+      "rating"
     ],
     [
-      "side"
-    ],
-    [
-      "loaded"
+      "tension",
+      "overload",
+      "capacity",
+      "failure"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The field notes describe visible cues consistent with: visible cue visible cue-visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors ASME B30, OSHA 1926.251. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T5 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: shackle side-loaded. The work is being assessed at the rough-complete lifecycle state with source anchors ASME B30, OSHA 1926.251. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ASME B30",

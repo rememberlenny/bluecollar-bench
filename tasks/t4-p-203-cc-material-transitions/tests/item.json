@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "ABS-to-PVC glued with wrong cement",
   "discipline": "2.2 Mechanical - Piping & Plumbing",
   "discipline_code": "2.2",
   "element": "P-203 Material transitions",
   "element_code": "P-203",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "glued"
+      "listed",
+      "transition",
+      "shielded"
     ],
     [
-      "wrong"
-    ],
-    [
-      "cement"
+      "shear",
+      "separation",
+      "corrosion",
+      "galvanic"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is P-203 Material transitions within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The field notes describe visible cues consistent with: ABS-to-PVC visible cue with not matching the specified requirement visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors IPC, mfr listings.",
+  "scenario": "In a T4 work setting, the evaluated element is P-203 Material transitions within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The observed field condition is: ABS-to-PVC glued with wrong cement. The work is being assessed at the rough-complete lifecycle state with source anchors IPC, mfr listings.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IPC",

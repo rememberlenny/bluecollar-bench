@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "pipe boot cracked (T4 FD)",
   "discipline": "2.6 Carpentry & Finishes",
   "discipline_code": "2.6",
   "element": "F-202 Roofing",
   "element_code": "F-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "pipe"
+      "905",
+      "fastening",
+      "underlayment"
     ],
     [
-      "boot"
-    ],
-    [
-      "cracked"
+      "uplift",
+      "blowoff",
+      "intrusion",
+      "ice"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is F-202 Roofing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The field notes describe visible cues consistent with: visible cue visible cue visible cue (T4 FD). The work is being assessed at the rough-complete lifecycle state with source anchors IRC R905, mfr specs. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T5 work setting, the evaluated element is F-202 Roofing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The observed field condition is: pipe boot cracked (T4 FD). The work is being assessed at the rough-complete lifecycle state with source anchors IRC R905, mfr specs. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R905",

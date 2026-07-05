@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "miswire",
-    "diagnosis"
+    "700 egress unswitched",
+    "outage evacuation life safety"
   ],
   "actions": [
     "compare",

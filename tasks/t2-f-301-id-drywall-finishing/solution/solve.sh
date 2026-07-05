@@ -12,7 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "floor"
+    "ga-216 spacing rated",
+    "cracking sag fire integrity"
   ],
   "actions": [
     "identify",

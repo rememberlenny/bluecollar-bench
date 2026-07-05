@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "welding without qualified WPS parameters",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-103 Structural welding",
   "element_code": "S-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t5-s-103-doc-structural-welding",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
@@ -36,10 +39,15 @@
   ],
   "required_findings": [
     [
-      "qualified"
+      "d1.1",
+      "wps",
+      "profile"
     ],
     [
-      "parameters"
+      "fusion",
+      "cracking",
+      "capacity",
+      "fatigue"
     ]
   ],
   "risk": "medium",
@@ -48,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T5 work setting, the evaluated element is S-103 Structural welding within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The field notes describe visible cues consistent with: welding without visible cue WPS visible cue. The work is being assessed at the tested/inspected lifecycle state with source anchors AWS D1.1. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T5 work setting, the evaluated element is S-103 Structural welding within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The observed field condition is: welding without qualified WPS parameters. The work is being assessed at the tested/inspected lifecycle state with source anchors AWS D1.1. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "AWS D1.1"

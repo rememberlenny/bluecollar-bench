@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "missing",
-    "seal",
-    "fitting"
+    "500 seal classified",
+    "ignition vapor migration explosion"
   ],
   "actions": [
     "correct",

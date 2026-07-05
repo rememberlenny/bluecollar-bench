@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "spotter",
-    "while",
-    "backing"
+    "swing spotter radius",
+    "struck crush caught backing"
   ],
   "actions": [
     "reject shortcut",

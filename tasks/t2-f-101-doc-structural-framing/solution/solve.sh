@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "missing",
-    "jack",
-    "studs"
+    "irc span load",
+    "deflection capacity sag failure"
   ],
   "actions": [
     "compare",

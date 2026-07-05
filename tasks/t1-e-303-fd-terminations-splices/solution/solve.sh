@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "splice",
-    "outside"
+    "110.14 termination torque",
+    "resistance overheat arc loose"
   ],
   "actions": [
     "diagnose",

@@ -15,7 +15,7 @@ You are evaluating a blue-collar trade-work scenario. Produce a concise, inspect
 
 ## Scenario
 
-In a T5 work setting, the evaluated element is S-103 Structural welding within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The field notes describe visible cues consistent with: not present where expected visible cue per visible cue (DOC: compare to detail). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1.
+In a T5 work setting, the evaluated element is S-103 Structural welding within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The observed field condition is: missing weld per drawing (DOC: compare to detail). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1.
 
 ## Task
 
@@ -33,6 +33,11 @@ Write valid JSON to `/app/answer.json` with this shape:
   "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
   "s3_percent": 0,
   "value": 0,
+  "sound_source": "component or source of the sound, when asked",
+  "confidence": 0.0,
+  "event_time": 0.0,
+  "rate": 0.0,
+  "order": ["step-id", "..."],
   "workable": ["activity ID", "..."],
   "findings": ["short defect or hazard finding", "..."],
   "actions": ["immediate corrective action", "..."],
@@ -43,6 +48,7 @@ Write valid JSON to `/app/answer.json` with this shape:
 
 Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
 Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.
 Use `workable` for a list of activity IDs when the task asks what work can still start.
 
 ## Source anchors

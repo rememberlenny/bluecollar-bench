@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "riding in bucket",
   "discipline": "2.11 Sitework & Utilities",
   "discipline_code": "2.11",
   "element": "U-301 Equipment safety",
   "element_code": "U-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -37,10 +40,15 @@
   ],
   "required_findings": [
     [
-      "riding"
+      "swing",
+      "spotter",
+      "radius"
     ],
     [
-      "bucket"
+      "struck",
+      "crush",
+      "caught",
+      "backing"
     ]
   ],
   "risk": "high",
@@ -50,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is U-301 Equipment safety within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.3 Heavy Equipment Operation. The field notes describe visible cues consistent with: visible cue in visible cue. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart O. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is U-301 Equipment safety within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.3 Heavy Equipment Operation. The observed field condition is: riding in bucket. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart O. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart O"

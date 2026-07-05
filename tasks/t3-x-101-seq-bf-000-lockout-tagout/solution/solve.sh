@@ -12,7 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "lock"
+    "1910.147 energy verification",
+    "unexpected release stored startup"
   ],
   "actions": [
     "stop",

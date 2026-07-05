@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missing box extension on deep finish",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-204 Boxes, fittings & fill",
   "element_code": "E-204",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-e-204-me-boxes-fittings-fill",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "missing"
+      "314",
+      "fill",
+      "volume"
     ],
     [
-      "extension"
-    ],
-    [
-      "deep"
+      "overheat",
+      "damage",
+      "splice",
+      "accessibility"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is E-204 Boxes, fittings & fill within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The field notes describe visible cues consistent with: not present where expected box visible cue on visible cue finish. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 314.16, 300.14, 314.28 (pull box sizing). The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T3 work setting, the evaluated element is E-204 Boxes, fittings & fill within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: missing box extension on deep finish. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 314.16, 300.14, 314.28 (pull box sizing). The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 314.16",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "skipped",
-    "verification",
-    "step"
+    "standard work instruction",
+    "deviation escape defect downstream"
   ],
   "actions": [
     "complete",

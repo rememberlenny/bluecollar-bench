@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "line",
-    "reversed"
+    "210.8 210.12 line load",
+    "protection downstream nuisance shock"
   ],
   "actions": [
     "diagnose",

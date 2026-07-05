@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "aluminum",
-    "device",
-    "rated"
+    "310 ampacity voltage drop",
+    "overheat insulation capacity"
   ],
   "actions": [
     "measure",

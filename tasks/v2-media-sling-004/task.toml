@@ -24,6 +24,16 @@ media = ["sling_004.png"]
 expected_value_present = true
 expected_value = 2366.0
 value_tolerance = 71.0
+expected_rate_present = false
+expected_rate = 0.0
+rate_tolerance = 0.0
+expected_event_time_present = false
+expected_event_time = 0.0
+event_time_tolerance = 0.0
+expected_order = []
+expected_sound_source = ""
+confusable_with = ""
+reduction_test = ""
 generation = "synthetic-media-v2"
 source_refs = ["ASME B30.9", "OSHA 1926.251"]
 

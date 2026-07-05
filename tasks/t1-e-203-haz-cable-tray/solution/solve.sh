@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "used",
-    "walkway"
+    "392 fill bonding",
+    "overheat derating fault path"
   ],
   "actions": [
     "stop work",

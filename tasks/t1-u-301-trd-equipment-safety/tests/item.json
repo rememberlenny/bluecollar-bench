@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "no spotter while backing near trench",
   "discipline": "2.11 Sitework & Utilities",
   "discipline_code": "2.11",
   "element": "U-301 Equipment safety",
   "element_code": "U-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-u-301-trd-equipment-safety",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
@@ -37,12 +40,14 @@
   ],
   "required_findings": [
     [
-      "spotter"
+      "swing",
+      "spotter",
+      "radius"
     ],
     [
-      "while"
-    ],
-    [
+      "struck",
+      "crush",
+      "caught",
       "backing"
     ]
   ],
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is U-301 Equipment safety within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.3 Heavy Equipment Operation. The field notes describe visible cues consistent with: no visible cue visible cue visible cue near trench. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart O.",
+  "scenario": "In a T1 work setting, the evaluated element is U-301 Equipment safety within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.3 Heavy Equipment Operation. The observed field condition is: no spotter while backing near trench. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart O.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart O"

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "harness",
-    "impact",
-    "indicator"
+    "anchorage 5000 inspection",
+    "arrest fall deployment fatality"
   ],
   "actions": [
     "identify",

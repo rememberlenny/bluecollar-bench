@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "unshielded",
-    "wrong",
-    "rubber"
+    "listed transition shielded",
+    "shear separation corrosion galvanic"
   ],
   "actions": [
     "replace",

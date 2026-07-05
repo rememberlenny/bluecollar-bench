@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "missing",
-    "tracer",
-    "wire"
+    "bedding lift compaction",
+    "settlement point load deflection"
   ],
   "actions": [
     "stop",

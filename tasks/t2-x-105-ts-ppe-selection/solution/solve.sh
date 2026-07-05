@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "flash",
-    "rating",
-    "below"
+    "70e category class",
+    "arc flash exposure inadequate"
   ],
   "actions": [
     "replace",

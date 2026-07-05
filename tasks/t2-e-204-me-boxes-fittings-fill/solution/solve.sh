@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "missing",
-    "extension",
-    "deep"
+    "314 fill volume",
+    "overheat damage splice accessibility"
   ],
   "actions": [
     "measure",

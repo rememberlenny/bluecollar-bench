@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "unsupported runs",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-302 NM/MC cable routing & protection",
   "element_code": "E-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-e-302-haz-nm-mc-cable-routing-protection",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.38,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,10 +41,16 @@
   ],
   "required_findings": [
     [
-      "unsupported"
+      "300.4",
+      "334",
+      "protection",
+      "support"
     ],
     [
-      "runs"
+      "penetration",
+      "screw",
+      "nail",
+      "damage"
     ]
   ],
   "risk": "critical",
@@ -51,7 +60,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T3 work setting, the evaluated element is E-302 NM/MC cable routing & protection within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The field notes describe visible cues consistent with: not held at the expected intervals visible cue. The work is being assessed at the in-progress lifecycle state with source anchors NEC 300.4, 334, 330.",
+  "scenario": "In a T3 work setting, the evaluated element is E-302 NM/MC cable routing & protection within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The observed field condition is: unsupported runs. The work is being assessed at the in-progress lifecycle state with source anchors NEC 300.4, 334, 330.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 300.4",

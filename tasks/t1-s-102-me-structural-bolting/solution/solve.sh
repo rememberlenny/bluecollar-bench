@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "wrong",
-    "bolt",
-    "grade"
+    "rcsc pretension rotation",
+    "slip fatigue clamping joint"
   ],
   "actions": [
     "measure",

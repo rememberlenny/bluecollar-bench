@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "missed",
-    "weld",
-    "drawing"
+    "wps parameter gauge",
+    "fusion undersize strength reject"
   ],
   "actions": [
     "correct",

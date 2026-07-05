@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "notching",
-    "boring",
-    "beyond"
+    "irc span load",
+    "deflection capacity sag failure"
   ],
   "actions": [
     "measure",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "elongation",
-    "record",
-    "calculated"
+    "pti strength elongation",
+    "ejection anchorage strand failure"
   ],
   "actions": [
     "compare",

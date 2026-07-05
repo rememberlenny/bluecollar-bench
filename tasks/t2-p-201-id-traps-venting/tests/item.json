@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "flat/horizontal vent below flood rim",
   "discipline": "2.2 Mechanical - Piping & Plumbing",
   "discipline_code": "2.2",
   "element": "P-201 Traps & venting",
   "element_code": "P-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-p-201-id-traps-venting",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "flat"
+      "trap",
+      "vent",
+      "ipc"
     ],
     [
-      "horizontal"
-    ],
-    [
-      "vent"
+      "siphon",
+      "sewer",
+      "gas",
+      "seal"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is P-201 Traps & venting within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The field notes describe visible cues consistent with: visible cue/visible cue visible cue below flood rim. The work is being assessed at the rough-complete lifecycle state with source anchors IPC/UPC.",
+  "scenario": "In a T2 work setting, the evaluated element is P-201 Traps & venting within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The observed field condition is: flat/horizontal vent below flood rim. The work is being assessed at the rough-complete lifecycle state with source anchors IPC/UPC.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IPC/UPC"

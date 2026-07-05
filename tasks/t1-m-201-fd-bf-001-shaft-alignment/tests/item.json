@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "thermal growth offset ignored on hot service",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-201 Shaft alignment",
   "element_code": "M-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "thermal"
+      "tolerance",
+      "soft",
+      "foot"
     ],
     [
-      "growth"
-    ],
-    [
-      "offset"
+      "vibration",
+      "coupling",
+      "bearing",
+      "wear"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T1 work setting, the evaluated element is M-201 Shaft alignment within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.2 Alignment. The field notes describe visible cues consistent with: visible cue visible cue visible cue ignored on hot service. The work is being assessed at the in-service lifecycle state with source anchors API 686, laser system manuals. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is M-201 Shaft alignment within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.2 Alignment. The observed field condition is: thermal growth offset ignored on hot service. The work is being assessed at the in-service lifecycle state with source anchors API 686, laser system manuals. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "API 686",

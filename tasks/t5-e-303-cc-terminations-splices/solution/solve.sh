@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "backstabbed",
-    "device",
-    "circuit"
+    "110.14 termination torque",
+    "resistance overheat arc loose"
   ],
   "actions": [
     "correct",

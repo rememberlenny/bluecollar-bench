@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "gauge",
-    "readout",
-    "interpretation"
+    "subcool superheat chart",
+    "overcharge undercharge flood starve"
   ],
   "actions": [
     "measure",

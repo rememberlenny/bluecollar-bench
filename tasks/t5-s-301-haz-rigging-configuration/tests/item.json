@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "shackle side-loaded",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-301 Rigging configuration",
   "element_code": "S-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t5-s-301-haz-rigging-configuration",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,13 +41,15 @@
   ],
   "required_findings": [
     [
-      "shackle"
+      "b30",
+      "angle",
+      "rating"
     ],
     [
-      "side"
-    ],
-    [
-      "loaded"
+      "tension",
+      "overload",
+      "capacity",
+      "failure"
     ]
   ],
   "risk": "critical",
@@ -54,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T5 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The field notes describe visible cues consistent with: visible cue visible cue-visible cue. The work is being assessed at the in-progress lifecycle state with source anchors ASME B30, OSHA 1926.251.",
+  "scenario": "In a T5 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: shackle side-loaded. The work is being assessed at the in-progress lifecycle state with source anchors ASME B30, OSHA 1926.251.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ASME B30",

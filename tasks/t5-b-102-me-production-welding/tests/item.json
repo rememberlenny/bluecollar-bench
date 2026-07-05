@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "fillet gauge fail (ME)",
   "discipline": "2.10 Assembly & Fabrication",
   "discipline_code": "2.10",
   "element": "B-102 Production welding",
   "element_code": "B-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t5-b-102-me-production-welding",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "fillet"
-    ],
-    [
+      "wps",
+      "parameter",
       "gauge"
     ],
     [
-      "fail"
+      "fusion",
+      "undersize",
+      "strength",
+      "reject"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is B-102 Production welding within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.1 Fastening & Joining. The field notes describe visible cues consistent with: visible cue visible cue visible cue (ME). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1/D1.3, shop WPS. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T5 work setting, the evaluated element is B-102 Production welding within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.1 Fastening & Joining. The observed field condition is: fillet gauge fail (ME). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1/D1.3, shop WPS. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "AWS D1.1/D1.3",

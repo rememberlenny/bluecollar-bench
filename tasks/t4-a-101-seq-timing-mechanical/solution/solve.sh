@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "plastigauge",
-    "reading"
+    "oem alignment specification",
+    "timing interference misfire damage"
   ],
   "actions": [
     "stop",

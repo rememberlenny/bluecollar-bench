@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "missing",
-    "support"
+    "358 raceway support",
+    "pull damage insulation capacity"
   ],
   "actions": [
     "stop",

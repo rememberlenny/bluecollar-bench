@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "primary/secondary landed reversed",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-104 Transformers (dry-type & pad-mount)",
   "element_code": "E-104",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-e-104-me-transformers-dry-type-pad-mount",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.17,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,14 @@
   ],
   "required_findings": [
     [
-      "primary"
+      "450",
+      "separately",
+      "derived"
     ],
     [
-      "secondary"
-    ],
-    [
-      "landed"
+      "fault",
+      "return",
+      "overheat"
     ]
   ],
   "risk": "medium",
@@ -51,7 +55,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-104 Transformers (dry-type & pad-mount) within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: visible cue/visible cue visible cue reversed. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 450, 250.30. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T2 work setting, the evaluated element is E-104 Transformers (dry-type & pad-mount) within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: primary/secondary landed reversed. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 450, 250.30. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 450",

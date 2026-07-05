@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "missing",
-    "check",
-    "valve"
+    "expansion point check",
+    "cavitation air circulation gravity"
   ],
   "actions": [
     "compare",

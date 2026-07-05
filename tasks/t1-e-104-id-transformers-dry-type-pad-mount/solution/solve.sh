@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "missing",
-    "secondary",
-    "bonding"
+    "450 separately derived",
+    "fault return overheat"
   ],
   "actions": [
     "identify",

@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "disconnect",
-    "sight"
+    "430 overload disconnect",
+    "maintenance unexpected start burnout"
   ],
   "actions": [
     "compare",

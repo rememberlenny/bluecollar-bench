@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "sloping",
-    "wrong",
-    "soil"
+    "subpart p protective",
+    "collapse engulfment fatality cave"
   ],
   "actions": [
     "stop work",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "plenum",
-    "riser",
-    "cable"
+    "568 category plenum",
+    "crosstalk performance smoke toxicity"
   ],
   "actions": [
     "measure",

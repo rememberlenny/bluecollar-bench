@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "PVC expansion fitting omitted on long exterior run",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-202 Rigid & PVC conduit",
   "element_code": "E-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-e-202-cc-rigid-pvc-conduit",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.38,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,16 @@
   ],
   "required_findings": [
     [
-      "expansion"
+      "352",
+      "344",
+      "expansion",
+      "bushing"
     ],
     [
-      "fitting"
-    ],
-    [
-      "omitted"
+      "separation",
+      "abrasion",
+      "joint",
+      "failure"
     ]
   ],
   "risk": "high",
@@ -53,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is E-202 Rigid & PVC conduit within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The field notes describe visible cues consistent with: PVC visible cue visible cue left out of the assembly on long exterior run. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 344, 352.",
+  "scenario": "In a T1 work setting, the evaluated element is E-202 Rigid & PVC conduit within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: PVC expansion fitting omitted on long exterior run. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 344, 352.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 344",

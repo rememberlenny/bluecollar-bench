@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "expansion",
-    "tank",
-    "closed"
+    "504 relief expansion",
+    "scald burst pressure explosion"
   ],
   "actions": [
     "stop work",

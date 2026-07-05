@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "crimp ring fails go/no-go gauge",
   "discipline": "2.2 Mechanical - Piping & Plumbing",
   "discipline_code": "2.2",
   "element": "P-301 PEX & copper installation",
   "element_code": "P-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-p-301-cc-pex-copper-installation",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "crimp"
+      "gauge",
+      "sleeve",
+      "ream"
     ],
     [
-      "ring"
-    ],
-    [
-      "fails"
+      "leak",
+      "erosion",
+      "corrosion",
+      "abrasion"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is P-301 PEX & copper installation within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The field notes describe visible cues consistent with: visible cue visible cue visible cue go/no-go gauge. The work is being assessed at the rough-complete lifecycle state with source anchors IPC, mfr specs.",
+  "scenario": "In a T2 work setting, the evaluated element is P-301 PEX & copper installation within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The observed field condition is: crimp ring fails go/no-go gauge. The work is being assessed at the rough-complete lifecycle state with source anchors IPC, mfr specs.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IPC",

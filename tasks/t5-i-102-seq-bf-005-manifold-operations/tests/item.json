@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "venting trapped pressure to face level (HAZ)",
   "discipline": "2.8 Instrumentation & Controls",
   "discipline_code": "2.8",
   "element": "I-102 Manifold operations",
   "element_code": "I-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t5-i-102-seq-bf-005-manifold-operations",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "venting"
+      "equalize",
+      "sequence",
+      "manifold"
     ],
     [
-      "trapped"
-    ],
-    [
-      "pressure"
+      "overrange",
+      "zero",
+      "shift",
+      "release"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T5 work setting, the evaluated element is I-102 Manifold operations within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.1 Field Instruments. The field notes describe visible cues consistent with: visible cue visible cue visible cue to face level (HAZ). The work is being assessed at the in-progress lifecycle state with source anchors mfr procedures. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T5 work setting, the evaluated element is I-102 Manifold operations within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.1 Field Instruments. The observed field condition is: venting trapped pressure to face level (HAZ). The work is being assessed at the in-progress lifecycle state with source anchors mfr procedures. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "mfr procedures"

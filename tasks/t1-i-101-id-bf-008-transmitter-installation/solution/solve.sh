@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "impulse",
-    "lines",
-    "sloped"
+    "551 impulse orientation",
+    "error gas condensate reading"
   ],
   "actions": [
     "identify",

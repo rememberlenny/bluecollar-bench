@@ -12,7 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "bushing"
+    "352 344 expansion bushing",
+    "separation abrasion joint failure"
   ],
   "actions": [
     "replace",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "missing",
-    "line",
-    "resistor"
+    "nfpa 72 supervision",
+    "undetected trouble notification life"
   ],
   "actions": [
     "compare",

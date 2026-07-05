@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "qualified",
-    "parameters"
+    "d1.1 wps profile",
+    "fusion cracking capacity fatigue"
   ],
   "actions": [
     "compare",

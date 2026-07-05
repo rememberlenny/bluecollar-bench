@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "brake",
-    "hose",
-    "twisted"
+    "minimum specification torque",
+    "fade pulsation runout distortion"
   ],
   "actions": [
     "correct",

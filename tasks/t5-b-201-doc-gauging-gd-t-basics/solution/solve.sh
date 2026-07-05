@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "caliper",
-    "misread",
-    "scale"
+    "datum specification y14.5",
+    "undersize oversize reject tolerance"
   ],
   "actions": [
     "compare",

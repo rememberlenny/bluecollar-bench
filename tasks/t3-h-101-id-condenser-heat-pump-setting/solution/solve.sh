@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "line",
-    "uninsulated",
-    "suction"
+    "clearance manufacturer level",
+    "airflow efficiency oil return"
   ],
   "actions": [
     "identify",

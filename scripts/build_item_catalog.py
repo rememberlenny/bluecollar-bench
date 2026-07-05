@@ -510,10 +510,15 @@ def build_taxonomy(elements: list[Element]) -> dict:
             "modalities": {
                 "text": "Text-only scenario; scenario text may serve as a future photo shot list.",
                 "photo": "Still image fixture.",
-                "video": "Video fixture.",
-                "audio": "Audio fixture.",
+                "image": "Still synthetic or real image fixture.",
+                "audio": "Audio-only fixture where transcript reduction destroys the item.",
+                "video": "Video-only or animation fixture where frame reduction destroys the item.",
                 "infrared": "Thermal/IR image fixture.",
                 "document": "Drawing, checklist, cut sheet, tag, or other document fixture.",
+            },
+            "modality_native_task_suffixes": {
+                "A": "Audio-native task where sound is the signal.",
+                "V": "Video-native task where motion, timing, sequence, or cause-effect is the signal.",
             },
         },
         "item_media_schema": {
@@ -521,6 +526,14 @@ def build_taxonomy(elements: list[Element]) -> dict:
             "media": "Array of media descriptors with type, path, alt, source, and license fields when fixtures are present.",
             "expected_value": "Optional numeric ground truth for instrument readings or computed visual quantities.",
             "value_tolerance": "Allowed absolute error for expected_value when the task asks for a numeric value.",
+            "expected_event_time": "Optional ground-truth timestamp for temporal violations.",
+            "event_time_tolerance": "Allowed absolute error for expected_event_time.",
+            "expected_rate": "Optional ground-truth rate for dynamic video or audio phenomena.",
+            "rate_tolerance": "Allowed absolute error for expected_rate.",
+            "expected_order": "Optional expected event/procedure sequence for edit-distance grading.",
+            "expected_sound_source": "Optional source/component label for audio-native fault signatures.",
+            "confusable_with": "Optional linked item id for deliberate confusable-pair reporting.",
+            "reduction_test": "Why transcript/frame reduction cannot preserve the answer.",
         },
         "state_model": {
             "s1_lifecycle": [

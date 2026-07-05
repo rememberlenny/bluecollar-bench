@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missing secondary bonding jumper (SDS)",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-104 Transformers (dry-type & pad-mount)",
   "element_code": "E-104",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-e-104-id-transformers-dry-type-pad-mount",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.17,
   "media": [],
   "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
@@ -36,13 +39,14 @@
   ],
   "required_findings": [
     [
-      "missing"
+      "450",
+      "separately",
+      "derived"
     ],
     [
-      "secondary"
-    ],
-    [
-      "bonding"
+      "fault",
+      "return",
+      "overheat"
     ]
   ],
   "risk": "high",
@@ -51,7 +55,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is E-104 Transformers (dry-type & pad-mount) within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: not present where expected visible cue visible cue jumper (SDS). The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 450, 250.30.",
+  "scenario": "In a T1 work setting, the evaluated element is E-104 Transformers (dry-type & pad-mount) within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: missing secondary bonding jumper (SDS). The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 450, 250.30.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 450",

@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "double",
-    "tapped",
-    "breakers"
+    "408 listing termination",
+    "overheat fault arc misoperation"
   ],
   "actions": [
     "correct",

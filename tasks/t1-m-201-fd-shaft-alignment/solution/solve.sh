@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "thermal",
-    "growth",
-    "offset"
+    "tolerance soft foot",
+    "vibration coupling bearing wear"
   ],
   "actions": [
     "diagnose",

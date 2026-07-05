@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "pressing force through rolling elements (wrong race)",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-301 Bearings & seals",
   "element_code": "M-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t5-m-301-fd-bearings-seals",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "pressing"
+      "race",
+      "mounting",
+      "fit"
     ],
     [
-      "force"
-    ],
-    [
-      "through"
+      "brinell",
+      "premature",
+      "failure",
+      "contamination"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T5 work setting, the evaluated element is M-301 Bearings & seals within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The field notes describe visible cues consistent with: visible cue visible cue visible cue rolling elements (wrong race). The work is being assessed at the in-service lifecycle state with source anchors SKF/Timken mounting guides.",
+  "scenario": "In a T5 work setting, the evaluated element is M-301 Bearings & seals within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The observed field condition is: pressing force through rolling elements (wrong race). The work is being assessed at the in-service lifecycle state with source anchors SKF/Timken mounting guides.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "SKF/Timken mounting guides"

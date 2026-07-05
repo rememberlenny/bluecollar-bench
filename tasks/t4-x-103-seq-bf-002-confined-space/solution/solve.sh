@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "permit",
-    "expired",
-    "shift"
+    "1910.146 permit atmosphere",
+    "asphyxiation toxic flammable rescue"
   ],
   "actions": [
     "stop",

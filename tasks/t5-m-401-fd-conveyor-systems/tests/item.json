@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "belt mistracking causes (loading off-center vs",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-401 Conveyor systems",
   "element_code": "M-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t5-m-401-fd-conveyor-systems",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "belt"
+      "cema",
+      "guarding",
+      "tracking"
     ],
     [
-      "mistracking"
-    ],
-    [
-      "causes"
+      "nip",
+      "entanglement",
+      "spillage",
+      "amputation"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T5 work setting, the evaluated element is M-401 Conveyor systems within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.4 Conveyors. The field notes describe visible cues consistent with: visible cue visible cue visible cue (loading off-center vs. idler skew - FD). The work is being assessed at the in-service lifecycle state with source anchors CEMA, OSHA 1910.212.",
+  "scenario": "In a T5 work setting, the evaluated element is M-401 Conveyor systems within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.4 Conveyors. The observed field condition is: belt mistracking causes (loading off-center vs. idler skew - FD). The work is being assessed at the in-service lifecycle state with source anchors CEMA, OSHA 1910.212.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "CEMA",

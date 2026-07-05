@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "missing",
-    "cleanout"
+    "trap vent ipc",
+    "siphon sewer gas seal"
   ],
   "actions": [
     "diagnose",

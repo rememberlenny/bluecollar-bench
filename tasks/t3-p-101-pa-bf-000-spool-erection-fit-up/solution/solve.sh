@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "flange",
-    "bolt",
-    "hole"
+    "b31 isometric alignment",
+    "stress strain leak fitup"
   ],
   "actions": [
     "complete",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "condensate line without trap or sloped wrong",
   "discipline": "2.3 HVAC-R",
   "discipline_code": "2.3",
   "element": "H-102 Furnace & venting",
   "element_code": "H-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t4-h-102-cc-furnace-venting",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "condensate"
+      "venting",
+      "combustion",
+      "category"
     ],
     [
-      "line"
-    ],
-    [
-      "trap"
+      "carbon",
+      "monoxide",
+      "backdraft",
+      "spillage"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is H-102 Furnace & venting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The field notes describe visible cues consistent with: visible cue visible cue without visible cue or sloped wrong. The work is being assessed at the rough-complete lifecycle state with source anchors IRC M1801, NFPA 54.",
+  "scenario": "In a T4 work setting, the evaluated element is H-102 Furnace & venting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The observed field condition is: condensate line without trap or sloped wrong. The work is being assessed at the rough-complete lifecycle state with source anchors IRC M1801, NFPA 54.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC M1801",

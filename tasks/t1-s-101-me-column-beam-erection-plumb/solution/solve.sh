@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "anchor",
-    "bolts",
-    "field"
+    "stability bracing plumb",
+    "collapse buckling load path"
   ],
   "actions": [
     "measure",

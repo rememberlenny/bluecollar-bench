@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "expired",
-    "gauge",
-    "calibration"
+    "345 isolation calibrated",
+    "overpressure instrument damage energy"
   ],
   "actions": [
     "compare",

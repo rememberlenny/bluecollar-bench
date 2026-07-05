@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missing jack studs",
   "discipline": "2.6 Carpentry & Finishes",
   "discipline_code": "2.6",
   "element": "F-101 Structural framing",
   "element_code": "F-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-f-101-doc-structural-framing",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "missing"
+      "irc",
+      "span",
+      "load"
     ],
     [
-      "jack"
-    ],
-    [
-      "studs"
+      "deflection",
+      "capacity",
+      "sag",
+      "failure"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T2 work setting, the evaluated element is F-101 Structural framing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The field notes describe visible cues consistent with: not present where expected visible cue visible cue. The work is being assessed at the tested/inspected lifecycle state with source anchors IRC R502, R602. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T2 work setting, the evaluated element is F-101 Structural framing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The observed field condition is: missing jack studs. The work is being assessed at the tested/inspected lifecycle state with source anchors IRC R502, R602. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R502",

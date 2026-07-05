@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "timing marks misaligned by a tooth (photo of marks - ME/ID)",
   "discipline": "2.9 Automotive & Powertrain",
   "discipline_code": "2.9",
   "element": "A-101 Timing & mechanical",
   "element_code": "A-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t5-a-101-me-bf-000-timing-mechanical",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "marks"
+      "oem",
+      "alignment",
+      "specification"
     ],
     [
-      "misaligned"
-    ],
-    [
-      "tooth"
+      "timing",
+      "interference",
+      "misfire",
+      "damage"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The field notes describe visible cues consistent with: timing visible cue visible cue by a visible cue (photo of visible cue - ME/ID). The work is being assessed at the rough-complete lifecycle state with source anchors OEM service info. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T5 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The observed field condition is: timing marks misaligned by a tooth (photo of marks - ME/ID). The work is being assessed at the rough-complete lifecycle state with source anchors OEM service info. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM service info"

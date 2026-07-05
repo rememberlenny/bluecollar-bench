@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "wrong",
-    "insulation",
-    "type"
+    "310 ampacity voltage drop",
+    "overheat insulation capacity"
   ],
   "actions": [
     "correct",

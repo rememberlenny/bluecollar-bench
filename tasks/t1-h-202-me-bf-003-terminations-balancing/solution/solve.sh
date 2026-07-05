@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "damper",
-    "positions",
-    "balance"
+    "balance damper tab",
+    "airflow comfort distribution short"
   ],
   "actions": [
     "measure",

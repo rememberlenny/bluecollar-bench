@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "insufficient torque (thermal signature - IR modality)",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-303 Terminations & splices",
   "element_code": "E-303",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t5-e-303-id-terminations-splices",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "insufficient"
-    ],
-    [
+      "110.14",
+      "termination",
       "torque"
     ],
     [
-      "thermal"
+      "resistance",
+      "overheat",
+      "arc",
+      "loose"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is E-303 Terminations & splices within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The field notes describe visible cues consistent with: not enough for the requirement visible cue (visible cue signature - IR modality). The work is being assessed at the rough-complete lifecycle state with source anchors NEC 110.14.",
+  "scenario": "In a T5 work setting, the evaluated element is E-303 Terminations & splices within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The observed field condition is: insufficient torque (thermal signature - IR modality). The work is being assessed at the rough-complete lifecycle state with source anchors NEC 110.14.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 110.14"

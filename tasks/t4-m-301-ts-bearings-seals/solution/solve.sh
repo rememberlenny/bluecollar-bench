@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "mechanical",
-    "seal",
-    "face"
+    "race mounting fit",
+    "brinell premature failure contamination"
   ],
   "actions": [
     "replace",

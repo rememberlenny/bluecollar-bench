@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "insufficient",
-    "cover",
-    "bars"
+    "aci cover development",
+    "corrosion bond capacity spall"
   ],
   "actions": [
     "correct",

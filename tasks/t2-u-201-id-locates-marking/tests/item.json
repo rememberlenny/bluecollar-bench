@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "digging without 811 locate",
   "discipline": "2.11 Sitework & Utilities",
   "discipline_code": "2.11",
   "element": "U-201 Locates & marking",
   "element_code": "U-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-u-201-id-locates-marking",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
@@ -36,10 +39,15 @@
   ],
   "required_findings": [
     [
-      "digging"
+      "811",
+      "tolerance",
+      "zone"
     ],
     [
-      "locate"
+      "strike",
+      "rupture",
+      "electrocution",
+      "outage"
     ]
   ],
   "risk": "medium",
@@ -48,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is U-201 Locates & marking within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The field notes describe visible cues consistent with: visible cue without 811 visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors 811/CGA best practices.",
+  "scenario": "In a T2 work setting, the evaluated element is U-201 Locates & marking within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The observed field condition is: digging without 811 locate. The work is being assessed at the rough-complete lifecycle state with source anchors 811/CGA best practices.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "811/CGA best practices"

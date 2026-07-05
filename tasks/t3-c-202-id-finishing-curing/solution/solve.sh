@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "sawcut",
-    "joints",
-    "late"
+    "308 cure timing",
+    "dusting scaling cracking shrinkage"
   ],
   "actions": [
     "identify",

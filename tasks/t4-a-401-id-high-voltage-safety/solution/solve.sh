@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "insulation",
-    "resistance",
-    "test"
+    "class rated verification",
+    "voltage arc electrocution stored"
   ],
   "actions": [
     "identify",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "adding water on site (slump manipulation - TRD: common but wrong)",
   "discipline": "2.5 Concrete & Masonry",
   "discipline_code": "2.5",
   "element": "C-201 Concrete placement",
   "element_code": "C-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-c-201-haz-concrete-placement",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,13 +41,15 @@
   ],
   "required_findings": [
     [
-      "adding"
+      "301",
+      "consolidation",
+      "placement"
     ],
     [
-      "water"
-    ],
-    [
-      "site"
+      "honeycomb",
+      "segregation",
+      "cold",
+      "strength"
     ]
   ],
   "risk": "critical",
@@ -54,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T2 work setting, the evaluated element is C-201 Concrete placement within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The field notes describe visible cues consistent with: visible cue visible cue on visible cue (slump manipulation - TRD: common but wrong). The work is being assessed at the in-progress lifecycle state with source anchors ACI 301, 304.",
+  "scenario": "In a T2 work setting, the evaluated element is C-201 Concrete placement within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The observed field condition is: adding water on site (slump manipulation - TRD: common but wrong). The work is being assessed at the in-progress lifecycle state with source anchors ACI 301, 304.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ACI 301",

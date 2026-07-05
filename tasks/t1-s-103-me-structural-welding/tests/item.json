@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "fillet undersized vs",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-103 Structural welding",
   "element_code": "S-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-s-103-me-structural-welding",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "fillet"
+      "d1.1",
+      "wps",
+      "profile"
     ],
     [
-      "undersized"
-    ],
-    [
-      "callout"
+      "fusion",
+      "cracking",
+      "capacity",
+      "fatigue"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is S-103 Structural welding within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The field notes describe visible cues consistent with: visible cue smaller than the required size vs. visible cue (gauge in photo - ME). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T1 work setting, the evaluated element is S-103 Structural welding within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The observed field condition is: fillet undersized vs. callout (gauge in photo - ME). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "AWS D1.1"

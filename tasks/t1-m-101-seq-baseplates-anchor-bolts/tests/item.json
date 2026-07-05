@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "epoxy vs",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-101 Baseplates & anchor bolts",
   "element_code": "M-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-m-101-seq-baseplates-anchor-bolts",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "epoxy"
+      "686",
+      "grout",
+      "projection"
     ],
     [
-      "cementitious"
-    ],
-    [
-      "grout"
+      "vibration",
+      "loosening",
+      "resonance",
+      "movement"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is M-101 Baseplates & anchor bolts within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.1 Setting & Grouting. The field notes describe visible cues consistent with: visible cue vs. visible cue visible cue misapplied. The work is being assessed at the in-progress lifecycle state with source anchors API RP 686.",
+  "scenario": "In a T1 work setting, the evaluated element is M-101 Baseplates & anchor bolts within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.1 Setting & Grouting. The observed field condition is: epoxy vs. cementitious grout misapplied. The work is being assessed at the in-progress lifecycle state with source anchors API RP 686.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "API RP 686"

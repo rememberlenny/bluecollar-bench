@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "temporary bracing removed before decking/permanent stability",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-101 Column/beam erection & plumb",
   "element_code": "S-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-s-101-pa-column-beam-erection-plumb",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "temporary"
+      "stability",
+      "bracing",
+      "plumb"
     ],
     [
-      "bracing"
-    ],
-    [
-      "removed"
+      "collapse",
+      "buckling",
+      "load",
+      "path"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is S-101 Column/beam erection & plumb within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The field notes describe visible cues consistent with: visible cue visible cue visible cue before decking/permanent stability. The work is being assessed at the rough-complete lifecycle state with source anchors AISC 303, OSHA 1926 Subpart R. Treat this as roughly 70 percent complete until defects are corrected.",
+  "scenario": "In a T2 work setting, the evaluated element is S-101 Column/beam erection & plumb within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The observed field condition is: temporary bracing removed before decking/permanent stability. The work is being assessed at the rough-complete lifecycle state with source anchors AISC 303, OSHA 1926 Subpart R. Treat this as roughly 70 percent complete until defects are corrected.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "AISC 303",

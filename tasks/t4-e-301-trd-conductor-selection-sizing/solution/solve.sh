@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "undersized",
-    "length",
-    "voltage"
+    "310 ampacity voltage drop",
+    "overheat insulation capacity"
   ],
   "actions": [
     "reject shortcut",

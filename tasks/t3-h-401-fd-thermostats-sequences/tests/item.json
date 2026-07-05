@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "heat pump O/B reversing valve config wrong (heats when calling cool)",
   "discipline": "2.3 HVAC-R",
   "discipline_code": "2.3",
   "element": "H-401 Thermostats & sequences",
   "element_code": "H-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "heat"
+      "configuration",
+      "sequence",
+      "terminal"
     ],
     [
-      "pump"
-    ],
-    [
-      "reversing"
+      "reversed",
+      "aux",
+      "comfort",
+      "efficiency"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T3 work setting, the evaluated element is H-401 Thermostats & sequences within 2.3 HVAC-R. The relevant subcategory is 2.3.4 Controls. The field notes describe visible cues consistent with: visible cue visible cue O/B visible cue valve config wrong (heats when calling cool). The work is being assessed at the in-service lifecycle state with source anchors mfr manuals.",
+  "scenario": "In a T3 work setting, the evaluated element is H-401 Thermostats & sequences within 2.3 HVAC-R. The relevant subcategory is 2.3.4 Controls. The observed field condition is: heat pump O/B reversing valve config wrong (heats when calling cool). The work is being assessed at the in-service lifecycle state with source anchors mfr manuals.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr manuals"

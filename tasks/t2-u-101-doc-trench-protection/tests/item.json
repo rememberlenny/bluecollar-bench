@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "trench box void behind shield",
   "discipline": "2.11 Sitework & Utilities",
   "discipline_code": "2.11",
   "element": "U-101 Trench protection",
   "element_code": "U-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-u-101-doc-trench-protection",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "void"
+      "subpart",
+      "p",
+      "protective"
     ],
     [
-      "behind"
-    ],
-    [
-      "shield"
+      "collapse",
+      "engulfment",
+      "fatality",
+      "cave"
     ]
   ],
   "risk": "critical",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T2 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The field notes describe visible cues consistent with: trench box visible cue visible cue visible cue. The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1926 Subpart P. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T2 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The observed field condition is: trench box void behind shield. The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1926 Subpart P. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart P"

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "anchor point inadequate (guessing at 5,000-lb rating - TRD)",
   "discipline": "2.12 Safety & Rigging",
   "discipline_code": "2.12",
   "element": "X-102 Fall protection",
   "element_code": "X-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-x-102-haz-fall-protection",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,13 +41,15 @@
   ],
   "required_findings": [
     [
-      "anchor"
+      "anchorage",
+      "5000",
+      "inspection"
     ],
     [
-      "point"
-    ],
-    [
-      "inadequate"
+      "arrest",
+      "fall",
+      "deployment",
+      "fatality"
     ]
   ],
   "risk": "critical",
@@ -54,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T3 work setting, the evaluated element is X-102 Fall protection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The field notes describe visible cues consistent with: visible cue visible cue not sufficient for the load or condition (guessing at 5,000-lb rating - TRD). The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart M, 1910.140.",
+  "scenario": "In a T3 work setting, the evaluated element is X-102 Fall protection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: anchor point inadequate (guessing at 5,000-lb rating - TRD). The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart M, 1910.140.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart M",

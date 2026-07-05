@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "NM within 1\u00bc in",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-302 NM/MC cable routing & protection",
   "element_code": "E-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-e-302-cc-nm-mc-cable-routing-protection",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.5,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,16 @@
   ],
   "required_findings": [
     [
-      "stud"
+      "300.4",
+      "334",
+      "protection",
+      "support"
     ],
     [
-      "face"
-    ],
-    [
-      "nail"
+      "penetration",
+      "screw",
+      "nail",
+      "damage"
     ]
   ],
   "risk": "high",
@@ -53,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-302 NM/MC cable routing & protection within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The field notes describe visible cues consistent with: NM within 1\u00bc in. of visible cue visible cue without visible cue plate. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 300.4, 334, 330.",
+  "scenario": "In a T2 work setting, the evaluated element is E-302 NM/MC cable routing & protection within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The observed field condition is: NM within 1\u00bc in. of stud face without nail plate. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 300.4, 334, 330.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 300.4",

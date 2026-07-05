@@ -15,7 +15,7 @@ You are evaluating a blue-collar trade-work scenario. Produce a concise, inspect
 
 ## Scenario
 
-In a T2 work setting, the evaluated element is I-101 Transmitter installation within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.1 Field Instruments. The field notes describe visible cues consistent with: DP visible cue visible cue visible cue wrong for service (gas taps below pipe / liquid taps on top - the classic). The work is being assessed at the rough-complete lifecycle state with source anchors API RP 551, mfr manuals. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.
+In a T2 work setting, the evaluated element is I-101 Transmitter installation within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.1 Field Instruments. The observed field condition is: DP impulse lines sloped wrong for service (gas taps below pipe / liquid taps on top - the classic). The work is being assessed at the rough-complete lifecycle state with source anchors API RP 551, mfr manuals. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.
 
 ## Task
 
@@ -33,6 +33,11 @@ Write valid JSON to `/app/answer.json` with this shape:
   "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
   "s3_percent": 0,
   "value": 0,
+  "sound_source": "component or source of the sound, when asked",
+  "confidence": 0.0,
+  "event_time": 0.0,
+  "rate": 0.0,
+  "order": ["step-id", "..."],
   "workable": ["activity ID", "..."],
   "findings": ["short defect or hazard finding", "..."],
   "actions": ["immediate corrective action", "..."],
@@ -43,6 +48,7 @@ Write valid JSON to `/app/answer.json` with this shape:
 
 Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
 Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.
 Use `workable` for a list of activity IDs when the task asks what work can still start.
 
 ## Source anchors

@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "missing",
-    "point",
-    "guards"
+    "cema guarding tracking",
+    "nip entanglement spillage amputation"
   ],
   "actions": [
     "stop work",

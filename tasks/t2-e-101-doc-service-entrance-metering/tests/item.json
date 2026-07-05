@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "meter jaws burned/corroded",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-101 Service entrance & metering",
   "element_code": "E-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-e-101-doc-service-entrance-metering",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.33,
   "media": [],
   "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
@@ -36,13 +39,14 @@
   ],
   "required_findings": [
     [
-      "meter"
+      "service",
+      "230"
     ],
     [
-      "jaws"
-    ],
-    [
-      "burned"
+      "water",
+      "intrusion",
+      "overheat",
+      "utility"
     ]
   ],
   "risk": "medium",
@@ -51,7 +55,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T2 work setting, the evaluated element is E-101 Service entrance & metering within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: visible cue visible cue visible cue/corroded. The work is being assessed at the tested/inspected lifecycle state with source anchors NEC Art. 230. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T2 work setting, the evaluated element is E-101 Service entrance & metering within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: meter jaws burned/corroded. The work is being assessed at the tested/inspected lifecycle state with source anchors NEC Art. 230. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 230"

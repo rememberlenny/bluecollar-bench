@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "neutrals & grounds mixed in subpanel",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-102 Panelboard installation & makeup",
   "element_code": "E-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-e-102-haz-panelboard-installation-makeup",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,13 +41,15 @@
   ],
   "required_findings": [
     [
-      "neutrals"
+      "408",
+      "listing",
+      "termination"
     ],
     [
-      "grounds"
-    ],
-    [
-      "mixed"
+      "overheat",
+      "fault",
+      "arc",
+      "misoperation"
     ]
   ],
   "risk": "critical",
@@ -54,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T3 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: visible cue & visible cue visible cue in subpanel. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4.",
+  "scenario": "In a T3 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: neutrals & grounds mixed in subpanel. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 408",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "undersized service conductors",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-101 Service entrance & metering",
   "element_code": "E-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-e-101-cc-service-entrance-metering",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.33,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,10 +40,14 @@
   ],
   "required_findings": [
     [
-      "undersized"
+      "service",
+      "230"
     ],
     [
-      "conductors"
+      "water",
+      "intrusion",
+      "overheat",
+      "utility"
     ]
   ],
   "risk": "high",
@@ -50,7 +57,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-101 Service entrance & metering within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: smaller than the required size service visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 230.",
+  "scenario": "In a T2 work setting, the evaluated element is E-101 Service entrance & metering within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: undersized service conductors. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 230.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 230"

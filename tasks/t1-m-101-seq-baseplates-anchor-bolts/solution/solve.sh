@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "epoxy",
-    "cementitious",
-    "grout"
+    "686 grout projection",
+    "vibration loosening resonance movement"
   ],
   "actions": [
     "stop",

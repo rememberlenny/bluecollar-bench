@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "kick",
-    "missing",
-    "roof"
+    "shingle lap sequence",
+    "intrusion drainage rot behind"
   ],
   "actions": [
     "stop",

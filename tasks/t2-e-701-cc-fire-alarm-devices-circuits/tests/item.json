@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "smoke detector spacing/placement",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-701 Fire alarm devices & circuits",
   "element_code": "E-701",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-e-701-cc-fire-alarm-devices-circuits",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "smoke"
+      "nfpa",
+      "72",
+      "supervision"
     ],
     [
-      "detector"
-    ],
-    [
-      "spacing"
+      "undetected",
+      "trouble",
+      "notification",
+      "life"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-701 Fire alarm devices & circuits within 2.1 Electrical. The relevant subcategory is 2.1.7 Low Voltage & Specialty. The field notes describe visible cues consistent with: visible cue visible cue visible cue/placement. The work is being assessed at the rough-complete lifecycle state with source anchors NFPA 72.",
+  "scenario": "In a T2 work setting, the evaluated element is E-701 Fire alarm devices & circuits within 2.1 Electrical. The relevant subcategory is 2.1.7 Low Voltage & Specialty. The observed field condition is: smoke detector spacing/placement. The work is being assessed at the rough-complete lifecycle state with source anchors NFPA 72.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NFPA 72"

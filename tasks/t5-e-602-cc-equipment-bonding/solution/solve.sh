@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "missing",
-    "jumper",
-    "around"
+    "250 continuity path",
+    "shock energized touch fault"
   ],
   "actions": [
     "correct",

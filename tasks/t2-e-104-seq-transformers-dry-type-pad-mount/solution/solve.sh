@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "inadequate",
-    "ventilation",
-    "clearance"
+    "450 separately derived",
+    "fault return overheat"
   ],
   "actions": [
     "stop",

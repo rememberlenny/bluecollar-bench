@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "wrong glue/no primer on PVC joints",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-202 Rigid & PVC conduit",
   "element_code": "E-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-e-202-seq-rigid-pvc-conduit",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.25,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,16 @@
   ],
   "required_findings": [
     [
-      "wrong"
+      "352",
+      "344",
+      "expansion",
+      "bushing"
     ],
     [
-      "glue"
-    ],
-    [
-      "primer"
+      "separation",
+      "abrasion",
+      "joint",
+      "failure"
     ]
   ],
   "risk": "high",
@@ -51,7 +57,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T2 work setting, the evaluated element is E-202 Rigid & PVC conduit within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The field notes describe visible cues consistent with: not matching the specified requirement visible cue/no visible cue on PVC joints. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 344, 352.",
+  "scenario": "In a T2 work setting, the evaluated element is E-202 Rigid & PVC conduit within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: wrong glue/no primer on PVC joints. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 344, 352.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 344",

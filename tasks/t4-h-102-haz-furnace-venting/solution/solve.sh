@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "flue",
-    "slope",
-    "back"
+    "venting combustion category",
+    "carbon monoxide backdraft spillage"
   ],
   "actions": [
     "stop work",

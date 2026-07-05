@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "clamp",
-    "listed",
-    "direct"
+    "250 electrode listed",
+    "lightning surge stabilize reference"
   ],
   "actions": [
     "measure",

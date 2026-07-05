@@ -12,7 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "milkshake"
+    "specification level source",
+    "contamination starvation aeration failure"
   ],
   "actions": [
     "identify",

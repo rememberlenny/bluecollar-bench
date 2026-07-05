@@ -15,7 +15,7 @@ You are evaluating a blue-collar trade-work scenario. Produce a concise, inspect
 
 ## Scenario
 
-In a T4 work setting, the evaluated element is P-401 Boiler & pump piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.4 Hydronic & Steam. The field notes describe visible cues consistent with: pump visible cue visible cue visible cue tank (point-of-no-pressure-change violated). The work is being assessed at the in-service lifecycle state with source anchors mfr manuals, hydronics references.
+In a T4 work setting, the evaluated element is P-401 Boiler & pump piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.4 Hydronic & Steam. The observed field condition is: pump pumping toward expansion tank (point-of-no-pressure-change violated). The work is being assessed at the in-service lifecycle state with source anchors mfr manuals, hydronics references.
 
 ## Task
 
@@ -33,6 +33,11 @@ Write valid JSON to `/app/answer.json` with this shape:
   "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
   "s3_percent": 0,
   "value": 0,
+  "sound_source": "component or source of the sound, when asked",
+  "confidence": 0.0,
+  "event_time": 0.0,
+  "rate": 0.0,
+  "order": ["step-id", "..."],
   "workable": ["activity ID", "..."],
   "findings": ["short defect or hazard finding", "..."],
   "actions": ["immediate corrective action", "..."],
@@ -43,6 +48,7 @@ Write valid JSON to `/app/answer.json` with this shape:
 
 Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
 Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.
 Use `workable` for a list of activity IDs when the task asks what work can still start.
 
 ## Source anchors

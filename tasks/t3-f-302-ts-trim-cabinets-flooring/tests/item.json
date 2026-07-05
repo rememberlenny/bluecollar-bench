@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "cabinets not hitting studs (screw pattern - ME)",
   "discipline": "2.6 Carpentry & Finishes",
   "discipline_code": "2.6",
   "element": "F-302 Trim, cabinets, flooring",
   "element_code": "F-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "hitting"
+      "expansion",
+      "substrate",
+      "fastening"
     ],
     [
-      "studs"
-    ],
-    [
-      "screw"
+      "buckling",
+      "deflection",
+      "pullout",
+      "movement"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T3 work setting, the evaluated element is F-302 Trim, cabinets, flooring within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The field notes describe visible cues consistent with: cabinets not visible cue visible cue (visible cue pattern - ME). The work is being assessed at the staged lifecycle state with source anchors mfr instructions, TCNA.",
+  "scenario": "In a T3 work setting, the evaluated element is F-302 Trim, cabinets, flooring within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The observed field condition is: cabinets not hitting studs (screw pattern - ME). The work is being assessed at the staged lifecycle state with source anchors mfr instructions, TCNA.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr instructions",

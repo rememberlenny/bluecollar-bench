@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "exceeded",
-    "sidewall",
-    "pressure"
+    "identification 200.6 pull",
+    "damage insulation phase confusion"
   ],
   "actions": [
     "complete",

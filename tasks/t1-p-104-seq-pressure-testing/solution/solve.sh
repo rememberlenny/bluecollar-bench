@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "instruments",
-    "isolated",
-    "hydro"
+    "345 isolation calibrated",
+    "overpressure instrument damage energy"
   ],
   "actions": [
     "stop",

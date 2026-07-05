@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "insufficient",
-    "bolt",
-    "projection"
+    "686 grout projection",
+    "vibration loosening resonance movement"
   ],
   "actions": [
     "correct",

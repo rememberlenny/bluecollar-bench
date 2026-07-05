@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "insufficient",
-    "overhang"
+    "905 fastening underlayment",
+    "uplift blowoff intrusion ice"
   ],
   "actions": [
     "measure",

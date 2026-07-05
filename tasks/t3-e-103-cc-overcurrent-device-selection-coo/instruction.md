@@ -15,7 +15,7 @@ You are evaluating a blue-collar trade-work scenario. Produce a concise, inspect
 
 ## Scenario
 
-In a T3 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: not matching the specified requirement visible cue visible cue for panel (listing). The work is being assessed at the rough-complete lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.
+In a T3 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: wrong breaker type for panel (listing). The work is being assessed at the rough-complete lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.
 
 ## Task
 
@@ -33,6 +33,11 @@ Write valid JSON to `/app/answer.json` with this shape:
   "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
   "s3_percent": 0,
   "value": 0,
+  "sound_source": "component or source of the sound, when asked",
+  "confidence": 0.0,
+  "event_time": 0.0,
+  "rate": 0.0,
+  "order": ["step-id", "..."],
   "workable": ["activity ID", "..."],
   "findings": ["short defect or hazard finding", "..."],
   "actions": ["immediate corrective action", "..."],
@@ -43,6 +48,7 @@ Write valid JSON to `/app/answer.json` with this shape:
 
 Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
 Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.
 Use `workable` for a list of activity IDs when the task asks what work can still start.
 
 ## Source anchors

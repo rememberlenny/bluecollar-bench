@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "permit expired mid-shift",
   "discipline": "2.12 Safety & Rigging",
   "discipline_code": "2.12",
   "element": "X-103 Confined space",
   "element_code": "X-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t4-x-103-seq-bf-002-confined-space",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "permit"
+      "1910.146",
+      "permit",
+      "atmosphere"
     ],
     [
-      "expired"
-    ],
-    [
-      "shift"
+      "asphyxiation",
+      "toxic",
+      "flammable",
+      "rescue"
     ]
   ],
   "risk": "critical",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is X-103 Confined space within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The field notes describe visible cues consistent with: visible cue past the allowed date mid-visible cue. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1910.146. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T4 work setting, the evaluated element is X-103 Confined space within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: permit expired mid-shift. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1910.146. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OSHA 1910.146"

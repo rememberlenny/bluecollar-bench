@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "replacing",
-    "parts",
-    "codes"
+    "test verify data",
+    "misdiagnosis parts unnecessary root"
   ],
   "actions": [
     "stop",

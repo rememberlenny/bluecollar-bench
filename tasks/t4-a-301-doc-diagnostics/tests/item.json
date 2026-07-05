@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "freeze-frame interpretation (DOC: read the scan tool screenshot)",
   "discipline": "2.9 Automotive & Powertrain",
   "discipline_code": "2.9",
   "element": "A-301 Diagnostics",
   "element_code": "A-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "freeze"
+      "test",
+      "verify",
+      "data"
     ],
     [
-      "frame"
-    ],
-    [
-      "interpretation"
+      "misdiagnosis",
+      "parts",
+      "unnecessary",
+      "root"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T4 work setting, the evaluated element is A-301 Diagnostics within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.3 Electrical & Electronics. The field notes describe visible cues consistent with: visible cue-visible cue visible cue (DOC: read the scan tool screenshot). The work is being assessed at the tested/inspected lifecycle state with source anchors OEM service info, OBD-II standards. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T4 work setting, the evaluated element is A-301 Diagnostics within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.3 Electrical & Electronics. The observed field condition is: freeze-frame interpretation (DOC: read the scan tool screenshot). The work is being assessed at the tested/inspected lifecycle state with source anchors OEM service info, OBD-II standards. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM service info",

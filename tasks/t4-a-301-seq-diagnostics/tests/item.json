@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "replacing parts on codes without testing (P0420 \u2192 cat vs",
   "discipline": "2.9 Automotive & Powertrain",
   "discipline_code": "2.9",
   "element": "A-301 Diagnostics",
   "element_code": "A-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t4-a-301-seq-diagnostics",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "replacing"
+      "test",
+      "verify",
+      "data"
     ],
     [
-      "parts"
-    ],
-    [
-      "codes"
+      "misdiagnosis",
+      "parts",
+      "unnecessary",
+      "root"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is A-301 Diagnostics within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.3 Electrical & Electronics. The field notes describe visible cues consistent with: visible cue visible cue on visible cue without testing (P0420 \u2192 cat vs. O2 sensor - the canonical TRD/FD item). The work is being assessed at the in-progress lifecycle state with source anchors OEM service info, OBD-II standards.",
+  "scenario": "In a T4 work setting, the evaluated element is A-301 Diagnostics within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.3 Electrical & Electronics. The observed field condition is: replacing parts on codes without testing (P0420 \u2192 cat vs. O2 sensor - the canonical TRD/FD item). The work is being assessed at the in-progress lifecycle state with source anchors OEM service info, OBD-II standards.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM service info",

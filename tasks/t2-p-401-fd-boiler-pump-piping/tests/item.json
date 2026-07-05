@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "pump pumping toward expansion tank (point-of-no-pressure-change violated)",
   "discipline": "2.2 Mechanical - Piping & Plumbing",
   "discipline_code": "2.2",
   "element": "P-401 Boiler & pump piping",
   "element_code": "P-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-p-401-fd-boiler-pump-piping",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "pumping"
+      "expansion",
+      "point",
+      "check"
     ],
     [
-      "toward"
-    ],
-    [
-      "expansion"
+      "cavitation",
+      "air",
+      "circulation",
+      "gravity"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T2 work setting, the evaluated element is P-401 Boiler & pump piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.4 Hydronic & Steam. The field notes describe visible cues consistent with: pump visible cue visible cue visible cue tank (point-of-no-pressure-change violated). The work is being assessed at the in-service lifecycle state with source anchors mfr manuals, hydronics references.",
+  "scenario": "In a T2 work setting, the evaluated element is P-401 Boiler & pump piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.4 Hydronic & Steam. The observed field condition is: pump pumping toward expansion tank (point-of-no-pressure-change violated). The work is being assessed at the in-service lifecycle state with source anchors mfr manuals, hydronics references.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr manuals",

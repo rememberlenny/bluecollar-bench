@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "undersized header (span vs",
   "discipline": "2.6 Carpentry & Finishes",
   "discipline_code": "2.6",
   "element": "F-101 Structural framing",
   "element_code": "F-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-f-101-cc-structural-framing",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "undersized"
+      "irc",
+      "span",
+      "load"
     ],
     [
-      "header"
-    ],
-    [
-      "span"
+      "deflection",
+      "capacity",
+      "sag",
+      "failure"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is F-101 Structural framing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The field notes describe visible cues consistent with: smaller than the required size visible cue (visible cue vs. table - ME+DOC). The work is being assessed at the rough-complete lifecycle state with source anchors IRC R502, R602.",
+  "scenario": "In a T3 work setting, the evaluated element is F-101 Structural framing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The observed field condition is: undersized header (span vs. table - ME+DOC). The work is being assessed at the rough-complete lifecycle state with source anchors IRC R502, R602.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R502",

@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "skirtboard",
-    "wear"
+    "cema guarding tracking",
+    "nip entanglement spillage amputation"
   ],
   "actions": [
     "correct",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "crushed or excessively long flex duct",
   "discipline": "2.3 HVAC-R",
   "discipline_code": "2.3",
   "element": "H-201 Duct installation",
   "element_code": "H-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-h-201-me-duct-installation",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "crushed"
+      "seal",
+      "mastic",
+      "smacna"
     ],
     [
-      "excessively"
-    ],
-    [
-      "long"
+      "leakage",
+      "loss",
+      "efficiency",
+      "pressure"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is H-201 Duct installation within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The field notes describe visible cues consistent with: visible cue or visible cue visible cue flex duct. The work is being assessed at the rough-complete lifecycle state with source anchors IMC 603, SMACNA, Manual D. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T3 work setting, the evaluated element is H-201 Duct installation within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The observed field condition is: crushed or excessively long flex duct. The work is being assessed at the rough-complete lifecycle state with source anchors IMC 603, SMACNA, Manual D. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IMC 603",

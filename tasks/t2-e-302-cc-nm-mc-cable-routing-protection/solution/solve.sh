@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "stud",
-    "face",
-    "nail"
+    "300.4 334 protection support",
+    "penetration screw nail damage"
   ],
   "actions": [
     "correct",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "cotter pin omitted on castle nut",
   "discipline": "2.9 Automotive & Powertrain",
   "discipline_code": "2.9",
   "element": "A-202 Suspension & steering",
   "element_code": "A-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t5-a-202-me-bf-011-suspension-steering",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "cotter"
+      "play",
+      "specification",
+      "wear"
     ],
     [
-      "omitted"
-    ],
-    [
-      "castle"
+      "alignment",
+      "separation",
+      "control",
+      "camber"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is A-202 Suspension & steering within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.2 Chassis. The field notes describe visible cues consistent with: visible cue pin left out of the assembly on visible cue nut. The work is being assessed at the rough-complete lifecycle state with source anchors OEM, alignment specs. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T5 work setting, the evaluated element is A-202 Suspension & steering within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.2 Chassis. The observed field condition is: cotter pin omitted on castle nut. The work is being assessed at the rough-complete lifecycle state with source anchors OEM, alignment specs. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM",

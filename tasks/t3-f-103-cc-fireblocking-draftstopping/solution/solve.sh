@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "open",
-    "stud",
-    "bays"
+    "302 fireblocking rated",
+    "spread chimney concealed flame"
   ],
   "actions": [
     "correct",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "no cure (blankets/compound absent in photo)",
   "discipline": "2.5 Concrete & Masonry",
   "discipline_code": "2.5",
   "element": "C-202 Finishing & curing",
   "element_code": "C-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-c-202-fd-finishing-curing",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "cure"
+      "308",
+      "cure",
+      "timing"
     ],
     [
-      "blankets"
-    ],
-    [
-      "compound"
+      "dusting",
+      "scaling",
+      "cracking",
+      "shrinkage"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T3 work setting, the evaluated element is C-202 Finishing & curing within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The field notes describe visible cues consistent with: no visible cue (visible cue/visible cue absent in photo). The work is being assessed at the in-service lifecycle state with source anchors ACI 302, 308.",
+  "scenario": "In a T3 work setting, the evaluated element is C-202 Finishing & curing within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The observed field condition is: no cure (blankets/compound absent in photo). The work is being assessed at the in-service lifecycle state with source anchors ACI 302, 308.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ACI 302",

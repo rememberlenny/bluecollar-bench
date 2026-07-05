@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "tile",
-    "single",
-    "layer"
+    "expansion substrate fastening",
+    "buckling deflection pullout movement"
   ],
   "actions": [
     "diagnose",

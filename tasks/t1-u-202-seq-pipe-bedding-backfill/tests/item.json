@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missing tracer wire on non-metallic",
   "discipline": "2.11 Sitework & Utilities",
   "discipline_code": "2.11",
   "element": "U-202 Pipe bedding & backfill",
   "element_code": "U-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-u-202-seq-pipe-bedding-backfill",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "missing"
+      "bedding",
+      "lift",
+      "compaction"
     ],
     [
-      "tracer"
-    ],
-    [
-      "wire"
+      "settlement",
+      "point",
+      "load",
+      "deflection"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is U-202 Pipe bedding & backfill within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The field notes describe visible cues consistent with: not present where expected visible cue visible cue on non-metallic. The work is being assessed at the in-progress lifecycle state with source anchors project specs, IPC 306.",
+  "scenario": "In a T1 work setting, the evaluated element is U-202 Pipe bedding & backfill within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The observed field condition is: missing tracer wire on non-metallic. The work is being assessed at the in-progress lifecycle state with source anchors project specs, IPC 306.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "project specs",

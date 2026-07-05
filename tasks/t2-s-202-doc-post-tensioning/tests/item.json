@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "elongation record vs",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-202 Post-tensioning",
   "element_code": "S-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-s-202-doc-post-tensioning",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
+      "pti",
+      "strength",
       "elongation"
     ],
     [
-      "record"
-    ],
-    [
-      "calculated"
+      "ejection",
+      "anchorage",
+      "strand",
+      "failure"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T2 work setting, the evaluated element is S-202 Post-tensioning within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.2 Reinforcing. The field notes describe visible cues consistent with: visible cue visible cue vs. visible cue mismatch (DOC). The work is being assessed at the tested/inspected lifecycle state with source anchors PTI. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T2 work setting, the evaluated element is S-202 Post-tensioning within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.2 Reinforcing. The observed field condition is: elongation record vs. calculated mismatch (DOC). The work is being assessed at the tested/inspected lifecycle state with source anchors PTI. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "PTI"

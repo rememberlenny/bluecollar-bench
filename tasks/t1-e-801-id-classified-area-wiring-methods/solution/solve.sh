@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "unpoured",
-    "seal",
-    "fill"
+    "500 seal classified",
+    "ignition vapor migration explosion"
   ],
   "actions": [
     "identify",

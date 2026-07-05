@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "heat",
-    "locked"
+    "configuration sequence terminal",
+    "reversed aux comfort efficiency"
   ],
   "actions": [
     "compare",

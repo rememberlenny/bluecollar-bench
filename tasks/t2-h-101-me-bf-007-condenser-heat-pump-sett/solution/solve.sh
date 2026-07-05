@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "service",
-    "disconnect",
-    "sight"
+    "clearance manufacturer level",
+    "airflow efficiency oil return"
   ],
   "actions": [
     "measure",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missing seal-off fitting at boundary",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-801 Classified-area wiring methods",
   "element_code": "E-801",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-e-801-cc-classified-area-wiring-methods",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "missing"
+      "500",
+      "seal",
+      "classified"
     ],
     [
-      "seal"
-    ],
-    [
-      "fitting"
+      "ignition",
+      "vapor",
+      "migration",
+      "explosion"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is E-801 Classified-area wiring methods within 2.1 Electrical. The relevant subcategory is 2.1.8 Hazardous Locations (T1 overlay). The field notes describe visible cues consistent with: not present where expected visible cue-off visible cue at boundary. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 500-516.",
+  "scenario": "In a T1 work setting, the evaluated element is E-801 Classified-area wiring methods within 2.1 Electrical. The relevant subcategory is 2.1.8 Hazardous Locations (T1 overlay). The observed field condition is: missing seal-off fitting at boundary. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 500-516.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 500-516"

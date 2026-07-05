@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "digging",
-    "locate"
+    "811 tolerance zone",
+    "strike rupture electrocution outage"
   ],
   "actions": [
     "identify",

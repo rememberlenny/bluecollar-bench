@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "crushed",
-    "excessively",
-    "long"
+    "seal mastic smacna",
+    "leakage loss efficiency pressure"
   ],
   "actions": [
     "measure",

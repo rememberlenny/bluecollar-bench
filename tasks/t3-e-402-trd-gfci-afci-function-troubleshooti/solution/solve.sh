@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "protecting",
-    "downstream",
-    "single"
+    "210.8 210.12 line load",
+    "protection downstream nuisance shock"
   ],
   "actions": [
     "reject shortcut",

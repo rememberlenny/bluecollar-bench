@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "hook",
-    "latch",
-    "missing"
+    "b30 angle rating",
+    "tension overload capacity failure"
   ],
   "actions": [
     "replace",

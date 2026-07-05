@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "breaker",
-    "conductor",
-    "ampacity"
+    "240 ampacity protection",
+    "overload overheat fire"
   ],
   "actions": [
     "compare",

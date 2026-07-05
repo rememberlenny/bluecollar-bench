@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "compression/leak-down interpretation (low two adjacent cylinders = head gasket - classic FD from gauge numbers)",
   "discipline": "2.9 Automotive & Powertrain",
   "discipline_code": "2.9",
   "element": "A-101 Timing & mechanical",
   "element_code": "A-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t4-a-101-fd-timing-mechanical",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "compression"
+      "oem",
+      "alignment",
+      "specification"
     ],
     [
-      "leak"
-    ],
-    [
-      "down"
+      "timing",
+      "interference",
+      "misfire",
+      "damage"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T4 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The field notes describe visible cues consistent with: visible cue/visible cue-visible cue interpretation (low two adjacent cylinders = head gasket - classic FD from gauge numbers). The work is being assessed at the in-service lifecycle state with source anchors OEM service info.",
+  "scenario": "In a T4 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The observed field condition is: compression/leak-down interpretation (low two adjacent cylinders = head gasket - classic FD from gauge numbers). The work is being assessed at the in-service lifecycle state with source anchors OEM service info.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM service info"

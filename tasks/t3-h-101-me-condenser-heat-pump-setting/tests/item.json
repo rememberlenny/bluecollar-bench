@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "pad not level (oil return)",
   "discipline": "2.3 HVAC-R",
   "discipline_code": "2.3",
   "element": "H-101 Condenser/heat pump setting",
   "element_code": "H-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-h-101-me-condenser-heat-pump-setting",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,9 +39,14 @@
   ],
   "required_findings": [
     [
+      "clearance",
+      "manufacturer",
       "level"
     ],
     [
+      "airflow",
+      "efficiency",
+      "oil",
       "return"
     ]
   ],
@@ -48,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is H-101 Condenser/heat pump setting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The field notes describe visible cues consistent with: pad not visible cue (oil visible cue). The work is being assessed at the rough-complete lifecycle state with source anchors mfr install manual, IMC/IRC M1401. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T3 work setting, the evaluated element is H-101 Condenser/heat pump setting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The observed field condition is: pad not level (oil return). The work is being assessed at the rough-complete lifecycle state with source anchors mfr install manual, IMC/IRC M1401. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr install manual",

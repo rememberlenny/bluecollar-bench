@@ -22,6 +22,7 @@ import generate_tasks as g1  # noqa: E402
 CONTROL = ROOT / "benchmark" / "items" / "control_items_v2.json"
 MEDIA_ITEMS = ROOT / "benchmark" / "items" / "media_items_v2.json"
 CPM_ITEMS = ROOT / "benchmark" / "items" / "cpm_items_v2.json"
+AUDIO_ITEMS = ROOT / "benchmark" / "items" / "audio_items_v2.json"
 MEDIA_DIR = ROOT / "benchmark" / "media"
 ITEMS = ROOT / "benchmark" / "items" / "items.json"
 GRADE_V2 = (ROOT / "scripts" / "grade_v2.py").read_text(encoding="utf-8")
@@ -49,7 +50,7 @@ def merged_items() -> list[dict]:
     items = [normalize_item(item) for item in json.loads(ITEMS.read_text(encoding="utf-8"))]
     by_id = {i["id"]: i for i in items}
     added = 0
-    for src in (CONTROL, MEDIA_ITEMS, CPM_ITEMS):
+    for src in (CONTROL, MEDIA_ITEMS, CPM_ITEMS, AUDIO_ITEMS):
         if not src.exists():
             continue
         for item in json.loads(src.read_text(encoding="utf-8")):
@@ -65,6 +66,9 @@ def merged_items() -> list[dict]:
 
 def main() -> None:
     merged_items()
+    restore_script = ROOT / "scripts" / "restore_scenarios.py"
+    if restore_script.exists():
+        subprocess.run([sys.executable, str(restore_script)], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(ROOT / "scripts" / "leakage_audit.py")], cwd=ROOT, check=True)
     items = json.loads(ITEMS.read_text(encoding="utf-8"))
     if TASKS.exists():

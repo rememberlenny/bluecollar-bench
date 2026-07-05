@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missing perimeter bond grid",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-603 Pool/spa equipotential bonding",
   "element_code": "E-603",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-e-603-cc-pool-spa-equipotential-bonding",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "missing"
+      "680",
+      "equipotential",
+      "grid"
     ],
     [
-      "perimeter"
-    ],
-    [
-      "bond"
+      "gradient",
+      "shock",
+      "immersion",
+      "stray"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is E-603 Pool/spa equipotential bonding within 2.1 Electrical. The relevant subcategory is 2.1.6 Grounding & Bonding. The field notes describe visible cues consistent with: not present where expected visible cue visible cue grid. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 680.",
+  "scenario": "In a T3 work setting, the evaluated element is E-603 Pool/spa equipotential bonding within 2.1 Electrical. The relevant subcategory is 2.1.6 Grounding & Bonding. The observed field condition is: missing perimeter bond grid. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 680.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 680"

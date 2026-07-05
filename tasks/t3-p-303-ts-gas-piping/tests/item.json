@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "wrong thread sealant (not gas-rated)",
   "discipline": "2.2 Mechanical - Piping & Plumbing",
   "discipline_code": "2.2",
   "element": "P-303 Gas piping",
   "element_code": "P-303",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-p-303-ts-gas-piping",
-  "leakage_ratio": 0.33,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "wrong"
+      "fuel",
+      "54",
+      "bond"
     ],
     [
-      "thread"
-    ],
-    [
-      "sealant"
+      "leak",
+      "ignition",
+      "debris",
+      "lightning"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T3 work setting, the evaluated element is P-303 Gas piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The field notes describe visible cues consistent with: not matching the specified requirement visible cue visible cue (not gas-rated). The work is being assessed at the staged lifecycle state with source anchors IFGC, NFPA 54.",
+  "scenario": "In a T3 work setting, the evaluated element is P-303 Gas piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The observed field condition is: wrong thread sealant (not gas-rated). The work is being assessed at the staged lifecycle state with source anchors IFGC, NFPA 54.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IFGC",

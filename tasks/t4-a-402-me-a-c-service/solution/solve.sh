@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "sealed",
-    "stop",
-    "leak"
+    "609 recovery specification",
+    "venting contamination compressor pressure"
   ],
   "actions": [
     "measure",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "standing in line with tendon during stressing (HAZ)",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-202 Post-tensioning",
   "element_code": "S-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t5-s-202-haz-bf-004-post-tensioning",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,13 +41,15 @@
   ],
   "required_findings": [
     [
-      "standing"
+      "pti",
+      "strength",
+      "elongation"
     ],
     [
-      "line"
-    ],
-    [
-      "tendon"
+      "ejection",
+      "anchorage",
+      "strand",
+      "failure"
     ]
   ],
   "risk": "critical",
@@ -54,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T5 work setting, the evaluated element is S-202 Post-tensioning within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.2 Reinforcing. The field notes describe visible cues consistent with: visible cue in visible cue with visible cue during stressing (HAZ). The work is being assessed at the in-progress lifecycle state with source anchors PTI. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T5 work setting, the evaluated element is S-202 Post-tensioning within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.2 Reinforcing. The observed field condition is: standing in line with tendon during stressing (HAZ). The work is being assessed at the in-progress lifecycle state with source anchors PTI. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "PTI"

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "head joints unfilled (visible voids)",
   "discipline": "2.5 Concrete & Masonry",
   "discipline_code": "2.5",
   "element": "C-301 Block/brick laying",
   "element_code": "C-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-c-301-cc-block-brick-laying",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "head"
+      "tms",
+      "joint",
+      "reinforcement"
     ],
     [
-      "joints"
-    ],
-    [
-      "unfilled"
+      "penetration",
+      "water",
+      "cracking",
+      "bond"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is C-301 Block/brick laying within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.3 Masonry. The field notes describe visible cues consistent with: visible cue visible cue visible cue (visible voids). The work is being assessed at the rough-complete lifecycle state with source anchors TMS 402/602.",
+  "scenario": "In a T3 work setting, the evaluated element is C-301 Block/brick laying within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.3 Masonry. The observed field condition is: head joints unfilled (visible voids). The work is being assessed at the rough-complete lifecycle state with source anchors TMS 402/602.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "TMS 402/602"

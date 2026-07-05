@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "DP impulse lines sloped wrong for service (gas taps below pipe / liquid taps on top - the classic)",
   "discipline": "2.8 Instrumentation & Controls",
   "discipline_code": "2.8",
   "element": "I-101 Transmitter installation",
   "element_code": "I-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t1-i-101-fd-bf-004-transmitter-installation",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "impulse"
+      "551",
+      "impulse",
+      "orientation"
     ],
     [
-      "lines"
-    ],
-    [
-      "sloped"
+      "error",
+      "gas",
+      "condensate",
+      "reading"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T1 work setting, the evaluated element is I-101 Transmitter installation within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.1 Field Instruments. The field notes describe visible cues consistent with: DP visible cue visible cue visible cue wrong for service (gas taps below pipe / liquid taps on top - the classic). The work is being assessed at the in-service lifecycle state with source anchors API RP 551, mfr manuals. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is I-101 Transmitter installation within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.1 Field Instruments. The observed field condition is: DP impulse lines sloped wrong for service (gas taps below pipe / liquid taps on top - the classic). The work is being assessed at the in-service lifecycle state with source anchors API RP 551, mfr manuals. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "API RP 551",

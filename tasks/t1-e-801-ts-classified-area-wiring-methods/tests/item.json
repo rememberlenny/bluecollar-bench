@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "non-rated fixture in Class I Div 2",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-801 Classified-area wiring methods",
   "element_code": "E-801",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-e-801-ts-classified-area-wiring-methods",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "rated"
+      "500",
+      "seal",
+      "classified"
     ],
     [
-      "fixture"
-    ],
-    [
-      "class"
+      "ignition",
+      "vapor",
+      "migration",
+      "explosion"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T1 work setting, the evaluated element is E-801 Classified-area wiring methods within 2.1 Electrical. The relevant subcategory is 2.1.8 Hazardous Locations (T1 overlay). The field notes describe visible cues consistent with: non-visible cue visible cue in visible cue I Div 2. The work is being assessed at the staged lifecycle state with source anchors NEC 500-516.",
+  "scenario": "In a T1 work setting, the evaluated element is E-801 Classified-area wiring methods within 2.1 Electrical. The relevant subcategory is 2.1.8 Hazardous Locations (T1 overlay). The observed field condition is: non-rated fixture in Class I Div 2. The work is being assessed at the staged lifecycle state with source anchors NEC 500-516.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 500-516"

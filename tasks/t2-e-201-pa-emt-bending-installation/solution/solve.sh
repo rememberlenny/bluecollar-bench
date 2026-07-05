@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "improper",
-    "coupling",
-    "engagement"
+    "358 raceway support",
+    "pull damage insulation capacity"
   ],
   "actions": [
     "complete",

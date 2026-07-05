@@ -15,7 +15,7 @@ You are evaluating a blue-collar trade-work scenario. Produce a concise, inspect
 
 ## Scenario
 
-In a T3 work setting, the evaluated element is S-201 Rebar placement within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.2 Reinforcing. The field notes describe visible cues consistent with: not present where expected visible cue/visible cue (mat on dirt). The work is being assessed at the rough-complete lifecycle state with source anchors ACI 318, ACI 117, placing drawings. Treat this as roughly 70 percent complete until defects are corrected.
+In a T3 work setting, the evaluated element is S-201 Rebar placement within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.2 Reinforcing. The observed field condition is: missing chairs/supports (mat on dirt). The work is being assessed at the rough-complete lifecycle state with source anchors ACI 318, ACI 117, placing drawings. Treat this as roughly 70 percent complete until defects are corrected.
 
 ## Task
 
@@ -33,6 +33,11 @@ Write valid JSON to `/app/answer.json` with this shape:
   "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
   "s3_percent": 0,
   "value": 0,
+  "sound_source": "component or source of the sound, when asked",
+  "confidence": 0.0,
+  "event_time": 0.0,
+  "rate": 0.0,
+  "order": ["step-id", "..."],
   "workable": ["activity ID", "..."],
   "findings": ["short defect or hazard finding", "..."],
   "actions": ["immediate corrective action", "..."],
@@ -43,6 +48,7 @@ Write valid JSON to `/app/answer.json` with this shape:
 
 Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
 Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.
 Use `workable` for a list of activity IDs when the task asks what work can still start.
 
 ## Source anchors

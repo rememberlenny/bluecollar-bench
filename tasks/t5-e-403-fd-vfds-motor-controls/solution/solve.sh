@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "missing",
-    "reactor",
-    "long"
+    "430 reactor separation",
+    "reflected interference insulation nuisance"
   ],
   "actions": [
     "diagnose",

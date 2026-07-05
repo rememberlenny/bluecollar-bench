@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "sagging flex (>\u00bd in/ft between supports)",
   "discipline": "2.3 HVAC-R",
   "discipline_code": "2.3",
   "element": "H-201 Duct installation",
   "element_code": "H-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-h-201-pa-duct-installation",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "sagging"
+      "seal",
+      "mastic",
+      "smacna"
     ],
     [
-      "flex"
-    ],
-    [
-      "supports"
+      "leakage",
+      "loss",
+      "efficiency",
+      "pressure"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is H-201 Duct installation within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The field notes describe visible cues consistent with: visible cue visible cue (>\u00bd in/ft between visible cue). The work is being assessed at the rough-complete lifecycle state with source anchors IMC 603, SMACNA, Manual D. Treat this as roughly 70 percent complete until defects are corrected.",
+  "scenario": "In a T3 work setting, the evaluated element is H-201 Duct installation within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The observed field condition is: sagging flex (>\u00bd in/ft between supports). The work is being assessed at the rough-complete lifecycle state with source anchors IMC 603, SMACNA, Manual D. Treat this as roughly 70 percent complete until defects are corrected.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IMC 603",

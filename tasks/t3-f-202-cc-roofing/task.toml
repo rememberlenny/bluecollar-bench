@@ -24,6 +24,16 @@ media = []
 expected_value_present = false
 expected_value = 0.0
 value_tolerance = 0.0
+expected_rate_present = false
+expected_rate = 0.0
+rate_tolerance = 0.0
+expected_event_time_present = false
+expected_event_time = 0.0
+event_time_tolerance = 0.0
+expected_order = []
+expected_sound_source = ""
+confusable_with = ""
+reduction_test = ""
 generation = "auto"
 source_refs = ["IRC R905", "mfr specs"]
 

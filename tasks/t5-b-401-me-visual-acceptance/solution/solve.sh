@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "first",
-    "article",
-    "dims"
+    "boundary standard drawing",
+    "reject nonconforming classification criteria"
   ],
   "actions": [
     "measure",

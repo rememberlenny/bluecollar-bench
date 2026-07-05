@@ -10,20 +10,28 @@ The uploaded v0.1 taxonomy docs are preserved under `docs/source/`. The executab
 - `benchmark/items/seed_items.json` contains curated hand-authored seed items.
 - `benchmark/items/control_items_v2.json` contains pass, needs-more-info, alarmist-trap, and tradeoff control items.
 - `benchmark/items/media_items_v2.json` contains synthetic image-backed instrument and rigging items.
-- `benchmark/media/` contains generated PNG fixtures copied into image-backed task containers at `/app/media/`.
+- `benchmark/items/audio_items_v2.json` contains synthetic audio-native fault-signature items.
+- `benchmark/items/original_scenarios.json` and `benchmark/items/interpretation_map.json` support v2.4 restoration of placeholder-stripped auto items.
+- `benchmark/media/` contains generated PNG and WAV fixtures copied into media-backed task containers at `/app/media/`.
 - `benchmark/items/items.json` is the generated comprehensive item catalog.
 - `benchmark/coverage_report.md` summarizes coverage by discipline, tier, task type, and matrix cell.
 - `benchmark/leakage_report.md` summarizes answer-token leakage and writes `leakage_ratio` onto each item.
+- `benchmark/restore_report.md` summarizes restored evidence and residual partial leakage for repaired auto items.
 - `dataset.toml` is the Harbor dataset manifest for the full benchmark.
 - `tasks/` contains generated Harbor task directories.
 - `scripts/build_item_catalog.py` parses the source docs and builds the comprehensive item catalog.
 - `scripts/gen_media_items.py` deterministically renders synthetic media fixtures and emits `media_items_v2.json`.
-- `scripts/generate_tasks_v2.py` merges v2 controls and media items, runs leakage auditing, and regenerates all Harbor tasks with `grade_v2`.
+- `scripts/gen_audio_items.py` deterministically renders synthetic audio fixtures and emits `audio_items_v2.json`.
+- `scripts/restore_scenarios.py` restores auto-item evidence and re-keys findings to interpretation vocabulary before leakage auditing.
+- `scripts/generate_tasks_v2.py` merges v2 controls, image media, CPM, and audio items, restores scenarios, runs leakage auditing, and regenerates all Harbor tasks with `grade_v2`.
+- `scripts/collect_run_results.py` harvests Harbor verifier rewards into versioned run directories pinned to the catalog hash.
+- `scripts/compare_runs.py` compares two collected runs across shared tasks and aggregate axes.
 - `scripts/grade_v2.py` is the current deterministic verifier template used in generated tasks.
 - `scripts/validate_tasks.py` runs local oracle/verifier checks without Docker.
 - `scripts/run_harbor.sh` runs either one task or the full Harbor dataset.
+- `docs/source/modality-native-task-categories-v0.1.md` defines audio-only and video-only task categories where the modality is the signal.
 
-Current generated size: 1005 Harbor tasks from 95 source elements, 12 curated seeds, 21 v2 control items, 56 synthetic instrument/media items, 28 synthetic CPM/resource-constraint items, 651 direct source-derived items, and 237 matrix backfill items. The v2.1 catalog adds real image evidence with deterministic ground truth, but the benchmark is still fail-heavy overall; see `GAP_ANALYSIS_v2.md` before treating aggregate scores as final. The source taxonomy still needs SME red-team validation before claims should be treated as authoritative.
+Current generated size: 1049 Harbor tasks from 95 source elements, 12 curated seeds, 21 v2 control items, 56 synthetic instrument/media items, 28 synthetic CPM/resource-constraint items, 44 synthetic audio fault-signature items, 651 direct source-derived items, and 237 matrix backfill items. The v2.1/v2.2/v2.3 catalog adds image and audio evidence with deterministic ground truth, but the benchmark is still fail-heavy overall; see `GAP_ANALYSIS_v2.md` before treating aggregate scores as final. The source taxonomy still needs SME red-team validation before claims should be treated as authoritative.
 
 ## Repository Layout
 
@@ -57,7 +65,7 @@ Regenerate tasks:
 make generate
 ```
 
-This rebuilds the 900-item base catalog, merges the v2 controls and synthetic media items, tags leakage, copies media fixtures into image-backed tasks, and writes generated tasks with the v2 grader.
+This rebuilds the 900-item base catalog, merges the v2 controls plus synthetic image, CPM, and audio items, restores placeholder-stripped evidence, tags leakage, copies media fixtures into media-backed tasks, and writes generated tasks with the v2 grader.
 
 Validate the generated tasks locally:
 
@@ -86,6 +94,33 @@ You can also run directly with Harbor:
 harbor run -p . --agent codex --model openai/gpt-5 --n-concurrent 8
 ```
 
+Collect and version run results:
+
+```bash
+python3 scripts/collect_run_results.py <harbor-runs-dir> gpt5_2026-07-05
+```
+
+This writes an immutable run directory:
+
+```text
+benchmark/runs/gpt5_2026-07-05/
+manifest.json
+metrics.json
+analysis.md
+catalog.snapshot.json
+```
+
+It also updates `benchmark/runs/index.json` and `benchmark/runs/latest.json`. Reusing a run name is rejected unless `--overwrite` is passed, so previous measurements are not lost accidentally. Each run stores the full `items.json` snapshot and catalog SHA used at collection time.
+
+Compare two collected runs:
+
+```bash
+python3 scripts/compare_runs.py gpt5_2026-07-05 gpt5_2026-07-06 \
+  --output benchmark/runs/gpt5_2026-07-05_vs_2026-07-06.md
+```
+
+The comparison report warns if catalog hashes differ, then reports shared-task reward deltas, safety-gate changes, axis rollups, largest regressions, and largest improvements.
+
 Install Harbor if needed:
 
 ```bash
@@ -104,6 +139,11 @@ Agents must write valid JSON to `/app/answer.json`:
   "s2_conditions": ["installed-defective", "non-compliant"],
   "s3_percent": 70,
   "value": 0,
+  "sound_source": "component or source of the sound, when asked",
+  "confidence": 0.0,
+  "event_time": 0.0,
+  "rate": 0.0,
+  "order": ["step-id", "..."],
   "findings": ["short defect or hazard finding"],
   "actions": ["immediate corrective action"],
   "rationale": "brief explanation",
@@ -128,11 +168,11 @@ The verifier emits `/logs/verifier/reward.json` with component metrics:
 
 The two directional safety metrics are intended as headline measures: `dangerous_false_pass` catches passing unsafe/non-compliant work, while `alarmist_false_fail` catches failing compliant controls.
 
-For image-backed instrument items, `s3` is reused for numeric-value scoring: `value` must be within the item's `value_tolerance` of `expected_value`.
+For image-backed instrument items, `s3` is reused for numeric-value scoring: `value` must be within the item's `value_tolerance` of `expected_value`. For audio/video-native items, the same slot can grade `sound_source`, `event_time`, `rate`, and `order` when corresponding expected fields exist.
 
 ## Item Schema
 
-Every item includes `modality` and `media` fields. Current generated items include 921 text-only tasks and 84 `modality: "image"` tasks. Image-backed items may also include `expected_value` and `value_tolerance` for deterministic grading of readings or computed quantities.
+Every item includes `modality` and `media` fields. Current generated items include 921 text-only tasks, 84 `modality: "image"` tasks, and 44 `modality: "audio"` tasks. Image-backed items may include `expected_value` and `value_tolerance` for deterministic grading of readings or computed quantities. Audio-native items may include `expected_sound_source` and `reduction_test`; future video-native items use the same pattern with `expected_event_time`, `expected_rate`, `expected_order`, and `confusable_with`.
 
 ## Publishing
 
@@ -172,6 +212,7 @@ Keep items small and objectively gradable. If an item requires jurisdiction-spec
 ## Roadmap
 
 - Extend synthetic media families: dial indicators, torque wrench/spec plates, panel schedules, P&ID excerpts, and photo-realistic variants seeded from the same ground-truth parameters.
+- Add animated video primitives for drip rate, torque-sequence order, belt drift, and wobble/runout tests.
 - Add SME-reviewed gold labels and jurisdiction/code-edition metadata.
 - Split deterministic grading from optional LLM-judge grading for open-ended hazard lists.
 - Add aggregate reporting by tier, discipline, task type, S1 state, and S2 condition.

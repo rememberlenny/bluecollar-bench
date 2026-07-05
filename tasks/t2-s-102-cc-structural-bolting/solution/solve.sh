@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "squirter",
-    "washers",
-    "fully"
+    "rcsc pretension rotation",
+    "slip fatigue clamping joint"
   ],
   "actions": [
     "correct",

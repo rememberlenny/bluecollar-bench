@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "breaker/conductor ampacity mismatch",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-103 Overcurrent device selection & coordination",
   "element_code": "E-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-e-103-doc-overcurrent-device-selection-coo",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.33,
   "media": [],
   "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
@@ -36,13 +39,14 @@
   ],
   "required_findings": [
     [
-      "breaker"
+      "240",
+      "ampacity",
+      "protection"
     ],
     [
-      "conductor"
-    ],
-    [
-      "ampacity"
+      "overload",
+      "overheat",
+      "fire"
     ]
   ],
   "risk": "high",
@@ -51,7 +55,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T1 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: visible cue/visible cue visible cue mismatch. The work is being assessed at the tested/inspected lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T1 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: breaker/conductor ampacity mismatch. The work is being assessed at the tested/inspected lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 240",

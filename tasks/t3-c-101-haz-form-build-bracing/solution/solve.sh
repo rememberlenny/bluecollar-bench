@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "inadequate",
-    "kickers",
-    "pour"
+    "347 bracing pressure",
+    "blowout collapse deflection failure"
   ],
   "actions": [
     "stop work",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "wrong",
-    "wirenut",
-    "size"
+    "110.14 termination torque",
+    "resistance overheat arc loose"
   ],
   "actions": [
     "replace",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "hitting",
-    "studs",
-    "screw"
+    "expansion substrate fastening",
+    "buckling deflection pullout movement"
   ],
   "actions": [
     "replace",

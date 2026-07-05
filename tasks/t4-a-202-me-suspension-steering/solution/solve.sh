@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "torquing",
-    "rubber",
-    "bushings"
+    "play specification wear",
+    "alignment separation control camber"
   ],
   "actions": [
     "measure",

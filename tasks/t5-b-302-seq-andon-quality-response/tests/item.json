@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "defect passed downstream instead of pulled",
   "discipline": "2.10 Assembly & Fabrication",
   "discipline_code": "2.10",
   "element": "B-302 Andon & quality response",
   "element_code": "B-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t5-b-302-seq-andon-quality-response",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "defect"
+      "containment",
+      "disposition",
+      "andon"
     ],
     [
-      "passed"
-    ],
-    [
-      "downstream"
+      "escape",
+      "downstream",
+      "quarantine",
+      "customer"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T5 work setting, the evaluated element is B-302 Andon & quality response within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.3 Line Operations. The field notes describe visible cues consistent with: visible cue visible cue visible cue instead of pulled. The work is being assessed at the in-progress lifecycle state with source anchors site quality procedures.",
+  "scenario": "In a T5 work setting, the evaluated element is B-302 Andon & quality response within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.3 Line Operations. The observed field condition is: defect passed downstream instead of pulled. The work is being assessed at the in-progress lifecycle state with source anchors site quality procedures.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "site quality procedures"

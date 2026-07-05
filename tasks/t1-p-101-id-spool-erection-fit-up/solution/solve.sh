@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "wrong",
-    "root"
+    "b31 isometric alignment",
+    "stress strain leak fitup"
   ],
   "actions": [
     "identify",

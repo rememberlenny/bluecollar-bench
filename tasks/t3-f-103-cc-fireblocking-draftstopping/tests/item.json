@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "open stud bays at floor transitions",
   "discipline": "2.6 Carpentry & Finishes",
   "discipline_code": "2.6",
   "element": "F-103 Fireblocking & draftstopping",
   "element_code": "F-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-f-103-cc-fireblocking-draftstopping",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "open"
+      "302",
+      "fireblocking",
+      "rated"
     ],
     [
-      "stud"
-    ],
-    [
-      "bays"
+      "spread",
+      "chimney",
+      "concealed",
+      "flame"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is F-103 Fireblocking & draftstopping within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The field notes describe visible cues consistent with: visible cue visible cue visible cue at floor transitions. The work is being assessed at the rough-complete lifecycle state with source anchors IRC R302.",
+  "scenario": "In a T3 work setting, the evaluated element is F-103 Fireblocking & draftstopping within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The observed field condition is: open stud bays at floor transitions. The work is being assessed at the rough-complete lifecycle state with source anchors IRC R302.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R302"

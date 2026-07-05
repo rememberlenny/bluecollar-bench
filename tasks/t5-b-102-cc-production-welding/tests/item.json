@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missed weld per drawing (DOC)",
   "discipline": "2.10 Assembly & Fabrication",
   "discipline_code": "2.10",
   "element": "B-102 Production welding",
   "element_code": "B-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t5-b-102-cc-production-welding",
-  "leakage_ratio": 0.33,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "missed"
+      "wps",
+      "parameter",
+      "gauge"
     ],
     [
-      "weld"
-    ],
-    [
-      "drawing"
+      "fusion",
+      "undersize",
+      "strength",
+      "reject"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is B-102 Production welding within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.1 Fastening & Joining. The field notes describe visible cues consistent with: visible cue visible cue per visible cue (DOC). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1/D1.3, shop WPS.",
+  "scenario": "In a T5 work setting, the evaluated element is B-102 Production welding within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.1 Fastening & Joining. The observed field condition is: missed weld per drawing (DOC). The work is being assessed at the rough-complete lifecycle state with source anchors AWS D1.1/D1.3, shop WPS.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "AWS D1.1/D1.3",

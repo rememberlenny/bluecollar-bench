@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "outriggers not fully extended on mats",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-302 Crane operations",
   "element_code": "S-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "outriggers"
+      "chart",
+      "radius",
+      "configuration"
     ],
     [
-      "fully"
-    ],
-    [
-      "extended"
+      "tip",
+      "overload",
+      "stability",
+      "contact"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is S-302 Crane operations within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The field notes describe visible cues consistent with: visible cue not visible cue visible cue on mats. The work is being assessed at the rough-complete lifecycle state with source anchors OSHA 1926.1400, load charts. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T2 work setting, the evaluated element is S-302 Crane operations within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: outriggers not fully extended on mats. The work is being assessed at the rough-complete lifecycle state with source anchors OSHA 1926.1400, load charts. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926.1400",

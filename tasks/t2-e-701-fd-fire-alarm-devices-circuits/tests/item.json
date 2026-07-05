@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "T-tapping on Class B circuit",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-701 Fire alarm devices & circuits",
   "element_code": "E-701",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-e-701-fd-fire-alarm-devices-circuits",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "tapping"
+      "nfpa",
+      "72",
+      "supervision"
     ],
     [
-      "class"
-    ],
-    [
-      "circuit"
+      "undetected",
+      "trouble",
+      "notification",
+      "life"
     ]
   ],
   "risk": "high",
@@ -52,7 +57,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T2 work setting, the evaluated element is E-701 Fire alarm devices & circuits within 2.1 Electrical. The relevant subcategory is 2.1.7 Low Voltage & Specialty. The field notes describe visible cues consistent with: T-visible cue on visible cue B visible cue. The work is being assessed at the in-service lifecycle state with source anchors NFPA 72.",
+  "scenario": "In a T2 work setting, the evaluated element is E-701 Fire alarm devices & circuits within 2.1 Electrical. The relevant subcategory is 2.1.7 Low Voltage & Specialty. The observed field condition is: T-tapping on Class B circuit. The work is being assessed at the in-service lifecycle state with source anchors NFPA 72.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NFPA 72"

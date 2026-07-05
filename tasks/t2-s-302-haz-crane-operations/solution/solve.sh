@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "working",
-    "under",
-    "suspended"
+    "chart radius configuration",
+    "tip overload stability contact"
   ],
   "actions": [
     "stop work",

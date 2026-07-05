@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "worn sheave grooves (belt riding low - ID)",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-302 Belts, sheaves & couplings",
   "element_code": "M-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "worn"
+      "tension",
+      "alignment",
+      "match"
     ],
     [
-      "sheave"
-    ],
-    [
-      "grooves"
+      "slip",
+      "wear",
+      "vibration",
+      "throw"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is M-302 Belts, sheaves & couplings within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The field notes describe visible cues consistent with: visible cue visible cue visible cue (belt riding low - ID). The work is being assessed at the rough-complete lifecycle state with source anchors mfr guides. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is M-302 Belts, sheaves & couplings within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The observed field condition is: worn sheave grooves (belt riding low - ID). The work is being assessed at the rough-complete lifecycle state with source anchors mfr guides. The measurable cue is visible enough to estimate whether the condition is within tolerance. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "mfr guides"

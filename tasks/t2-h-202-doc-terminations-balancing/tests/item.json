@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "supply short-circuiting to return",
   "discipline": "2.3 HVAC-R",
   "discipline_code": "2.3",
   "element": "H-202 Terminations & balancing",
   "element_code": "H-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-h-202-doc-terminations-balancing",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "supply"
+      "balance",
+      "damper",
+      "tab"
     ],
     [
+      "airflow",
+      "comfort",
+      "distribution",
       "short"
-    ],
-    [
-      "circuiting"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T2 work setting, the evaluated element is H-202 Terminations & balancing within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The field notes describe visible cues consistent with: visible cue visible cue-visible cue to return. The work is being assessed at the tested/inspected lifecycle state with source anchors SMACNA, TAB reports. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T2 work setting, the evaluated element is H-202 Terminations & balancing within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The observed field condition is: supply short-circuiting to return. The work is being assessed at the tested/inspected lifecycle state with source anchors SMACNA, TAB reports. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "SMACNA",

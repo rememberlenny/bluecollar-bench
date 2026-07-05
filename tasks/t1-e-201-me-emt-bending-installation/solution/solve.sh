@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "kinked",
-    "flattened",
-    "bend"
+    "358 raceway support",
+    "pull damage insulation capacity"
   ],
   "actions": [
     "measure",

@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "incomplete",
-    "bolt",
-    "pattern"
+    "pcc gasket pattern",
+    "leak uneven crush blowout"
   ],
   "actions": [
     "correct",

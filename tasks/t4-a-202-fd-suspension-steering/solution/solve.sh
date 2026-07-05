@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "ball",
-    "joint",
-    "play"
+    "play specification wear",
+    "alignment separation control camber"
   ],
   "actions": [
     "diagnose",

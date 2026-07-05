@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "unsealed",
-    "weatherhead",
-    "penetration"
+    "service 230",
+    "water intrusion overheat utility"
   ],
   "actions": [
     "stop work",

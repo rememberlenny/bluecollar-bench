@@ -64,6 +64,52 @@ def zero(reason: str) -> None:
     write_reward(metrics)
 
 
+def numeric_score(answer: dict, field: str, expected: float, tolerance: float) -> float:
+    try:
+        return 1.0 if abs(float(answer.get(field)) - float(expected)) <= float(tolerance) else 0.0
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def order_values(value: object) -> list[str]:
+    if isinstance(value, list):
+        return [normalize(x) for x in value if isinstance(x, str)]
+    if isinstance(value, str):
+        return [normalize(x) for x in re.split(r"[,>;\n]+", value) if normalize(x)]
+    return []
+
+
+def edit_distance(a: list[str], b: list[str]) -> int:
+    prev = list(range(len(b) + 1))
+    for i, av in enumerate(a, 1):
+        curr = [i]
+        for j, bv in enumerate(b, 1):
+            curr.append(min(
+                prev[j] + 1,
+                curr[j - 1] + 1,
+                prev[j - 1] + (0 if av == bv else 1),
+            ))
+        prev = curr
+    return prev[-1]
+
+
+def order_score(answer: dict, expected_order: list[str]) -> float:
+    expected = order_values(expected_order)
+    got = order_values(answer.get("order"))
+    if not expected:
+        return 1.0
+    if not got:
+        return 0.0
+    return max(0.0, 1.0 - edit_distance(expected, got) / max(len(expected), len(got), 1))
+
+
+def sound_source_score(answer: dict, expected: object) -> float:
+    got = normalize(answer.get("sound_source", ""))
+    if isinstance(expected, list):
+        return 1.0 if any(normalize(option) == got for option in expected) else 0.0
+    return 1.0 if normalize(expected) == got else 0.0
+
+
 def main() -> int:
     item = json.loads(ITEM_PATH.read_text(encoding="utf-8"))
     if not ANSWER_PATH.exists():
@@ -80,6 +126,15 @@ def main() -> int:
 
     # --- schema ---
     schema_fields = ["decision", "risk", "s1_state", "s2_conditions", "s3_percent", "findings", "actions"]
+    for expected_key, answer_key in [
+        ("expected_value", "value"),
+        ("expected_rate", "rate"),
+        ("expected_event_time", "event_time"),
+        ("expected_order", "order"),
+        ("expected_sound_source", "sound_source"),
+    ]:
+        if expected_key in item:
+            schema_fields.append(answer_key)
     schema = sum(1 for f in schema_fields if f in answer) / len(schema_fields)
 
     # --- decision ---
@@ -116,20 +171,32 @@ def main() -> int:
         extras = len(ans_s2 - expected_s2)
         s2 = max(0.0, hits / len(expected_s2) - 0.25 * extras)
 
-    # --- S3 percent ---
-    s3 = 1.0
+    # --- S3 percent or modality-native scalar/temporal answers ---
+    progress_s3 = 1.0
     if isinstance(item.get("s3_percent"), (int, float)):
-        s3 = 1.0 if isinstance(answer.get("s3_percent"), (int, float)) and abs(item["s3_percent"] - answer["s3_percent"]) <= 15 else 0.0
+        progress_s3 = 1.0 if isinstance(answer.get("s3_percent"), (int, float)) and abs(item["s3_percent"] - answer["s3_percent"]) <= 15 else 0.0
 
-    # --- Numeric value read from media or computed from the visual prompt ---
+    s3_parts: list[float] = []
     if isinstance(item.get("expected_value"), (int, float)):
         tolerance = item.get("value_tolerance", 0)
         if not isinstance(tolerance, (int, float)):
             tolerance = 0
-        try:
-            s3 = 1.0 if abs(float(answer.get("value")) - float(item["expected_value"])) <= float(tolerance) else 0.0
-        except (TypeError, ValueError):
-            s3 = 0.0
+        s3_parts.append(numeric_score(answer, "value", item["expected_value"], tolerance))
+    if isinstance(item.get("expected_rate"), (int, float)):
+        tolerance = item.get("rate_tolerance", 0)
+        if not isinstance(tolerance, (int, float)):
+            tolerance = 0
+        s3_parts.append(numeric_score(answer, "rate", item["expected_rate"], tolerance))
+    if isinstance(item.get("expected_event_time"), (int, float)):
+        tolerance = item.get("event_time_tolerance", 0)
+        if not isinstance(tolerance, (int, float)):
+            tolerance = 0
+        s3_parts.append(numeric_score(answer, "event_time", item["expected_event_time"], tolerance))
+    if isinstance(item.get("expected_order"), list):
+        s3_parts.append(order_score(answer, item["expected_order"]))
+    if "expected_sound_source" in item:
+        s3_parts.append(sound_source_score(answer, item["expected_sound_source"]))
+    s3 = sum(s3_parts) / len(s3_parts) if s3_parts else progress_s3
 
     # --- findings / actions ---
     scoped = normalize({

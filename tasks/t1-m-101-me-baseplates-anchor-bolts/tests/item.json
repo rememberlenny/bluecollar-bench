@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "grout without vent holes (voids - sounding test)",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-101 Baseplates & anchor bolts",
   "element_code": "M-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-m-101-me-baseplates-anchor-bolts",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "grout"
+      "686",
+      "grout",
+      "projection"
     ],
     [
-      "vent"
-    ],
-    [
-      "holes"
+      "vibration",
+      "loosening",
+      "resonance",
+      "movement"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is M-101 Baseplates & anchor bolts within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.1 Setting & Grouting. The field notes describe visible cues consistent with: visible cue without visible cue visible cue (voids - sounding test). The work is being assessed at the rough-complete lifecycle state with source anchors API RP 686. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T1 work setting, the evaluated element is M-101 Baseplates & anchor bolts within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.1 Setting & Grouting. The observed field condition is: grout without vent holes (voids - sounding test). The work is being assessed at the rough-complete lifecycle state with source anchors API RP 686. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "API RP 686"

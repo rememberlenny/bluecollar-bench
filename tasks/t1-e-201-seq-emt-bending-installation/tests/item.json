@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missing support within 3 ft of box",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-201 EMT bending & installation",
   "element_code": "E-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-e-201-seq-emt-bending-installation",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,10 +39,15 @@
   ],
   "required_findings": [
     [
-      "missing"
+      "358",
+      "raceway",
+      "support"
     ],
     [
-      "support"
+      "pull",
+      "damage",
+      "insulation",
+      "capacity"
     ]
   ],
   "risk": "high",
@@ -48,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is E-201 EMT bending & installation within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The field notes describe visible cues consistent with: not present where expected visible cue within 3 ft of box. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 358, Ch. 9 (fill).",
+  "scenario": "In a T1 work setting, the evaluated element is E-201 EMT bending & installation within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: missing support within 3 ft of box. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 358, Ch. 9 (fill).",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 358",

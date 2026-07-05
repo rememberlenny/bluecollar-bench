@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "honeycomb",
-    "missed",
-    "vibration"
+    "301 consolidation placement",
+    "honeycomb segregation cold strength"
   ],
   "actions": [
     "diagnose",

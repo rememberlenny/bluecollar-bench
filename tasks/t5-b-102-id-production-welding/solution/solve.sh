@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "spatter",
-    "cleanliness",
-    "reject"
+    "wps parameter gauge",
+    "fusion undersize strength reject"
   ],
   "actions": [
     "identify",

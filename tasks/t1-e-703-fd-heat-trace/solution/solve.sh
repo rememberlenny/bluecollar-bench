@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "crossed",
-    "circuits",
-    "insulation"
+    "427 gfpe circuit",
+    "freeze fire fault moisture"
   ],
   "actions": [
     "diagnose",

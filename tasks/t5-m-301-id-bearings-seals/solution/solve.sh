@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "overheated",
-    "install",
-    "bluing"
+    "race mounting fit",
+    "brinell premature failure contamination"
   ],
   "actions": [
     "identify",

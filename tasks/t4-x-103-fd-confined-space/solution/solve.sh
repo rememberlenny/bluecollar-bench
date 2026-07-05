@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "attendant",
-    "posted"
+    "1910.146 permit atmosphere",
+    "asphyxiation toxic flammable rescue"
   ],
   "actions": [
     "diagnose",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "torque sequence pattern violated (spiral/star from center - SEQ)",
   "discipline": "2.10 Assembly & Fabrication",
   "discipline_code": "2.10",
   "element": "B-101 Torque & threaded fastening",
   "element_code": "B-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t4-b-101-seq-torque-threaded-fastening",
-  "leakage_ratio": 0.33,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "sequence"
+      "specification",
+      "sequence",
+      "single-use"
     ],
     [
-      "pattern"
-    ],
-    [
-      "violated"
+      "clamping",
+      "distortion",
+      "yield",
+      "relaxation"
     ]
   ],
   "risk": "high",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is B-101 Torque & threaded fastening within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.1 Fastening & Joining. The field notes describe visible cues consistent with: torque visible cue visible cue not following the required order (spiral/star from center - SEQ). The work is being assessed at the in-progress lifecycle state with source anchors OEM/engineering specs.",
+  "scenario": "In a T4 work setting, the evaluated element is B-101 Torque & threaded fastening within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.1 Fastening & Joining. The observed field condition is: torque sequence pattern violated (spiral/star from center - SEQ). The work is being assessed at the in-progress lifecycle state with source anchors OEM/engineering specs.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM/engineering specs"

@@ -15,7 +15,7 @@ You are evaluating a blue-collar trade-work scenario. Produce a concise, inspect
 
 ## Scenario
 
-In a T3 work setting, the evaluated element is H-301 Brazing & evacuation within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The field notes describe visible cues consistent with: visible cue without visible cue visible cue (black scale inside - shows in cutaway photos). The work is being assessed at the in-progress lifecycle state with source anchors mfr specs, ACCA, EPA 608.
+In a T3 work setting, the evaluated element is H-301 Brazing & evacuation within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The observed field condition is: brazed without nitrogen purge (black scale inside - shows in cutaway photos). The work is being assessed at the in-progress lifecycle state with source anchors mfr specs, ACCA, EPA 608.
 
 ## Task
 
@@ -33,6 +33,11 @@ Write valid JSON to `/app/answer.json` with this shape:
   "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
   "s3_percent": 0,
   "value": 0,
+  "sound_source": "component or source of the sound, when asked",
+  "confidence": 0.0,
+  "event_time": 0.0,
+  "rate": 0.0,
+  "order": ["step-id", "..."],
   "workable": ["activity ID", "..."],
   "findings": ["short defect or hazard finding", "..."],
   "actions": ["immediate corrective action", "..."],
@@ -43,6 +48,7 @@ Write valid JSON to `/app/answer.json` with this shape:
 
 Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
 Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.
 Use `workable` for a list of activity IDs when the task asks what work can still start.
 
 ## Source anchors

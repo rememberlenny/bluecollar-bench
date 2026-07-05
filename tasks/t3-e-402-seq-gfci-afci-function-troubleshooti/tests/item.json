@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "AFCI nuisance-trip diagnosis (shared neutral)",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-402 GFCI/AFCI function & troubleshooting",
   "element_code": "E-402",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-e-402-seq-gfci-afci-function-troubleshooti",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.38,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,13 +39,16 @@
   ],
   "required_findings": [
     [
-      "nuisance"
+      "210.8",
+      "210.12",
+      "line",
+      "load"
     ],
     [
-      "trip"
-    ],
-    [
-      "diagnosis"
+      "protection",
+      "downstream",
+      "nuisance",
+      "shock"
     ]
   ],
   "risk": "high",
@@ -51,7 +57,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T3 work setting, the evaluated element is E-402 GFCI/AFCI function & troubleshooting within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The field notes describe visible cues consistent with: AFCI visible cue-visible cue visible cue (shared neutral). The work is being assessed at the in-progress lifecycle state with source anchors NEC 210.8, 210.12.",
+  "scenario": "In a T3 work setting, the evaluated element is E-402 GFCI/AFCI function & troubleshooting within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The observed field condition is: AFCI nuisance-trip diagnosis (shared neutral). The work is being assessed at the in-progress lifecycle state with source anchors NEC 210.8, 210.12.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 210.8",

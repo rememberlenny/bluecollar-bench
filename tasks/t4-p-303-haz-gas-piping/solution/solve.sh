@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "csst",
-    "bonded"
+    "fuel 54 bond",
+    "leak ignition debris lightning"
   ],
   "actions": [
     "stop work",

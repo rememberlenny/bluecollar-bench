@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "no try-step verification (SEQ)",
   "discipline": "2.12 Safety & Rigging",
   "discipline_code": "2.12",
   "element": "X-101 Lockout/Tagout",
   "element_code": "X-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t4-x-101-haz-lockout-tagout",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,10 +41,15 @@
   ],
   "required_findings": [
     [
-      "step"
+      "1910.147",
+      "energy",
+      "verification"
     ],
     [
-      "verification"
+      "unexpected",
+      "release",
+      "stored",
+      "startup"
     ]
   ],
   "risk": "critical",
@@ -51,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is X-101 Lockout/Tagout within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The field notes describe visible cues consistent with: no try-visible cue visible cue (SEQ). The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1910.147.",
+  "scenario": "In a T4 work setting, the evaluated element is X-101 Lockout/Tagout within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: no try-step verification (SEQ). The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1910.147.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OSHA 1910.147"

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "over-greasing (purged seal)",
   "discipline": "2.7 Equipment & Machinery",
   "discipline_code": "2.7",
   "element": "M-301 Bearings & seals",
   "element_code": "M-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t1-m-301-ts-bf-007-bearings-seals",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "over"
+      "race",
+      "mounting",
+      "fit"
     ],
     [
-      "greasing"
-    ],
-    [
-      "purged"
+      "brinell",
+      "premature",
+      "failure",
+      "contamination"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T1 work setting, the evaluated element is M-301 Bearings & seals within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The field notes describe visible cues consistent with: visible cue-visible cue (visible cue seal). The work is being assessed at the staged lifecycle state with source anchors SKF/Timken mounting guides. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is M-301 Bearings & seals within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The observed field condition is: over-greasing (purged seal). The work is being assessed at the staged lifecycle state with source anchors SKF/Timken mounting guides. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "SKF/Timken mounting guides"

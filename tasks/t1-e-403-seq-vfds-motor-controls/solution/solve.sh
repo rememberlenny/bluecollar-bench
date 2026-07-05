@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "wrong",
-    "overload",
-    "class"
+    "430 reactor separation",
+    "reflected interference insulation nuisance"
   ],
   "actions": [
     "stop",

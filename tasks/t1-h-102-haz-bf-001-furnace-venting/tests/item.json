@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "PVC flue slope back-pitched (condensing)",
   "discipline": "2.3 HVAC-R",
   "discipline_code": "2.3",
   "element": "H-102 Furnace & venting",
   "element_code": "H-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t1-h-102-haz-bf-001-furnace-venting",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,13 +41,15 @@
   ],
   "required_findings": [
     [
-      "flue"
+      "venting",
+      "combustion",
+      "category"
     ],
     [
-      "slope"
-    ],
-    [
-      "back"
+      "carbon",
+      "monoxide",
+      "backdraft",
+      "spillage"
     ]
   ],
   "risk": "critical",
@@ -54,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is H-102 Furnace & venting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The field notes describe visible cues consistent with: PVC visible cue visible cue visible cue-pitched (condensing). The work is being assessed at the in-progress lifecycle state with source anchors IRC M1801, NFPA 54. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is H-102 Furnace & venting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The observed field condition is: PVC flue slope back-pitched (condensing). The work is being assessed at the in-progress lifecycle state with source anchors IRC M1801, NFPA 54. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC M1801",

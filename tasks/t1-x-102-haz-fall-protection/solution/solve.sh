@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "anchor",
-    "point",
-    "inadequate"
+    "anchorage 5000 inspection",
+    "arrest fall deployment fatality"
   ],
   "actions": [
     "stop work",

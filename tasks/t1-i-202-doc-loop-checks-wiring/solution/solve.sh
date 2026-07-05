@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "shield",
-    "grounded",
-    "both"
+    "shield single drawing",
+    "ground loop noise wrong"
   ],
   "actions": [
     "compare",

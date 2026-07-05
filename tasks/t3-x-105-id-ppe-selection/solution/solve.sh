@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "voltage",
-    "glove",
-    "class"
+    "70e category class",
+    "arc flash exposure inadequate"
   ],
   "actions": [
     "identify",

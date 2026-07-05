@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "wrong breaker type for panel (listing)",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-103 Overcurrent device selection & coordination",
   "element_code": "E-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-e-103-cc-overcurrent-device-selection-coo",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.17,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,14 @@
   ],
   "required_findings": [
     [
-      "wrong"
+      "240",
+      "ampacity",
+      "protection"
     ],
     [
-      "breaker"
-    ],
-    [
-      "type"
+      "overload",
+      "overheat",
+      "fire"
     ]
   ],
   "risk": "high",
@@ -53,7 +57,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: not matching the specified requirement visible cue visible cue for panel (listing). The work is being assessed at the rough-complete lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.",
+  "scenario": "In a T1 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: wrong breaker type for panel (listing). The work is being assessed at the rough-complete lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 240",

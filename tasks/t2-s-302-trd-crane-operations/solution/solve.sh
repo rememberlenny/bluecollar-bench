@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "power",
-    "line",
-    "clearance"
+    "chart radius configuration",
+    "tip overload stability contact"
   ],
   "actions": [
     "reject shortcut",

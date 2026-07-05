@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "window pan flashing absent",
   "discipline": "2.6 Carpentry & Finishes",
   "discipline_code": "2.6",
   "element": "F-201 Flashing & WRB integration",
   "element_code": "F-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -37,10 +40,15 @@
   ],
   "required_findings": [
     [
-      "window"
+      "shingle",
+      "lap",
+      "sequence"
     ],
     [
-      "absent"
+      "intrusion",
+      "drainage",
+      "rot",
+      "behind"
     ]
   ],
   "risk": "high",
@@ -50,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The field notes describe visible cues consistent with: visible cue pan flashing visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors IRC R703, mfr instructions.",
+  "scenario": "In a T2 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The observed field condition is: window pan flashing absent. The work is being assessed at the rough-complete lifecycle state with source anchors IRC R703, mfr instructions.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R703",

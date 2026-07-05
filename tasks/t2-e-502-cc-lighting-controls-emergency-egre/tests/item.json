@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "emergency fixture on switched leg",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-502 Lighting controls & emergency egress",
   "element_code": "E-502",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-e-502-cc-lighting-controls-emergency-egre",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,10 +40,15 @@
   ],
   "required_findings": [
     [
-      "fixture"
+      "700",
+      "egress",
+      "unswitched"
     ],
     [
-      "switched"
+      "outage",
+      "evacuation",
+      "life",
+      "safety"
     ]
   ],
   "risk": "high",
@@ -50,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-502 Lighting controls & emergency egress within 2.1 Electrical. The relevant subcategory is 2.1.5 Lighting. The field notes describe visible cues consistent with: emergency visible cue on visible cue leg. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 700, NFPA 101.",
+  "scenario": "In a T2 work setting, the evaluated element is E-502 Lighting controls & emergency egress within 2.1 Electrical. The relevant subcategory is 2.1.5 Lighting. The observed field condition is: emergency fixture on switched leg. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 700, NFPA 101.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 700",

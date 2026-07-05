@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "parasitic",
-    "draw",
-    "procedure"
+    "test verify data",
+    "misdiagnosis parts unnecessary root"
   ],
   "actions": [
     "diagnose",

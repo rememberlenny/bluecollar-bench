@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "plastigauge reading (ME)",
   "discipline": "2.9 Automotive & Powertrain",
   "discipline_code": "2.9",
   "element": "A-101 Timing & mechanical",
   "element_code": "A-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t4-a-101-seq-timing-mechanical",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
@@ -36,10 +39,15 @@
   ],
   "required_findings": [
     [
-      "plastigauge"
+      "oem",
+      "alignment",
+      "specification"
     ],
     [
-      "reading"
+      "timing",
+      "interference",
+      "misfire",
+      "damage"
     ]
   ],
   "risk": "high",
@@ -48,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The field notes describe visible cues consistent with: visible cue visible cue (ME). The work is being assessed at the in-progress lifecycle state with source anchors OEM service info.",
+  "scenario": "In a T4 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The observed field condition is: plastigauge reading (ME). The work is being assessed at the in-progress lifecycle state with source anchors OEM service info.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM service info"

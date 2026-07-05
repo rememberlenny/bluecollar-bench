@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "lubricant",
-    "long",
-    "pull"
+    "identification 200.6 pull",
+    "damage insulation phase confusion"
   ],
   "actions": [
     "replace",

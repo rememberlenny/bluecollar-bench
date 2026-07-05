@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "lapped",
-    "sealed"
+    "flashing weep cavity",
+    "drainage moisture trapped efflorescence"
   ],
   "actions": [
     "correct",

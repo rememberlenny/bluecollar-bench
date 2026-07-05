@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "fillet",
-    "undersized",
-    "callout"
+    "d1.1 wps profile",
+    "fusion cracking capacity fatigue"
   ],
   "actions": [
     "measure",

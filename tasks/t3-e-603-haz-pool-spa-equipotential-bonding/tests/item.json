@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "unbonded pump motor",
   "discipline": "2.1 Electrical",
   "discipline_code": "2.1",
   "element": "E-603 Pool/spa equipotential bonding",
   "element_code": "E-603",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t3-e-603-haz-pool-spa-equipotential-bonding",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,13 +41,15 @@
   ],
   "required_findings": [
     [
-      "unbonded"
+      "680",
+      "equipotential",
+      "grid"
     ],
     [
-      "pump"
-    ],
-    [
-      "motor"
+      "gradient",
+      "shock",
+      "immersion",
+      "stray"
     ]
   ],
   "risk": "critical",
@@ -54,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T3 work setting, the evaluated element is E-603 Pool/spa equipotential bonding within 2.1 Electrical. The relevant subcategory is 2.1.6 Grounding & Bonding. The field notes describe visible cues consistent with: not electrically tied together visible cue visible cue. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 680.",
+  "scenario": "In a T3 work setting, the evaluated element is E-603 Pool/spa equipotential bonding within 2.1 Electrical. The relevant subcategory is 2.1.6 Grounding & Bonding. The observed field condition is: unbonded pump motor. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 680.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 680"

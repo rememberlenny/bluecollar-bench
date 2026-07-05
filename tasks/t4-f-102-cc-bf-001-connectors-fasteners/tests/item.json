@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "missing hanger nails (empty holes)",
   "discipline": "2.6 Carpentry & Finishes",
   "discipline_code": "2.6",
   "element": "F-102 Connectors & fasteners",
   "element_code": "F-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "missing"
+      "listed",
+      "fastener",
+      "schedule"
     ],
     [
-      "hanger"
-    ],
-    [
-      "nails"
+      "withdrawal",
+      "shear",
+      "capacity",
+      "uplift"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is F-102 Connectors & fasteners within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The field notes describe visible cues consistent with: not present where expected visible cue visible cue (empty holes). The work is being assessed at the rough-complete lifecycle state with source anchors Simpson catalogs, IRC. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T4 work setting, the evaluated element is F-102 Connectors & fasteners within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The observed field condition is: missing hanger nails (empty holes). The work is being assessed at the rough-complete lifecycle state with source anchors Simpson catalogs, IRC. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "Simpson catalogs",

@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "found",
-    "left",
-    "recorded"
+    "found left hysteresis",
+    "drift traceability error span"
   ],
   "actions": [
     "compare",

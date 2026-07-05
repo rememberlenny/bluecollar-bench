@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "respirator",
-    "wrong",
-    "cartridge"
+    "70e category class",
+    "arc flash exposure inadequate"
   ],
   "actions": [
     "correct",

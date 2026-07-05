@@ -13,8 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "reversed",
-    "polarity"
+    "406 210.8 gfci",
+    "shock polarity ground protection"
   ],
   "actions": [
     "correct",

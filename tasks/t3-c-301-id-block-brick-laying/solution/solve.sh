@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "joints",
-    "tooled",
-    "concave"
+    "tms joint reinforcement",
+    "penetration water cracking bond"
   ],
   "actions": [
     "identify",

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "unprotected trench \u22655 ft with workers in it",
   "discipline": "2.11 Sitework & Utilities",
   "discipline_code": "2.11",
   "element": "U-101 Trench protection",
   "element_code": "U-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t2-u-101-haz-trench-protection",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.29,
   "media": [],
   "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
@@ -38,10 +41,15 @@
   ],
   "required_findings": [
     [
-      "unprotected"
+      "subpart",
+      "p",
+      "protective"
     ],
     [
-      "workers"
+      "collapse",
+      "engulfment",
+      "fatality",
+      "cave"
     ]
   ],
   "risk": "critical",
@@ -51,7 +59,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T2 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The field notes describe visible cues consistent with: visible cue trench \u22655 ft with visible cue in it. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart P.",
+  "scenario": "In a T2 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The observed field condition is: unprotected trench \u22655 ft with workers in it. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart P.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart P"

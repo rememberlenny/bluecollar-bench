@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "cold",
-    "joint",
-    "lifts"
+    "301 consolidation placement",
+    "honeycomb segregation cold strength"
   ],
   "actions": [
     "identify",

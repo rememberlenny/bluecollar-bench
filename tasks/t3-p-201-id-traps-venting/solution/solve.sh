@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "flat",
-    "horizontal",
-    "vent"
+    "trap vent ipc",
+    "siphon sewer gas seal"
   ],
   "actions": [
     "identify",

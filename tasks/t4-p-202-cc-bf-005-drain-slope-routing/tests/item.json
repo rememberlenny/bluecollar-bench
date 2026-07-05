@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "improper fitting direction (using a vent tee on its back for drainage)",
   "discipline": "2.2 Mechanical - Piping & Plumbing",
   "discipline_code": "2.2",
   "element": "P-202 Drain slope & routing",
   "element_code": "P-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "matrix-backfill",
   "id": "t4-p-202-cc-bf-005-drain-slope-routing",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.14,
   "media": [],
   "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
@@ -37,13 +40,15 @@
   ],
   "required_findings": [
     [
-      "improper"
+      "slope",
+      "grade",
+      "quarter"
     ],
     [
-      "fitting"
-    ],
-    [
-      "direction"
+      "stranding",
+      "clog",
+      "standing",
+      "backup"
     ]
   ],
   "risk": "high",
@@ -53,7 +58,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is P-202 Drain slope & routing within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The field notes describe visible cues consistent with: not installed in the expected manner visible cue visible cue (using a vent tee on its back for drainage). The work is being assessed at the rough-complete lifecycle state with source anchors IPC 704. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T4 work setting, the evaluated element is P-202 Drain slope & routing within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The observed field condition is: improper fitting direction (using a vent tee on its back for drainage). The work is being assessed at the rough-complete lifecycle state with source anchors IPC 704. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IPC 704"

@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "sling angle under 30\u00b0 (tension math - ME)",
   "discipline": "2.4 Structural & Ironwork",
   "discipline_code": "2.4",
   "element": "S-301 Rigging configuration",
   "element_code": "S-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -19,7 +22,7 @@
   ],
   "generation": "auto",
   "id": "t1-s-301-me-rigging-configuration",
-  "leakage_ratio": 0.0,
+  "leakage_ratio": 0.43,
   "media": [],
   "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "sling"
+      "b30",
+      "angle",
+      "rating"
     ],
     [
-      "angle"
-    ],
-    [
-      "under"
+      "tension",
+      "overload",
+      "capacity",
+      "failure"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The field notes describe visible cues consistent with: visible cue visible cue visible cue 30\u00b0 (tension math - ME). The work is being assessed at the rough-complete lifecycle state with source anchors ASME B30, OSHA 1926.251. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T1 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: sling angle under 30\u00b0 (tension math - ME). The work is being assessed at the rough-complete lifecycle state with source anchors ASME B30, OSHA 1926.251. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ASME B30",

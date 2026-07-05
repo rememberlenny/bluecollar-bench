@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "barrier",
-    "missing",
-    "cold"
+    "905 fastening underlayment",
+    "uplift blowoff intrusion ice"
   ],
   "actions": [
     "identify",

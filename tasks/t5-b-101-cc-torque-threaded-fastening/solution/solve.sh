@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "thread",
-    "locker",
-    "color"
+    "specification sequence single-use",
+    "clamping distortion yield relaxation"
   ],
   "actions": [
     "correct",

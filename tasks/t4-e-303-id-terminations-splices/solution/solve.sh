@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "insufficient",
-    "torque",
-    "thermal"
+    "110.14 termination torque",
+    "resistance overheat arc loose"
   ],
   "actions": [
     "identify",

@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "forms",
-    "oiled"
+    "347 bracing pressure",
+    "blowout collapse deflection failure"
   ],
   "actions": [
     "complete",

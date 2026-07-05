@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "sheave",
-    "misalignment",
-    "straightedge"
+    "tension alignment match",
+    "slip wear vibration throw"
   ],
   "actions": [
     "measure",

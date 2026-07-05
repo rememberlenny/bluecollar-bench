@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "windshield",
-    "replaced",
-    "camera"
+    "oem calibration required",
+    "aim camera braking lane"
   ],
   "actions": [
     "correct",

@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "rocks",
-    "against",
-    "sand"
+    "bedding lift compaction",
+    "settlement point load deflection"
   ],
   "actions": [
     "correct",

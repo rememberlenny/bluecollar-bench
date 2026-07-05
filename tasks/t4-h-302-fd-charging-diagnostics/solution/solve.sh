@@ -13,9 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "charged",
-    "beer",
-    "cold"
+    "subcool superheat chart",
+    "overcharge undercharge flood starve"
   ],
   "actions": [
     "diagnose",

@@ -12,8 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "unreamed",
-    "burr"
+    "gauge sleeve ream",
+    "leak erosion corrosion abrasion"
   ],
   "actions": [
     "measure",

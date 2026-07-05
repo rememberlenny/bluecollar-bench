@@ -1,9 +1,12 @@
 {
   "decision": "fail",
+  "defect": "line set uninsulated suction",
   "discipline": "2.3 HVAC-R",
   "discipline_code": "2.3",
   "element": "H-101 Condenser/heat pump setting",
   "element_code": "H-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
   "forbidden": [
     [
       "pass"
@@ -36,13 +39,15 @@
   ],
   "required_findings": [
     [
-      "line"
+      "clearance",
+      "manufacturer",
+      "level"
     ],
     [
-      "uninsulated"
-    ],
-    [
-      "suction"
+      "airflow",
+      "efficiency",
+      "oil",
+      "return"
     ]
   ],
   "risk": "medium",
@@ -51,7 +56,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is H-101 Condenser/heat pump setting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The field notes describe visible cues consistent with: visible cue set visible cue visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors mfr install manual, IMC/IRC M1401.",
+  "scenario": "In a T3 work setting, the evaluated element is H-101 Condenser/heat pump setting within 2.3 HVAC-R. The relevant subcategory is 2.3.1 Equipment Installation. The observed field condition is: line set uninsulated suction. The work is being assessed at the rough-complete lifecycle state with source anchors mfr install manual, IMC/IRC M1401.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr install manual",

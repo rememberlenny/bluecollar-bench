@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "secured",
-    "vertical",
-    "runs"
+    "392 fill bonding",
+    "overheat derating fault path"
   ],
   "actions": [
     "complete",

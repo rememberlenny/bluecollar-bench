@@ -12,9 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "supply",
-    "short",
-    "circuiting"
+    "balance damper tab",
+    "airflow comfort distribution short"
   ],
   "actions": [
     "compare",
