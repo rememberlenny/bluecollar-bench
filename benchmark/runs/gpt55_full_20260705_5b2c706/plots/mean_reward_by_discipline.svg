@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="554" viewBox="0 0 960 554">
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933} .muted{fill:#607080} .grid{stroke:#d7dde3;stroke-width:1} .axis{stroke:#8b98a5;stroke-width:1.2}
+</style>
+<rect width="960" height="554" fill="#ffffff"/>
+<text x="24" y="34" font-size="24" font-weight="700">Mean Reward by Discipline</text>
+<text x="24" y="59" font-size="14" class="muted">Discipline codes, sorted from hardest to easiest.</text>
+<line x1="190.0" y1="74" x2="190.0" y2="508" class="grid"/>
+<text x="190.0" y="536" text-anchor="middle" font-size="12" class="muted">0.00</text>
+<line x1="358.8" y1="74" x2="358.8" y2="508" class="grid"/>
+<text x="358.8" y="536" text-anchor="middle" font-size="12" class="muted">0.25</text>
+<line x1="527.5" y1="74" x2="527.5" y2="508" class="grid"/>
+<text x="527.5" y="536" text-anchor="middle" font-size="12" class="muted">0.50</text>
+<line x1="696.2" y1="74" x2="696.2" y2="508" class="grid"/>
+<text x="696.2" y="536" text-anchor="middle" font-size="12" class="muted">0.75</text>
+<line x1="865.0" y1="74" x2="865.0" y2="508" class="grid"/>
+<text x="865.0" y="536" text-anchor="middle" font-size="12" class="muted">1.00</text>
+<line x1="190" y1="508" x2="865" y2="508" class="axis"/>
+<text x="527.5" y="550" text-anchor="middle" font-size="12" class="muted">Mean reward</text>
+<text x="178" y="112" text-anchor="end" font-size="13">2.1</text>
+<rect x="190" y="97" width="493.9" height="20" rx="3" fill="#2f6f73"/>
+<text x="691.9" y="112" font-size="12">0.732  n=233</text>
+<text x="178" y="146" text-anchor="end" font-size="13">2.4</text>
+<rect x="190" y="131" width="499.9" height="20" rx="3" fill="#b64f35"/>
+<text x="697.9" y="146" font-size="12">0.741  n=91</text>
+<text x="178" y="180" text-anchor="end" font-size="13">2.11</text>
+<rect x="190" y="165" width="504.4" height="20" rx="3" fill="#6f5aa8"/>
+<text x="702.4" y="180" font-size="12">0.747  n=51</text>
+<text x="178" y="214" text-anchor="end" font-size="13">2.2</text>
+<rect x="190" y="199" width="509.1" height="20" rx="3" fill="#9a6b16"/>
+<text x="707.1" y="214" font-size="12">0.754  n=97</text>
+<text x="178" y="248" text-anchor="end" font-size="13">2.7</text>
+<rect x="190" y="233" width="519.5" height="20" rx="3" fill="#2f5f9f"/>
+<text x="717.5" y="248" font-size="12">0.770  n=78</text>
+<text x="178" y="282" text-anchor="end" font-size="13">2.6</text>
+<rect x="190" y="267" width="522.7" height="20" rx="3" fill="#4f7d3a"/>
+<text x="720.7" y="282" font-size="12">0.774  n=79</text>
+<text x="178" y="316" text-anchor="end" font-size="13">2.9</text>
+<rect x="190" y="301" width="525.4" height="20" rx="3" fill="#9b3f6d"/>
+<text x="723.4" y="316" font-size="12">0.778  n=82</text>
+<text x="178" y="350" text-anchor="end" font-size="13">2.10</text>
+<rect x="190" y="335" width="525.4" height="20" rx="3" fill="#5f6b2f"/>
+<text x="723.4" y="350" font-size="12">0.778  n=30</text>
+<text x="178" y="384" text-anchor="end" font-size="13">2.5</text>
+<rect x="190" y="369" width="525.9" height="20" rx="3" fill="#316d9b"/>
+<text x="723.9" y="384" font-size="12">0.779  n=61</text>
+<text x="178" y="418" text-anchor="end" font-size="13">2.3</text>
+<rect x="190" y="403" width="528.3" height="20" rx="3" fill="#8a4c2f"/>
+<text x="726.3" y="418" font-size="12">0.783  n=80</text>
+<text x="178" y="452" text-anchor="end" font-size="13">2.8</text>
+<rect x="190" y="437" width="529.5" height="20" rx="3" fill="#56636f"/>
+<text x="727.5" y="452" font-size="12">0.784  n=50</text>
+<text x="178" y="486" text-anchor="end" font-size="13">2.12</text>
+<rect x="190" y="471" width="552.3" height="20" rx="3" fill="#7a5a2f"/>
+<text x="750.3" y="486" font-size="12">0.818  n=117</text>
+</svg>

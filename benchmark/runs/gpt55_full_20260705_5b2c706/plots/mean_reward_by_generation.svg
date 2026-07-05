@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="486" viewBox="0 0 960 486">
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933} .muted{fill:#607080} .grid{stroke:#d7dde3;stroke-width:1} .axis{stroke:#8b98a5;stroke-width:1.2}
+</style>
+<rect width="960" height="486" fill="#ffffff"/>
+<text x="24" y="34" font-size="24" font-weight="700">Mean Reward by Generation Source</text>
+<text x="24" y="59" font-size="14" class="muted">How generated and curated item groups performed.</text>
+<line x1="190.0" y1="74" x2="190.0" y2="440" class="grid"/>
+<text x="190.0" y="468" text-anchor="middle" font-size="12" class="muted">0.00</text>
+<line x1="358.8" y1="74" x2="358.8" y2="440" class="grid"/>
+<text x="358.8" y="468" text-anchor="middle" font-size="12" class="muted">0.25</text>
+<line x1="527.5" y1="74" x2="527.5" y2="440" class="grid"/>
+<text x="527.5" y="468" text-anchor="middle" font-size="12" class="muted">0.50</text>
+<line x1="696.2" y1="74" x2="696.2" y2="440" class="grid"/>
+<text x="696.2" y="468" text-anchor="middle" font-size="12" class="muted">0.75</text>
+<line x1="865.0" y1="74" x2="865.0" y2="440" class="grid"/>
+<text x="865.0" y="468" text-anchor="middle" font-size="12" class="muted">1.00</text>
+<line x1="190" y1="440" x2="865" y2="440" class="axis"/>
+<text x="527.5" y="482" text-anchor="middle" font-size="12" class="muted">Mean reward</text>
+<text x="178" y="112" text-anchor="end" font-size="13">curated-v2-trd</text>
+<rect x="190" y="97" width="384.7" height="20" rx="3" fill="#2f6f73"/>
+<text x="582.8" y="112" font-size="12">0.570  n=5</text>
+<text x="178" y="146" text-anchor="end" font-size="13">curated-v2-control</text>
+<rect x="190" y="131" width="483.0" height="20" rx="3" fill="#b64f35"/>
+<text x="681.0" y="146" font-size="12">0.716  n=8</text>
+<text x="178" y="180" text-anchor="end" font-size="13">synthetic-audio-v2</text>
+<rect x="190" y="165" width="496.5" height="20" rx="3" fill="#6f5aa8"/>
+<text x="694.5" y="180" font-size="12">0.736  n=44</text>
+<text x="178" y="214" text-anchor="end" font-size="13">auto</text>
+<rect x="190" y="199" width="510.0" height="20" rx="3" fill="#9a6b16"/>
+<text x="708.0" y="214" font-size="12">0.756  n=651</text>
+<text x="178" y="248" text-anchor="end" font-size="13">curated</text>
+<rect x="190" y="233" width="517.3" height="20" rx="3" fill="#2f5f9f"/>
+<text x="715.3" y="248" font-size="12">0.766  n=12</text>
+<text x="178" y="282" text-anchor="end" font-size="13">matrix-backfill</text>
+<rect x="190" y="267" width="518.5" height="20" rx="3" fill="#4f7d3a"/>
+<text x="716.5" y="282" font-size="12">0.768  n=237</text>
+<text x="178" y="316" text-anchor="end" font-size="13">curated-v2-nmi</text>
+<rect x="190" y="301" width="519.8" height="20" rx="3" fill="#9b3f6d"/>
+<text x="717.8" y="316" font-size="12">0.770  n=5</text>
+<text x="178" y="350" text-anchor="end" font-size="13">synthetic-cpm-v2</text>
+<rect x="190" y="335" width="535.8" height="20" rx="3" fill="#5f6b2f"/>
+<text x="733.8" y="350" font-size="12">0.794  n=28</text>
+<text x="178" y="384" text-anchor="end" font-size="13">synthetic-media-v2</text>
+<rect x="190" y="369" width="598.8" height="20" rx="3" fill="#316d9b"/>
+<text x="796.8" y="384" font-size="12">0.887  n=56</text>
+<text x="178" y="418" text-anchor="end" font-size="13">curated-v2-trap</text>
+<rect x="190" y="403" width="641.2" height="20" rx="3" fill="#8a4c2f"/>
+<text x="839.2" y="418" font-size="12">0.950  n=3</text>
+</svg>

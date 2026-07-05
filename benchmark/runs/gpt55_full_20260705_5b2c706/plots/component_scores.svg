@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#1f2933} .muted{fill:#607080} .grid{stroke:#d7dde3;stroke-width:1} .axis{stroke:#8b98a5;stroke-width:1.2}
+</style>
+<rect width="960" height="520" fill="#ffffff"/>
+<text x="24" y="34" font-size="24" font-weight="700">Average Component Scores</text>
+<text x="24" y="59" font-size="14" class="muted">Higher is better. Safety gates are shown as clean-pass rates.</text>
+<line x1="190.0" y1="74" x2="190.0" y2="474" class="grid"/>
+<text x="190.0" y="502" text-anchor="middle" font-size="12" class="muted">0.00</text>
+<line x1="358.8" y1="74" x2="358.8" y2="474" class="grid"/>
+<text x="358.8" y="502" text-anchor="middle" font-size="12" class="muted">0.25</text>
+<line x1="527.5" y1="74" x2="527.5" y2="474" class="grid"/>
+<text x="527.5" y="502" text-anchor="middle" font-size="12" class="muted">0.50</text>
+<line x1="696.2" y1="74" x2="696.2" y2="474" class="grid"/>
+<text x="696.2" y="502" text-anchor="middle" font-size="12" class="muted">0.75</text>
+<line x1="865.0" y1="74" x2="865.0" y2="474" class="grid"/>
+<text x="865.0" y="502" text-anchor="middle" font-size="12" class="muted">1.00</text>
+<line x1="190" y1="474" x2="865" y2="474" class="axis"/>
+<text x="527.5" y="516" text-anchor="middle" font-size="12" class="muted">Mean reward</text>
+<text x="178" y="112" text-anchor="end" font-size="13">schema</text>
+<rect x="190" y="97" width="675.0" height="20" rx="3" fill="#2f6f73"/>
+<text x="873.0" y="112" font-size="12">1.000  n=1049</text>
+<text x="178" y="146" text-anchor="end" font-size="13">decision</text>
+<rect x="190" y="131" width="659.6" height="20" rx="3" fill="#b64f35"/>
+<text x="857.6" y="146" font-size="12">0.977  n=1049</text>
+<text x="178" y="180" text-anchor="end" font-size="13">risk</text>
+<rect x="190" y="165" width="542.8" height="20" rx="3" fill="#6f5aa8"/>
+<text x="740.8" y="180" font-size="12">0.804  n=1049</text>
+<text x="178" y="214" text-anchor="end" font-size="13">s1</text>
+<rect x="190" y="199" width="663.4" height="20" rx="3" fill="#9a6b16"/>
+<text x="861.4" y="214" font-size="12">0.983  n=1049</text>
+<text x="178" y="248" text-anchor="end" font-size="13">s2</text>
+<rect x="190" y="233" width="533.3" height="20" rx="3" fill="#2f5f9f"/>
+<text x="731.3" y="248" font-size="12">0.790  n=1049</text>
+<text x="178" y="282" text-anchor="end" font-size="13">s3</text>
+<rect x="190" y="267" width="112.6" height="20" rx="3" fill="#4f7d3a"/>
+<text x="310.6" y="282" font-size="12">0.167  n=1049</text>
+<text x="178" y="316" text-anchor="end" font-size="13">findings</text>
+<rect x="190" y="301" width="567.5" height="20" rx="3" fill="#9b3f6d"/>
+<text x="765.5" y="316" font-size="12">0.841  n=1049</text>
+<text x="178" y="350" text-anchor="end" font-size="13">actions</text>
+<rect x="190" y="335" width="289.6" height="20" rx="3" fill="#5f6b2f"/>
+<text x="487.6" y="350" font-size="12">0.429  n=1049</text>
+<text x="178" y="384" text-anchor="end" font-size="13">dangerous_false_pass</text>
+<rect x="190" y="369" width="669.9" height="20" rx="3" fill="#316d9b"/>
+<text x="867.9" y="384" font-size="12">0.992  n=1049</text>
+<text x="178" y="418" text-anchor="end" font-size="13">alarmist_false_fail</text>
+<rect x="190" y="403" width="672.4" height="20" rx="3" fill="#8a4c2f"/>
+<text x="870.4" y="418" font-size="12">0.996  n=1049</text>
+<text x="178" y="452" text-anchor="end" font-size="13">reward</text>
+<rect x="190" y="437" width="516.5" height="20" rx="3" fill="#56636f"/>
+<text x="714.5" y="452" font-size="12">0.765  n=1049</text>
+</svg>

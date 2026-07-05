@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gpt55_full_20260705_5b2c706 Plots</title>
+  <style>
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #1f2933; background: #f5f7f9; }
+    main { max-width: 1120px; margin: 0 auto; padding: 28px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .meta { color: #607080; margin-bottom: 22px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 18px; }
+    .card { background: #fff; border: 1px solid #dfe5eb; border-radius: 8px; padding: 14px; }
+    .card span { display: block; color: #607080; font-size: 13px; margin-bottom: 8px; }
+    .card strong { font-size: 24px; }
+    .plot { background: #fff; border: 1px solid #dfe5eb; border-radius: 8px; padding: 10px; margin: 14px 0; overflow-x: auto; }
+    .plot img { display: block; width: 100%; min-width: 720px; height: auto; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #dfe5eb; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 9px 11px; border-bottom: 1px solid #e8edf2; text-align: left; font-size: 14px; }
+    th { background: #e9eef3; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>gpt55_full_20260705_5b2c706</h1>
+  <div class="meta">Collected at 2026-07-05T23:21:23+00:00. Source commit 5b2c706b62f28fee8bf1f7dd3e7232256fcacc3d.</div>
+  <div class="cards"><section class="card"><span>Tasks scored</span><strong>1049</strong></section>
+<section class="card"><span>Mean reward</span><strong>0.765</strong></section>
+<section class="card"><span>Saturated tasks</span><strong>85</strong></section>
+<section class="card"><span>Floored tasks</span><strong>12</strong></section>
+<section class="card"><span>Dangerous false pass hits</span><strong>8</strong></section>
+<section class="card"><span>Alarmist false fail hits</span><strong>4</strong></section>
+<section class="card"><span>Catalog</span><strong>3d917f30ba6d3ee7</strong></section></div>
+  <section class="plot"><img src="component_scores.svg" alt="component_scores.svg"></section>
+<section class="plot"><img src="reward_distribution.svg" alt="reward_distribution.svg"></section>
+<section class="plot"><img src="mean_reward_by_tier.svg" alt="mean_reward_by_tier.svg"></section>
+<section class="plot"><img src="mean_reward_by_modality.svg" alt="mean_reward_by_modality.svg"></section>
+<section class="plot"><img src="mean_reward_by_task_type.svg" alt="mean_reward_by_task_type.svg"></section>
+<section class="plot"><img src="mean_reward_by_discipline.svg" alt="mean_reward_by_discipline.svg"></section>
+<section class="plot"><img src="mean_reward_by_generation.svg" alt="mean_reward_by_generation.svg"></section>
+<section class="plot"><img src="safety_gate_hits.svg" alt="safety_gate_hits.svg"></section>
+  <h2>Lowest Reward Tasks</h2>
+  <table>
+    <thead><tr><th>Task</th><th>Reward</th><th>Tier</th><th>Type</th><th>Modality</th></tr></thead>
+    <tbody><tr><td>t1-e-303-cc-terminations-splices</td><td>0.000</td><td>T1</td><td>CC</td><td>text</td></tr>
+<tr><td>t2-e-303-cc-terminations-splices</td><td>0.000</td><td>T2</td><td>CC</td><td>text</td></tr>
+<tr><td>t3-e-303-cc-terminations-splices</td><td>0.000</td><td>T3</td><td>CC</td><td>text</td></tr>
+<tr><td>v2-audio-hammer-000</td><td>0.000</td><td>T3</td><td>FD</td><td>audio</td></tr>
+<tr><td>v2-audio-hammer-008</td><td>0.000</td><td>T3</td><td>FD</td><td>audio</td></tr>
+<tr><td>v2-audio-hum-002</td><td>0.000</td><td>T2</td><td>FD</td><td>audio</td></tr>
+<tr><td>v2-audio-hum-004</td><td>0.000</td><td>T2</td><td>FD</td><td>audio</td></tr>
+<tr><td>v2-cpm-delay-001</td><td>0.000</td><td>T2</td><td>RES</td><td>image</td></tr>
+<tr><td>v2-cpm-delay-009</td><td>0.000</td><td>T2</td><td>RES</td><td>image</td></tr>
+<tr><td>v2-media-sling-004</td><td>0.000</td><td>T1</td><td>ME</td><td>image</td></tr>
+<tr><td>v2-media-sling-009</td><td>0.000</td><td>T1</td><td>ME</td><td>image</td></tr>
+<tr><td>v2-media-sling-011</td><td>0.000</td><td>T1</td><td>ME</td><td>image</td></tr>
+<tr><td>t5-e-303-cc-terminations-splices</td><td>0.300</td><td>T5</td><td>CC</td><td>text</td></tr>
+<tr><td>t5-e-105-doc-motor-circuits-disconnects</td><td>0.312</td><td>T5</td><td>DOC</td><td>text</td></tr>
+<tr><td>t2-e-602-id-equipment-bonding</td><td>0.338</td><td>T2</td><td>ID</td><td>text</td></tr>
+<tr><td>t3-e-204-id-boxes-fittings-fill</td><td>0.338</td><td>T3</td><td>ID</td><td>text</td></tr>
+<tr><td>t4-p-401-fd-boiler-pump-piping</td><td>0.350</td><td>T4</td><td>FD</td><td>text</td></tr>
+<tr><td>v2-audio-hum-001</td><td>0.350</td><td>T2</td><td>FD</td><td>audio</td></tr>
+<tr><td>v2-trd-s302-t1-wind-pick</td><td>0.350</td><td>T1</td><td>TRD</td><td>text</td></tr>
+<tr><td>t1-e-403-id-vfds-motor-controls</td><td>0.362</td><td>T1</td><td>ID</td><td>text</td></tr></tbody>
+  </table>
+</main>
+</body>
+</html>
