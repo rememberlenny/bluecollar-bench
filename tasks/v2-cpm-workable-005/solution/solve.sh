@@ -15,7 +15,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   "actions": [
     "resequence reassign proceed backlog"
   ],
-  "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
+  "rationale": "The observed condition satisfies the requested acceptance criteria or the disruption is absorbed without a required rejection.",
   "references": [
     "CPM computed ground truth",
     "expansion-plan track 3"

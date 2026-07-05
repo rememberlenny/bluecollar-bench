@@ -16,7 +16,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   "actions": [
     "verify torque"
   ],
-  "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
+  "rationale": "The available evidence is insufficient to make the requested determination without additional information.",
   "references": [
     "NEC 110.14"
   ]

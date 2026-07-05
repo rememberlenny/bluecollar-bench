@@ -258,15 +258,23 @@ def render_instruction(item: dict) -> str:
 
 
 def render_solution(item: dict) -> str:
+    decision = item["decision"]
+    if decision == "pass":
+        rationale = "The observed condition satisfies the requested acceptance criteria or the disruption is absorbed without a required rejection."
+    elif decision == "needs_more_info":
+        rationale = "The available evidence is insufficient to make the requested determination without additional information."
+    else:
+        rationale = "The scenario contains visible defects or hazards that make the work unacceptable until corrected."
+
     answer = {
-        "decision": item["decision"],
+        "decision": decision,
         "risk": item["risk"],
         "s1_state": item["s1_state"],
         "s2_conditions": item["s2_expected"],
         "s3_percent": item.get("s3_percent"),
         "findings": [" ".join(group) for group in item["required_findings"]],
         "actions": [" ".join(group) for group in item["required_actions"]],
-        "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
+        "rationale": rationale,
         "references": item["source_refs"],
     }
     if isinstance(item.get("expected_value"), (int, float)):

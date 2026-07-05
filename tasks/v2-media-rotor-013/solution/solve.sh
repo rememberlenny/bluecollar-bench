@@ -15,7 +15,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   "actions": [
     "specification spec lookup verify"
   ],
-  "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
+  "rationale": "The available evidence is insufficient to make the requested determination without additional information.",
   "references": [
     "OEM specs"
   ],

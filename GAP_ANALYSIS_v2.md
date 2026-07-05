@@ -10,9 +10,9 @@ All 900 items had `decision: "fail"` and risk was never `low`. A constant policy
 **Fix shipped:** 21 curated v2 text items, 56 synthetic image-backed v2.1 items, and 28 CPM/Gantt image-backed v2.2 items. Catalog is now 1,005: 947 fail, 45 pass, 13 needs_more_info, with 84 image-backed items. The synthetic slices are healthier than the original corpus, but the overall catalog is still far too fail-heavy — target ≥25–30% pass/nmi. The v2 controls and synthetic media families are the patterns to replicate; text-item rebalance remains priority 1.
 
 ### 2. Answer leakage (critical)
-11/1,005 items include ≥80% of their `required_findings` tokens verbatim in the scenario text after the current audit (see `benchmark/leakage_report.md`). The original risk remains: auto-generated scenarios can name the defect ("The observed field condition is: isolated metal parts") and hand the agent the code anchors, so echoing the prompt scores the findings metric. The synthetic media items are mostly clean because the decisive evidence is in the image; the text scenario stays generic. The curated seeds show the right text-only style — describe *observations* (green bonding screw installed) and reserve *conclusions* (improper neutral-ground bond) for the grader.
+0/1,005 items include ≥80% of their `required_findings` tokens verbatim in the scenario text after the current audit (see `benchmark/leakage_report.md`); 36 remain in the partial 40–79% bucket. The original risk remains: auto-generated scenarios can name the defect ("The observed field condition is: isolated metal parts") and hand the agent the code anchors, so echoing the prompt scores the findings metric. The synthetic media items are mostly clean because the decisive evidence is in the image; the text scenario stays generic. The curated seeds show the right text-only style — describe *observations* (green bonding screw installed) and reserve *conclusions* (improper neutral-ground bond) for the grader.
 
-**Fix shipped:** `scripts/leakage_audit.py` tags every item with `leakage_ratio` and writes the report. **Remaining:** rewrite or review the 11 leaked scenarios; that's authoring work (human or LLM-assisted with SME review), not scripting work. The v2 control items model the target style.
+**Fix shipped:** `scripts/leakage_audit.py` tags every item with `leakage_ratio` and writes the report. **Remaining:** review the 36 partial scenarios for observation-style rewrites where needed; that's authoring work (human or LLM-assisted with SME review), not scripting work. The v2 control items model the target style.
 
 ### 3. Grader brittleness (high)
 - v1 checked `forbidden` tokens against the *entire flattened answer*, so a correct fail rationale containing the word "pass" ("this cannot pass inspection") tripped the gate and halved the reward. Verified empirically.
@@ -31,7 +31,7 @@ The benchmark is now genuinely multimodal. **v2.1 shipped:** `scripts/gen_media_
 
 ## Priority order
 1. Rebalance decisions (extend v2 control pattern to ~250 pass/nmi items)
-2. De-leak the 11 flagged scenarios (observation-style rewrites)
+2. Review the 36 partial-leakage scenarios (observation-style rewrites where needed)
 3. Adopt grade_v2 everywhere (done via generate_tasks_v2) and track the two directional gates as headline metrics
 4. Extend synthetic media families: psychrometric calculators, dial indicators, torque/spec-plate comparisons, panel schedules, P&ID excerpts, and photo-realistic variants seeded from synthetic parameters
 5. SME red-team pass on code refs (still open from taxonomy v0.1)

@@ -15,7 +15,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   "actions": [
     "obtain confirm verify request"
   ],
-  "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
+  "rationale": "The available evidence is insufficient to make the requested determination without additional information.",
   "references": [
     "CPM computed ground truth",
     "expansion-plan track 3"

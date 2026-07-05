@@ -18,7 +18,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
     "monitor",
     "document"
   ],
-  "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
+  "rationale": "The observed condition satisfies the requested acceptance criteria or the disruption is absorbed without a required rejection.",
   "references": [
     "OSHA 1926 Subpart M"
   ]
