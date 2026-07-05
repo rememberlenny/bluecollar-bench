@@ -1,0 +1,72 @@
+{
+  "agent": "codex",
+  "exception_result_files_from_interrupted_or_superseded_runs": 203,
+  "generated_at_utc": "2026-07-05T06:52:55.524822+00:00",
+  "jobs": [
+    {
+      "cancelled": 6,
+      "completed": 89,
+      "cost_usd": 2.76869925,
+      "errored": 6,
+      "job": "codex-full-suite"
+    },
+    {
+      "cancelled": 27,
+      "completed": 114,
+      "cost_usd": 2.9115522500000006,
+      "errored": 27,
+      "job": "codex-full-suite-remaining"
+    },
+    {
+      "cancelled": 51,
+      "completed": 320,
+      "cost_usd": 9.681554750000002,
+      "errored": 51,
+      "job": "codex-full-suite-remaining-64"
+    },
+    {
+      "cancelled": 109,
+      "completed": 235,
+      "cost_usd": 4.30756425,
+      "errored": 109,
+      "job": "codex-full-suite-remaining-128"
+    },
+    {
+      "cancelled": 2,
+      "completed": 356,
+      "cost_usd": 12.293589,
+      "errored": 7,
+      "job": "codex-full-suite-remaining-128b"
+    },
+    {
+      "cancelled": 0,
+      "completed": 7,
+      "cost_usd": 0.19404875000000002,
+      "errored": 0,
+      "job": "codex-full-suite-final-7"
+    },
+    {
+      "cancelled": 0,
+      "completed": 56,
+      "cost_usd": 1.9186552499999998,
+      "errored": 3,
+      "job": "codex-full-suite-final-media-56"
+    },
+    {
+      "cancelled": 0,
+      "completed": 3,
+      "cost_usd": 0.0906305,
+      "errored": 0,
+      "job": "codex-full-suite-final-media-3"
+    }
+  ],
+  "model": "openai/gpt-5",
+  "remaining_unrun_or_only_failed": 0,
+  "reported_cost_usd_sum": 34.166294,
+  "successful_unique_tasks": 977,
+  "task_dirs_with_task_toml": 977,
+  "validation": {
+    "command": "make validate",
+    "result": "Validated 977 task(s)."
+  }
+}
