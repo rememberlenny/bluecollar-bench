@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-a-101-id-timing-mechanical",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "timing"
-    ],
-    [
-      "mechanical"
-    ],
     [
       "belt"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The observed field condition is: belt routing wrong vs. diagram (DOC). The work is being assessed at the rough-complete lifecycle state with source anchors OEM service info.",
+  "scenario": "In a T4 work setting, the evaluated element is A-101 Timing & mechanical within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.1 Engine & Drivetrain. The field notes describe visible cues consistent with: visible cue visible cue not matching the specified requirement vs. diagram (DOC). The work is being assessed at the rough-complete lifecycle state with source anchors OEM service info.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM service info"

@@ -13,12 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "flashing",
-    "integration",
     "window",
-    "flashing",
-    "absent",
-    "non compliant"
+    "absent"
   ],
   "actions": [
     "correct",

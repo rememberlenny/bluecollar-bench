@@ -12,11 +12,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "vfds",
-    "motor",
     "missing",
-    "load",
-    "reactor"
+    "reactor",
+    "long"
   ],
   "actions": [
     "identify",

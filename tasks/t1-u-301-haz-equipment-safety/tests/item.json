@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-u-301-haz-equipment-safety",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
   "required_actions": [
     [
@@ -35,12 +38,6 @@
   ],
   "required_findings": [
     [
-      "equipment"
-    ],
-    [
-      "safety"
-    ],
-    [
       "personnel"
     ],
     [
@@ -48,9 +45,6 @@
     ],
     [
       "radius"
-    ],
-    [
-      "hazard"
     ]
   ],
   "risk": "critical",
@@ -60,7 +54,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is U-301 Equipment safety within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.3 Heavy Equipment Operation. The observed field condition is: personnel in swing radius. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart O.",
+  "scenario": "In a T1 work setting, the evaluated element is U-301 Equipment safety within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.3 Heavy Equipment Operation. The field notes describe visible cues consistent with: visible cue in visible cue visible cue. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart O.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart O"

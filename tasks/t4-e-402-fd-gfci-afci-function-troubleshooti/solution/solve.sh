@@ -13,12 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "gfci",
-    "afci",
     "line",
-    "load",
-    "reversed",
-    "fault"
+    "reversed"
   ],
   "actions": [
     "diagnose",

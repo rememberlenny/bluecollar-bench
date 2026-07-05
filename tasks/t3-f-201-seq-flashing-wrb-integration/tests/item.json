@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-f-201-seq-flashing-wrb-integration",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "flashing"
-    ],
-    [
-      "integration"
-    ],
-    [
       "reverse"
     ],
     [
@@ -46,9 +43,6 @@
     ],
     [
       "upper"
-    ],
-    [
-      "sequence"
     ]
   ],
   "risk": "high",
@@ -57,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T3 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The observed field condition is: reverse-lapped WRB (upper layer behind lower). The work is being assessed at the in-progress lifecycle state with source anchors IRC R703, mfr instructions.",
+  "scenario": "In a T3 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The field notes describe visible cues consistent with: visible cue-visible cue WRB (visible cue layer behind lower). The work is being assessed at the in-progress lifecycle state with source anchors IRC R703, mfr instructions.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R703",

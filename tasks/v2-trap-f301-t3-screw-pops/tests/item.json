@@ -1,0 +1,56 @@
+{
+  "decision": "pass",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-301 Drywall & finishing",
+  "element_code": "F-301",
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "structural"
+    ],
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "remove",
+      "drywall"
+    ]
+  ],
+  "generation": "curated-v2-trap",
+  "id": "v2-trap-f301-t3-screw-pops",
+  "leakage_ratio": 0.33,
+  "media": [],
+  "modality": "text",
+  "prompt": "Classify this condition and determine whether it represents a defect requiring corrective construction work.",
+  "required_actions": [
+    [
+      "touch",
+      "repair",
+      "monitor",
+      "cosmetic"
+    ]
+  ],
+  "required_findings": [
+    [
+      "cosmetic",
+      "minor",
+      "shrinkage"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "accepted",
+  "s2_expected": [],
+  "s3_percent": 100,
+  "scenario": "A one-year warranty walkthrough of a non-fire-rated interior partition notes three small circular bumps in the paint film along one stud line, consistent with seasonal lumber shrinkage. Fastener spacing on the original inspection photos met the schedule, and the wall shows no cracking, movement, or moisture staining.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "GA-216"
+  ],
+  "subcategory": "2.6.3 Interior Finish",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T3",
+  "title": "T3 F-301 Cosmetic screw pops (alarmist trap)"
+}

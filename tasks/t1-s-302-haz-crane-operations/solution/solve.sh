@@ -13,12 +13,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "crane",
-    "operations",
     "working",
     "under",
-    "suspended",
-    "hazard"
+    "suspended"
   ],
   "actions": [
     "stop work",

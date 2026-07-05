@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-p-103-id-hangers-supports",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
   "required_actions": [
     [
@@ -33,16 +36,7 @@
   ],
   "required_findings": [
     [
-      "hangers"
-    ],
-    [
-      "supports"
-    ],
-    [
       "shoe"
-    ],
-    [
-      "support"
     ]
   ],
   "risk": "medium",
@@ -51,7 +45,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is P-103 Hangers & supports within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The observed field condition is: shoe off its support. The work is being assessed at the rough-complete lifecycle state with source anchors project support standards, MSS SP-58.",
+  "scenario": "In a T1 work setting, the evaluated element is P-103 Hangers & supports within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The field notes describe visible cues consistent with: visible cue off its support. The work is being assessed at the rough-complete lifecycle state with source anchors project support standards, MSS SP-58.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "project support standards",

@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-p-401-doc-boiler-pump-piping",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "boiler"
-    ],
-    [
-      "pump"
-    ],
     [
       "missing"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T2 work setting, the evaluated element is P-401 Boiler & pump piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.4 Hydronic & Steam. The observed field condition is: missing check valve causing gravity flow. The work is being assessed at the tested/inspected lifecycle state with source anchors mfr manuals, hydronics references. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T2 work setting, the evaluated element is P-401 Boiler & pump piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.4 Hydronic & Steam. The field notes describe visible cues consistent with: not present where expected visible cue visible cue causing gravity flow. The work is being assessed at the tested/inspected lifecycle state with source anchors mfr manuals, hydronics references. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr manuals",

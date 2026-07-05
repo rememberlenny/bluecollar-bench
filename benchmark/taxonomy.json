@@ -14,6 +14,14 @@
       "2.8": "Instrumentation & Controls",
       "2.9": "Automotive & Powertrain"
     },
+    "modalities": {
+      "audio": "Audio fixture.",
+      "document": "Drawing, checklist, cut sheet, tag, or other document fixture.",
+      "infrared": "Thermal/IR image fixture.",
+      "photo": "Still image fixture.",
+      "text": "Text-only scenario; scenario text may serve as a future photo shot list.",
+      "video": "Video fixture."
+    },
     "task_types": {
       "CC": "Code/spec compliance",
       "DOC": "Document interpretation",
@@ -22,6 +30,7 @@
       "ID": "Identification",
       "ME": "Measurement & estimation",
       "PA": "Progress assessment",
+      "RES": "Resource/constraint recovery",
       "SEQ": "Procedure sequencing",
       "TRD": "Tradeoff judgment",
       "TS": "Tool & material selection"
@@ -119,6 +128,12 @@
       "T4": "core",
       "T5": "core"
     }
+  },
+  "item_media_schema": {
+    "expected_value": "Optional numeric ground truth for instrument readings or computed visual quantities.",
+    "media": "Array of media descriptors with type, path, alt, source, and license fields when fixtures are present.",
+    "modality": "Primary item modality. Existing v0.1/v2 generated items use text.",
+    "value_tolerance": "Allowed absolute error for expected_value when the task asks for a numeric value."
   },
   "source_element_counts": {
     "2.1": 25,

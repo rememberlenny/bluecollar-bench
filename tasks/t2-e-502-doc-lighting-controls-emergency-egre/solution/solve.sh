@@ -12,8 +12,6 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "lighting",
-    "controls",
     "miswire",
     "diagnosis"
   ],

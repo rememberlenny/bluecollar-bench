@@ -12,11 +12,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "conductor",
-    "selection",
     "undersized",
-    "load",
-    "length"
+    "length",
+    "voltage"
   ],
   "actions": [
     "replace",

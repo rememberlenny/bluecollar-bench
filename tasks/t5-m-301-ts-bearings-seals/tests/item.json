@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-m-301-ts-bearings-seals",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "bearings"
-    ],
-    [
-      "seals"
-    ],
     [
       "mechanical"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T5 work setting, the evaluated element is M-301 Bearings & seals within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The observed field condition is: mechanical seal face contamination from bare-hand touch. The work is being assessed at the staged lifecycle state with source anchors SKF/Timken mounting guides.",
+  "scenario": "In a T5 work setting, the evaluated element is M-301 Bearings & seals within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.3 Rotating Equipment. The field notes describe visible cues consistent with: visible cue visible cue visible cue contamination from bare-hand touch. The work is being assessed at the staged lifecycle state with source anchors SKF/Timken mounting guides.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "SKF/Timken mounting guides"

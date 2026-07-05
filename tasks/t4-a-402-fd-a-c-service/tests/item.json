@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-a-402-fd-a-c-service",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
   "required_actions": [
     [
@@ -33,9 +36,6 @@
   ],
   "required_findings": [
     [
-      "service"
-    ],
-    [
       "pressure"
     ],
     [
@@ -43,9 +43,6 @@
     ],
     [
       "interpretation"
-    ],
-    [
-      "fault"
     ]
   ],
   "risk": "high",
@@ -55,7 +52,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T4 work setting, the evaluated element is A-402 A/C service within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.4 EV & A/C Systems. The observed field condition is: pressure readings interpretation (both low vs. high-high - FD). The work is being assessed at the in-service lifecycle state with source anchors EPA 609, OEM specs.",
+  "scenario": "In a T4 work setting, the evaluated element is A-402 A/C service within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.4 EV & A/C Systems. The field notes describe visible cues consistent with: visible cue visible cue visible cue (both low vs. high-high - FD). The work is being assessed at the in-service lifecycle state with source anchors EPA 609, OEM specs.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "EPA 609",

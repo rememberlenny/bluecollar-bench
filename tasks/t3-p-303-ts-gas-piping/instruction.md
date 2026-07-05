@@ -1,47 +1,53 @@
-        # T3 P-303 Tool & material selection
+# T3 P-303 Tool & material selection
 
-        You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
+You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
 
-        ## Item metadata
+## Item metadata
 
-        - ID: `t3-p-303-ts-gas-piping`
-        - Tier: `T3`
-        - Discipline: `2.2 Mechanical - Piping & Plumbing`
-        - Element: `P-303 Gas piping`
-        - Task type: `TS`
-        - Expected lifecycle state to assess: `staged`
-        - Relevant S2 condition classes: `installed-defective`
+- ID: `t3-p-303-ts-gas-piping`
+- Tier: `T3`
+- Discipline: `2.2 Mechanical - Piping & Plumbing`
+- Element: `P-303 Gas piping`
+- Task type: `TS`
+- Expected lifecycle state to assess: `staged`
+- Relevant S2 condition classes: `installed-defective`
+- Modality: `text`
 
-        ## Scenario
+## Scenario
 
-        In a T3 work setting, the evaluated element is P-303 Gas piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The observed field condition is: wrong thread sealant (not gas-rated). The work is being assessed at the staged lifecycle state with source anchors IFGC, NFPA 54.
+In a T3 work setting, the evaluated element is P-303 Gas piping within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.3 Plumbing - Supply. The field notes describe visible cues consistent with: not matching the specified requirement visible cue visible cue (not gas-rated). The work is being assessed at the staged lifecycle state with source anchors IFGC, NFPA 54.
 
-        ## Task
+## Task
 
-        Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.
+Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.
 
-        ## Required output
+## Required output
 
-        Write valid JSON to `/app/answer.json` with this shape:
+Write valid JSON to `/app/answer.json` with this shape:
 
-        ```json
-        {
-          "decision": "pass | fail | needs_more_info",
-          "risk": "low | medium | high | critical",
-          "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
-          "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
-          "findings": ["short defect or hazard finding", "..."],
-          "actions": ["immediate corrective action", "..."],
-          "rationale": "brief explanation",
-          "references": ["code or standard anchors you relied on"]
-        }
-        ```
+```json
+{
+  "decision": "pass | fail | needs_more_info",
+  "risk": "low | medium | high | critical",
+  "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
+  "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
+  "s3_percent": 0,
+  "value": 0,
+  "workable": ["activity ID", "..."],
+  "findings": ["short defect or hazard finding", "..."],
+  "actions": ["immediate corrective action", "..."],
+  "rationale": "brief explanation",
+  "references": ["code or standard anchors you relied on"]
+}
+```
 
-        Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `workable` for a list of activity IDs when the task asks what work can still start.
 
-        ## Source anchors
+## Source anchors
 
-        These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
+These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
 
-        - IFGC
+- IFGC
 - NFPA 54

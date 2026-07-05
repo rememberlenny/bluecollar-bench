@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-s-302-doc-crane-operations",
+  "leakage_ratio": 0.5,
+  "media": [],
+  "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
   "required_actions": [
     [
@@ -33,19 +36,10 @@
   ],
   "required_findings": [
     [
-      "crane"
-    ],
-    [
-      "operations"
-    ],
-    [
-      "load"
-    ],
-    [
       "rigging"
     ],
     [
-      "load"
+      "radius"
     ]
   ],
   "risk": "high",
@@ -54,7 +48,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T2 work setting, the evaluated element is S-302 Crane operations within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: load + rigging vs. load chart at radius (DOC+ME). The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1926.1400, load charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T2 work setting, the evaluated element is S-302 Crane operations within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The field notes describe visible cues consistent with: load + visible cue vs. load chart at visible cue (DOC+ME). The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1926.1400, load charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926.1400",

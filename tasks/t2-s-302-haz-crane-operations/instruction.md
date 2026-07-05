@@ -1,47 +1,53 @@
-        # T2 S-302 Hazard spotting
+# T2 S-302 Hazard spotting
 
-        You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
+You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
 
-        ## Item metadata
+## Item metadata
 
-        - ID: `t2-s-302-haz-crane-operations`
-        - Tier: `T2`
-        - Discipline: `2.4 Structural & Ironwork`
-        - Element: `S-302 Crane operations`
-        - Task type: `HAZ`
-        - Expected lifecycle state to assess: `in-progress`
-        - Relevant S2 condition classes: `installed-defective, non-compliant`
+- ID: `t2-s-302-haz-crane-operations`
+- Tier: `T2`
+- Discipline: `2.4 Structural & Ironwork`
+- Element: `S-302 Crane operations`
+- Task type: `HAZ`
+- Expected lifecycle state to assess: `in-progress`
+- Relevant S2 condition classes: `installed-defective, non-compliant`
+- Modality: `text`
 
-        ## Scenario
+## Scenario
 
-        In a T2 work setting, the evaluated element is S-302 Crane operations within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: working under suspended load. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926.1400, load charts.
+In a T2 work setting, the evaluated element is S-302 Crane operations within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The field notes describe visible cues consistent with: visible cue visible cue visible cue load. The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926.1400, load charts.
 
-        ## Task
+## Task
 
-        Identify the safety hazards, their severity, and the immediate controls required.
+Identify the safety hazards, their severity, and the immediate controls required.
 
-        ## Required output
+## Required output
 
-        Write valid JSON to `/app/answer.json` with this shape:
+Write valid JSON to `/app/answer.json` with this shape:
 
-        ```json
-        {
-          "decision": "pass | fail | needs_more_info",
-          "risk": "low | medium | high | critical",
-          "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
-          "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
-          "findings": ["short defect or hazard finding", "..."],
-          "actions": ["immediate corrective action", "..."],
-          "rationale": "brief explanation",
-          "references": ["code or standard anchors you relied on"]
-        }
-        ```
+```json
+{
+  "decision": "pass | fail | needs_more_info",
+  "risk": "low | medium | high | critical",
+  "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
+  "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
+  "s3_percent": 0,
+  "value": 0,
+  "workable": ["activity ID", "..."],
+  "findings": ["short defect or hazard finding", "..."],
+  "actions": ["immediate corrective action", "..."],
+  "rationale": "brief explanation",
+  "references": ["code or standard anchors you relied on"]
+}
+```
 
-        Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `workable` for a list of activity IDs when the task asks what work can still start.
 
-        ## Source anchors
+## Source anchors
 
-        These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
+These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
 
-        - OSHA 1926.1400
+- OSHA 1926.1400
 - load charts

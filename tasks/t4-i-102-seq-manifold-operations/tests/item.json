@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-i-102-seq-manifold-operations",
+  "leakage_ratio": 0.33,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
   "required_actions": [
     [
@@ -33,22 +36,13 @@
   ],
   "required_findings": [
     [
-      "manifold"
-    ],
-    [
-      "operations"
-    ],
-    [
       "valve"
     ],
     [
-      "manifold"
-    ],
-    [
       "sequence"
     ],
     [
-      "sequence"
+      "wrong"
     ]
   ],
   "risk": "high",
@@ -57,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is I-102 Manifold operations within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.1 Field Instruments. The observed field condition is: 3/5-valve manifold sequence wrong (equalize before opening HP side - pure SEQ item, one right order). The work is being assessed at the in-progress lifecycle state with source anchors mfr procedures.",
+  "scenario": "In a T4 work setting, the evaluated element is I-102 Manifold operations within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.1 Field Instruments. The field notes describe visible cues consistent with: 3/5-visible cue manifold visible cue not matching the specified requirement (equalize before opening HP side - pure SEQ item, one right order). The work is being assessed at the in-progress lifecycle state with source anchors mfr procedures.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "mfr procedures"

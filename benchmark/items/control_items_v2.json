@@ -1,0 +1,1129 @@
+[
+  {
+    "decision": "pass",
+    "discipline": "2.1 Electrical",
+    "discipline_code": "2.1",
+    "element": "E-102 Panelboard installation & makeup",
+    "element_code": "E-102",
+    "findings_mode": "all",
+    "forbidden": [
+      [
+        "stop",
+        "work"
+      ],
+      [
+        "rework"
+      ]
+    ],
+    "generation": "curated-v2-control",
+    "id": "v2-pass-e102-t3-subpanel-correct",
+    "media": [],
+    "modality": "text",
+    "prompt": "Determine whether this installation should pass inspection. Cite the specific observations that support your decision and note any conditions.",
+    "required_actions": [
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "neutral"
+      ],
+      [
+        "ground"
+      ],
+      [
+        "single",
+        "conductor"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "rough-complete",
+    "s2_expected": [],
+    "s3_percent": 85,
+    "scenario": "A residential garage subpanel is shown with the deadfront removed at rough inspection. The feeder lands on separate neutral and equipment grounding bars; the green bonding screw is absent and stored in the parts bag taped inside the cabinet. Every breaker terminal holds a single conductor. All knockout openings are filled. A typed panel schedule is affixed to the door and working clearance in front of the panel is unobstructed.",
+    "source_file": "docs/source/electrical-element-tree-v0.1.md",
+    "source_refs": [
+      "NEC 408",
+      "NEC 250.32"
+    ],
+    "subcategory": "2.1.1 Power Distribution",
+    "task_type": "CC",
+    "task_type_name": "Code/spec compliance",
+    "tier": "T3",
+    "title": "T3 E-102 Compliant subpanel makeup (control)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.2 Mechanical - Piping & Plumbing",
+    "discipline_code": "2.2",
+    "element": "P-102 Flanged joints",
+    "element_code": "P-102",
+    "findings_mode": "all",
+    "forbidden": [
+      [
+        "stop",
+        "work"
+      ],
+      [
+        "disassemble"
+      ]
+    ],
+    "generation": "curated-v2-control",
+    "id": "v2-pass-p102-t1-flange-correct",
+    "media": [],
+    "modality": "text",
+    "prompt": "Assess this joint against the bolted-joint assembly requirements. Cite the observations supporting your decision.",
+    "required_actions": [
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "torque"
+      ],
+      [
+        "gasket"
+      ],
+      [
+        "thread"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 95,
+    "scenario": "A 6-inch Class 150 flanged joint is inspected after bolt-up. All eight studs are installed with hardened washers, torque witness lines are marked across every nut, and stud ends project one to three threads past each nut. The gasket visible at the joint edge matches the spiral-wound type called out on the line class sheet. The torque record sheet shows a completed star-pattern sequence in three passes.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME PCC-1",
+      "ASME B16.5"
+    ],
+    "subcategory": "2.2.1 Process Piping",
+    "task_type": "CC",
+    "task_type_name": "Code/spec compliance",
+    "tier": "T1",
+    "title": "T1 P-102 Compliant flanged joint (control)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "findings_mode": "all",
+    "forbidden": [
+      [
+        "re",
+        "evacuate"
+      ],
+      [
+        "stop",
+        "work"
+      ]
+    ],
+    "generation": "curated-v2-control",
+    "id": "v2-pass-h301-t4-evacuation-correct",
+    "media": [],
+    "modality": "text",
+    "prompt": "Evaluate whether the documented procedure was performed correctly and in the right order.",
+    "required_actions": [
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "nitrogen"
+      ],
+      [
+        "micron"
+      ],
+      [
+        "core"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "A line-set replacement is documented with photos: a nitrogen regulator connected and flowing during each braze, Schrader cores removed and set aside before evacuation, and a micron gauge at the far port reading 320 microns. The tech's log shows the system isolated from the pump and holding below 500 microns for fifteen minutes before charging began.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "SEQ",
+    "task_type_name": "Procedure sequencing",
+    "tier": "T4",
+    "title": "T4 H-301 Compliant brazing and evacuation (control)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-102 Structural bolting",
+    "element_code": "S-102",
+    "findings_mode": "all",
+    "forbidden": [
+      [
+        "stop",
+        "work"
+      ],
+      [
+        "retension"
+      ]
+    ],
+    "generation": "curated-v2-control",
+    "id": "v2-pass-s102-t2-bolting-correct",
+    "media": [],
+    "modality": "text",
+    "prompt": "Determine whether this connection meets the specified pretension requirements. Cite the visible evidence.",
+    "required_actions": [
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "dti"
+      ],
+      [
+        "match",
+        "mark"
+      ],
+      [
+        "a325"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "A moment connection specified as pretensioned is inspected. Bolt heads show F3125 Grade A325 markings matching the drawing callout. Every DTI washer's silicone squirts are fully extruded at all bumps. Match marks made at snug-tight show consistent nut rotation across the connection. No thread run-out sits in the shear plane at the visible bolts.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "RCSC Specification"
+    ],
+    "subcategory": "2.4.1 Steel Erection",
+    "task_type": "CC",
+    "task_type_name": "Code/spec compliance",
+    "tier": "T2",
+    "title": "T2 S-102 Compliant structural bolting (control)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "findings_mode": "all",
+    "forbidden": [
+      [
+        "replace",
+        "rotor"
+      ],
+      [
+        "stop",
+        "work"
+      ]
+    ],
+    "generation": "curated-v2-control",
+    "id": "v2-pass-a201-t4-brakes-correct",
+    "media": [],
+    "modality": "text",
+    "prompt": "Verify the measurements against specification and determine whether this work is acceptable for release.",
+    "required_actions": [
+      [
+        "release"
+      ],
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "rotor"
+      ],
+      [
+        "minimum"
+      ],
+      [
+        "torque"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 95,
+    "scenario": "A completed front brake job is documented. The micrometer reads 28.4 mm on a rotor stamped MIN TH 26.0 mm. New pads are seated with hardware and shims, caliper guide pins show fresh silicone lube on the boots, and the work order records lug nuts torqued to 103 ft-lb in a star pattern with a torque wrench pictured on the wheel. Road test noted normal pedal.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Compliant brake service (control)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.11 Sitework & Utilities",
+    "discipline_code": "2.11",
+    "element": "U-101 Trench protection",
+    "element_code": "U-101",
+    "findings_mode": "all",
+    "forbidden": [
+      [
+        "evacuate"
+      ],
+      [
+        "stop",
+        "work"
+      ]
+    ],
+    "generation": "curated-v2-control",
+    "id": "v2-pass-u101-t2-trench-correct",
+    "media": [],
+    "modality": "text",
+    "prompt": "Identify any hazards requiring immediate control, or confirm the protective system is adequate as observed.",
+    "required_actions": [
+      [
+        "monitor"
+      ],
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "protective system present"
+      ],
+      [
+        "safe access present"
+      ],
+      [
+        "edge setback acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "in-progress",
+    "s2_expected": [],
+    "s3_percent": 50,
+    "scenario": "A 6-foot-deep utility trench has workers inside a trench shield whose certification plate and tabulated data are visible. Shield walls extend above grade, the spoil pile sits roughly four feet back from the edge, and an extension ladder inside the shield extends three rungs above grade about ten feet from the workers. A competent-person daily inspection log dated today is shown.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "OSHA 1926 Subpart P"
+    ],
+    "subcategory": "2.11.1 Excavation & Trenching",
+    "task_type": "HAZ",
+    "task_type_name": "Hazard spotting",
+    "tier": "T2",
+    "title": "T2 U-101 Compliant trench protection (control)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.7 Equipment & Machinery",
+    "discipline_code": "2.7",
+    "element": "M-201 Shaft alignment",
+    "element_code": "M-201",
+    "findings_mode": "all",
+    "forbidden": [
+      [
+        "realign"
+      ],
+      [
+        "stop",
+        "work"
+      ]
+    ],
+    "generation": "curated-v2-control",
+    "id": "v2-pass-m201-t1-alignment-correct",
+    "media": [],
+    "modality": "text",
+    "prompt": "Evaluate whether the alignment procedure was sequenced and completed correctly.",
+    "required_actions": [
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "soft",
+        "foot"
+      ],
+      [
+        "pipe"
+      ],
+      [
+        "tolerance"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "A pump-motor alignment record shows soft foot checked and corrected to 0.001 inch at each foot, final laser alignment performed after the suction and discharge flanges were bolted up, and the as-left readings within the 1800-rpm tolerance table posted on the job card. Cold offsets for hot service were applied per the OEM growth chart.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "API RP 686"
+    ],
+    "subcategory": "2.7.2 Alignment",
+    "task_type": "SEQ",
+    "task_type_name": "Procedure sequencing",
+    "tier": "T1",
+    "title": "T1 M-201 Compliant shaft alignment (control)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-102 Fall protection",
+    "element_code": "X-102",
+    "findings_mode": "all",
+    "forbidden": [
+      [
+        "remove",
+        "from",
+        "service"
+      ],
+      [
+        "stop",
+        "work"
+      ]
+    ],
+    "generation": "curated-v2-control",
+    "id": "v2-pass-x102-t2-harness-correct",
+    "media": [],
+    "modality": "text",
+    "prompt": "Inspect the fall protection setup as observed and identify any deficiencies, or confirm it is acceptable.",
+    "required_actions": [
+      [
+        "monitor"
+      ],
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "fall arrest gear intact"
+      ],
+      [
+        "inspection tag current"
+      ],
+      [
+        "rated tie off"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "in-progress",
+    "s2_expected": [],
+    "s3_percent": 50,
+    "scenario": "A worker at 15 feet on a steel deck wears a full-body harness with clean, unfrayed webbing; the fold-out impact indicator tag is intact and the inspection grid is punched for the current quarter. The lanyard snaps to an engineered anchor strap around a structural beam marked with a rated-anchor tag, connected at shoulder height.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1926 Subpart M"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "ID",
+    "task_type_name": "Identification",
+    "tier": "T2",
+    "title": "T2 X-102 Compliant fall protection (control)"
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.1 Electrical",
+    "discipline_code": "2.1",
+    "element": "E-303 Terminations & splices",
+    "element_code": "E-303",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "accept",
+        "as",
+        "is"
+      ]
+    ],
+    "generation": "curated-v2-nmi",
+    "id": "v2-nmi-e303-t2-termination-torque",
+    "media": [],
+    "modality": "text",
+    "prompt": "Determine whether this termination can be accepted from the evidence provided. If not, state exactly what verification is required.",
+    "required_actions": [
+      [
+        "verify",
+        "torque"
+      ]
+    ],
+    "required_findings": [
+      [
+        "torque"
+      ],
+      [
+        "record",
+        "mark",
+        "verification"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "rough-complete",
+    "s2_expected": [],
+    "s3_percent": 80,
+    "scenario": "A photo shows feeder lugs in a disconnect, conductors fully seated with correct strip length and no visible strand damage. Nothing in the photo or the provided paperwork indicates whether the lugs were torqued to the marked values, and no torque marks or record sheet is included.",
+    "source_file": "docs/source/electrical-element-tree-v0.1.md",
+    "source_refs": [
+      "NEC 110.14"
+    ],
+    "subcategory": "2.1.3 Wire & Cable",
+    "task_type": "CC",
+    "task_type_name": "Code/spec compliance",
+    "tier": "T2",
+    "title": "T2 E-303 Termination torque unverifiable"
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.2 Mechanical - Piping & Plumbing",
+    "discipline_code": "2.2",
+    "element": "P-201 Traps & venting",
+    "element_code": "P-201",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "approve",
+        "as",
+        "is"
+      ]
+    ],
+    "generation": "curated-v2-nmi",
+    "id": "v2-nmi-p201-t3-concealed-vent",
+    "media": [],
+    "modality": "text",
+    "prompt": "Can this drain arrangement be approved from what is shown? State what additional evidence would settle it.",
+    "required_actions": [
+      [
+        "verify",
+        "vent"
+      ]
+    ],
+    "required_findings": [
+      [
+        "vent"
+      ],
+      [
+        "concealed",
+        "wall",
+        "hidden"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "rough-complete",
+    "s2_expected": [],
+    "s3_percent": 75,
+    "scenario": "Under a bathroom sink, a P-trap with correct outlet geometry connects to a sanitary tee entering the wall. The wall is closed and finished. No photo of the rough-in stage and no vent information for this fixture group is provided.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "IPC"
+    ],
+    "subcategory": "2.2.2 Plumbing - DWV",
+    "task_type": "CC",
+    "task_type_name": "Code/spec compliance",
+    "tier": "T3",
+    "title": "T3 P-201 Vent path concealed"
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-301 Diagnostics",
+    "element_code": "A-301",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "replace",
+        "converter",
+        "immediately"
+      ]
+    ],
+    "generation": "curated-v2-nmi",
+    "id": "v2-nmi-a301-t4-p0420-diagnosis",
+    "media": [],
+    "modality": "text",
+    "prompt": "Assess whether the quoted repair is justified by the evidence provided. State what testing should occur before parts are ordered.",
+    "required_actions": [
+      [
+        "test",
+        "verify",
+        "measure"
+      ]
+    ],
+    "required_findings": [
+      [
+        "oxygen",
+        "o2"
+      ],
+      [
+        "waveform",
+        "data",
+        "test"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "planned",
+    "s2_expected": [
+      "degraded"
+    ],
+    "s3_percent": 10,
+    "scenario": "A scan report shows stored code P0420 with a freeze frame captured at steady 45 mph cruise. The service writer has quoted a catalytic converter replacement. No upstream or downstream oxygen sensor waveform data, fuel trim values, or exhaust leak inspection results are attached to the ticket.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM service info"
+    ],
+    "subcategory": "2.9.3 Electrical & Electronics",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 A-301 Catalyst code without waveform data"
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "curated-v2-nmi",
+    "id": "v2-nmi-x103-t1-incomplete-gas-test",
+    "media": [],
+    "modality": "text",
+    "prompt": "Determine whether entry can be authorized on this permit as documented. Identify exactly what is missing.",
+    "required_actions": [
+      [
+        "complete",
+        "test",
+        "retest"
+      ]
+    ],
+    "required_findings": [
+      [
+        "lel",
+        "flammable"
+      ],
+      [
+        "h2s",
+        "co",
+        "toxic"
+      ],
+      [
+        "bump",
+        "calibration"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "A confined-space entry permit for a process vessel shows an oxygen reading of 20.9 percent logged thirty minutes ago. The LEL, H2S, and CO fields on the permit are blank, and the meter's bump-test record for today is not attached. The attendant and rescue plan sections are complete.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Incomplete atmospheric testing"
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-201 Rebar placement",
+    "element_code": "S-201",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "approve",
+        "pour",
+        "now"
+      ]
+    ],
+    "generation": "curated-v2-nmi",
+    "id": "v2-nmi-s201-t2-bar-size-unconfirmed",
+    "media": [],
+    "modality": "text",
+    "prompt": "Can bar size compliance be confirmed from this evidence? State what measurement or reference is needed.",
+    "required_actions": [
+      [
+        "measure",
+        "verify",
+        "confirm"
+      ]
+    ],
+    "required_findings": [
+      [
+        "bar",
+        "size"
+      ],
+      [
+        "scale",
+        "reference",
+        "closeup",
+        "measure"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "rough-complete",
+    "s2_expected": [],
+    "s3_percent": 70,
+    "scenario": "A pre-pour photo of a grade beam shows bars on chairs with consistent spacing and clear cover to the forms. The photo is taken from too far away to read bar deformation patterns or count ribs, and the placing drawings specify different bar sizes for the top and bottom mats. No scale reference is in frame.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ACI 117",
+      "placing drawings"
+    ],
+    "subcategory": "2.4.2 Reinforcing",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T2",
+    "title": "T2 S-201 Rebar size not confirmable"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.6 Carpentry & Finishes",
+    "discipline_code": "2.6",
+    "element": "F-301 Drywall & finishing",
+    "element_code": "F-301",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "structural"
+      ],
+      [
+        "stop",
+        "work"
+      ],
+      [
+        "remove",
+        "drywall"
+      ]
+    ],
+    "generation": "curated-v2-trap",
+    "id": "v2-trap-f301-t3-screw-pops",
+    "media": [],
+    "modality": "text",
+    "prompt": "Classify this condition and determine whether it represents a defect requiring corrective construction work.",
+    "required_actions": [
+      [
+        "touch",
+        "repair",
+        "monitor",
+        "cosmetic"
+      ]
+    ],
+    "required_findings": [
+      [
+        "cosmetic",
+        "minor",
+        "shrinkage"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "accepted",
+    "s2_expected": [],
+    "s3_percent": 100,
+    "scenario": "A one-year warranty walkthrough of a non-fire-rated interior partition notes three small circular bumps in the paint film along one stud line, consistent with seasonal lumber shrinkage. Fastener spacing on the original inspection photos met the schedule, and the wall shows no cracking, movement, or moisture staining.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "GA-216"
+    ],
+    "subcategory": "2.6.3 Interior Finish",
+    "task_type": "CC",
+    "task_type_name": "Code/spec compliance",
+    "tier": "T3",
+    "title": "T3 F-301 Cosmetic screw pops (alarmist trap)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-102 Fluids & leaks",
+    "element_code": "A-102",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "immediate",
+        "repair",
+        "required"
+      ],
+      [
+        "unsafe"
+      ]
+    ],
+    "generation": "curated-v2-trap",
+    "id": "v2-trap-a102-t4-oil-seep",
+    "media": [],
+    "modality": "text",
+    "prompt": "Assess this observation and recommend an appropriate disposition for the customer.",
+    "required_actions": [
+      [
+        "monitor",
+        "recheck",
+        "note"
+      ]
+    ],
+    "required_findings": [
+      [
+        "seep",
+        "dampness",
+        "minor"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "in-service",
+    "s2_expected": [
+      "worn"
+    ],
+    "s3_percent": 100,
+    "scenario": "During an oil change on a 140,000-mile vehicle, the tech photographs slight dampness with dust accumulation along the lower edge of the valve cover gasket. There are no drips on the undertray or the ground, oil level is at the full mark, and the customer reports no oil consumption between changes.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.1 Engine & Drivetrain",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 A-102 Valve cover seep (alarmist trap)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.5 Concrete & Masonry",
+    "discipline_code": "2.5",
+    "element": "C-301 Block/brick laying",
+    "element_code": "C-301",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "rebuild"
+      ],
+      [
+        "structural"
+      ],
+      [
+        "stop",
+        "work"
+      ]
+    ],
+    "generation": "curated-v2-trap",
+    "id": "v2-trap-c301-t2-efflorescence",
+    "media": [],
+    "modality": "text",
+    "prompt": "Identify this condition and determine whether corrective masonry work is warranted.",
+    "required_actions": [
+      [
+        "clean",
+        "monitor",
+        "brush"
+      ]
+    ],
+    "required_findings": [
+      [
+        "efflorescence",
+        "salt",
+        "powder"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "accepted",
+    "s2_expected": [],
+    "s3_percent": 100,
+    "scenario": "Three months after completion, a new CMU veneer shows a light white powdery haze across several courses after a wet winter. Joints are tooled concave and intact, weep holes at the bottom course are open and unobstructed, and interior humidity readings behind the wall are normal.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "BIA tech notes"
+    ],
+    "subcategory": "2.5.3 Masonry",
+    "task_type": "ID",
+    "task_type_name": "Identification",
+    "tier": "T2",
+    "title": "T2 C-301 Light efflorescence (alarmist trap)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.1 Electrical",
+    "discipline_code": "2.1",
+    "element": "E-303 Terminations & splices",
+    "element_code": "E-303",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "violation"
+      ],
+      [
+        "rework",
+        "required"
+      ]
+    ],
+    "generation": "curated-v2-trd",
+    "id": "v2-trd-e303-t3-backstab",
+    "media": [],
+    "modality": "text",
+    "prompt": "Give the inspection decision, then explain the difference between what the code permits here and what experienced electricians typically prefer, and why.",
+    "required_actions": [
+      [
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "listed",
+        "permitted",
+        "compliant"
+      ],
+      [
+        "side",
+        "screw",
+        "clamp"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "rough-complete",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "A living-room circuit uses receptacles wired via push-in backstab connections with 14 AWG solid copper on a 15 A circuit, consistent with the device listing. The homeowner asks whether the work must be redone. Local amendments add nothing beyond the model code.",
+    "source_file": "docs/source/electrical-element-tree-v0.1.md",
+    "source_refs": [
+      "NEC 110.14",
+      "device listings"
+    ],
+    "subcategory": "2.1.3 Wire & Cable",
+    "task_type": "TRD",
+    "task_type_name": "Tradeoff judgment",
+    "tier": "T3",
+    "title": "T3 E-303 Backstabbed receptacles (judgment)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-302 ADAS & post-repair calibration",
+    "element_code": "A-302",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "acceptable",
+        "as",
+        "released"
+      ]
+    ],
+    "generation": "curated-v2-trd",
+    "id": "v2-trd-a302-t4-adas-skip",
+    "media": [],
+    "modality": "text",
+    "prompt": "Judge whether releasing this vehicle was acceptable. Weigh the absence of warning lights against the OEM requirement, and state the correct disposition.",
+    "required_actions": [
+      [
+        "calibrate",
+        "schedule",
+        "return"
+      ]
+    ],
+    "required_findings": [
+      [
+        "calibration"
+      ],
+      [
+        "oem",
+        "procedure",
+        "required"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "non-compliant"
+    ],
+    "s3_percent": 90,
+    "scenario": "A windshield with a forward-facing camera bracket was replaced. The glass installer road-tested the vehicle, confirmed no dash warnings, and released it, noting the shop lacks calibration targets and the customer declined a dealer visit. The OEM procedure for this model specifies a static target calibration after glass replacement.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM position statements"
+    ],
+    "subcategory": "2.9.3 Electrical & Electronics",
+    "task_type": "TRD",
+    "task_type_name": "Tradeoff judgment",
+    "tier": "T4",
+    "title": "T4 A-302 Skipped ADAS calibration (judgment)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.10 Assembly & Fabrication",
+    "discipline_code": "2.10",
+    "element": "B-101 Torque & threaded fastening",
+    "element_code": "B-101",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "reuse",
+        "acceptable"
+      ]
+    ],
+    "generation": "curated-v2-trd",
+    "id": "v2-trd-b101-t5-tty-reuse",
+    "media": [],
+    "modality": "text",
+    "prompt": "Judge the operator's reasoning against the specification. State the correct disposition and the cost-versus-risk tradeoff involved.",
+    "required_actions": [
+      [
+        "replace",
+        "new"
+      ],
+      [
+        "andon",
+        "stop",
+        "hold"
+      ]
+    ],
+    "required_findings": [
+      [
+        "one time fastener"
+      ],
+      [
+        "reuse unacceptable"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "in-progress",
+    "s2_expected": [
+      "non-compliant"
+    ],
+    "s3_percent": 60,
+    "scenario": "During a line-side rework, an operator reinstalls the same stretch bolts that were removed an hour earlier, reasoning that they were only torqued once and the replacement kit would stop the line for twenty minutes. The engineering spec marks these fasteners single-use with an angle-tightening step.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "engineering specs"
+    ],
+    "subcategory": "2.10.1 Fastening & Joining",
+    "task_type": "TRD",
+    "task_type_name": "Tradeoff judgment",
+    "tier": "T5",
+    "title": "T5 B-101 Torque-to-yield reuse (judgment)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-302 Crane operations",
+    "element_code": "S-302",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "curated-v2-trd",
+    "id": "v2-trd-s302-t1-wind-pick",
+    "media": [],
+    "modality": "text",
+    "prompt": "Make the go/no-go call. Weigh the schedule pressure explicitly and state the conditions under which the lift could proceed.",
+    "required_actions": [
+      [
+        "postpone",
+        "delay",
+        "no",
+        "go"
+      ]
+    ],
+    "required_findings": [
+      [
+        "weather limit exceeded"
+      ],
+      [
+        "delay lift"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "A vessel lift calculates to 92 percent of chart capacity at the working radius. Site wind is averaging 18 mph with gusts to 28 mph against a manufacturer wind limit of 20 mph for this boom configuration. The schedule shows the crane demobilizes tomorrow and the next window costs a week of standby.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "OSHA 1926.1400",
+      "load charts"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "TRD",
+    "task_type_name": "Tradeoff judgment",
+    "tier": "T1",
+    "title": "T1 S-302 Marginal crane pick in gusts (judgment)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-102 Fall protection",
+    "element_code": "X-102",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "acceptable",
+        "for",
+        "short"
+      ]
+    ],
+    "generation": "curated-v2-trd",
+    "id": "v2-trd-x102-t2-guardrail-tieoff",
+    "media": [],
+    "modality": "text",
+    "prompt": "Judge whether this tie-off is acceptable for a five-minute task. Address the difference between guardrail strength and anchorage requirements.",
+    "required_actions": [
+      [
+        "stop",
+        "work"
+      ],
+      [
+        "relocate",
+        "engineered",
+        "proper"
+      ]
+    ],
+    "required_findings": [
+      [
+        "not rated anchorage"
+      ],
+      [
+        "tie off unacceptable"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "in-progress",
+    "s2_expected": [
+      "non-compliant"
+    ],
+    "s3_percent": 40,
+    "scenario": "A worker leaning over a roof edge to fasten trim has clipped a lanyard to the top rail of a temporary guardrail, explaining that the nearest engineered anchor is forty feet away and the task takes five minutes. The guardrail is built to standard guardrail strength requirements, not personal fall arrest anchorage ratings.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1926.502"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "TRD",
+    "task_type_name": "Tradeoff judgment",
+    "tier": "T2",
+    "title": "T2 X-102 Guardrail as anchor (judgment)"
+  }
+]

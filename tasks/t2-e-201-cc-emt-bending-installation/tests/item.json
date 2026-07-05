@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-e-201-cc-emt-bending-installation",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,23 +37,13 @@
   ],
   "required_findings": [
     [
-      "bending"
-    ],
-    [
-      "installation"
-    ],
-    [
       "bends"
-    ],
-    [
-      "between"
     ],
     [
       "pull"
     ],
     [
-      "non",
-      "compliant"
+      "points"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-201 EMT bending & installation within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: >360\u00b0 of bends between pull points. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 358, Ch. 9 (fill).",
+  "scenario": "In a T2 work setting, the evaluated element is E-201 EMT bending & installation within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The field notes describe visible cues consistent with: >360\u00b0 of visible cue between visible cue visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 358, Ch. 9 (fill).",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 358",

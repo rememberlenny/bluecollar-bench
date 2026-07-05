@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-e-105-fd-motor-circuits-disconnects",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "motor"
-    ],
-    [
-      "circuits"
-    ],
-    [
       "missing"
     ],
     [
@@ -46,9 +43,6 @@
     ],
     [
       "disconnect"
-    ],
-    [
-      "fault"
     ]
   ],
   "risk": "high",
@@ -58,7 +52,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T1 work setting, the evaluated element is E-105 Motor circuits & disconnects within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: missing lockable disconnect for maintenance. The work is being assessed at the in-service lifecycle state with source anchors NEC Art. 430.",
+  "scenario": "In a T1 work setting, the evaluated element is E-105 Motor circuits & disconnects within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: not present where expected visible cue visible cue for maintenance. The work is being assessed at the in-service lifecycle state with source anchors NEC Art. 430.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 430"

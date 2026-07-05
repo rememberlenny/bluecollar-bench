@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t1-c-202-seq-bf-012-finishing-curing",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "finishing"
-    ],
-    [
-      "curing"
-    ],
-    [
       "troweling"
     ],
     [
@@ -46,9 +43,6 @@
     ],
     [
       "water"
-    ],
-    [
-      "sequence"
     ]
   ],
   "risk": "high",
@@ -57,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is C-202 Finishing & curing within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The observed field condition is: troweling bleed water back in (dusting/scaling later - FD from failed-surface photos). The work is being assessed at the in-progress lifecycle state with source anchors ACI 302, 308. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is C-202 Finishing & curing within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The field notes describe visible cues consistent with: visible cue visible cue visible cue back in (dusting/scaling later - FD from failed-surface photos). The work is being assessed at the in-progress lifecycle state with source anchors ACI 302, 308. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ACI 302",

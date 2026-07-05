@@ -1,0 +1,54 @@
+{
+  "decision": "fail",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "RES Schedule & constraint reasoning",
+  "element_code": "RES-001",
+  "expected_value": 2,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "no",
+      "impact"
+    ]
+  ],
+  "generation": "synthetic-cpm-v2",
+  "id": "v2-cpm-delay-011",
+  "leakage_ratio": 0.0,
+  "media": [
+    "cpm_delay_011.png"
+  ],
+  "modality": "image",
+  "prompt": "Read the schedule and the disruption from the image. Report the project finish delay in workdays in the `value` field (0 if the float absorbs it), state whether the completion date slips, and identify what drives your answer.",
+  "required_actions": [
+    [
+      "notify",
+      "recover",
+      "resequence",
+      "crash",
+      "accelerate"
+    ]
+  ],
+  "required_findings": [
+    [
+      "critical",
+      "path"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 40,
+  "scenario": "The image shows the current lookahead schedule with early-start bars, durations, and predecessor lists, plus a disruption note at the bottom.",
+  "source_file": "docs/source/expansion-plan-four-tracks-v0.1.md",
+  "source_refs": [
+    "CPM computed ground truth",
+    "expansion-plan track 3"
+  ],
+  "subcategory": "Cross-trade sequencing",
+  "task_type": "RES",
+  "task_type_name": "Resource & constraint reasoning",
+  "tier": "T2",
+  "title": "T2 RES Field constraint: delay (image)",
+  "value_tolerance": 0
+}

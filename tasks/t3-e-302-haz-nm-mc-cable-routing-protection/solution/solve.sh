@@ -13,11 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "cable",
-    "routing",
     "unsupported",
-    "runs",
-    "hazard"
+    "runs"
   ],
   "actions": [
     "stop work",

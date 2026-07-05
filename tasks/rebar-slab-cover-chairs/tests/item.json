@@ -16,6 +16,9 @@
   ],
   "generation": "curated",
   "id": "rebar-slab-cover-chairs",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Assess readiness for concrete placement, identify the defects, and estimate the lifecycle state.",
   "required_actions": [
     [
@@ -34,17 +37,13 @@
   ],
   "required_findings": [
     [
-      "insufficient",
-      "cover"
+      "insufficient cover"
     ],
     [
-      "missing",
-      "chairs"
+      "missing chairs"
     ],
     [
-      "bars",
-      "touching",
-      "form"
+      "bars touching form"
     ]
   ],
   "risk": "high",

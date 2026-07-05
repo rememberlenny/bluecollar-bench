@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-f-201-cc-flashing-wrb-integration",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,23 +37,10 @@
   ],
   "required_findings": [
     [
-      "flashing"
-    ],
-    [
-      "integration"
-    ],
-    [
       "window"
     ],
     [
-      "flashing"
-    ],
-    [
       "absent"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -60,7 +50,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The observed field condition is: window pan flashing absent. The work is being assessed at the rough-complete lifecycle state with source anchors IRC R703, mfr instructions.",
+  "scenario": "In a T3 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The field notes describe visible cues consistent with: visible cue pan flashing visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors IRC R703, mfr instructions.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R703",

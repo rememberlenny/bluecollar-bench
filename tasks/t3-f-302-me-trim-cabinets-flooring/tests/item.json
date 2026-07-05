@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-f-302-me-trim-cabinets-flooring",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
   "required_actions": [
     [
@@ -33,19 +36,13 @@
   ],
   "required_findings": [
     [
-      "trim"
-    ],
-    [
-      "cabinets"
-    ],
-    [
       "floating"
     ],
     [
       "floor"
     ],
     [
-      "without"
+      "expansion"
     ]
   ],
   "risk": "medium",
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is F-302 Trim, cabinets, flooring within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The observed field condition is: floating floor without expansion gap (buckling - FD). The work is being assessed at the rough-complete lifecycle state with source anchors mfr instructions, TCNA. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T3 work setting, the evaluated element is F-302 Trim, cabinets, flooring within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The field notes describe visible cues consistent with: visible cue visible cue without visible cue gap (buckling - FD). The work is being assessed at the rough-complete lifecycle state with source anchors mfr instructions, TCNA. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr instructions",

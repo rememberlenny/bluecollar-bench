@@ -1,47 +1,53 @@
-        # T3 C-201 Fault diagnosis coverage backfill
+# T3 C-201 Fault diagnosis coverage backfill
 
-        You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
+You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
 
-        ## Item metadata
+## Item metadata
 
-        - ID: `t3-c-201-fd-bf-001-concrete-placement`
-        - Tier: `T3`
-        - Discipline: `2.5 Concrete & Masonry`
-        - Element: `C-201 Concrete placement`
-        - Task type: `FD`
-        - Expected lifecycle state to assess: `in-service`
-        - Relevant S2 condition classes: `degraded, failed`
+- ID: `t3-c-201-fd-bf-001-concrete-placement`
+- Tier: `T3`
+- Discipline: `2.5 Concrete & Masonry`
+- Element: `C-201 Concrete placement`
+- Task type: `FD`
+- Expected lifecycle state to assess: `in-service`
+- Relevant S2 condition classes: `degraded, failed`
+- Modality: `text`
 
-        ## Scenario
+## Scenario
 
-        In a T3 work setting, the evaluated element is C-201 Concrete placement within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The observed field condition is: honeycomb from missed vibration. The work is being assessed at the in-service lifecycle state with source anchors ACI 301, 304. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.
+In a T3 work setting, the evaluated element is C-201 Concrete placement within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The field notes describe visible cues consistent with: visible cue from visible cue visible cue. The work is being assessed at the in-service lifecycle state with source anchors ACI 301, 304. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.
 
-        ## Task
+## Task
 
-        Diagnose the most likely fault or failure mode and explain what evidence supports it.
+Diagnose the most likely fault or failure mode and explain what evidence supports it.
 
-        ## Required output
+## Required output
 
-        Write valid JSON to `/app/answer.json` with this shape:
+Write valid JSON to `/app/answer.json` with this shape:
 
-        ```json
-        {
-          "decision": "pass | fail | needs_more_info",
-          "risk": "low | medium | high | critical",
-          "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
-          "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
-          "findings": ["short defect or hazard finding", "..."],
-          "actions": ["immediate corrective action", "..."],
-          "rationale": "brief explanation",
-          "references": ["code or standard anchors you relied on"]
-        }
-        ```
+```json
+{
+  "decision": "pass | fail | needs_more_info",
+  "risk": "low | medium | high | critical",
+  "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
+  "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
+  "s3_percent": 0,
+  "value": 0,
+  "workable": ["activity ID", "..."],
+  "findings": ["short defect or hazard finding", "..."],
+  "actions": ["immediate corrective action", "..."],
+  "rationale": "brief explanation",
+  "references": ["code or standard anchors you relied on"]
+}
+```
 
-        Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `workable` for a list of activity IDs when the task asks what work can still start.
 
-        ## Source anchors
+## Source anchors
 
-        These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
+These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
 
-        - ACI 301
+- ACI 301
 - 304

@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-x-102-me-fall-protection",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "fall"
-    ],
-    [
-      "protection"
-    ],
-    [
       "trigger"
     ],
     [
@@ -51,7 +48,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is X-102 Fall protection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: 6-ft trigger ignored. The work is being assessed at the rough-complete lifecycle state with source anchors OSHA 1926 Subpart M, 1910.140. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T1 work setting, the evaluated element is X-102 Fall protection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The field notes describe visible cues consistent with: 6-ft visible cue visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors OSHA 1926 Subpart M, 1910.140. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart M",

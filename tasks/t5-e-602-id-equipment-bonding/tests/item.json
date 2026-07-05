@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-e-602-id-equipment-bonding",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "equipment"
-    ],
-    [
-      "bonding"
-    ],
     [
       "csst"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is E-602 Equipment bonding within 2.1 Electrical. The relevant subcategory is 2.1.6 Grounding & Bonding. The observed field condition is: CSST gas line not bonded. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 250.104, 250.30.",
+  "scenario": "In a T5 work setting, the evaluated element is E-602 Equipment bonding within 2.1 Electrical. The relevant subcategory is 2.1.6 Grounding & Bonding. The field notes describe visible cues consistent with: visible cue gas visible cue not visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 250.104, 250.30.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 250.104",

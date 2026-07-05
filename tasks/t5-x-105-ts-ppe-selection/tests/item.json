@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-x-105-ts-ppe-selection",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
   "required_actions": [
     [
@@ -32,9 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "selection"
-    ],
     [
       "flash"
     ],
@@ -51,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T5 work setting, the evaluated element is X-105 PPE selection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: arc-flash rating below task category (label vs. clothing - DOC+ID). The work is being assessed at the staged lifecycle state with source anchors NFPA 70E, OSHA 1910 Subpart I.",
+  "scenario": "In a T5 work setting, the evaluated element is X-105 PPE selection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The field notes describe visible cues consistent with: arc-visible cue visible cue visible cue task category (label vs. clothing - DOC+ID). The work is being assessed at the staged lifecycle state with source anchors NFPA 70E, OSHA 1910 Subpart I.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "NFPA 70E",

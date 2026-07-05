@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-p-102-id-flanged-joints",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "flanged"
-    ],
-    [
-      "joints"
-    ],
     [
       "torque"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is P-102 Flanged joints within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The observed field condition is: no torque marks/witness lines. The work is being assessed at the rough-complete lifecycle state with source anchors ASME PCC-1, B16.5.",
+  "scenario": "In a T1 work setting, the evaluated element is P-102 Flanged joints within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The field notes describe visible cues consistent with: no visible cue visible cue/visible cue lines. The work is being assessed at the rough-complete lifecycle state with source anchors ASME PCC-1, B16.5.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ASME PCC-1",

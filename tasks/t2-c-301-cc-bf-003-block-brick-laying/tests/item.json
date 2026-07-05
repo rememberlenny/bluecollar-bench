@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t2-c-301-cc-bf-003-block-brick-laying",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,12 +37,6 @@
   ],
   "required_findings": [
     [
-      "block"
-    ],
-    [
-      "brick"
-    ],
-    [
       "ladder"
     ],
     [
@@ -47,10 +44,6 @@
     ],
     [
       "spacing"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is C-301 Block/brick laying within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.3 Masonry. The observed field condition is: ladder reinforcement spacing exceeded. The work is being assessed at the rough-complete lifecycle state with source anchors TMS 402/602. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T2 work setting, the evaluated element is C-301 Block/brick laying within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.3 Masonry. The field notes describe visible cues consistent with: visible cue visible cue visible cue exceeded. The work is being assessed at the rough-complete lifecycle state with source anchors TMS 402/602. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "TMS 402/602"

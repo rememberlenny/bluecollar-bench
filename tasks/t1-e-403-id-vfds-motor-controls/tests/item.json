@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-e-403-id-vfds-motor-controls",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
   "required_actions": [
     [
@@ -33,19 +36,13 @@
   ],
   "required_findings": [
     [
-      "vfds"
-    ],
-    [
-      "motor"
-    ],
-    [
       "missing"
     ],
     [
-      "load"
+      "reactor"
     ],
     [
-      "reactor"
+      "long"
     ]
   ],
   "risk": "medium",
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is E-403 VFDs & motor controls within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The observed field condition is: missing load reactor on long motor leads. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 430, mfr manuals.",
+  "scenario": "In a T1 work setting, the evaluated element is E-403 VFDs & motor controls within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The field notes describe visible cues consistent with: not present where expected load visible cue on visible cue motor leads. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 430, mfr manuals.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 430",

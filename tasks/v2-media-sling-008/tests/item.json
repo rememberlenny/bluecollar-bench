@@ -1,0 +1,55 @@
+{
+  "decision": "pass",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-301 Rigging configuration",
+  "element_code": "S-301",
+  "expected_value": 2121,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "do",
+      "not",
+      "lift"
+    ]
+  ],
+  "generation": "synthetic-media-v2",
+  "id": "v2-media-sling-008",
+  "leakage_ratio": 0.0,
+  "media": [
+    "sling_008.png"
+  ],
+  "modality": "image",
+  "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+  "required_actions": [
+    [
+      "proceed",
+      "lift",
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "within",
+      "below",
+      "under",
+      "acceptable"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "planned",
+  "s2_expected": [],
+  "s3_percent": 0,
+  "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ASME B30.9",
+    "OSHA 1926.251"
+  ],
+  "subcategory": "2.4.3 Rigging & Machinery Moving",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T1",
+  "title": "T1 S-301 Measurement & estimation (image)",
+  "value_tolerance": 64
+}

@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-f-301-me-drywall-finishing",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "drywall"
-    ],
-    [
-      "finishing"
-    ],
-    [
       "joints"
     ],
     [
@@ -51,7 +48,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is F-301 Drywall & finishing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The observed field condition is: joints not staggered. The work is being assessed at the rough-complete lifecycle state with source anchors GA-216, IRC. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T3 work setting, the evaluated element is F-301 Drywall & finishing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The field notes describe visible cues consistent with: visible cue not visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors GA-216, IRC. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "GA-216",

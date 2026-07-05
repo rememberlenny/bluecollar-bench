@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-e-102-pa-panelboard-installation-makeup",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
   "required_actions": [
     [
@@ -33,19 +36,10 @@
   ],
   "required_findings": [
     [
-      "panelboard"
-    ],
-    [
-      "installation"
-    ],
-    [
       "panel"
     ],
     [
       "schedule"
-    ],
-    [
-      "complete"
     ]
   ],
   "risk": "medium",
@@ -54,7 +48,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: no panel schedule. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4. Treat this as roughly 70 percent complete until defects are corrected.",
+  "scenario": "In a T2 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: no visible cue visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4. Treat this as roughly 70 percent complete until defects are corrected.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 408",

@@ -44,6 +44,13 @@ def validate_task(task_dir: Path) -> tuple[bool, str]:
         if key not in item:
             return False, f"item missing {key}"
 
+    for entry in item.get("media", []) or []:
+        media_path = entry if isinstance(entry, str) else entry.get("path", "")
+        if not media_path:
+            return False, "media entry missing path"
+        if not (task_dir / "environment" / "media" / media_path).exists():
+            return False, f"missing media fixture {media_path}"
+
     with tempfile.TemporaryDirectory(prefix=f"{task_dir.name}-") as tmp:
         tmp_path = Path(tmp)
         app_dir = tmp_path / "app"

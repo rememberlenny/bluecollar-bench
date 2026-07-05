@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t4-x-105-id-bf-004-ppe-selection",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
   "required_actions": [
     [
@@ -32,9 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "selection"
-    ],
     [
       "flash"
     ],
@@ -51,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is X-105 PPE selection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: arc-flash rating below task category (label vs. clothing - DOC+ID). The work is being assessed at the rough-complete lifecycle state with source anchors NFPA 70E, OSHA 1910 Subpart I. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T4 work setting, the evaluated element is X-105 PPE selection within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The field notes describe visible cues consistent with: arc-visible cue visible cue visible cue task category (label vs. clothing - DOC+ID). The work is being assessed at the rough-complete lifecycle state with source anchors NFPA 70E, OSHA 1910 Subpart I. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "NFPA 70E",

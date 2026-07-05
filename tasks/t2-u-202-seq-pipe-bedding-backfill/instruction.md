@@ -1,47 +1,53 @@
-        # T2 U-202 Procedure sequencing
+# T2 U-202 Procedure sequencing
 
-        You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
+You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
 
-        ## Item metadata
+## Item metadata
 
-        - ID: `t2-u-202-seq-pipe-bedding-backfill`
-        - Tier: `T2`
-        - Discipline: `2.11 Sitework & Utilities`
-        - Element: `U-202 Pipe bedding & backfill`
-        - Task type: `SEQ`
-        - Expected lifecycle state to assess: `in-progress`
-        - Relevant S2 condition classes: `installed-defective`
+- ID: `t2-u-202-seq-pipe-bedding-backfill`
+- Tier: `T2`
+- Discipline: `2.11 Sitework & Utilities`
+- Element: `U-202 Pipe bedding & backfill`
+- Task type: `SEQ`
+- Expected lifecycle state to assess: `in-progress`
+- Relevant S2 condition classes: `installed-defective`
+- Modality: `text`
 
-        ## Scenario
+## Scenario
 
-        In a T2 work setting, the evaluated element is U-202 Pipe bedding & backfill within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The observed field condition is: missing tracer wire on non-metallic. The work is being assessed at the in-progress lifecycle state with source anchors project specs, IPC 306.
+In a T2 work setting, the evaluated element is U-202 Pipe bedding & backfill within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The field notes describe visible cues consistent with: not present where expected visible cue visible cue on non-metallic. The work is being assessed at the in-progress lifecycle state with source anchors project specs, IPC 306.
 
-        ## Task
+## Task
 
-        Evaluate the procedure sequence and state what must happen before work can continue.
+Evaluate the procedure sequence and state what must happen before work can continue.
 
-        ## Required output
+## Required output
 
-        Write valid JSON to `/app/answer.json` with this shape:
+Write valid JSON to `/app/answer.json` with this shape:
 
-        ```json
-        {
-          "decision": "pass | fail | needs_more_info",
-          "risk": "low | medium | high | critical",
-          "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
-          "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
-          "findings": ["short defect or hazard finding", "..."],
-          "actions": ["immediate corrective action", "..."],
-          "rationale": "brief explanation",
-          "references": ["code or standard anchors you relied on"]
-        }
-        ```
+```json
+{
+  "decision": "pass | fail | needs_more_info",
+  "risk": "low | medium | high | critical",
+  "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
+  "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
+  "s3_percent": 0,
+  "value": 0,
+  "workable": ["activity ID", "..."],
+  "findings": ["short defect or hazard finding", "..."],
+  "actions": ["immediate corrective action", "..."],
+  "rationale": "brief explanation",
+  "references": ["code or standard anchors you relied on"]
+}
+```
 
-        Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `workable` for a list of activity IDs when the task asks what work can still start.
 
-        ## Source anchors
+## Source anchors
 
-        These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
+These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
 
-        - project specs
+- project specs
 - IPC 306

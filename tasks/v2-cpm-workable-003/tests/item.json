@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "RES Schedule & constraint reasoning",
+  "element_code": "RES-001",
+  "expected_set": [
+    "F",
+    "G"
+  ],
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "stand",
+      "down",
+      "all",
+      "crews"
+    ]
+  ],
+  "generation": "synthetic-cpm-v2",
+  "id": "v2-cpm-workable-003",
+  "leakage_ratio": 0.5,
+  "media": [
+    "cpm_workable_003.png"
+  ],
+  "modality": "image",
+  "prompt": "List, in the `workable` field, the IDs of every activity the crews can start now: not blocked by the held activity directly or transitively, with all other predecessors complete.",
+  "required_actions": [
+    [
+      "resequence",
+      "reassign",
+      "proceed",
+      "backlog"
+    ]
+  ],
+  "required_findings": [
+    [
+      "blocked",
+      "downstream",
+      "hold",
+      "predecessor"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 40,
+  "scenario": "The image shows the lookahead schedule and a hold notice. Assume all activities whose bars finish by the hold date are complete; nothing else has started.",
+  "set_field": "workable",
+  "source_file": "docs/source/expansion-plan-four-tracks-v0.1.md",
+  "source_refs": [
+    "CPM computed ground truth",
+    "expansion-plan track 3"
+  ],
+  "subcategory": "Cross-trade sequencing",
+  "task_type": "RES",
+  "task_type_name": "Resource & constraint reasoning",
+  "tier": "T2",
+  "title": "T2 RES Field constraint: workable (image)"
+}

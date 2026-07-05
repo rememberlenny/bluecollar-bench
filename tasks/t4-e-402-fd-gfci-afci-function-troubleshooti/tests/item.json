@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-e-402-fd-gfci-afci-function-troubleshooti",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
   "required_actions": [
     [
@@ -33,22 +36,10 @@
   ],
   "required_findings": [
     [
-      "gfci"
-    ],
-    [
-      "afci"
-    ],
-    [
       "line"
     ],
     [
-      "load"
-    ],
-    [
       "reversed"
-    ],
-    [
-      "fault"
     ]
   ],
   "risk": "high",
@@ -58,7 +49,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T4 work setting, the evaluated element is E-402 GFCI/AFCI function & troubleshooting within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The observed field condition is: line/load reversed on GFCI. The work is being assessed at the in-service lifecycle state with source anchors NEC 210.8, 210.12.",
+  "scenario": "In a T4 work setting, the evaluated element is E-402 GFCI/AFCI function & troubleshooting within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The field notes describe visible cues consistent with: visible cue/load arranged opposite of the expected orientation on GFCI. The work is being assessed at the in-service lifecycle state with source anchors NEC 210.8, 210.12.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 210.8",

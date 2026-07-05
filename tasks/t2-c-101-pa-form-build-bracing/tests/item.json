@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-c-101-pa-form-build-bracing",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
   "required_actions": [
     [
@@ -33,19 +36,10 @@
   ],
   "required_findings": [
     [
-      "form"
-    ],
-    [
-      "build"
-    ],
-    [
       "blowout"
     ],
     [
       "evidence"
-    ],
-    [
-      "complete"
     ]
   ],
   "risk": "medium",
@@ -54,7 +48,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is C-101 Form build & bracing within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.1 Formwork. The observed field condition is: blowout evidence. The work is being assessed at the rough-complete lifecycle state with source anchors ACI 347. Treat this as roughly 70 percent complete until defects are corrected.",
+  "scenario": "In a T2 work setting, the evaluated element is C-101 Form build & bracing within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.1 Formwork. The field notes describe visible cues consistent with: visible cue visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors ACI 347. Treat this as roughly 70 percent complete until defects are corrected.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ACI 347"

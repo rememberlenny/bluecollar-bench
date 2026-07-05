@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t4-f-201-seq-bf-003-flashing-wrb-integration",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
   "required_actions": [
     [
@@ -33,22 +36,13 @@
   ],
   "required_findings": [
     [
-      "flashing"
-    ],
-    [
-      "integration"
-    ],
-    [
       "kick"
-    ],
-    [
-      "flashing"
     ],
     [
       "missing"
     ],
     [
-      "sequence"
+      "roof"
     ]
   ],
   "risk": "high",
@@ -57,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The observed field condition is: kick-out flashing missing at roof-wall. The work is being assessed at the in-progress lifecycle state with source anchors IRC R703, mfr instructions. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T4 work setting, the evaluated element is F-201 Flashing & WRB integration within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.2 Exterior Envelope. The field notes describe visible cues consistent with: visible cue-out flashing not present where expected at visible cue-wall. The work is being assessed at the in-progress lifecycle state with source anchors IRC R703, mfr instructions. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R703",

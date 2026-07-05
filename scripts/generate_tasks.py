@@ -178,58 +178,83 @@ exit 0
 
 
 def render_instruction(item: dict) -> str:
-    source_refs = "\n".join(f"- {ref}" for ref in item["source_refs"])
-    s2 = ", ".join(item["s2_expected"])
-    return textwrap.dedent(
-        f"""\
-        # {item["title"]}
-
-        You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.
-
-        ## Item metadata
-
-        - ID: `{item["id"]}`
-        - Tier: `{item["tier"]}`
-        - Discipline: `{item["discipline"]}`
-        - Element: `{item["element"]}`
-        - Task type: `{item["task_type"]}`
-        - Expected lifecycle state to assess: `{item["s1_state"]}`
-        - Relevant S2 condition classes: `{s2}`
-
-        ## Scenario
-
-        {item["scenario"]}
-
-        ## Task
-
-        {item["prompt"]}
-
-        ## Required output
-
-        Write valid JSON to `/app/answer.json` with this shape:
-
-        ```json
-        {{
-          "decision": "pass | fail | needs_more_info",
-          "risk": "low | medium | high | critical",
-          "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
-          "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
-          "findings": ["short defect or hazard finding", "..."],
-          "actions": ["immediate corrective action", "..."],
-          "rationale": "brief explanation",
-          "references": ["code or standard anchors you relied on"]
-        }}
-        ```
-
-        Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
-
-        ## Source anchors
-
-        These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.
-
-        {source_refs}
-        """
+    s2 = ", ".join(item["s2_expected"]) or "none"
+    media = item.get("media") or []
+    lines = [
+        f"# {item['title']}",
+        "",
+        "You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.",
+        "",
+        "## Item metadata",
+        "",
+        f"- ID: `{item['id']}`",
+        f"- Tier: `{item['tier']}`",
+        f"- Discipline: `{item['discipline']}`",
+        f"- Element: `{item['element']}`",
+        f"- Task type: `{item['task_type']}`",
+        f"- Expected lifecycle state to assess: `{item['s1_state']}`",
+        f"- Relevant S2 condition classes: `{s2}`",
+        f"- Modality: `{item.get('modality', 'text')}`",
+        "",
+        "## Scenario",
+        "",
+        item["scenario"],
+        "",
+    ]
+    if media:
+        lines.extend(["## Media", ""])
+        for entry in media:
+            if isinstance(entry, str):
+                media_path = entry
+                media_type = item.get("modality", "media")
+                media_alt = ""
+            else:
+                media_path = entry.get("path", "")
+                media_type = entry.get("type", item.get("modality", "media"))
+                media_alt = entry.get("alt", "")
+            label = f"- `/app/media/{media_path}` ({media_type})"
+            if media_alt:
+                label += f": {media_alt}"
+            lines.append(label)
+        lines.append("")
+    lines.extend(
+        [
+            "## Task",
+            "",
+            item["prompt"],
+            "",
+            "## Required output",
+            "",
+            "Write valid JSON to `/app/answer.json` with this shape:",
+            "",
+            "```json",
+            "{",
+            '  "decision": "pass | fail | needs_more_info",',
+            '  "risk": "low | medium | high | critical",',
+            '  "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",',
+            '  "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],',
+            '  "s3_percent": 0,',
+            '  "value": 0,',
+            '  "workable": ["activity ID", "..."],',
+            '  "findings": ["short defect or hazard finding", "..."],',
+            '  "actions": ["immediate corrective action", "..."],',
+            '  "rationale": "brief explanation",',
+            '  "references": ["code or standard anchors you relied on"]',
+            "}",
+            "```",
+            "",
+            "Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.",
+            "Use `value` for the numeric reading or computed quantity when the task asks for one.",
+            "Use `workable` for a list of activity IDs when the task asks what work can still start.",
+            "",
+            "## Source anchors",
+            "",
+            "These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.",
+            "",
+        ]
     )
+    lines.extend(f"- {ref}" for ref in item["source_refs"])
+    return "\n".join(lines) + "\n"
 
 
 def render_solution(item: dict) -> str:
@@ -244,6 +269,10 @@ def render_solution(item: dict) -> str:
         "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
         "references": item["source_refs"],
     }
+    if isinstance(item.get("expected_value"), (int, float)):
+        answer["value"] = item["expected_value"]
+    if item.get("expected_set") is not None:
+        answer[item.get("set_field", "workable")] = item["expected_set"]
     payload = json.dumps(answer, indent=2)
     return f"""#!/usr/bin/env bash
 set -euo pipefail
@@ -265,6 +294,13 @@ def render_task_toml(item: dict) -> str:
     ]
     keywords_toml = ", ".join(json.dumps(k) for k in keywords)
     source_refs = ", ".join(json.dumps(ref) for ref in item["source_refs"])
+    media_refs = ", ".join(json.dumps(entry if isinstance(entry, str) else entry.get("path", "")) for entry in item.get("media", []))
+    expected_value = item.get("expected_value")
+    value_tolerance = item.get("value_tolerance")
+    expected_value_present = isinstance(expected_value, (int, float))
+    value_tolerance_present = isinstance(value_tolerance, (int, float))
+    expected_value_toml = str(float(expected_value)) if expected_value_present else "0.0"
+    value_tolerance_toml = str(float(value_tolerance)) if value_tolerance_present else "0.0"
     return textwrap.dedent(
         f"""\
         schema_version = "1.3"
@@ -288,6 +324,11 @@ def render_task_toml(item: dict) -> str:
         s3_percent = {float(item.get("s3_percent", 0))}
         expected_decision = "{item["decision"]}"
         expected_risk = "{item["risk"]}"
+        modality = "{item.get("modality", "text")}"
+        media = [{media_refs}]
+        expected_value_present = {str(expected_value_present).lower()}
+        expected_value = {expected_value_toml}
+        value_tolerance = {value_tolerance_toml}
         generation = "{item.get("generation", "unknown")}"
         source_refs = [{source_refs}]
 

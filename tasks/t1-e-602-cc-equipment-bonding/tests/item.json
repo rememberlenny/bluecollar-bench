@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-e-602-cc-equipment-bonding",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,23 +37,13 @@
   ],
   "required_findings": [
     [
-      "equipment"
-    ],
-    [
-      "bonding"
-    ],
-    [
       "missing"
-    ],
-    [
-      "bonding"
     ],
     [
       "jumper"
     ],
     [
-      "non",
-      "compliant"
+      "around"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is E-602 Equipment bonding within 2.1 Electrical. The relevant subcategory is 2.1.6 Grounding & Bonding. The observed field condition is: missing bonding jumper around water meter. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 250.104, 250.30.",
+  "scenario": "In a T1 work setting, the evaluated element is E-602 Equipment bonding within 2.1 Electrical. The relevant subcategory is 2.1.6 Grounding & Bonding. The field notes describe visible cues consistent with: not present where expected bonding visible cue visible cue water meter. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 250.104, 250.30.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 250.104",

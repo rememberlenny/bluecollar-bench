@@ -16,6 +16,9 @@
   ],
   "generation": "curated",
   "id": "hvac-furnace-venting-garage-return",
+  "leakage_ratio": 0.62,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the safety and compliance issues and state whether the system should remain in service.",
   "required_actions": [
     [

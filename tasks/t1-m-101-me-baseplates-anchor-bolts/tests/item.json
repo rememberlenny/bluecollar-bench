@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-m-101-me-baseplates-anchor-bolts",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
   "required_actions": [
     [
@@ -33,19 +36,13 @@
   ],
   "required_findings": [
     [
-      "baseplates"
-    ],
-    [
-      "anchor"
-    ],
-    [
       "grout"
     ],
     [
-      "without"
+      "vent"
     ],
     [
-      "vent"
+      "holes"
     ]
   ],
   "risk": "medium",
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is M-101 Baseplates & anchor bolts within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.1 Setting & Grouting. The observed field condition is: grout without vent holes (voids - sounding test). The work is being assessed at the rough-complete lifecycle state with source anchors API RP 686. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T1 work setting, the evaluated element is M-101 Baseplates & anchor bolts within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.1 Setting & Grouting. The field notes describe visible cues consistent with: visible cue without visible cue visible cue (voids - sounding test). The work is being assessed at the rough-complete lifecycle state with source anchors API RP 686. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "API RP 686"

@@ -12,12 +12,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "pressure",
-    "testing",
     "instruments",
     "isolated",
-    "before",
-    "sequence"
+    "hydro"
   ],
   "actions": [
     "stop",

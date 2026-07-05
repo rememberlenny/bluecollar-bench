@@ -13,12 +13,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "boiler",
-    "pump",
     "separator",
     "wrong",
-    "location",
-    "non compliant"
+    "location"
   ],
   "actions": [
     "correct",

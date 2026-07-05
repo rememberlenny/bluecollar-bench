@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-s-101-haz-column-beam-erection-plumb",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
   "required_actions": [
     [
@@ -35,12 +38,6 @@
   ],
   "required_findings": [
     [
-      "column"
-    ],
-    [
-      "beam"
-    ],
-    [
       "shims"
     ],
     [
@@ -48,9 +45,6 @@
     ],
     [
       "under"
-    ],
-    [
-      "hazard"
     ]
   ],
   "risk": "critical",
@@ -60,7 +54,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is S-101 Column/beam erection & plumb within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The observed field condition is: shims missing under base plate. The work is being assessed at the in-progress lifecycle state with source anchors AISC 303, OSHA 1926 Subpart R.",
+  "scenario": "In a T1 work setting, the evaluated element is S-101 Column/beam erection & plumb within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The field notes describe visible cues consistent with: visible cue not present where expected visible cue base plate. The work is being assessed at the in-progress lifecycle state with source anchors AISC 303, OSHA 1926 Subpart R.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "AISC 303",

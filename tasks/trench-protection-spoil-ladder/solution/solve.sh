@@ -12,10 +12,10 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "6 foot trench",
-    "no shoring",
-    "spoil within 2 ft",
-    "no ladder"
+    "unprotected excavation",
+    "protective system absent",
+    "spoil too close",
+    "egress ladder absent"
   ],
   "actions": [
     "stop work",

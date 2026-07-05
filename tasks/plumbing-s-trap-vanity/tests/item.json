@@ -17,6 +17,9 @@
   ],
   "generation": "curated",
   "id": "plumbing-s-trap-vanity",
+  "leakage_ratio": 0.33,
+  "media": [],
+  "modality": "text",
   "prompt": "Assess whether the drain configuration is acceptable and explain the likely failure mode.",
   "required_actions": [
     [

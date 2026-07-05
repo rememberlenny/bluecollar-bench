@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-a-401-seq-high-voltage-safety",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "high"
-    ],
-    [
-      "voltage"
-    ],
-    [
       "service"
     ],
     [
@@ -46,9 +43,6 @@
     ],
     [
       "pulled"
-    ],
-    [
-      "sequence"
     ]
   ],
   "risk": "critical",
@@ -57,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is A-401 High-voltage safety within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.4 EV & A/C Systems. The observed field condition is: service disconnect pulled but no wait time/verification (SEQ). The work is being assessed at the in-progress lifecycle state with source anchors OEM HV procedures, NFPA 70E-adjacent.",
+  "scenario": "In a T4 work setting, the evaluated element is A-401 High-voltage safety within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.4 EV & A/C Systems. The field notes describe visible cues consistent with: visible cue visible cue visible cue but no wait time/verification (SEQ). The work is being assessed at the in-progress lifecycle state with source anchors OEM HV procedures, NFPA 70E-adjacent.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM HV procedures",

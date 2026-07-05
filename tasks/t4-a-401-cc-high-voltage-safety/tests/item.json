@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-a-401-cc-high-voltage-safety",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,12 +37,6 @@
   ],
   "required_findings": [
     [
-      "high"
-    ],
-    [
-      "voltage"
-    ],
-    [
       "orange"
     ],
     [
@@ -47,10 +44,6 @@
     ],
     [
       "handling"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "critical",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is A-401 High-voltage safety within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.4 EV & A/C Systems. The observed field condition is: orange cable handling violations. The work is being assessed at the rough-complete lifecycle state with source anchors OEM HV procedures, NFPA 70E-adjacent.",
+  "scenario": "In a T4 work setting, the evaluated element is A-401 High-voltage safety within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.4 EV & A/C Systems. The field notes describe visible cues consistent with: visible cue visible cue visible cue violations. The work is being assessed at the rough-complete lifecycle state with source anchors OEM HV procedures, NFPA 70E-adjacent.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM HV procedures",

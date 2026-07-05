@@ -1,0 +1,2994 @@
+[
+  {
+    "decision": "pass",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 25.93,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "replace",
+        "rotor"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-000",
+    "media": [
+      "rotor_000.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "service",
+        "release",
+        "document",
+        "remain"
+      ]
+    ],
+    "required_findings": [
+      [
+        "above",
+        "exceeds",
+        "greater"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 26.77,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "remain",
+        "in",
+        "service"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-001",
+    "media": [
+      "rotor_001.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "replace"
+      ]
+    ],
+    "required_findings": [
+      [
+        "below",
+        "under",
+        "less"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "worn"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 28.79,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "replace",
+        "rotor"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-002",
+    "media": [
+      "rotor_002.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "service",
+        "release",
+        "document",
+        "remain"
+      ]
+    ],
+    "required_findings": [
+      [
+        "above",
+        "exceeds",
+        "greater"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 27.07,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "remain",
+        "in",
+        "service"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-003",
+    "media": [
+      "rotor_003.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "replace"
+      ]
+    ],
+    "required_findings": [
+      [
+        "below",
+        "under",
+        "less"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "worn"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 26.4,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "replace",
+        "rotor"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-004",
+    "media": [
+      "rotor_004.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "service",
+        "release",
+        "document",
+        "remain"
+      ]
+    ],
+    "required_findings": [
+      [
+        "above",
+        "exceeds",
+        "greater"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 26.68,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "remain",
+        "in",
+        "service"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-005",
+    "media": [
+      "rotor_005.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "replace"
+      ]
+    ],
+    "required_findings": [
+      [
+        "below",
+        "under",
+        "less"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "worn"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 26.27,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "release"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-006",
+    "media": [
+      "rotor_006.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "specification",
+        "spec",
+        "lookup",
+        "verify"
+      ]
+    ],
+    "required_findings": [
+      [
+        "illegible",
+        "unreadable",
+        "unknown",
+        "stamp"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 22.62,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "remain",
+        "in",
+        "service"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-007",
+    "media": [
+      "rotor_007.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "replace"
+      ]
+    ],
+    "required_findings": [
+      [
+        "below",
+        "under",
+        "less"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "worn"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 27.08,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "replace",
+        "rotor"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-008",
+    "media": [
+      "rotor_008.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "service",
+        "release",
+        "document",
+        "remain"
+      ]
+    ],
+    "required_findings": [
+      [
+        "above",
+        "exceeds",
+        "greater"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 26.67,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "remain",
+        "in",
+        "service"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-009",
+    "media": [
+      "rotor_009.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "replace"
+      ]
+    ],
+    "required_findings": [
+      [
+        "below",
+        "under",
+        "less"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "worn"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 26.32,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "replace",
+        "rotor"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-010",
+    "media": [
+      "rotor_010.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "service",
+        "release",
+        "document",
+        "remain"
+      ]
+    ],
+    "required_findings": [
+      [
+        "above",
+        "exceeds",
+        "greater"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 23.84,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "remain",
+        "in",
+        "service"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-011",
+    "media": [
+      "rotor_011.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "replace"
+      ]
+    ],
+    "required_findings": [
+      [
+        "below",
+        "under",
+        "less"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "worn"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 29.28,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "replace",
+        "rotor"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-012",
+    "media": [
+      "rotor_012.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "service",
+        "release",
+        "document",
+        "remain"
+      ]
+    ],
+    "required_findings": [
+      [
+        "above",
+        "exceeds",
+        "greater"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.9 Automotive & Powertrain",
+    "discipline_code": "2.9",
+    "element": "A-201 Brakes",
+    "element_code": "A-201",
+    "expected_value": 24.97,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "release"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-rotor-013",
+    "media": [
+      "rotor_013.png"
+    ],
+    "modality": "image",
+    "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+    "required_actions": [
+      [
+        "specification",
+        "spec",
+        "lookup",
+        "verify"
+      ]
+    ],
+    "required_findings": [
+      [
+        "illegible",
+        "unreadable",
+        "unknown",
+        "stamp"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OEM specs"
+    ],
+    "subcategory": "2.9.2 Chassis",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T4",
+    "title": "T4 A-201 Measurement & estimation (image)",
+    "value_tolerance": 0.05
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 436,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "leak"
+      ],
+      [
+        "moisture"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-000",
+    "media": [
+      "micron_000.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "charge",
+        "proceed",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "holds",
+        "held",
+        "tight",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 4563,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-001",
+    "media": [
+      "micron_001.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "locate",
+        "repair",
+        "pressurize",
+        "nitrogen"
+      ]
+    ],
+    "required_findings": [
+      [
+        "leak"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "installed-defective"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 1495,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-002",
+    "media": [
+      "micron_002.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "evacuate",
+        "triple",
+        "continue"
+      ]
+    ],
+    "required_findings": [
+      [
+        "moisture",
+        "dehydrate",
+        "stall"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "non-compliant"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 549,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "leak"
+      ],
+      [
+        "moisture"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-003",
+    "media": [
+      "micron_003.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "charge",
+        "proceed",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "holds",
+        "held",
+        "tight",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 4857,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-004",
+    "media": [
+      "micron_004.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "locate",
+        "repair",
+        "pressurize",
+        "nitrogen"
+      ]
+    ],
+    "required_findings": [
+      [
+        "leak"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "installed-defective"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 1318,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-005",
+    "media": [
+      "micron_005.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "evacuate",
+        "triple",
+        "continue"
+      ]
+    ],
+    "required_findings": [
+      [
+        "moisture",
+        "dehydrate",
+        "stall"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "non-compliant"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 365,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "leak"
+      ],
+      [
+        "moisture"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-006",
+    "media": [
+      "micron_006.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "charge",
+        "proceed",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "holds",
+        "held",
+        "tight",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 4167,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-007",
+    "media": [
+      "micron_007.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "locate",
+        "repair",
+        "pressurize",
+        "nitrogen"
+      ]
+    ],
+    "required_findings": [
+      [
+        "leak"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "installed-defective"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 1824,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-008",
+    "media": [
+      "micron_008.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "evacuate",
+        "triple",
+        "continue"
+      ]
+    ],
+    "required_findings": [
+      [
+        "moisture",
+        "dehydrate",
+        "stall"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "non-compliant"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 539,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "leak"
+      ],
+      [
+        "moisture"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-009",
+    "media": [
+      "micron_009.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "charge",
+        "proceed",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "holds",
+        "held",
+        "tight",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 3138,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-010",
+    "media": [
+      "micron_010.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "locate",
+        "repair",
+        "pressurize",
+        "nitrogen"
+      ]
+    ],
+    "required_findings": [
+      [
+        "leak"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "installed-defective"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 1880,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-011",
+    "media": [
+      "micron_011.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "evacuate",
+        "triple",
+        "continue"
+      ]
+    ],
+    "required_findings": [
+      [
+        "moisture",
+        "dehydrate",
+        "stall"
+      ]
+    ],
+    "risk": "medium",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "non-compliant"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 380,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "leak"
+      ],
+      [
+        "moisture"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-012",
+    "media": [
+      "micron_012.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "charge",
+        "proceed",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "holds",
+        "held",
+        "tight",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "tested/inspected",
+    "s2_expected": [],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.3 HVAC-R",
+    "discipline_code": "2.3",
+    "element": "H-301 Brazing & evacuation",
+    "element_code": "H-301",
+    "expected_value": 5006,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "charge",
+        "system",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-micron-013",
+    "media": [
+      "micron_013.png"
+    ],
+    "modality": "image",
+    "prompt": "Read both values from the image, report the 10-minute reading in `value`, diagnose what the decay behavior indicates, and give the disposition.",
+    "required_actions": [
+      [
+        "locate",
+        "repair",
+        "pressurize",
+        "nitrogen"
+      ]
+    ],
+    "required_findings": [
+      [
+        "leak"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "tested/inspected",
+    "s2_expected": [
+      "installed-defective"
+    ],
+    "s3_percent": 90,
+    "scenario": "The image shows micron gauge readings at pump isolation and ten minutes later during a standing decay test on an evacuated refrigeration system.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "EPA 608",
+      "mfr specs"
+    ],
+    "subcategory": "2.3.3 Refrigeration Circuit",
+    "task_type": "FD",
+    "task_type_name": "Fault diagnosis",
+    "tier": "T4",
+    "title": "T4 H-301 Fault diagnosis (image)",
+    "value_tolerance": 0
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "ventilate",
+        "before",
+        "entry"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-000",
+    "media": [
+      "gasmeter_000.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "entry",
+        "proceed",
+        "monitor",
+        "continuous"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "acceptable",
+        "limits",
+        "normal"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-001",
+    "media": [
+      "gasmeter_001.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "no",
+        "entry",
+        "ventilate",
+        "prohibit"
+      ]
+    ],
+    "required_findings": [
+      [
+        "oxygen",
+        "o2",
+        "deficient"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-002",
+    "media": [
+      "gasmeter_002.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "no",
+        "entry",
+        "ventilate",
+        "prohibit"
+      ]
+    ],
+    "required_findings": [
+      [
+        "flammable",
+        "lel",
+        "explosive"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-003",
+    "media": [
+      "gasmeter_003.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "no",
+        "entry",
+        "ventilate",
+        "prohibit"
+      ]
+    ],
+    "required_findings": [
+      [
+        "h2s",
+        "hydrogen",
+        "sulfide"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-004",
+    "media": [
+      "gasmeter_004.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "no",
+        "entry",
+        "ventilate",
+        "prohibit"
+      ]
+    ],
+    "required_findings": [
+      [
+        "co",
+        "carbon",
+        "monoxide"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-005",
+    "media": [
+      "gasmeter_005.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "retest",
+        "repair",
+        "complete",
+        "bump"
+      ]
+    ],
+    "required_findings": [
+      [
+        "h2s",
+        "missing",
+        "blank",
+        "sensor"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "ventilate",
+        "before",
+        "entry"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-006",
+    "media": [
+      "gasmeter_006.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "entry",
+        "proceed",
+        "monitor",
+        "continuous"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "acceptable",
+        "limits",
+        "normal"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "ventilate",
+        "before",
+        "entry"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-007",
+    "media": [
+      "gasmeter_007.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "entry",
+        "proceed",
+        "monitor",
+        "continuous"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "acceptable",
+        "limits",
+        "normal"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-008",
+    "media": [
+      "gasmeter_008.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "no",
+        "entry",
+        "ventilate",
+        "prohibit"
+      ]
+    ],
+    "required_findings": [
+      [
+        "oxygen",
+        "o2",
+        "deficient"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-009",
+    "media": [
+      "gasmeter_009.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "no",
+        "entry",
+        "ventilate",
+        "prohibit"
+      ]
+    ],
+    "required_findings": [
+      [
+        "flammable",
+        "lel",
+        "explosive"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-010",
+    "media": [
+      "gasmeter_010.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "no",
+        "entry",
+        "ventilate",
+        "prohibit"
+      ]
+    ],
+    "required_findings": [
+      [
+        "h2s",
+        "hydrogen",
+        "sulfide"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-011",
+    "media": [
+      "gasmeter_011.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "no",
+        "entry",
+        "ventilate",
+        "prohibit"
+      ]
+    ],
+    "required_findings": [
+      [
+        "co",
+        "carbon",
+        "monoxide"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "needs_more_info",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "authorize",
+        "entry",
+        "now"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-012",
+    "media": [
+      "gasmeter_012.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "retest",
+        "repair",
+        "complete",
+        "bump"
+      ]
+    ],
+    "required_findings": [
+      [
+        "h2s",
+        "missing",
+        "blank",
+        "sensor"
+      ]
+    ],
+    "risk": "high",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.12 Safety & Rigging",
+    "discipline_code": "2.12",
+    "element": "X-103 Confined space",
+    "element_code": "X-103",
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "ventilate",
+        "before",
+        "entry"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-gasmeter-013",
+    "media": [
+      "gasmeter_013.png"
+    ],
+    "modality": "image",
+    "prompt": "Read all four channels from the image and determine whether entry can be authorized. Identify any reading outside acceptable entry limits.",
+    "required_actions": [
+      [
+        "entry",
+        "proceed",
+        "monitor",
+        "continuous"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "acceptable",
+        "limits",
+        "normal"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 5,
+    "scenario": "The image shows the pre-entry atmospheric test screen from a 4-gas monitor at a permit-required confined space.",
+    "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+    "source_refs": [
+      "OSHA 1910.146"
+    ],
+    "subcategory": "2.12 Cross-cutting",
+    "task_type": "DOC",
+    "task_type_name": "Document interpretation",
+    "tier": "T1",
+    "title": "T1 X-103 Document interpretation (image)"
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 8000,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "do",
+        "not",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-000",
+    "media": [
+      "sling_000.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "proceed",
+        "lift",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "below",
+        "under",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 240
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 3536,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-001",
+    "media": [
+      "sling_001.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "rerig",
+        "shorten",
+        "longer",
+        "higher",
+        "rated",
+        "stop"
+      ]
+    ],
+    "required_findings": [
+      [
+        "exceeds",
+        "over",
+        "above",
+        "overload"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 106
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 8000,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "do",
+        "not",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-002",
+    "media": [
+      "sling_002.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "proceed",
+        "lift",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "below",
+        "under",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 240
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 4243,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-003",
+    "media": [
+      "sling_003.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "rerig",
+        "shorten",
+        "longer",
+        "higher",
+        "rated",
+        "stop"
+      ]
+    ],
+    "required_findings": [
+      [
+        "exceeds",
+        "over",
+        "above",
+        "overload"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 127
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 2366,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-004",
+    "media": [
+      "sling_004.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "rerig",
+        "shorten",
+        "longer",
+        "higher",
+        "rated",
+        "stop"
+      ]
+    ],
+    "required_findings": [
+      [
+        "angle",
+        "flat",
+        "30"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 71
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 4359,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-005",
+    "media": [
+      "sling_005.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "rerig",
+        "shorten",
+        "longer",
+        "higher",
+        "rated",
+        "stop"
+      ]
+    ],
+    "required_findings": [
+      [
+        "exceeds",
+        "over",
+        "above",
+        "overload"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 131
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 2309,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "do",
+        "not",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-006",
+    "media": [
+      "sling_006.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "proceed",
+        "lift",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "below",
+        "under",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 69
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 3549,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-007",
+    "media": [
+      "sling_007.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "rerig",
+        "shorten",
+        "longer",
+        "higher",
+        "rated",
+        "stop"
+      ]
+    ],
+    "required_findings": [
+      [
+        "exceeds",
+        "over",
+        "above",
+        "overload"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 106
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 2121,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "do",
+        "not",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-008",
+    "media": [
+      "sling_008.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "proceed",
+        "lift",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "below",
+        "under",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 64
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 6000,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-009",
+    "media": [
+      "sling_009.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "rerig",
+        "shorten",
+        "longer",
+        "higher",
+        "rated",
+        "stop"
+      ]
+    ],
+    "required_findings": [
+      [
+        "exceeds",
+        "over",
+        "above",
+        "overload"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 180
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 1155,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "do",
+        "not",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-010",
+    "media": [
+      "sling_010.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "proceed",
+        "lift",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "below",
+        "under",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 35
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 4000,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-011",
+    "media": [
+      "sling_011.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "rerig",
+        "shorten",
+        "longer",
+        "higher",
+        "rated",
+        "stop"
+      ]
+    ],
+    "required_findings": [
+      [
+        "exceeds",
+        "over",
+        "above",
+        "overload"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 120
+  },
+  {
+    "decision": "pass",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 3000,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "do",
+        "not",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-012",
+    "media": [
+      "sling_012.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "proceed",
+        "lift",
+        "document"
+      ]
+    ],
+    "required_findings": [
+      [
+        "within",
+        "below",
+        "under",
+        "acceptable"
+      ]
+    ],
+    "risk": "low",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 90
+  },
+  {
+    "decision": "fail",
+    "discipline": "2.4 Structural & Ironwork",
+    "discipline_code": "2.4",
+    "element": "S-301 Rigging configuration",
+    "element_code": "S-301",
+    "expected_value": 7099,
+    "findings_mode": "any_per_group",
+    "forbidden": [
+      [
+        "proceed",
+        "with",
+        "lift"
+      ]
+    ],
+    "generation": "synthetic-media-v2",
+    "id": "v2-media-sling-013",
+    "media": [
+      "sling_013.png"
+    ],
+    "modality": "image",
+    "prompt": "Compute the tension in each sling leg from the image, report it in `value` (pounds), and judge whether this rigging arrangement may be used for the lift.",
+    "required_actions": [
+      [
+        "rerig",
+        "shorten",
+        "longer",
+        "higher",
+        "rated",
+        "stop"
+      ]
+    ],
+    "required_findings": [
+      [
+        "exceeds",
+        "over",
+        "above",
+        "overload"
+      ]
+    ],
+    "risk": "critical",
+    "s1_state": "planned",
+    "s2_expected": [],
+    "s3_percent": 0,
+    "scenario": "The image shows a two-leg sling arrangement with the load weight, the sling angle at the load, and the tagged working load limit of each leg.",
+    "source_file": "docs/source/element-trees-construction-v0.1.md",
+    "source_refs": [
+      "ASME B30.9",
+      "OSHA 1926.251"
+    ],
+    "subcategory": "2.4.3 Rigging & Machinery Moving",
+    "task_type": "ME",
+    "task_type_name": "Measurement & estimation",
+    "tier": "T1",
+    "title": "T1 S-301 Measurement & estimation (image)",
+    "value_tolerance": 213
+  }
+]

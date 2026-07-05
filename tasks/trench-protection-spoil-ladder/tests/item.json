@@ -16,6 +16,9 @@
   ],
   "generation": "curated",
   "id": "trench-protection-spoil-ladder",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the hazards and state whether work may continue.",
   "required_actions": [
     [
@@ -37,23 +40,16 @@
   ],
   "required_findings": [
     [
-      "6",
-      "foot",
-      "trench"
+      "unprotected excavation"
     ],
     [
-      "no",
-      "shoring"
+      "protective system absent"
     ],
     [
-      "spoil",
-      "within",
-      "2",
-      "ft"
+      "spoil too close"
     ],
     [
-      "no",
-      "ladder"
+      "egress ladder absent"
     ]
   ],
   "risk": "critical",

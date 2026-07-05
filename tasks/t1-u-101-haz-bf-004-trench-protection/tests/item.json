@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t1-u-101-haz-bf-004-trench-protection",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
   "required_actions": [
     [
@@ -35,12 +38,6 @@
   ],
   "required_findings": [
     [
-      "trench"
-    ],
-    [
-      "protection"
-    ],
-    [
       "sloping"
     ],
     [
@@ -48,9 +45,6 @@
     ],
     [
       "soil"
-    ],
-    [
-      "hazard"
     ]
   ],
   "risk": "critical",
@@ -60,7 +54,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The observed field condition is: sloping wrong for soil type (DOC: tabulated data). The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart P. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The field notes describe visible cues consistent with: visible cue not matching the specified requirement for visible cue type (DOC: tabulated data). The work is being assessed at the in-progress lifecycle state with source anchors OSHA 1926 Subpart P. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart P"

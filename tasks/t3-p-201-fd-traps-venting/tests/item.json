@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-p-201-fd-traps-venting",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
   "required_actions": [
     [
@@ -33,19 +36,10 @@
   ],
   "required_findings": [
     [
-      "traps"
-    ],
-    [
-      "venting"
-    ],
-    [
       "missing"
     ],
     [
       "cleanout"
-    ],
-    [
-      "fault"
     ]
   ],
   "risk": "high",
@@ -55,7 +49,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T3 work setting, the evaluated element is P-201 Traps & venting within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The observed field condition is: missing cleanout. The work is being assessed at the in-service lifecycle state with source anchors IPC/UPC.",
+  "scenario": "In a T3 work setting, the evaluated element is P-201 Traps & venting within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The field notes describe visible cues consistent with: not present where expected visible cue. The work is being assessed at the in-service lifecycle state with source anchors IPC/UPC.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IPC/UPC"

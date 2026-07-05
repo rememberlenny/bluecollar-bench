@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t2-f-103-cc-bf-002-fireblocking-draftstoppi",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,23 +37,13 @@
   ],
   "required_findings": [
     [
-      "fireblocking"
-    ],
-    [
-      "draftstopping"
-    ],
-    [
       "foam"
-    ],
-    [
-      "where"
     ],
     [
       "fire"
     ],
     [
-      "non",
-      "compliant"
+      "rated"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is F-103 Fireblocking & draftstopping within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The observed field condition is: foam where fire-rated sealant required (ID by color/label). The work is being assessed at the rough-complete lifecycle state with source anchors IRC R302. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T2 work setting, the evaluated element is F-103 Fireblocking & draftstopping within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.1 Rough Framing. The field notes describe visible cues consistent with: visible cue where visible cue-visible cue sealant required (ID by color/label). The work is being assessed at the rough-complete lifecycle state with source anchors IRC R302. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IRC R302"

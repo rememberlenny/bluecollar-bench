@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-f-301-cc-drywall-finishing",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,12 +37,6 @@
   ],
   "required_findings": [
     [
-      "drywall"
-    ],
-    [
-      "finishing"
-    ],
-    [
       "screw"
     ],
     [
@@ -47,10 +44,6 @@
     ],
     [
       "exceeded"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is F-301 Drywall & finishing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The observed field condition is: screw spacing exceeded. The work is being assessed at the rough-complete lifecycle state with source anchors GA-216, IRC.",
+  "scenario": "In a T2 work setting, the evaluated element is F-301 Drywall & finishing within 2.6 Carpentry & Finishes. The relevant subcategory is 2.6.3 Interior Finish. The field notes describe visible cues consistent with: visible cue visible cue beyond the allowed limit. The work is being assessed at the rough-complete lifecycle state with source anchors GA-216, IRC.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "GA-216",

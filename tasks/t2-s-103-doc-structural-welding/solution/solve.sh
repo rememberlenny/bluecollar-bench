@@ -12,11 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 85,
   "findings": [
-    "structural",
-    "welding",
-    "welding",
-    "without",
-    "qualified"
+    "qualified",
+    "parameters"
   ],
   "actions": [
     "compare",

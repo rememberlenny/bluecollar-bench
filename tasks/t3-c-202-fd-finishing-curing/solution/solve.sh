@@ -13,12 +13,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "finishing",
-    "curing",
     "cure",
     "blankets",
-    "compound",
-    "fault"
+    "compound"
   ],
   "actions": [
     "diagnose",

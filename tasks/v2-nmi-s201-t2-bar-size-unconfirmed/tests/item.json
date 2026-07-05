@@ -1,0 +1,55 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-201 Rebar placement",
+  "element_code": "S-201",
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "approve",
+      "pour",
+      "now"
+    ]
+  ],
+  "generation": "curated-v2-nmi",
+  "id": "v2-nmi-s201-t2-bar-size-unconfirmed",
+  "leakage_ratio": 0.67,
+  "media": [],
+  "modality": "text",
+  "prompt": "Can bar size compliance be confirmed from this evidence? State what measurement or reference is needed.",
+  "required_actions": [
+    [
+      "measure",
+      "verify",
+      "confirm"
+    ]
+  ],
+  "required_findings": [
+    [
+      "bar",
+      "size"
+    ],
+    [
+      "scale",
+      "reference",
+      "closeup",
+      "measure"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 70,
+  "scenario": "A pre-pour photo of a grade beam shows bars on chairs with consistent spacing and clear cover to the forms. The photo is taken from too far away to read bar deformation patterns or count ribs, and the placing drawings specify different bar sizes for the top and bottom mats. No scale reference is in frame.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ACI 117",
+    "placing drawings"
+  ],
+  "subcategory": "2.4.2 Reinforcing",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T2",
+  "title": "T2 S-201 Rebar size not confirmable"
+}

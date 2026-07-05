@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-s-102-cc-structural-bolting",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,12 +37,6 @@
   ],
   "required_findings": [
     [
-      "structural"
-    ],
-    [
-      "bolting"
-    ],
-    [
       "squirter"
     ],
     [
@@ -47,10 +44,6 @@
     ],
     [
       "fully"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is S-102 Structural bolting within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The observed field condition is: DTI squirter washers not fully crushed. The work is being assessed at the rough-complete lifecycle state with source anchors RCSC Specification.",
+  "scenario": "In a T1 work setting, the evaluated element is S-102 Structural bolting within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.1 Steel Erection. The field notes describe visible cues consistent with: DTI visible cue visible cue not visible cue crushed. The work is being assessed at the rough-complete lifecycle state with source anchors RCSC Specification.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "RCSC Specification"

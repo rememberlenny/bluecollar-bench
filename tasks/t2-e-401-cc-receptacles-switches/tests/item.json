@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-e-401-cc-receptacles-switches",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,20 +37,10 @@
   ],
   "required_findings": [
     [
-      "receptacles"
-    ],
-    [
-      "switches"
-    ],
-    [
       "reversed"
     ],
     [
       "polarity"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -57,7 +50,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-401 Receptacles & switches within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The observed field condition is: reversed polarity. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 210.8, 406.4, 406.9.",
+  "scenario": "In a T2 work setting, the evaluated element is E-401 Receptacles & switches within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The field notes describe visible cues consistent with: arranged opposite of the expected orientation visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 210.8, 406.4, 406.9.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 210.8",

@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-m-401-haz-conveyor-systems",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
   "required_actions": [
     [
@@ -35,12 +38,6 @@
   ],
   "required_findings": [
     [
-      "conveyor"
-    ],
-    [
-      "systems"
-    ],
-    [
       "missing"
     ],
     [
@@ -48,9 +45,6 @@
     ],
     [
       "guards"
-    ],
-    [
-      "hazard"
     ]
   ],
   "risk": "critical",
@@ -60,7 +54,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T5 work setting, the evaluated element is M-401 Conveyor systems within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.4 Conveyors. The observed field condition is: missing nip-point guards (HAZ). The work is being assessed at the in-progress lifecycle state with source anchors CEMA, OSHA 1910.212.",
+  "scenario": "In a T5 work setting, the evaluated element is M-401 Conveyor systems within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.4 Conveyors. The field notes describe visible cues consistent with: not present where expected nip-visible cue visible cue (HAZ). The work is being assessed at the in-progress lifecycle state with source anchors CEMA, OSHA 1910.212.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "CEMA",

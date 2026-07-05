@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-h-201-cc-duct-installation",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,12 +37,6 @@
   ],
   "required_findings": [
     [
-      "duct"
-    ],
-    [
-      "installation"
-    ],
-    [
       "unsealed"
     ],
     [
@@ -47,10 +44,6 @@
     ],
     [
       "mastic"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is H-201 Duct installation within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The observed field condition is: unsealed joints (no mastic/foil tape - cloth duct tape is the classic wrong answer, great ID item). The work is being assessed at the rough-complete lifecycle state with source anchors IMC 603, SMACNA, Manual D.",
+  "scenario": "In a T3 work setting, the evaluated element is H-201 Duct installation within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The field notes describe visible cues consistent with: left open at the joint or penetration visible cue (no visible cue/foil tape - cloth duct tape is the classic wrong answer, great ID item). The work is being assessed at the rough-complete lifecycle state with source anchors IMC 603, SMACNA, Manual D.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IMC 603",

@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-p-202-me-drain-slope-routing",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
   "required_actions": [
     [
@@ -33,19 +36,13 @@
   ],
   "required_findings": [
     [
-      "drain"
-    ],
-    [
-      "slope"
-    ],
-    [
-      "slope"
-    ],
-    [
       "under"
     ],
     [
       "over"
+    ],
+    [
+      "solids"
     ]
   ],
   "risk": "medium",
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is P-202 Drain slope & routing within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The observed field condition is: slope under \u00bc in/ft (or over - solids stranding on steep runs). The work is being assessed at the rough-complete lifecycle state with source anchors IPC 704. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T3 work setting, the evaluated element is P-202 Drain slope & routing within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.2 Plumbing - DWV (T2/T3). The field notes describe visible cues consistent with: slope visible cue \u00bc in/ft (or visible cue - visible cue stranding on steep runs). The work is being assessed at the rough-complete lifecycle state with source anchors IPC 704. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "IPC 704"

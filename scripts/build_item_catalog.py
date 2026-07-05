@@ -18,7 +18,7 @@ TAXONOMY_PATH = ROOT / "benchmark" / "taxonomy.json"
 COVERAGE_PATH = ROOT / "benchmark" / "coverage_report.md"
 
 TIERS = ["T1", "T2", "T3", "T4", "T5"]
-TASK_TYPES = ["ID", "FD", "CC", "SEQ", "TS", "HAZ", "ME", "PA", "DOC", "TRD"]
+TASK_TYPES = ["ID", "FD", "CC", "SEQ", "TS", "HAZ", "ME", "PA", "DOC", "TRD", "RES"]
 
 TASK_TYPE_NAMES = {
     "ID": "Identification",
@@ -31,6 +31,7 @@ TASK_TYPE_NAMES = {
     "PA": "Progress assessment",
     "DOC": "Document interpretation",
     "TRD": "Tradeoff judgment",
+    "RES": "Resource/constraint recovery",
 }
 
 DISCIPLINES = {
@@ -95,6 +96,7 @@ S1_BY_TASK_TYPE = {
     "PA": "rough-complete",
     "DOC": "tested/inspected",
     "TRD": "in-progress",
+    "RES": "in-progress",
 }
 
 S3_BY_STATE = {
@@ -107,6 +109,9 @@ S3_BY_STATE = {
     "accepted": 95,
     "in-service": 100,
 }
+
+DEFAULT_MODALITY = "text"
+DEFAULT_MEDIA: list[dict] = []
 
 HIGH_RISK_TERMS = [
     "fall",
@@ -142,6 +147,53 @@ CRITICAL_TERMS = [
     "suspended load",
     "working under",
 ]
+
+FINDING_STOPWORDS = {
+    "from",
+    "with",
+    "where",
+    "that",
+    "this",
+    "than",
+    "into",
+    "near",
+    "before",
+    "after",
+    "during",
+    "without",
+    "within",
+    "between",
+    "required",
+    "visible",
+    "photo",
+    "item",
+    "classic",
+    "load",
+    "chart",
+    "estimate",
+}
+
+MASK_TERMS = {
+    "missing": "not present where expected",
+    "omitted": "left out of the assembly",
+    "wrong": "not matching the specified requirement",
+    "improper": "not installed in the expected manner",
+    "inadequate": "not sufficient for the load or condition",
+    "insufficient": "not enough for the requirement",
+    "undersized": "smaller than the required size",
+    "unsupported": "not held at the expected intervals",
+    "unsealed": "left open at the joint or penetration",
+    "unbonded": "not electrically tied together",
+    "uncapped": "left open at the end",
+    "expired": "past the allowed date",
+    "exceeded": "beyond the allowed limit",
+    "violated": "not following the required order",
+    "misread": "interpreted contrary to the marked indication",
+    "misused": "used contrary to the expected procedure",
+    "mismatch": "does not match the adjacent reference",
+    "reversed": "arranged opposite of the expected orientation",
+    "backwards": "oriented opposite the reference direction",
+}
 
 
 @dataclass
@@ -280,7 +332,7 @@ def risk_for(element: Element, task_type: str, defect: str) -> str:
         return "critical"
     if any(term in haystack for term in HIGH_RISK_TERMS):
         return "high"
-    if task_type in {"CC", "FD", "SEQ", "TRD"}:
+    if task_type in {"CC", "FD", "SEQ", "TRD", "RES"}:
         return "high"
     return "medium"
 
@@ -290,7 +342,7 @@ def s2_for(task_type: str) -> list[str]:
         return ["degraded", "failed"]
     if task_type == "ID":
         return ["installed-defective"]
-    if task_type in {"HAZ", "CC", "TRD"}:
+    if task_type in {"HAZ", "CC", "TRD", "RES"}:
         return ["installed-defective", "non-compliant"]
     return ["installed-defective"]
 
@@ -307,31 +359,44 @@ def prompt_for(task_type: str) -> str:
         "PA": "Assess lifecycle state, percent complete, defects, and remaining work.",
         "DOC": "Compare the field condition against the referenced document, tag, drawing, or standard.",
         "TRD": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
+        "RES": "Assess the disrupted lookahead schedule: what can proceed, what is delayed, and which recovery plan is valid.",
     }
     return prompts[task_type]
 
 
 def required_terms(element: Element, task_type: str, defect: str) -> list[list[str]]:
-    defect_terms = [word for word in re.findall(r"[A-Za-z0-9]+", defect.lower()) if len(word) >= 4]
-    element_terms = [word for word in re.findall(r"[A-Za-z0-9]+", element.name.lower()) if len(word) >= 4]
+    context_terms = {
+        word
+        for word in re.findall(
+            r"[A-Za-z0-9]+",
+            f"{element.code} {element.name} {' '.join(element.refs)}".lower(),
+        )
+        if len(word) >= 4
+    }
+    seen: set[str] = set()
+    defect_terms = [
+        word
+        for word in re.findall(r"[A-Za-z0-9]+", defect.lower())
+        if len(word) >= 4 and word not in FINDING_STOPWORDS and word not in context_terms
+    ]
     terms = []
-    if element_terms:
-        terms.append([element_terms[0]])
-    if len(element_terms) > 1:
-        terms.append([element_terms[1]])
     for term in defect_terms[:3]:
-        terms.append([term])
-    if task_type == "CC":
-        terms.append(["non", "compliant"])
-    elif task_type == "HAZ":
-        terms.append(["hazard"])
-    elif task_type == "SEQ":
-        terms.append(["sequence"])
-    elif task_type == "FD":
-        terms.append(["fault"])
-    elif task_type == "PA":
-        terms.append(["complete"])
-    return terms[:6]
+        if term not in seen:
+            terms.append([term])
+            seen.add(term)
+    if not terms:
+        terms.append(["defect"])
+    return terms[:5]
+
+
+def mask_finding_terms(text: str, groups: list[list[str]]) -> str:
+    """Remove rewarded conclusion tokens from generated scenario text."""
+    masked = text
+    terms = sorted({term.lower() for group in groups for term in group}, key=len, reverse=True)
+    for term in terms:
+        replacement = MASK_TERMS.get(term, "visible cue")
+        masked = re.sub(rf"\b{re.escape(term)}\b", replacement, masked, flags=re.IGNORECASE)
+    return compact_text(masked)
 
 
 def action_terms(task_type: str) -> list[list[str]]:
@@ -346,6 +411,7 @@ def action_terms(task_type: str) -> list[list[str]]:
         "PA": [["complete"], ["remaining"], ["reinspect"]],
         "DOC": [["compare"], ["correct"], ["document"]],
         "TRD": [["reject", "shortcut"], ["follow"], ["document"]],
+        "RES": [["hold"], ["sequence"], ["verify"]],
     }
     return actions[task_type]
 
@@ -356,10 +422,13 @@ def build_auto_item(element: Element, tier: str, task_type: str, ordinal: int, g
     risk = risk_for(element, task_type, defect)
     item_id = f"{tier.lower()}-{element.code.lower()}-{task_type.lower()}-{slug(element.name)[:32]}"
     source_refs = element.refs or [element.code]
+    findings = required_terms(element, task_type, defect)
+    observed_condition = mask_finding_terms(defect, findings)
     scenario = (
         f"In a {tier} work setting, the evaluated element is {element.code} {element.name} "
         f"within {element.discipline}. The relevant subcategory is {element.subcategory}. "
-        f"The observed field condition is: {defect}. The work is being assessed at the "
+        f"The field notes describe visible cues consistent with: {observed_condition}. "
+        f"The work is being assessed at the "
         f"{s1_state} lifecycle state with source anchors {', '.join(source_refs)}."
     )
     if task_type == "DOC":
@@ -383,11 +452,13 @@ def build_auto_item(element: Element, tier: str, task_type: str, ordinal: int, g
         "s1_state": s1_state,
         "s2_expected": s2_for(task_type),
         "s3_percent": S3_BY_STATE[s1_state],
+        "modality": DEFAULT_MODALITY,
+        "media": list(DEFAULT_MEDIA),
         "risk": risk,
         "decision": "fail",
         "scenario": scenario,
         "prompt": prompt_for(task_type),
-        "required_findings": required_terms(element, task_type, defect),
+        "required_findings": findings,
         "required_actions": action_terms(task_type),
         "forbidden": [["pass"], ["accept"], ["safe", "as", "is"]],
         "source_refs": source_refs,
@@ -416,6 +487,8 @@ def normalize_curated_item(item: dict) -> dict:
     item.setdefault("element_code", element_match.group(1) if element_match else "")
     item.setdefault("task_type_name", TASK_TYPE_NAMES.get(item["task_type"], item["task_type"]))
     item.setdefault("s3_percent", S3_BY_STATE.get(item["s1_state"], 50))
+    item.setdefault("modality", DEFAULT_MODALITY)
+    item.setdefault("media", list(DEFAULT_MEDIA))
     item.setdefault("generation", "curated")
     return item
 
@@ -434,6 +507,20 @@ def build_taxonomy(elements: list[Element]) -> dict:
             },
             "disciplines": DISCIPLINES,
             "task_types": TASK_TYPE_NAMES,
+            "modalities": {
+                "text": "Text-only scenario; scenario text may serve as a future photo shot list.",
+                "photo": "Still image fixture.",
+                "video": "Video fixture.",
+                "audio": "Audio fixture.",
+                "infrared": "Thermal/IR image fixture.",
+                "document": "Drawing, checklist, cut sheet, tag, or other document fixture.",
+            },
+        },
+        "item_media_schema": {
+            "modality": "Primary item modality. Existing v0.1/v2 generated items use text.",
+            "media": "Array of media descriptors with type, path, alt, source, and license fields when fixtures are present.",
+            "expected_value": "Optional numeric ground truth for instrument readings or computed visual quantities.",
+            "value_tolerance": "Allowed absolute error for expected_value when the task asks for a numeric value.",
         },
         "state_model": {
             "s1_lifecycle": [

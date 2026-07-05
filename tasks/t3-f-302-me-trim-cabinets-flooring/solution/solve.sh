@@ -12,11 +12,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "trim",
-    "cabinets",
     "floating",
     "floor",
-    "without"
+    "expansion"
   ],
   "actions": [
     "measure",

@@ -13,12 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "grounding",
-    "electrode",
     "missing",
-    "supplemental",
-    "electrode",
-    "non compliant"
+    "supplemental"
   ],
   "actions": [
     "correct",

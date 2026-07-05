@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-e-304-me-wire-pulling-feeders-branch",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "wire"
-    ],
-    [
-      "pulling"
-    ],
     [
       "phase"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is E-304 Wire pulling (feeders & branch) within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The observed field condition is: phase tape colors wrong. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 200.6, 210.5 (identification). The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T1 work setting, the evaluated element is E-304 Wire pulling (feeders & branch) within 2.1 Electrical. The relevant subcategory is 2.1.3 Wire & Cable. The field notes describe visible cues consistent with: visible cue visible cue visible cue wrong. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 200.6, 210.5 (identification). The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 200.6",

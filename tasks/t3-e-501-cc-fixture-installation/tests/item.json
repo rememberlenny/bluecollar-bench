@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-e-501-cc-fixture-installation",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,20 +37,10 @@
   ],
   "required_findings": [
     [
-      "fixture"
-    ],
-    [
-      "installation"
-    ],
-    [
       "insulation"
     ],
     [
       "contact"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -57,7 +50,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T3 work setting, the evaluated element is E-501 Fixture installation within 2.1 Electrical. The relevant subcategory is 2.1.5 Lighting. The observed field condition is: non-IC can in insulation contact. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 410.",
+  "scenario": "In a T3 work setting, the evaluated element is E-501 Fixture installation within 2.1 Electrical. The relevant subcategory is 2.1.5 Lighting. The field notes describe visible cues consistent with: non-IC can in visible cue visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors NEC 410.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 410"

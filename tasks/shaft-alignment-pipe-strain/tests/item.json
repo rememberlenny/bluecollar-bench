@@ -16,6 +16,9 @@
   ],
   "generation": "curated",
   "id": "shaft-alignment-pipe-strain",
+  "leakage_ratio": 0.73,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the sequence and explain the likely problem before final acceptance.",
   "required_actions": [
     [

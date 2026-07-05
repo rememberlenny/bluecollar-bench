@@ -12,10 +12,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "locates",
-    "marking",
     "digging",
-    "without",
     "locate"
   ],
   "actions": [

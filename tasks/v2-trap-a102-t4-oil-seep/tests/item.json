@@ -1,0 +1,54 @@
+{
+  "decision": "pass",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-102 Fluids & leaks",
+  "element_code": "A-102",
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "immediate",
+      "repair",
+      "required"
+    ],
+    [
+      "unsafe"
+    ]
+  ],
+  "generation": "curated-v2-trap",
+  "id": "v2-trap-a102-t4-oil-seep",
+  "leakage_ratio": 0.33,
+  "media": [],
+  "modality": "text",
+  "prompt": "Assess this observation and recommend an appropriate disposition for the customer.",
+  "required_actions": [
+    [
+      "monitor",
+      "recheck",
+      "note"
+    ]
+  ],
+  "required_findings": [
+    [
+      "seep",
+      "dampness",
+      "minor"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "worn"
+  ],
+  "s3_percent": 100,
+  "scenario": "During an oil change on a 140,000-mile vehicle, the tech photographs slight dampness with dust accumulation along the lower edge of the valve cover gasket. There are no drips on the undertray or the ground, oil level is at the full mark, and the customer reports no oil consumption between changes.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM specs"
+  ],
+  "subcategory": "2.9.1 Engine & Drivetrain",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "T4 A-102 Valve cover seep (alarmist trap)"
+}

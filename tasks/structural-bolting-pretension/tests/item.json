@@ -15,6 +15,9 @@
   ],
   "generation": "curated",
   "id": "structural-bolting-pretension",
+  "leakage_ratio": 0.71,
+  "media": [],
+  "modality": "text",
   "prompt": "Decide if this connection can be accepted and list what evidence or rework is needed.",
   "required_actions": [
     [

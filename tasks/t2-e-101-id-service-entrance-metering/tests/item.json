@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-e-101-id-service-entrance-metering",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the component or condition shown, and name the visible defect cues.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "service"
-    ],
-    [
-      "entrance"
-    ],
     [
       "missing"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is E-101 Service entrance & metering within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: missing drip loop. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 230.",
+  "scenario": "In a T2 work setting, the evaluated element is E-101 Service entrance & metering within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: not present where expected visible cue visible cue. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 230.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 230"

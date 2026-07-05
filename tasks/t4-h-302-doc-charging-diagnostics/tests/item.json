@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-h-302-doc-charging-diagnostics",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "charging"
-    ],
-    [
-      "diagnostics"
-    ],
     [
       "sight"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T4 work setting, the evaluated element is H-302 Charging & diagnostics within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The observed field condition is: sight-glass bubbles misread. The work is being assessed at the tested/inspected lifecycle state with source anchors mfr charging charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T4 work setting, the evaluated element is H-302 Charging & diagnostics within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The field notes describe visible cues consistent with: visible cue-visible cue visible cue misread. The work is being assessed at the tested/inspected lifecycle state with source anchors mfr charging charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr charging charts"

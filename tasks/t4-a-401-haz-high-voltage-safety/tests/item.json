@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-a-401-haz-high-voltage-safety",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
   "required_actions": [
     [
@@ -35,12 +38,6 @@
   ],
   "required_findings": [
     [
-      "high"
-    ],
-    [
-      "voltage"
-    ],
-    [
       "glove"
     ],
     [
@@ -48,9 +45,6 @@
     ],
     [
       "wrong"
-    ],
-    [
-      "hazard"
     ]
   ],
   "risk": "critical",
@@ -60,7 +54,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T4 work setting, the evaluated element is A-401 High-voltage safety within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.4 EV & A/C Systems. The observed field condition is: glove class wrong or test date expired (ID from stamp). The work is being assessed at the in-progress lifecycle state with source anchors OEM HV procedures, NFPA 70E-adjacent.",
+  "scenario": "In a T4 work setting, the evaluated element is A-401 High-voltage safety within 2.9 Automotive & Powertrain. The relevant subcategory is 2.9.4 EV & A/C Systems. The field notes describe visible cues consistent with: visible cue visible cue not matching the specified requirement or test date expired (ID from stamp). The work is being assessed at the in-progress lifecycle state with source anchors OEM HV procedures, NFPA 70E-adjacent.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OEM HV procedures",

@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t2-h-301-cc-bf-004-brazing-evacuation",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,12 +37,6 @@
   ],
   "required_findings": [
     [
-      "brazing"
-    ],
-    [
-      "evacuation"
-    ],
-    [
       "vacuum"
     ],
     [
@@ -47,10 +44,6 @@
     ],
     [
       "target"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T2 work setting, the evaluated element is H-301 Brazing & evacuation within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The observed field condition is: vacuum not held at target microns (decay test - read the gauge, FD). The work is being assessed at the rough-complete lifecycle state with source anchors mfr specs, ACCA, EPA 608. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T2 work setting, the evaluated element is H-301 Brazing & evacuation within 2.3 HVAC-R. The relevant subcategory is 2.3.3 Refrigeration Circuit. The field notes describe visible cues consistent with: visible cue not visible cue at visible cue microns (decay test - read the gauge, FD). The work is being assessed at the rough-complete lifecycle state with source anchors mfr specs, ACCA, EPA 608. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "mfr specs",

@@ -12,8 +12,6 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 15,
   "findings": [
-    "rigging",
-    "configuration",
     "hook",
     "latch",
     "missing"

@@ -16,6 +16,9 @@
   ],
   "generation": "curated",
   "id": "electrical-panel-subpanel-defects",
+  "leakage_ratio": 0.67,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether this installation should pass inspection. Identify the visible defects, classify the risk, and list the immediate corrective actions.",
   "required_actions": [
     [

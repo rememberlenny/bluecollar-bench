@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-x-104-seq-hot-work",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
   "required_actions": [
     [
@@ -33,19 +36,13 @@
   ],
   "required_findings": [
     [
-      "work"
-    ],
-    [
-      "work"
-    ],
-    [
       "over"
     ],
     [
       "sewer"
     ],
     [
-      "sequence"
+      "drain"
     ]
   ],
   "risk": "critical",
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T5 work setting, the evaluated element is X-104 Hot work within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: hot work over sewer/drain. The work is being assessed at the in-progress lifecycle state with source anchors NFPA 51B, OSHA 1926 Subpart J.",
+  "scenario": "In a T5 work setting, the evaluated element is X-104 Hot work within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The field notes describe visible cues consistent with: hot work visible cue visible cue/visible cue. The work is being assessed at the in-progress lifecycle state with source anchors NFPA 51B, OSHA 1926 Subpart J.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "NFPA 51B",

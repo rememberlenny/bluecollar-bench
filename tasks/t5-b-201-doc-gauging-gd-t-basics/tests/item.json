@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-b-201-doc-gauging-gd-t-basics",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
   "required_actions": [
     [
@@ -33,19 +36,13 @@
   ],
   "required_findings": [
     [
-      "gauging"
-    ],
-    [
-      "basics"
-    ],
-    [
       "caliper"
     ],
     [
       "misread"
     ],
     [
-      "photo"
+      "scale"
     ]
   ],
   "risk": "medium",
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T5 work setting, the evaluated element is B-201 Gauging & GD&T basics within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.2 Fitment & Tolerance. The observed field condition is: caliper/mic misread (photo of scale - pure ME). The work is being assessed at the tested/inspected lifecycle state with source anchors ASME Y14.5 (basic), gauge instructions. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T5 work setting, the evaluated element is B-201 Gauging & GD&T basics within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.2 Fitment & Tolerance. The field notes describe visible cues consistent with: visible cue/mic interpreted contrary to the marked indication (photo of visible cue - pure ME). The work is being assessed at the tested/inspected lifecycle state with source anchors ASME Y14.5 (basic), gauge instructions. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "ASME Y14.5 (basic)",

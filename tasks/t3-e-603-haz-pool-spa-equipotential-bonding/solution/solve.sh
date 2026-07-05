@@ -13,12 +13,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "pool",
-    "equipotential",
     "unbonded",
     "pump",
-    "motor",
-    "hazard"
+    "motor"
   ],
   "actions": [
     "stop work",

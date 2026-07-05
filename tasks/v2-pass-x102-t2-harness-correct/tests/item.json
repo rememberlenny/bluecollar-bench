@@ -1,0 +1,58 @@
+{
+  "decision": "pass",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-102 Fall protection",
+  "element_code": "X-102",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "remove",
+      "from",
+      "service"
+    ],
+    [
+      "stop",
+      "work"
+    ]
+  ],
+  "generation": "curated-v2-control",
+  "id": "v2-pass-x102-t2-harness-correct",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Inspect the fall protection setup as observed and identify any deficiencies, or confirm it is acceptable.",
+  "required_actions": [
+    [
+      "monitor"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "fall arrest gear intact"
+    ],
+    [
+      "inspection tag current"
+    ],
+    [
+      "rated tie off"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "A worker at 15 feet on a steel deck wears a full-body harness with clean, unfrayed webbing; the fold-out impact indicator tag is intact and the inspection grid is punched for the current quarter. The lanyard snaps to an engineered anchor strap around a structural beam marked with a rated-anchor tag, connected at shoulder height.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart M"
+  ],
+  "subcategory": "2.12 Cross-cutting",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T2",
+  "title": "T2 X-102 Compliant fall protection (control)"
+}

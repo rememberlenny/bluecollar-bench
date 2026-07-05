@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t5-i-201-fd-bf-014-calibration",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
   "required_actions": [
     [
@@ -33,9 +36,6 @@
   ],
   "required_findings": [
     [
-      "calibration"
-    ],
-    [
       "zero"
     ],
     [
@@ -43,9 +43,6 @@
     ],
     [
       "error"
-    ],
-    [
-      "fault"
     ]
   ],
   "risk": "high",
@@ -55,7 +52,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T5 work setting, the evaluated element is I-201 Calibration within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.2 Calibration & Loop Checks. The observed field condition is: zero vs. span error diagnosis from cal sheet (FD+DOC). The work is being assessed at the in-service lifecycle state with source anchors ISA standards, site QC. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T5 work setting, the evaluated element is I-201 Calibration within 2.8 Instrumentation & Controls. The relevant subcategory is 2.8.2 Calibration & Loop Checks. The field notes describe visible cues consistent with: visible cue vs. visible cue visible cue diagnosis from cal sheet (FD+DOC). The work is being assessed at the in-service lifecycle state with source anchors ISA standards, site QC. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "ISA standards",

@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t4-x-101-cc-lockout-tagout",
+  "leakage_ratio": 0.33,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,12 +37,6 @@
   ],
   "required_findings": [
     [
-      "lockout"
-    ],
-    [
-      "tagout"
-    ],
-    [
       "energy"
     ],
     [
@@ -47,10 +44,6 @@
     ],
     [
       "missed"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "critical",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is X-101 Lockout/Tagout within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The observed field condition is: energy source missed (stored hydraulic/gravity/capacitor). The work is being assessed at the rough-complete lifecycle state with source anchors OSHA 1910.147.",
+  "scenario": "In a T4 work setting, the evaluated element is X-101 Lockout/Tagout within 2.12 Safety & Rigging. The relevant subcategory is 2.10.4 Quality Inspection. The field notes describe visible cues consistent with: visible cue visible cue visible cue (stored hydraulic/gravity/capacitor). The work is being assessed at the rough-complete lifecycle state with source anchors OSHA 1910.147.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "OSHA 1910.147"

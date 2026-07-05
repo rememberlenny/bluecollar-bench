@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-s-301-haz-rigging-configuration",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
   "required_actions": [
     [
@@ -35,12 +38,6 @@
   ],
   "required_findings": [
     [
-      "rigging"
-    ],
-    [
-      "configuration"
-    ],
-    [
       "shackle"
     ],
     [
@@ -48,9 +45,6 @@
     ],
     [
       "loaded"
-    ],
-    [
-      "hazard"
     ]
   ],
   "risk": "critical",
@@ -60,7 +54,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T5 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The observed field condition is: shackle side-loaded. The work is being assessed at the in-progress lifecycle state with source anchors ASME B30, OSHA 1926.251.",
+  "scenario": "In a T5 work setting, the evaluated element is S-301 Rigging configuration within 2.4 Structural & Ironwork. The relevant subcategory is 2.4.3 Rigging & Machinery Moving. The field notes describe visible cues consistent with: visible cue visible cue-visible cue. The work is being assessed at the in-progress lifecycle state with source anchors ASME B30, OSHA 1926.251.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ASME B30",

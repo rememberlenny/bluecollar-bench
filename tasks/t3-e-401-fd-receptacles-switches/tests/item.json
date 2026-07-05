@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-e-401-fd-receptacles-switches",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "receptacles"
-    ],
-    [
-      "switches"
-    ],
-    [
       "gfci"
     ],
     [
@@ -46,9 +43,6 @@
     ],
     [
       "kitchen"
-    ],
-    [
-      "fault"
     ]
   ],
   "risk": "high",
@@ -58,7 +52,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T3 work setting, the evaluated element is E-401 Receptacles & switches within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The observed field condition is: GFCI missing in wet/kitchen/garage locations. The work is being assessed at the in-service lifecycle state with source anchors NEC 210.8, 406.4, 406.9.",
+  "scenario": "In a T3 work setting, the evaluated element is E-401 Receptacles & switches within 2.1 Electrical. The relevant subcategory is 2.1.4 Devices & Equipment. The field notes describe visible cues consistent with: visible cue not present where expected in wet/visible cue/garage locations. The work is being assessed at the in-service lifecycle state with source anchors NEC 210.8, 406.4, 406.9.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 210.8",

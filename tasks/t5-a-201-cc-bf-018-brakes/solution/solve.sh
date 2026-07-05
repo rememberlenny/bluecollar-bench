@@ -13,11 +13,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "brakes",
     "torque",
     "sequence",
-    "spec",
-    "non compliant"
+    "spec"
   ],
   "actions": [
     "correct",

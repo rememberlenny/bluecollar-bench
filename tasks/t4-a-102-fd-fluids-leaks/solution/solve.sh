@@ -13,12 +13,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "fluids",
-    "leaks",
     "leak",
     "source",
-    "identification",
-    "fault"
+    "identification"
   ],
   "actions": [
     "diagnose",

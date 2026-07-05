@@ -13,11 +13,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "receptacles",
-    "switches",
     "reversed",
-    "polarity",
-    "non compliant"
+    "polarity"
   ],
   "actions": [
     "correct",

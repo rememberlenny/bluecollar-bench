@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-e-102-haz-panelboard-installation-makeup",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
   "required_actions": [
     [
@@ -35,12 +38,6 @@
   ],
   "required_findings": [
     [
-      "panelboard"
-    ],
-    [
-      "installation"
-    ],
-    [
       "neutrals"
     ],
     [
@@ -48,9 +45,6 @@
     ],
     [
       "mixed"
-    ],
-    [
-      "hazard"
     ]
   ],
   "risk": "critical",
@@ -60,7 +54,7 @@
     "non-compliant"
   ],
   "s3_percent": 45,
-  "scenario": "In a T2 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: neutrals & grounds mixed in subpanel. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4.",
+  "scenario": "In a T2 work setting, the evaluated element is E-102 Panelboard installation & makeup within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: visible cue & visible cue visible cue in subpanel. The work is being assessed at the in-progress lifecycle state with source anchors NEC Art. 408, 110.26 (working clearance), 200.4.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 408",

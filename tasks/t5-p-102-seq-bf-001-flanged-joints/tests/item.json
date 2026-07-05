@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t5-p-102-seq-bf-001-flanged-joints",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "flanged"
-    ],
-    [
-      "joints"
-    ],
-    [
       "wrong"
     ],
     [
@@ -46,9 +43,6 @@
     ],
     [
       "type"
-    ],
-    [
-      "sequence"
     ]
   ],
   "risk": "high",
@@ -57,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T5 work setting, the evaluated element is P-102 Flanged joints within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The observed field condition is: wrong gasket type/material for service. The work is being assessed at the in-progress lifecycle state with source anchors ASME PCC-1, B16.5. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T5 work setting, the evaluated element is P-102 Flanged joints within 2.2 Mechanical - Piping & Plumbing. The relevant subcategory is 2.2.1 Process Piping (T1/T2). The field notes describe visible cues consistent with: not matching the specified requirement visible cue visible cue/material for service. The work is being assessed at the in-progress lifecycle state with source anchors ASME PCC-1, B16.5. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ASME PCC-1",

@@ -13,12 +13,7 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "water",
-    "heaters",
-    "drip",
-    "where",
-    "required",
-    "fault"
+    "drip"
   ],
   "actions": [
     "diagnose",

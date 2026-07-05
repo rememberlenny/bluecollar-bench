@@ -13,12 +13,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 100,
   "findings": [
-    "transmitter",
-    "installation",
     "impulse",
     "lines",
-    "sloped",
-    "fault"
+    "sloped"
   ],
   "actions": [
     "diagnose",

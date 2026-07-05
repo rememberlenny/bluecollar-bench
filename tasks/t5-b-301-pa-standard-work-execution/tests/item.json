@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-b-301-pa-standard-work-execution",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Assess lifecycle state, percent complete, defects, and remaining work.",
   "required_actions": [
     [
@@ -33,12 +36,6 @@
   ],
   "required_findings": [
     [
-      "standard"
-    ],
-    [
-      "work"
-    ],
-    [
       "skipped"
     ],
     [
@@ -46,9 +43,6 @@
     ],
     [
       "step"
-    ],
-    [
-      "complete"
     ]
   ],
   "risk": "high",
@@ -57,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T5 work setting, the evaluated element is B-301 Standard work execution within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.3 Line Operations. The observed field condition is: skipped verification step under takt pressure (TRD). The work is being assessed at the rough-complete lifecycle state with source anchors site standard work, TWI. Treat this as roughly 70 percent complete until defects are corrected.",
+  "scenario": "In a T5 work setting, the evaluated element is B-301 Standard work execution within 2.10 Assembly & Fabrication. The relevant subcategory is 2.10.3 Line Operations. The field notes describe visible cues consistent with: visible cue visible cue visible cue under takt pressure (TRD). The work is being assessed at the rough-complete lifecycle state with source anchors site standard work, TWI. Treat this as roughly 70 percent complete until defects are corrected.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "site standard work",

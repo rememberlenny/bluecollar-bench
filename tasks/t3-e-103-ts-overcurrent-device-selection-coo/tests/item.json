@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t3-e-103-ts-overcurrent-device-selection-coo",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "overcurrent"
-    ],
-    [
-      "device"
-    ],
     [
       "breaker"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T3 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The observed field condition is: breaker/conductor ampacity mismatch. The work is being assessed at the staged lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.",
+  "scenario": "In a T3 work setting, the evaluated element is E-103 Overcurrent device selection & coordination within 2.1 Electrical. The relevant subcategory is 2.1.1 Power Distribution. The field notes describe visible cues consistent with: visible cue/visible cue visible cue mismatch. The work is being assessed at the staged lifecycle state with source anchors NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC 240",

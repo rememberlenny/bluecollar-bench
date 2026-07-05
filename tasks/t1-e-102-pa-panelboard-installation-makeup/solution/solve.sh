@@ -12,11 +12,8 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "panelboard",
-    "installation",
     "panel",
-    "schedule",
-    "complete"
+    "schedule"
   ],
   "actions": [
     "complete",

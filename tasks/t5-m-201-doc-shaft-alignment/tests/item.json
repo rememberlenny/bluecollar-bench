@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t5-m-201-doc-shaft-alignment",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
   "required_actions": [
     [
@@ -33,19 +36,13 @@
   ],
   "required_findings": [
     [
-      "shaft"
-    ],
-    [
-      "alignment"
-    ],
-    [
-      "alignment"
-    ],
-    [
       "done"
     ],
     [
-      "before"
+      "final"
+    ],
+    [
+      "pipe"
     ]
   ],
   "risk": "medium",
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T5 work setting, the evaluated element is M-201 Shaft alignment within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.2 Alignment. The observed field condition is: alignment done before final pipe connection (pipe strain - SEQ/TRD). The work is being assessed at the tested/inspected lifecycle state with source anchors API 686, laser system manuals. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T5 work setting, the evaluated element is M-201 Shaft alignment within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.2 Alignment. The field notes describe visible cues consistent with: alignment visible cue before visible cue visible cue connection (visible cue strain - SEQ/TRD). The work is being assessed at the tested/inspected lifecycle state with source anchors API 686, laser system manuals. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "API 686",

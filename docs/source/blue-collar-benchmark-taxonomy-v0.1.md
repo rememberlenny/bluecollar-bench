@@ -100,6 +100,15 @@ Adapted from CII's 8 construction disciplines (concrete, structural steel, elect
 ### 2.12 Cross-cutting: Safety & Rigging (applies to all)
 - LOTO, confined space, fall protection, hot work, PPE selection, housekeeping/hazard recognition
 
+### 2.13 Building Science & Indoor Environment (T3 expansion candidate)
+- **Moisture & condensation** — dew point, surface-condensation risk, vapor drive, attic/crawlspace moisture, mold-conducive conditions
+- **Air sealing & insulation** — stack effect, air-barrier continuity, thermal bridging, R-value/assembly reasoning
+- **Ventilation & combustion safety** — residential ventilation sizing, bath/kitchen exhaust, backdrafting risk, CO alarm placement
+- **Indoor air quality** — CO2/PM2.5/VOC/radon meter readings, humidity targets, filtration tradeoffs
+- **Lighting** — lumen/illuminance calculations, color temperature, CRI, flicker diagnosis
+- **EMF measurement literacy** — meter interpretation and evidence-calibrated risk communication
+- Primarily T3 Residential / DIY; strongest fit for FD, HAZ, ME, SEQ, TS, and TRD.
+
 ---
 
 ## Axis 3 — Task Type (Cognitive skill the eval item tests)
@@ -116,6 +125,7 @@ Adapted from CII's 8 construction disciplines (concrete, structural steel, elect
 | PA | Progress assessment | "What % complete is this work item? What's left?" |
 | DOC | Document interpretation | "Read this P&ID / blueprint / wiring diagram and answer..." |
 | TRD | Tradeoff judgment | "Textbook says X; field conditions show Y. What does a journeyman actually do?" |
+| RES | Resource/constraint recovery | "Given a disrupted lookahead schedule, what can proceed, what is delayed, and which recovery plan is valid?" |
 
 Every item = **Tier × Discipline.Sub-category × Task type** (e.g., `T3 × 2.2-Plumbing.DWV × CC`).
 
@@ -186,6 +196,7 @@ Borrowed from construction "rules of credit" — pre-agreed % credit per lifecyc
 | Automotive | — | — | ○ | ● | ● |
 | Assembly/Fab | ○ | — | — | — | ● |
 | Sitework/Utilities | ● | ● | ○ | ○ | — |
+| Building Science / Indoor Environment | — | ○ | ● | ○ | — |
 | Safety (cross-cut) | ● | ● | ● | ● | ● |
 
 ● = core cell (seed 20–50 items) ○ = secondary — = out of scope
@@ -194,7 +205,7 @@ Borrowed from construction "rules of credit" — pre-agreed % credit per lifecyc
 
 ## Open Questions for v0.2
 
-1. **Sub-tier for DIY vs. licensed residential?** A homeowner question ("which wire nut?") and a residential journeyman question ("service upgrade load calc") differ hugely in difficulty. Could tag skill level (apprentice / journeyman / master / DIY) instead of splitting the tier.
+1. **Sub-tier for DIY vs. licensed residential?** A homeowner question ("which wire nut?") and a residential journeyman question ("service upgrade load calc") differ hugely in difficulty. The expansion plan proposes `skill` tags (DIY / apprentice / journeyman / master) plus `escalation` labels (`none`, `diy-with-permit`, `licensed-pro`, `emergency`) rather than splitting T3.
 2. **Jurisdiction handling** — NEC vs. CEC vs. IRC amendments. Tag items with code edition + jurisdiction, or keep v1 US/model-code only?
-3. **Modality tags** — photo, video, audio (engine/arc sounds), thermal/IR, document scan. Worth a fourth axis or just metadata?
+3. **Modality tags** — photo, video, audio (engine/arc sounds), thermal/IR, document scan. The expansion plan keeps modality as item metadata and adds paired transcript/audio, ordered frame sequences, and chart media.
 4. **CII element-level detail** — full definitions are member-gated; if you or a collaborator has CII access, we can true-up 2.1–2.8 against their metric definitions.

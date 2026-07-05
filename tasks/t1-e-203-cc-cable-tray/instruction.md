@@ -11,10 +11,11 @@ You are evaluating a blue-collar trade-work scenario. Produce a concise, inspect
 - Task type: `CC`
 - Expected lifecycle state to assess: `rough-complete`
 - Relevant S2 condition classes: `installed-defective, non-compliant`
+- Modality: `text`
 
 ## Scenario
 
-In a T1 work setting, the evaluated element is E-203 Cable tray within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: fill ratio exceeded. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 392.
+In a T1 work setting, the evaluated element is E-203 Cable tray within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The field notes describe visible cues consistent with: visible cue visible cue beyond the allowed limit. The work is being assessed at the rough-complete lifecycle state with source anchors NEC Art. 392.
 
 ## Task
 
@@ -30,6 +31,9 @@ Write valid JSON to `/app/answer.json` with this shape:
   "risk": "low | medium | high | critical",
   "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
   "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
+  "s3_percent": 0,
+  "value": 0,
+  "workable": ["activity ID", "..."],
   "findings": ["short defect or hazard finding", "..."],
   "actions": ["immediate corrective action", "..."],
   "rationale": "brief explanation",
@@ -38,6 +42,8 @@ Write valid JSON to `/app/answer.json` with this shape:
 ```
 
 Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `workable` for a list of activity IDs when the task asks what work can still start.
 
 ## Source anchors
 

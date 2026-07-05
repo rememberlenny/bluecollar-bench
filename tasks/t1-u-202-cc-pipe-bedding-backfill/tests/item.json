@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-u-202-cc-pipe-bedding-backfill",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,23 +37,13 @@
   ],
   "required_findings": [
     [
-      "pipe"
-    ],
-    [
-      "bedding"
-    ],
-    [
       "rocks"
     ],
     [
       "against"
     ],
     [
-      "pipe"
-    ],
-    [
-      "non",
-      "compliant"
+      "sand"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is U-202 Pipe bedding & backfill within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The observed field condition is: rocks against pipe (no bedding sand). The work is being assessed at the rough-complete lifecycle state with source anchors project specs, IPC 306.",
+  "scenario": "In a T1 work setting, the evaluated element is U-202 Pipe bedding & backfill within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The field notes describe visible cues consistent with: visible cue visible cue pipe (no bedding visible cue). The work is being assessed at the rough-complete lifecycle state with source anchors project specs, IPC 306.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "project specs",

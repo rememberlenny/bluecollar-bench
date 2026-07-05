@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-m-201-me-shaft-alignment",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
   "required_actions": [
     [
@@ -32,12 +35,6 @@
     ]
   ],
   "required_findings": [
-    [
-      "shaft"
-    ],
-    [
-      "alignment"
-    ],
     [
       "soft"
     ],
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 70,
-  "scenario": "In a T1 work setting, the evaluated element is M-201 Shaft alignment within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.2 Alignment. The observed field condition is: soft foot uncorrected (dial reading in photo - ME). The work is being assessed at the rough-complete lifecycle state with source anchors API 686, laser system manuals. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "scenario": "In a T1 work setting, the evaluated element is M-201 Shaft alignment within 2.7 Equipment & Machinery. The relevant subcategory is 2.7.2 Alignment. The field notes describe visible cues consistent with: visible cue visible cue visible cue (dial reading in photo - ME). The work is being assessed at the rough-complete lifecycle state with source anchors API 686, laser system manuals. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
   "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
   "source_refs": [
     "API 686",

@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t4-u-201-cc-bf-001-locates-marking",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
   "required_actions": [
     [
@@ -34,12 +37,6 @@
   ],
   "required_findings": [
     [
-      "locates"
-    ],
-    [
-      "marking"
-    ],
-    [
       "misreading"
     ],
     [
@@ -47,10 +44,6 @@
     ],
     [
       "colors"
-    ],
-    [
-      "non",
-      "compliant"
     ]
   ],
   "risk": "high",
@@ -60,7 +53,7 @@
     "non-compliant"
   ],
   "s3_percent": 70,
-  "scenario": "In a T4 work setting, the evaluated element is U-201 Locates & marking within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The observed field condition is: misreading mark colors (red=electric, yellow=gas, blue=water, green=sewer, orange=comm - pure ID item). The work is being assessed at the rough-complete lifecycle state with source anchors 811/CGA best practices. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T4 work setting, the evaluated element is U-201 Locates & marking within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.2 Underground Utilities. The field notes describe visible cues consistent with: visible cue visible cue visible cue (red=electric, yellow=gas, blue=water, green=sewer, orange=comm - pure ID item). The work is being assessed at the rough-complete lifecycle state with source anchors 811/CGA best practices. This item is a coverage backfill for a secondary taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "811/CGA best practices"

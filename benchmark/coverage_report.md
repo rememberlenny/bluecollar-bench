@@ -47,6 +47,7 @@
 | PA Progress assessment | 35 |
 | DOC Document interpretation | 59 |
 | TRD Tradeoff judgment | 26 |
+| RES Resource/constraint recovery | 0 |
 
 ## Coverage Matrix
 

@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-e-202-ts-rigid-pvc-conduit",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
   "required_actions": [
     [
@@ -33,19 +36,7 @@
   ],
   "required_findings": [
     [
-      "rigid"
-    ],
-    [
-      "conduit"
-    ],
-    [
       "bushing"
-    ],
-    [
-      "where"
-    ],
-    [
-      "required"
     ]
   ],
   "risk": "medium",
@@ -54,7 +45,7 @@
     "installed-defective"
   ],
   "s3_percent": 15,
-  "scenario": "In a T1 work setting, the evaluated element is E-202 Rigid & PVC conduit within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The observed field condition is: no bushing on RMC where required. The work is being assessed at the staged lifecycle state with source anchors NEC Art. 344, 352.",
+  "scenario": "In a T1 work setting, the evaluated element is E-202 Rigid & PVC conduit within 2.1 Electrical. The relevant subcategory is 2.1.2 Raceway. The field notes describe visible cues consistent with: no visible cue on RMC where required. The work is being assessed at the staged lifecycle state with source anchors NEC Art. 344, 352.",
   "source_file": "docs/source/electrical-element-tree-v0.1.md",
   "source_refs": [
     "NEC Art. 344",

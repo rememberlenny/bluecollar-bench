@@ -12,11 +12,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "structural",
-    "welding",
-    "visible",
     "undercut",
-    "porosity"
+    "porosity",
+    "incomplete"
   ],
   "actions": [
     "identify",

@@ -19,6 +19,9 @@
   ],
   "generation": "matrix-backfill",
   "id": "t1-c-201-seq-bf-006-concrete-placement",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
   "required_actions": [
     [
@@ -33,22 +36,13 @@
   ],
   "required_findings": [
     [
-      "concrete"
-    ],
-    [
-      "placement"
-    ],
-    [
       "honeycomb"
-    ],
-    [
-      "from"
     ],
     [
       "missed"
     ],
     [
-      "sequence"
+      "vibration"
     ]
   ],
   "risk": "high",
@@ -57,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 45,
-  "scenario": "In a T1 work setting, the evaluated element is C-201 Concrete placement within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The observed field condition is: honeycomb from missed vibration. The work is being assessed at the in-progress lifecycle state with source anchors ACI 301, 304. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
+  "scenario": "In a T1 work setting, the evaluated element is C-201 Concrete placement within 2.5 Concrete & Masonry. The relevant subcategory is 2.5.2 Placement & Finishing. The field notes describe visible cues consistent with: visible cue from visible cue visible cue. The work is being assessed at the in-progress lifecycle state with source anchors ACI 301, 304. This item is a coverage backfill for a core taxonomy matrix cell; validate tier-specific details with an SME before treating it as authoritative.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "ACI 301",

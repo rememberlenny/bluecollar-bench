@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t1-u-101-doc-trench-protection",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
   "required_actions": [
     [
@@ -33,19 +36,13 @@
   ],
   "required_findings": [
     [
-      "trench"
-    ],
-    [
-      "protection"
-    ],
-    [
-      "trench"
-    ],
-    [
       "void"
     ],
     [
       "behind"
+    ],
+    [
+      "shield"
     ]
   ],
   "risk": "critical",
@@ -54,7 +51,7 @@
     "installed-defective"
   ],
   "s3_percent": 85,
-  "scenario": "In a T1 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The observed field condition is: trench box void behind shield. The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1926 Subpart P. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "scenario": "In a T1 work setting, the evaluated element is U-101 Trench protection within 2.11 Sitework & Utilities. The relevant subcategory is 2.11.1 Excavation & Trenching. The field notes describe visible cues consistent with: trench box visible cue visible cue visible cue. The work is being assessed at the tested/inspected lifecycle state with source anchors OSHA 1926 Subpart P. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "OSHA 1926 Subpart P"

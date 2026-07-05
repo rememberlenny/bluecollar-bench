@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+APP_DIR="${BLUECOLLAR_APP_DIR:-/app}"
+mkdir -p "$APP_DIR"
+cat > "$APP_DIR/answer.json" <<'JSON'
+{
+  "decision": "needs_more_info",
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_conditions": [],
+  "s3_percent": 90,
+  "findings": [
+    "illegible unreadable unknown stamp"
+  ],
+  "actions": [
+    "specification spec lookup verify"
+  ],
+  "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
+  "references": [
+    "OEM specs"
+  ],
+  "value": 26.27
+}
+JSON

@@ -13,12 +13,9 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 70,
   "findings": [
-    "fireblocking",
-    "draftstopping",
     "foam",
-    "where",
     "fire",
-    "non compliant"
+    "rated"
   ],
   "actions": [
     "correct",

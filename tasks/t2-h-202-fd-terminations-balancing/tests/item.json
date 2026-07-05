@@ -19,6 +19,9 @@
   ],
   "generation": "auto",
   "id": "t2-h-202-fd-terminations-balancing",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
   "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
   "required_actions": [
     [
@@ -33,22 +36,13 @@
   ],
   "required_findings": [
     [
-      "terminations"
-    ],
-    [
-      "balancing"
-    ],
-    [
       "missing"
-    ],
-    [
-      "balancing"
     ],
     [
       "dampers"
     ],
     [
-      "fault"
+      "branch"
     ]
   ],
   "risk": "high",
@@ -58,7 +52,7 @@
     "failed"
   ],
   "s3_percent": 100,
-  "scenario": "In a T2 work setting, the evaluated element is H-202 Terminations & balancing within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The observed field condition is: missing balancing dampers at branch takeoffs. The work is being assessed at the in-service lifecycle state with source anchors SMACNA, TAB reports.",
+  "scenario": "In a T2 work setting, the evaluated element is H-202 Terminations & balancing within 2.3 HVAC-R. The relevant subcategory is 2.3.2 Distribution. The field notes describe visible cues consistent with: not present where expected balancing visible cue at visible cue takeoffs. The work is being assessed at the in-service lifecycle state with source anchors SMACNA, TAB reports.",
   "source_file": "docs/source/element-trees-construction-v0.1.md",
   "source_refs": [
     "SMACNA",

@@ -12,10 +12,10 @@ cat > "$APP_DIR/answer.json" <<'JSON'
   ],
   "s3_percent": 45,
   "findings": [
-    "breaker taped",
-    "no lock",
-    "no try verification",
-    "stored mechanical energy"
+    "unlocked breaker",
+    "tape is not lock",
+    "try step omitted",
+    "uncontrolled stored energy"
   ],
   "actions": [
     "apply lock",
