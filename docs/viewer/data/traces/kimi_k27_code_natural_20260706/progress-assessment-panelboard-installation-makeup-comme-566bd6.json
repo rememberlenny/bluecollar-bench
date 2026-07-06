@@ -1,0 +1,1 @@
+{"events": [{"kind": "thinking", "label": "reasoning", "text": ">\n<|im_start|>user<|im_end|>"}], "source": "openrouter-api", "stats": {"completion_tokens": 16, "prompt_tokens": 696}}

@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import shutil
 import subprocess
 from collections import Counter
 from pathlib import Path
@@ -231,6 +232,166 @@ def answer_for_reward_path(path_text: str) -> dict[str, Any] | None:
     return extract_answer_from_trial(trial_dir)
 
 
+# --- trace extraction -------------------------------------------------------
+# Raw run dirs (jobs/, runs/) are gitignored, so agent traces and model
+# reasoning die with the machine unless captured here. Traces are compacted
+# into per-task JSON files under docs/viewer/data/traces/<run>/ and lazily
+# fetched by the viewer.
+
+TRACES_DIR = ROOT / "docs/viewer/data/traces"
+TRACE_THINKING_LIMIT = 4000
+TRACE_TEXT_LIMIT = 2500
+TRACE_OUTPUT_LIMIT = 700
+TRACE_MAX_EVENTS = 60
+
+
+def clip(value: Any, limit: int) -> str:
+    text = str(value).strip()
+    return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
+
+
+def trace_event(kind: str, label: str, text: Any = None, limit: int = TRACE_TEXT_LIMIT) -> dict[str, Any]:
+    event: dict[str, Any] = {"kind": kind, "label": label}
+    if text:
+        event["text"] = clip(text, limit)
+    return event
+
+
+def iter_json_lines(path: Path):
+    for line in path.read_text(errors="replace").splitlines():
+        parsed = parse_json_text(line.strip())
+        if isinstance(parsed, dict):
+            yield parsed
+
+
+def trace_from_claude_code(path: Path) -> dict[str, Any]:
+    events: list[dict[str, Any]] = []
+    stats: dict[str, Any] = {}
+    for event in iter_json_lines(path):
+        etype = event.get("type")
+        if etype == "assistant":
+            for block in (event.get("message") or {}).get("content") or []:
+                if not isinstance(block, dict):
+                    continue
+                if block.get("type") == "thinking" and str(block.get("thinking", "")).strip():
+                    events.append(trace_event("thinking", "thinking", block["thinking"], TRACE_THINKING_LIMIT))
+                elif block.get("type") == "text" and str(block.get("text", "")).strip():
+                    events.append(trace_event("message", "assistant", block["text"]))
+                elif block.get("type") == "tool_use":
+                    name = block.get("name", "tool")
+                    tool_input = block.get("input") or {}
+                    if name == "Write":
+                        label = f"Write {tool_input.get('file_path', '')}"
+                        text = tool_input.get("content", "")
+                    elif name == "Bash":
+                        label = "Bash"
+                        text = tool_input.get("command", "")
+                    else:
+                        label = name
+                        text = json.dumps(tool_input, sort_keys=True)
+                    events.append(trace_event("tool", label, text, TRACE_OUTPUT_LIMIT))
+        elif etype == "user":
+            for block in (event.get("message") or {}).get("content") or []:
+                if isinstance(block, dict) and block.get("type") == "tool_result":
+                    content = block.get("content")
+                    if isinstance(content, list):
+                        content = " ".join(str(c.get("text", c)) if isinstance(c, dict) else str(c) for c in content)
+                    if content:
+                        events.append(trace_event("tool_result", "tool result", content, TRACE_OUTPUT_LIMIT))
+        elif etype == "result":
+            for key in ("num_turns", "duration_ms", "total_cost_usd"):
+                if event.get(key) is not None:
+                    stats[key] = event[key]
+    return {"source": "claude-code", "events": events, "stats": stats}
+
+
+def trace_from_codex(path: Path) -> dict[str, Any]:
+    events: list[dict[str, Any]] = []
+    stats: dict[str, Any] = {}
+    for event in iter_json_lines(path):
+        if event.get("type") == "item.completed":
+            item = event.get("item") or {}
+            itype = item.get("type")
+            if itype == "reasoning" and (item.get("text") or item.get("summary")):
+                events.append(trace_event("thinking", "reasoning", item.get("text") or item.get("summary"), TRACE_THINKING_LIMIT))
+            elif itype == "command_execution":
+                text = item.get("command", "")
+                output = item.get("aggregated_output") or ""
+                if output.strip():
+                    text += "\n→ " + clip(output, TRACE_OUTPUT_LIMIT)
+                exit_code = item.get("exit_code")
+                label = "shell" if exit_code in (None, 0) else f"shell (exit {exit_code})"
+                events.append(trace_event("tool", label, text, TRACE_TEXT_LIMIT))
+            elif itype == "agent_message" and str(item.get("text", "")).strip():
+                events.append(trace_event("message", "assistant", item["text"]))
+            elif itype == "file_change":
+                events.append(trace_event("tool", "file change", json.dumps(item.get("changes") or item, sort_keys=True), TRACE_OUTPUT_LIMIT))
+        elif event.get("type") == "turn.completed":
+            usage = event.get("usage") or {}
+            for key in ("input_tokens", "cached_input_tokens", "output_tokens"):
+                stats[key] = stats.get(key, 0) + (usage.get(key) or 0)
+    return {"source": "codex", "events": events, "stats": stats}
+
+
+def trace_from_api_response(path: Path) -> dict[str, Any]:
+    payload = load_json(path, {})
+    events: list[dict[str, Any]] = []
+    stats: dict[str, Any] = {}
+    if "candidates" in payload:  # Gemini
+        candidates = payload.get("candidates") or [{}]
+        for part in (candidates[0].get("content") or {}).get("parts") or []:
+            if not isinstance(part, dict) or not str(part.get("text", "")).strip():
+                continue
+            if part.get("thought"):
+                events.append(trace_event("thinking", "thinking", part["text"], TRACE_THINKING_LIMIT))
+            else:
+                events.append(trace_event("message", "response", part["text"]))
+        usage = payload.get("usageMetadata") or {}
+        stats = {k: usage[k] for k in ("promptTokenCount", "candidatesTokenCount") if k in usage}
+        return {"source": "gemini-api", "events": events, "stats": stats}
+    choices = payload.get("choices") or [{}]
+    message = choices[0].get("message") or {}
+    if str(message.get("reasoning") or "").strip():
+        events.append(trace_event("thinking", "reasoning", message["reasoning"], TRACE_THINKING_LIMIT))
+    if str(message.get("content") or "").strip():
+        events.append(trace_event("message", "response", message["content"]))
+    usage = payload.get("usage") or {}
+    stats = {k: usage[k] for k in ("prompt_tokens", "completion_tokens") if k in usage}
+    return {"source": "openrouter-api", "events": events, "stats": stats}
+
+
+def extract_trace_from_trial(trial_dir: Path) -> dict[str, Any] | None:
+    for rel, extractor in [
+        ("agent/claude-code.txt", trace_from_claude_code),
+        ("agent/codex.txt", trace_from_codex),
+        ("response.json", trace_from_api_response),
+    ]:
+        path = trial_dir / rel
+        if not path.exists():
+            continue
+        try:
+            trace = extractor(path)
+        except Exception:
+            return None
+        if trace["events"]:
+            trace["events"] = trace["events"][:TRACE_MAX_EVENTS]
+            return trace
+    return None
+
+
+def write_trace_for_row(run_id: str, row: dict[str, Any]) -> str | None:
+    trial_dir = trial_dir_from_reward_path(row.get("reward_path", ""))
+    if not trial_dir:
+        return None
+    trace = extract_trace_from_trial(trial_dir)
+    if not trace:
+        return None
+    out = TRACES_DIR / run_id / f"{row['task']}.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(trace, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    return f"data/traces/{run_id}/{row['task']}.json"
+
+
 def git_output(args: list[str]) -> str:
     try:
         return subprocess.check_output(args, cwd=ROOT, text=True).strip()
@@ -447,6 +608,8 @@ def run_summary(metadata: dict[str, Any], rows: list[dict[str, Any]]) -> dict[st
 
 
 def discover_runs() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, dict[str, dict[str, Any]]]]:
+    if TRACES_DIR.exists():
+        shutil.rmtree(TRACES_DIR)
     runs_index = load_json(ROOT / "benchmark/runs/index.json", {})
     indexed = {
         entry.get("run"): entry
@@ -481,8 +644,16 @@ def discover_runs() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[st
             skipped.append({**summary, "skip_reason": "no metric rows"})
             continue
         runs.append(summary)
+        # Capture agent traces / model reasoning for naturalized-catalog runs
+        # whose raw (gitignored) run dirs are still present on this machine.
+        capture_traces = summary.get("catalog") == "naturalized"
         for row in rows:
-            results_by_task.setdefault(row["task"], {})[run_id] = short_result(row)
+            result = short_result(row)
+            if capture_traces:
+                trace_path = write_trace_for_row(run_id, row)
+                if trace_path:
+                    result["trace"] = trace_path
+            results_by_task.setdefault(row["task"], {})[run_id] = result
 
     runs.sort(key=lambda run: (run.get("collected_at") or "", run["run"]))
     skipped.sort(key=lambda run: (run.get("collected_at") or "", run["run"]))

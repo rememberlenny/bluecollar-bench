@@ -686,6 +686,82 @@
     .harness-badge.agent { background: #efe4f7; color: #6b3fa0; border: 1px solid #d9c2ec; }
     .harness-badge.api { background: #e3eef8; color: #2b5d8c; border: 1px solid #c4daee; }
 
+    .component-scores {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 6px 0 8px;
+    }
+
+    .component-cell {
+      font-size: 10.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      background: #fff;
+      white-space: nowrap;
+    }
+
+    .component-cell.good { border-color: #abd4bd; background: #effaf3; color: #2c6b45; }
+    .component-cell.mid { border-color: #e1c392; background: #fff8eb; color: #8a6215; }
+    .component-cell.bad { border-color: #e3b7b2; background: #fff4f2; color: #a33f34; }
+    .component-cell.gate { border-color: #a33f34; background: #a33f34; color: #fff; font-weight: 700; }
+
+    .trace-toggle {
+      margin-top: 8px;
+      padding: 4px 10px;
+      font-size: 11px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .trace-toggle:hover { background: #f2f5f1; }
+
+    .trace-body {
+      margin-top: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      max-height: 420px;
+      overflow-y: auto;
+      background: #fbfcfa;
+    }
+
+    .trace-stats {
+      font-size: 10.5px;
+      color: #67706a;
+      margin-bottom: 6px;
+    }
+
+    .trace-ev { margin-bottom: 8px; }
+
+    .trace-ev-label {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #67706a;
+      margin-bottom: 2px;
+    }
+
+    .trace-ev pre {
+      margin: 2px 0 0;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #fff;
+      border: 1px solid #e7ebe6;
+    }
+
+    .trace-ev.thinking pre { background: #f6f2fa; border-color: #e2d5ee; color: #4b3a61; font-style: italic; }
+    .trace-ev.tool pre, .trace-ev.tool_result pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f4f6f8; }
+
     .run-answer {
       display: flex;
       flex-wrap: wrap;
@@ -1524,14 +1600,94 @@
           </div>
           <div class="answer-body">
             <div class="pill-row">${answerSummaryPills(answer)}</div>
+            ${componentScores(result)}
             ${renderAnswerField("Findings", answer.findings)}
             ${renderAnswerField("Actions", answer.actions)}
             ${renderAnswerField("Rationale", answer.rationale)}
             ${renderAnswerField("References", answer.references)}
             ${answer.source ? `<div class="answer-field"><div class="answer-label">Source</div><p class="answer-text">${esc(answer.source)}</p></div>` : ""}
+            ${traceSection(result)}
           </div>
         </div>
       `;
+    }
+
+    const COMPONENT_LABELS = [
+      ["decision", "decision"], ["risk", "risk"], ["findings", "findings"],
+      ["actions", "actions"], ["s1", "stage"], ["s2", "conditions"], ["s3", "progress"],
+    ];
+
+    function componentScores(result) {
+      const cells = COMPONENT_LABELS
+        .filter(([key]) => typeof result[key] === "number")
+        .map(([key, label]) => {
+          const value = result[key];
+          const cls = value >= 0.99 ? "good" : (value >= 0.5 ? "mid" : "bad");
+          return `<span class="component-cell ${cls}" title="${esc(label)} component score">${esc(label)} ${esc(fmt(value))}</span>`;
+        });
+      const gates = [];
+      if (result.dangerous_false_pass === 0) gates.push(`<span class="component-cell gate" title="Item expected fail; model said pass — reward zeroed">⚠ dangerous false pass</span>`);
+      if (result.alarmist_false_fail === 0) gates.push(`<span class="component-cell gate" title="Item expected pass; model said fail — reward zeroed">⚠ alarmist false fail</span>`);
+      if (!cells.length && !gates.length) return "";
+      return `<div class="component-scores">${gates.join("")}${cells.join("")}</div>`;
+    }
+
+    function traceSection(result) {
+      if (!result.trace) return "";
+      return `
+        <button class="trace-toggle" data-trace="${esc(result.trace)}">Show trace &amp; reasoning</button>
+        <div class="trace-body" hidden></div>
+      `;
+    }
+
+    function renderTrace(trace) {
+      const stats = trace.stats || {};
+      const statBits = [];
+      if (stats.num_turns) statBits.push(`${stats.num_turns} turns`);
+      if (stats.duration_ms) statBits.push(`${(stats.duration_ms / 1000).toFixed(1)}s`);
+      if (stats.input_tokens) statBits.push(`${stats.input_tokens.toLocaleString()} in`);
+      if (stats.output_tokens) statBits.push(`${stats.output_tokens.toLocaleString()} out`);
+      if (stats.prompt_tokens) statBits.push(`${stats.prompt_tokens.toLocaleString()} in`);
+      if (stats.completion_tokens) statBits.push(`${stats.completion_tokens.toLocaleString()} out`);
+      if (stats.promptTokenCount) statBits.push(`${stats.promptTokenCount.toLocaleString()} in`);
+      if (stats.candidatesTokenCount) statBits.push(`${stats.candidatesTokenCount.toLocaleString()} out`);
+      const head = `<div class="trace-stats">${esc(trace.source || "")}${statBits.length ? " · " + esc(statBits.join(" · ")) : ""}</div>`;
+      const body = (trace.events || []).map(event => `
+        <div class="trace-ev ${esc(event.kind)}">
+          <span class="trace-ev-label">${esc(event.label)}</span>
+          ${event.text ? `<pre>${esc(event.text)}</pre>` : ""}
+        </div>
+      `).join("");
+      return head + (body || `<div class="trace-stats">No trace events extracted.</div>`);
+    }
+
+    const traceCache = {};
+
+    function bindTraceToggles(container) {
+      container.querySelectorAll(".trace-toggle").forEach(button => {
+        button.addEventListener("click", async event => {
+          event.stopPropagation();
+          const body = button.nextElementSibling;
+          if (!body.hidden) {
+            body.hidden = true;
+            button.textContent = "Show trace & reasoning";
+            return;
+          }
+          const url = button.dataset.trace;
+          try {
+            if (!traceCache[url]) {
+              const response = await fetch(url);
+              if (!response.ok) throw new Error(`HTTP ${response.status}`);
+              traceCache[url] = await response.json();
+            }
+            body.innerHTML = renderTrace(traceCache[url]);
+          } catch (error) {
+            body.innerHTML = `<div class="trace-stats">Trace failed to load: ${esc(error.message)}</div>`;
+          }
+          body.hidden = false;
+          button.textContent = "Hide trace";
+        });
+      });
     }
 
     function renderModelAnswers(item) {
@@ -1642,6 +1798,7 @@
           </div>
         </div>
       `;
+      bindTraceToggles(detail);
       detail.querySelectorAll(".run-row").forEach(row => {
         row.addEventListener("click", () => {
           state.activeRun = row.dataset.run;

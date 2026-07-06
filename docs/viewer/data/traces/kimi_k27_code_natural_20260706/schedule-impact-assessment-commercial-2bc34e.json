@@ -1,0 +1,1 @@
+{"events": [{"kind": "thinking", "label": "reasoning", "text": ">\n<function_calls>\n<invoke name=\"read_image\">\n<parameter name=\"path\">/app/media/cpm_delay_000.png</parameter>\n</invoke>\n</function_calls>"}], "source": "openrouter-api", "stats": {"completion_tokens": 39, "prompt_tokens": 1531}}
