@@ -381,6 +381,36 @@
 
     .score strong { text-align: right; }
 
+    .model-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      min-width: 145px;
+    }
+
+    .model-score {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+      min-height: 22px;
+      border: 1px solid #d6ddd4;
+      border-radius: 999px;
+      padding: 2px 6px;
+      background: #f8faf7;
+      font-size: 11px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .model-score b {
+      font-weight: 760;
+      color: #344038;
+    }
+
+    .model-score.hard { border-color: #e3b7b2; background: #fff4f2; color: var(--red); }
+    .model-score.medium { border-color: #e1c392; background: #fff8eb; color: var(--amber); }
+    .model-score.solved { border-color: #abd4bd; background: #effaf3; color: var(--green); }
+
     .detail {
       position: sticky;
       top: 22px;
@@ -484,6 +514,28 @@
       background: var(--blue);
     }
 
+    .run-table {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 12px;
+    }
+
+    .run-row {
+      display: grid;
+      grid-template-columns: minmax(116px, 1fr) 62px 70px;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-bottom: 1px solid #e7ebe6;
+      background: #fff;
+    }
+
+    .run-row:last-child { border-bottom: 0; }
+    .run-row.active { background: #eef5f0; }
+    .run-row strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
     .media-grid {
       display: grid;
       gap: 10px;
@@ -556,6 +608,7 @@
       .score strong { text-align: left; }
       .kv { grid-template-columns: 1fr; }
       .component { grid-template-columns: 92px minmax(0, 1fr) 36px; }
+      .run-row { grid-template-columns: 1fr 54px 64px; }
     }
   </style>
 </head>
@@ -599,6 +652,9 @@
 
       <label for="generation">Generation</label>
       <select id="generation"></select>
+
+      <label for="activeRun">Results</label>
+      <select id="activeRun"></select>
 
       <label for="groupAxis">Roll up by</label>
       <select id="groupAxis">
@@ -656,7 +712,7 @@
                   <tr>
                     <th data-sort="title">Task</th>
                     <th data-sort="reward">Reward</th>
-                    <th data-sort="difficulty">Difficulty</th>
+                    <th data-sort="models">Models</th>
                     <th data-sort="task_type">Axes</th>
                     <th data-sort="decision">Expected</th>
                   </tr>
@@ -688,6 +744,7 @@
         generation: ""
       },
       groupAxis: "task_type",
+      activeRun: "__all__",
       sort: { key: "reward", dir: "asc" },
       selected: ""
     };
@@ -704,6 +761,7 @@
     };
 
     const groupAxis = document.getElementById("groupAxis");
+    const activeRun = document.getElementById("activeRun");
     const stats = document.getElementById("stats");
     const groups = document.getElementById("groups");
     const taskRows = document.getElementById("taskRows");
@@ -727,8 +785,54 @@
       return typeof value === "number" ? `${Math.round(value * 100)}%` : "0%";
     }
 
+    function runById(runId) {
+      return (state.data.runs || []).find(run => run.run === runId);
+    }
+
+    function runLabel(runId) {
+      return runById(runId)?.label || runId;
+    }
+
+    function shortRunLabel(run) {
+      const label = run.label || run.run;
+      if (label.includes("2026-07-05")) return "G5.5 7/05";
+      if (label.includes("full merged")) return "G5.5 full";
+      if (label.includes("text delta")) return "G5.5 delta";
+      if (label.includes("DeepSeek")) return "DS v4";
+      if (label.includes("Gemini")) return "Gemini";
+      if (label.includes("Sonnet")) return "Sonnet";
+      if (label.includes("GLM")) return "GLM";
+      return label.replace("GPT-5.5", "G5.5");
+    }
+
+    function resultValues(item) {
+      return Object.values(item.results || {}).filter(result => typeof result.reward === "number");
+    }
+
     function resultOf(item) {
-      return item.result || { difficulty: "unscored", reward: null };
+      if (state.activeRun !== "__all__") {
+        return item.results?.[state.activeRun] || { difficulty: "unscored", reward: null };
+      }
+      const values = resultValues(item);
+      if (!values.length) return { aggregate: true, difficulty: "unscored", reward: null, scored_count: 0 };
+      const rewards = values.map(result => result.reward);
+      const reward = rewards.reduce((sum, value) => sum + value, 0) / rewards.length;
+      return {
+        aggregate: true,
+        reward,
+        difficulty: difficultyBucket(reward),
+        scored_count: values.length,
+        best: Math.max(...rewards),
+        worst: Math.min(...rewards)
+      };
+    }
+
+    function difficultyBucket(reward) {
+      if (typeof reward !== "number") return "unscored";
+      if (reward <= 0.25) return "hard";
+      if (reward <= 0.65) return "medium";
+      if (reward <= 0.9) return "light";
+      return "solved";
     }
 
     function difficultyClass(name) {
@@ -772,12 +876,19 @@
       fillSelect(filterControls.decision, uniqueValues("decision"), "All decisions");
       fillSelect(filterControls.generation, uniqueValues("generation"), "All generations");
       fillSelect(filterControls.difficulty, ["hard", "medium", "light", "solved", "unscored"], "All results");
+      activeRun.innerHTML = `<option value="__all__">All models</option>` + (state.data.runs || [])
+        .map(run => `<option value="${esc(run.run)}">${esc(run.label)} (${esc(fmt(run.mean_reward))})</option>`)
+        .join("");
 
       Object.entries(filterControls).forEach(([key, control]) => {
         control.addEventListener(key === "query" ? "input" : "change", () => {
           state.filters[key] = control.value;
           render();
         });
+      });
+      activeRun.addEventListener("change", () => {
+        state.activeRun = activeRun.value;
+        render();
       });
       groupAxis.addEventListener("change", () => {
         state.groupAxis = groupAxis.value;
@@ -788,6 +899,8 @@
         Object.entries(filterControls).forEach(([key, control]) => control.value = state.filters[key]);
         state.groupAxis = "task_type";
         groupAxis.value = state.groupAxis;
+        state.activeRun = "__all__";
+        activeRun.value = state.activeRun;
         render();
       });
       document.getElementById("copyLink").addEventListener("click", async () => {
@@ -829,8 +942,8 @@
     function sortedItems(items) {
       const { key, dir } = state.sort;
       return [...items].sort((a, b) => {
-        const av = key === "reward" ? resultOf(a).reward : key === "difficulty" ? resultOf(a).difficulty : a[key];
-        const bv = key === "reward" ? resultOf(b).reward : key === "difficulty" ? resultOf(b).difficulty : b[key];
+        const av = key === "reward" ? resultOf(a).reward : key === "models" ? resultValues(a).length : a[key];
+        const bv = key === "reward" ? resultOf(b).reward : key === "models" ? resultValues(b).length : b[key];
         const missing = key === "reward" ? (dir === "asc" ? 2 : -1) : "";
         const aa = av === null || av === undefined ? missing : av;
         const bb = bv === null || bv === undefined ? missing : bv;
@@ -842,17 +955,20 @@
     }
 
     function renderStats(items) {
-      const scored = items.filter(item => typeof resultOf(item).reward === "number");
-      const hard = scored.filter(item => resultOf(item).reward <= 0.25).length;
-      const medium = scored.filter(item => resultOf(item).reward > 0.25 && resultOf(item).reward <= 0.65).length;
-      const mean = scored.length ? scored.reduce((sum, item) => sum + resultOf(item).reward, 0) / scored.length : null;
-      const gates = scored.filter(item => resultOf(item).dangerous_false_pass === 0).length;
+      const selectedResults = state.activeRun === "__all__"
+        ? items.flatMap(item => resultValues(item))
+        : items.map(item => item.results?.[state.activeRun]).filter(Boolean);
+      const scored = selectedResults.filter(result => typeof result.reward === "number");
+      const hard = scored.filter(result => result.reward <= 0.25).length;
+      const medium = scored.filter(result => result.reward > 0.25 && result.reward <= 0.65).length;
+      const mean = scored.length ? scored.reduce((sum, result) => sum + result.reward, 0) / scored.length : null;
+      const gates = scored.filter(result => result.dangerous_false_pass === 0).length;
       stats.innerHTML = [
         ["Visible tasks", items.length],
-        ["Scored", scored.length],
+        [state.activeRun === "__all__" ? "Scored results" : "Scored tasks", scored.length],
         ["Mean reward", fmt(mean)],
+        ["Models", state.data.runs?.length || 0],
         ["Hard", hard],
-        ["Medium", medium],
         ["False-pass gates", gates]
       ].map(([label, value]) => `
         <div class="stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>
@@ -877,6 +993,17 @@
         const bv = b.mean ?? 2;
         return av - bv || String(a.key).localeCompare(String(b.key), undefined, { numeric: true });
       });
+    }
+
+    function renderModelStrip(item) {
+      const runs = state.data.runs || [];
+      if (!runs.length) return `<span class="pill blue">no runs</span>`;
+      return runs.map(run => {
+        const result = item.results?.[run.run];
+        const label = shortRunLabel(run);
+        if (!result) return `<span class="model-score"><b>${esc(label)}</b> -</span>`;
+        return `<span class="model-score ${barClass(result.reward)}"><b>${esc(label)}</b> ${esc(fmt(result.reward))}</span>`;
+      }).join("");
     }
 
     function renderGroups(items) {
@@ -929,7 +1056,7 @@
                 <span class="bar"><i class="${barClass(result.reward)}" style="width:${pct(result.reward)}"></i></span>
               </div>
             </td>
-            <td><span class="pill ${difficultyClass(result.difficulty)}">${esc(result.difficulty)}</span></td>
+            <td><div class="model-strip">${renderModelStrip(item)}</div></td>
             <td>
               <div class="pill-row">
                 <span class="pill">${esc(item.task_type)}</span>
@@ -987,7 +1114,8 @@
     }
 
     function renderComponents(result) {
-      if (!result || typeof result.reward !== "number") return `<p class="text-block">No collected result for this task in the latest run snapshot.</p>`;
+      if (!result || typeof result.reward !== "number") return `<p class="text-block">No collected result for this task in the selected run.</p>`;
+      if (result.aggregate) return `<p class="text-block">Select one model run to inspect component scores.</p>`;
       const keys = ["schema", "decision", "risk", "s1", "s2", "s3", "findings", "actions", "forbidden_clean", "dangerous_false_pass", "alarmist_false_fail"];
       return keys.filter(key => typeof result[key] === "number").map(key => `
         <div class="component">
@@ -996,6 +1124,26 @@
           <span>${esc(fmt(result[key]))}</span>
         </div>
       `).join("");
+    }
+
+    function renderRunResults(item) {
+      const runs = state.data.runs || [];
+      if (!runs.length) return `<p class="text-block">No model runs loaded.</p>`;
+      return `
+        <div class="run-table">
+          ${runs.map(run => {
+            const result = item.results?.[run.run];
+            const active = state.activeRun === run.run ? "active" : "";
+            return `
+              <button class="run-row ${active}" data-run="${esc(run.run)}">
+                <strong>${esc(run.label)}</strong>
+                <span>${esc(result ? fmt(result.reward) : "-")}</span>
+                <span class="pill ${difficultyClass(result?.difficulty || "unscored")}">${esc(result?.difficulty || "unscored")}</span>
+              </button>
+            `;
+          }).join("")}
+        </div>
+      `;
     }
 
     function renderDetail() {
@@ -1015,7 +1163,8 @@
           <div class="detail-id">${esc(item.id)}</div>
           <div class="pill-row" style="margin-top:10px">
             <span class="pill ${difficultyClass(result.difficulty)}">${esc(result.difficulty)}</span>
-            <span class="pill blue">reward ${esc(fmt(result.reward))}</span>
+            <span class="pill blue">${state.activeRun === "__all__" ? "mean" : "reward"} ${esc(fmt(result.reward))}</span>
+            ${result.aggregate && result.scored_count ? `<span class="pill violet">${esc(result.scored_count)} models</span>` : ""}
             <span class="pill ${item.decision === "fail" ? "red" : item.decision === "pass" ? "green" : "amber"}">${esc(item.decision)}</span>
             <span class="pill ${item.risk === "critical" || item.risk === "high" ? "red" : item.risk === "medium" ? "amber" : "green"}">${esc(item.risk)}</span>
           </div>
@@ -1044,8 +1193,11 @@
           ${renderTokenList("Required Actions", item.required_actions)}
           ${renderTokenList("Forbidden Answers", item.forbidden)}
 
+          <h4>Model Results</h4>
+          ${renderRunResults(item)}
+
           <h4>Result Components</h4>
-          ${renderComponents(item.result)}
+          ${renderComponents(result)}
 
           <h4>Sources And Files</h4>
           <div class="pill-row">
@@ -1058,6 +1210,13 @@
           </div>
         </div>
       `;
+      detail.querySelectorAll(".run-row").forEach(row => {
+        row.addEventListener("click", () => {
+          state.activeRun = row.dataset.run;
+          activeRun.value = state.activeRun;
+          render();
+        });
+      });
     }
 
     function render() {
@@ -1074,13 +1233,12 @@
       state.data = await response.json();
       state.selected = decodeURIComponent(location.hash.replace(/^#/, "")) || "";
 
-      const run = state.data.run;
-      document.getElementById("runMeta").textContent = run
-        ? `${run.run} | ${run.tasks_scored} scored | mean ${fmt(run.mean_reward)}`
-        : `${state.data.summary.items} catalog items`;
-      document.getElementById("subtitle").textContent = run
-        ? `Latest collected run: ${run.run}`
-        : "Catalog snapshot without collected run results.";
+      const runCount = state.data.runs?.length || 0;
+      const resultCount = state.data.summary?.result_count || 0;
+      document.getElementById("runMeta").textContent =
+        `${runCount} model runs | ${resultCount} scored results`;
+      document.getElementById("subtitle").textContent =
+        `Comparing ${runCount} collected model runs across the task catalog.`;
       document.getElementById("dataMeta").textContent =
         `Generated ${state.data.generated_at || "unknown"} from ${state.data.repo || "local repo"} ${state.data.ref || ""}.`;
       if (state.data.repo) {
