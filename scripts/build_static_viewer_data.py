@@ -27,6 +27,24 @@ COMPONENT_KEYS = [
     "dangerous_false_pass",
     "alarmist_false_fail",
 ]
+ANSWER_KEYS = [
+    "decision",
+    "risk",
+    "s1_state",
+    "s2_conditions",
+    "s3_percent",
+    "value",
+    "sound_source",
+    "confidence",
+    "event_time",
+    "rate",
+    "order",
+    "workable",
+    "findings",
+    "actions",
+    "rationale",
+    "references",
+]
 
 
 def load_json(path: Path, fallback: Any = None) -> Any:
@@ -34,6 +52,180 @@ def load_json(path: Path, fallback: Any = None) -> Any:
         return fallback
     with path.open() as f:
         return json.load(f)
+
+
+def load_answer_json(path: Path) -> Any | None:
+    try:
+        return json.loads(path.read_text(errors="replace"), strict=False)
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def compact_text(value: Any, limit: int = 420) -> str:
+    text = str(value)
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1].rstrip() + "..."
+
+
+def compact_answer(value: Any) -> dict[str, Any] | None:
+    if not isinstance(value, dict):
+        return None
+    answer: dict[str, Any] = {}
+    for key in ANSWER_KEYS:
+        if key not in value:
+            continue
+        item = value[key]
+        if isinstance(item, str):
+            answer[key] = compact_text(item)
+        elif isinstance(item, list):
+            answer[key] = [compact_text(entry, 240) for entry in item[:8]]
+            if len(item) > 8:
+                answer[key].append(f"... {len(item) - 8} more")
+        elif isinstance(item, (int, float, bool)) or item is None:
+            answer[key] = item
+        else:
+            answer[key] = compact_text(json.dumps(item, sort_keys=True), 240)
+    return answer or None
+
+
+def parse_json_text(text: str) -> Any | None:
+    try:
+        return json.loads(text, strict=False)
+    except json.JSONDecodeError:
+        return None
+
+
+def extract_answer_from_patch(patch: str) -> dict[str, Any] | None:
+    if "/app/answer.json" not in patch:
+        return None
+    lines = []
+    in_file = False
+    for line in patch.splitlines():
+        if line.startswith("*** Add File: /app/answer.json") or line.startswith("*** Update File: /app/answer.json"):
+            in_file = True
+            continue
+        if in_file and line.startswith("*** End Patch"):
+            break
+        if in_file and line.startswith("+") and not line.startswith("+++"):
+            lines.append(line[1:])
+    return compact_answer(parse_json_text("\n".join(lines)))
+
+
+def extract_answer_from_trajectory(path: Path) -> dict[str, Any] | None:
+    data = load_json(path, {})
+    for step in data.get("steps", []):
+        for call in step.get("tool_calls", []):
+            args = call.get("arguments", {})
+            if isinstance(args, dict):
+                patch = args.get("input") or args.get("cmd") or ""
+            else:
+                patch = str(args)
+            answer = extract_answer_from_patch(patch)
+            if answer:
+                answer["source"] = "trajectory patch"
+                return answer
+        extra = step.get("extra", {})
+        details = extra.get("tool_call_details", {}) if isinstance(extra, dict) else {}
+        for detail in details.values():
+            answer = extract_answer_from_patch(str(detail.get("raw_arguments", "")))
+            if answer:
+                answer["source"] = "trajectory patch"
+                return answer
+    return None
+
+
+def extract_answer_from_jsonl(path: Path) -> dict[str, Any] | None:
+    try:
+        lines = path.read_text(errors="replace").splitlines()
+    except OSError:
+        return None
+    for line in lines:
+        event = parse_json_text(line)
+        if not isinstance(event, dict):
+            continue
+        payload = event.get("payload", {})
+        if isinstance(payload, dict):
+            # Codex rollout logs include patch content in either the custom tool
+            # call input or in the patch-apply event's file-change payload.
+            answer = extract_answer_from_patch(str(payload.get("input", "")))
+            if answer:
+                answer["source"] = "agent transcript"
+                return answer
+            changes = payload.get("changes", {})
+            if isinstance(changes, dict):
+                changed = changes.get("/app/answer.json", {})
+                content = changed.get("content") if isinstance(changed, dict) else None
+                answer = compact_answer(parse_json_text(content or ""))
+                if answer:
+                    answer["source"] = "agent transcript"
+                    return answer
+        item = event.get("item", {})
+        if isinstance(item, dict) and item.get("type") == "file_change":
+            for change in item.get("changes", []):
+                if change.get("path") == "/app/answer.json" and change.get("content"):
+                    answer = compact_answer(parse_json_text(change["content"]))
+                    if answer:
+                        answer["source"] = "agent transcript"
+                        return answer
+        message = event.get("message", {})
+        if isinstance(message, dict):
+            for content in message.get("content", []):
+                if not isinstance(content, dict):
+                    continue
+                if content.get("type") == "tool_use":
+                    tool_input = content.get("input", {})
+                    if isinstance(tool_input, dict) and tool_input.get("file_path") == "/app/answer.json":
+                        answer = compact_answer(parse_json_text(tool_input.get("content", "")))
+                        if answer:
+                            answer["source"] = "agent transcript"
+                            return answer
+    return None
+
+
+def extract_answer_from_trial(trial_dir: Path) -> dict[str, Any] | None:
+    answer_path = trial_dir / "answer.json"
+    if answer_path.exists():
+        answer = compact_answer(load_answer_json(answer_path))
+        if answer:
+            answer["source"] = str(answer_path.relative_to(ROOT)) if answer_path.is_relative_to(ROOT) else str(answer_path)
+            return answer
+
+    trajectory_path = trial_dir / "agent/trajectory.json"
+    if trajectory_path.exists():
+        answer = extract_answer_from_trajectory(trajectory_path)
+        if answer:
+            return answer
+
+    for transcript in sorted((trial_dir / "agent").glob("**/*.jsonl")):
+        answer = extract_answer_from_jsonl(transcript)
+        if answer:
+            return answer
+    for transcript in sorted((trial_dir / "agent").glob("*.txt")):
+        answer = extract_answer_from_jsonl(transcript)
+        if answer:
+            return answer
+    return None
+
+
+def trial_dir_from_reward_path(path_text: str) -> Path | None:
+    if not path_text:
+        return None
+    path = Path(path_text)
+    if not path.is_absolute():
+        path = ROOT / path
+    for candidate in [path.parent, *path.parents]:
+        if (candidate / "answer.json").exists() or (candidate / "result.json").exists() or (candidate / "agent").exists():
+            return candidate
+    return None
+
+
+def answer_for_reward_path(path_text: str) -> dict[str, Any] | None:
+    trial_dir = trial_dir_from_reward_path(path_text)
+    if not trial_dir:
+        return None
+    return extract_answer_from_trial(trial_dir)
 
 
 def git_output(args: list[str]) -> str:
@@ -71,6 +263,9 @@ def short_result(row: dict[str, Any]) -> dict[str, Any]:
         "difficulty": difficulty_bucket(row.get("reward")),
         "reward_path": row.get("reward_path", ""),
     }
+    answer = answer_for_reward_path(row.get("reward_path", ""))
+    if answer:
+        result["answer"] = answer
     for key in COMPONENT_KEYS:
         if key in row:
             result[key] = row[key]

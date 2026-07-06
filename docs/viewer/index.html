@@ -205,7 +205,10 @@
       align-items: start;
     }
 
+    .workspace > * { min-width: 0; }
+
     .panel {
+      min-width: 0;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--panel);
@@ -524,7 +527,7 @@
 
     .run-row {
       display: grid;
-      grid-template-columns: minmax(116px, 1fr) 62px 70px;
+      grid-template-columns: minmax(104px, 1fr) 50px 70px 76px;
       gap: 8px;
       align-items: center;
       padding: 8px 10px;
@@ -535,6 +538,105 @@
     .run-row:last-child { border-bottom: 0; }
     .run-row.active { background: #eef5f0; }
     .run-row strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    .run-answer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      justify-content: flex-end;
+      min-width: 0;
+    }
+
+    .answer-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .answer-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .answer-card.active {
+      border-color: #9fc5aa;
+      box-shadow: inset 0 0 0 1px #cbe4d1;
+    }
+
+    .answer-head {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 9px 10px;
+      border-bottom: 1px solid #e7ebe6;
+      background: #fbfcfa;
+    }
+
+    .answer-head strong {
+      display: block;
+      min-width: 0;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .answer-head small {
+      color: var(--muted);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .answer-body {
+      display: grid;
+      gap: 8px;
+      padding: 10px;
+    }
+
+    .answer-field {
+      display: grid;
+      gap: 4px;
+    }
+
+    .answer-label {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .answer-text {
+      margin: 0;
+      color: #26302a;
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    .answer-list {
+      display: grid;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .answer-list li {
+      border-left: 3px solid #d9e1d8;
+      padding-left: 8px;
+      color: #26302a;
+      font-size: 13px;
+      line-height: 1.38;
+    }
+
+    .answer-empty {
+      border: 1px dashed #cbd6cb;
+      border-radius: 8px;
+      padding: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      background: #fbfcfa;
+    }
 
     .media-grid {
       display: grid;
@@ -609,6 +711,10 @@
       .kv { grid-template-columns: 1fr; }
       .component { grid-template-columns: 92px minmax(0, 1fr) 36px; }
       .run-row { grid-template-columns: 1fr 54px 64px; }
+      .run-answer {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+      }
     }
   </style>
 </head>
@@ -1126,6 +1232,136 @@
       `).join("");
     }
 
+    function answerHasValue(answer) {
+      return answer && Object.keys(answer).some(key => key !== "source");
+    }
+
+    function answerPillClass(key, value) {
+      const text = String(value ?? "").toLowerCase();
+      if (key === "decision") return text === "fail" ? "red" : text === "pass" ? "green" : "amber";
+      if (key === "risk") return text === "critical" || text === "high" ? "red" : text === "medium" ? "amber" : "green";
+      if (key === "workable") return value === true ? "green" : value === false ? "red" : "blue";
+      return "blue";
+    }
+
+    function answerValue(value) {
+      if (Array.isArray(value)) return value.join(", ");
+      if (value === true) return "true";
+      if (value === false) return "false";
+      if (value === null || value === undefined || value === "") return "";
+      return String(value);
+    }
+
+    function answerSummaryPills(answer) {
+      if (!answerHasValue(answer)) return "";
+      const keys = [
+        "decision",
+        "risk",
+        "s1_state",
+        "s2_conditions",
+        "s3_percent",
+        "value",
+        "sound_source",
+        "confidence",
+        "event_time",
+        "rate",
+        "order",
+        "workable"
+      ];
+      return keys
+        .filter(key => answer[key] !== undefined && answer[key] !== null && answerValue(answer[key]) !== "")
+        .map(key => `
+          <span class="pill ${answerPillClass(key, answer[key])}">
+            ${esc(key.replaceAll("_", " "))}: ${esc(answerValue(answer[key]))}
+          </span>
+        `).join("");
+    }
+
+    function runAnswerPills(result) {
+      const answer = result?.answer;
+      if (!answerHasValue(answer)) return `<span class="pill">no answer</span>`;
+      const keys = ["decision", "risk"].filter(key => answer[key] !== undefined && answer[key] !== null);
+      if (!keys.length) return `<span class="pill green">answer</span>`;
+      return keys.map(key => `
+        <span class="pill ${answerPillClass(key, answer[key])}">${esc(answerValue(answer[key]))}</span>
+      `).join("");
+    }
+
+    function renderAnswerField(label, value) {
+      if (value === undefined || value === null || answerValue(value) === "") return "";
+      if (Array.isArray(value)) {
+        return `
+          <div class="answer-field">
+            <div class="answer-label">${esc(label)}</div>
+            <ul class="answer-list">
+              ${value.map(entry => `<li>${esc(entry)}</li>`).join("")}
+            </ul>
+          </div>
+        `;
+      }
+      return `
+        <div class="answer-field">
+          <div class="answer-label">${esc(label)}</div>
+          <p class="answer-text">${esc(value)}</p>
+        </div>
+      `;
+    }
+
+    function renderAnswerCard(run, result) {
+      const answer = result?.answer;
+      const active = state.activeRun === run.run ? "active" : "";
+      if (!result) {
+        return `
+          <div class="answer-card ${active}">
+            <div class="answer-head">
+              <strong>${esc(run.label)}</strong>
+              <small>unscored</small>
+            </div>
+            <div class="answer-body"><div class="answer-empty">No result collected for this task.</div></div>
+          </div>
+        `;
+      }
+      if (!answerHasValue(answer)) {
+        return `
+          <div class="answer-card ${active}">
+            <div class="answer-head">
+              <strong>${esc(run.label)}</strong>
+              <small>${esc(fmt(result.reward))} ${esc(result.difficulty || "")}</small>
+            </div>
+            <div class="answer-body"><div class="answer-empty">Score exists, but no answer payload was found in the archived run files.</div></div>
+          </div>
+        `;
+      }
+      return `
+        <div class="answer-card ${active}">
+          <div class="answer-head">
+            <strong>${esc(run.label)}</strong>
+            <small>${esc(fmt(result.reward))} ${esc(result.difficulty || "")}</small>
+          </div>
+          <div class="answer-body">
+            <div class="pill-row">${answerSummaryPills(answer)}</div>
+            ${renderAnswerField("Findings", answer.findings)}
+            ${renderAnswerField("Actions", answer.actions)}
+            ${renderAnswerField("Rationale", answer.rationale)}
+            ${renderAnswerField("References", answer.references)}
+            ${answer.source ? `<div class="answer-field"><div class="answer-label">Source</div><p class="answer-text">${esc(answer.source)}</p></div>` : ""}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderModelAnswers(item) {
+      const runs = state.activeRun === "__all__"
+        ? (state.data.runs || [])
+        : (state.data.runs || []).filter(run => run.run === state.activeRun);
+      if (!runs.length) return `<p class="text-block">No model runs loaded.</p>`;
+      return `
+        <div class="answer-grid">
+          ${runs.map(run => renderAnswerCard(run, item.results?.[run.run])).join("")}
+        </div>
+      `;
+    }
+
     function renderRunResults(item) {
       const runs = state.data.runs || [];
       if (!runs.length) return `<p class="text-block">No model runs loaded.</p>`;
@@ -1139,6 +1375,7 @@
                 <strong>${esc(run.label)}</strong>
                 <span>${esc(result ? fmt(result.reward) : "-")}</span>
                 <span class="pill ${difficultyClass(result?.difficulty || "unscored")}">${esc(result?.difficulty || "unscored")}</span>
+                <span class="run-answer">${runAnswerPills(result)}</span>
               </button>
             `;
           }).join("")}
@@ -1195,6 +1432,9 @@
 
           <h4>Model Results</h4>
           ${renderRunResults(item)}
+
+          <h4>Model Answers</h4>
+          ${renderModelAnswers(item)}
 
           <h4>Result Components</h4>
           ${renderComponents(result)}
