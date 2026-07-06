@@ -42,6 +42,7 @@ Current generated size: 1299 Harbor tasks from 95 source elements, 12 curated se
 Start here:
 
 - [Eval structure wiki](docs/eval-structure-wiki.md) - role families, trade jobs, role tasks, stages/states, modalities, scoring, and run workflow.
+- [Running benchmarks runbook](docs/running-benchmarks.md) - which harness per provider (GPT goes direct to OpenAI, not OpenRouter), env requirements, Harbor job configs, throughput setup, and known failure signatures.
 - [Eval structure DAG](docs/eval-structure-dag.mmd) - graph of the domain model plus source, build, validation, Harbor run, collection, and comparison flow.
 - [Gap analysis](GAP_ANALYSIS_v2.md) - current benchmark-health caveats and priority fixes before treating aggregate scores as final.
 - [Post-merge eval report](EVAL_v2.4.md) - v2.4 repair notes, run validity caveats, and recommended next evaluation order.

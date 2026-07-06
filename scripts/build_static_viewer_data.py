@@ -298,6 +298,8 @@ def base_run_label(lowered: str) -> str:
         return "GLM 5.2"
     if "gemini35" in lowered or "gemini_35" in lowered:
         return "Gemini 3.5 Flash"
+    if "kimi" in lowered:
+        return "Kimi K2.7 code"
     if "codex" in lowered:
         return "Codex GPT-5"
     return lowered.replace("_", " ")

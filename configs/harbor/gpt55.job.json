@@ -1,0 +1,21 @@
+{
+  "job_name": "gpt55_natural_<date>",
+  "n_concurrent_trials": 48,
+  "environment": {
+    "type": "docker",
+    "extra_docker_compose": [
+      "configs/harbor/apparmor-unconfined.compose.yaml"
+    ]
+  },
+  "agents": [
+    {
+      "name": "codex",
+      "model_name": "gpt-5.5"
+    }
+  ],
+  "datasets": [
+    {
+      "path": "tasks"
+    }
+  ]
+}

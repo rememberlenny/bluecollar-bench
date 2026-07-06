@@ -60,6 +60,24 @@ if [[ -z "$AGENT" || -z "$MODEL" ]]; then
   exit 2
 fi
 
+# GPT/codex runs go directly to OpenAI. A shell-level OPENAI_BASE_URL override
+# (e.g. pointing at OpenRouter) is forwarded into agent containers by Harbor
+# and silently breaks codex auth, so drop it for codex runs. Set
+# HARBOR_KEEP_OPENAI_BASE_URL=1 to opt out of this hygiene.
+if [[ "$AGENT" == codex* && -z "${HARBOR_KEEP_OPENAI_BASE_URL:-}" ]]; then
+  if [[ -n "${OPENAI_BASE_URL:-}${OPENAI_API_BASE:-}" ]]; then
+    echo "note: unsetting OPENAI_BASE_URL/OPENAI_API_BASE for codex (direct OpenAI)" >&2
+    unset OPENAI_BASE_URL OPENAI_API_BASE
+  fi
+fi
+
+# The claude CLI expects bare Anthropic model ids (claude-sonnet-5), not
+# provider-prefixed ones (anthropic/claude-sonnet-5), which it rejects at
+# runtime with a model-not-found error.
+if [[ "$AGENT" == claude-code* ]]; then
+  MODEL="${MODEL#anthropic/}"
+fi
+
 if command -v harbor >/dev/null 2>&1; then
   HARBOR_BIN="$(command -v harbor)"
 elif [[ -x ".venv/bin/harbor" ]]; then

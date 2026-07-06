@@ -31,6 +31,40 @@ max 1200 tokens; concurrency 48). GLM fails the 84 image and 44 audio tasks with
 
 Kimi K2.7 Code naturalized baseline: 1,255 scored tasks, mean reward 0.5496, 331 floors, 265 dangerous false-pass hits, and 266 alarmist false-fail hits. Its run covers text plus image, not audio.
 
+## Agentic (Harbor) runs: Sonnet 5 and GPT-5.5
+
+Sonnet 5 (claude-code agent) and GPT-5.5 (codex agent, direct OpenAI) were
+rerun as full Harbor jobs on the naturalized catalog at concurrency 48,
+joined against their coded-catalog runs (`sonnet5_20260706_064841`,
+`gpt55_full_20260706_c48_openai_merged`) over all 1,299 tasks:
+
+| Component | Sonnet 5 old -> new | GPT-5.5 old -> new |
+|---|---|---|
+| reward | 0.7793 -> 0.7815 (+0.002) | 0.7411 -> 0.7562 (+0.015) |
+| decision | 0.9646 -> 0.9507 (-0.014) | 0.9815 -> 0.9723 (-0.009) |
+| risk | 0.8237 -> 0.8137 (-0.010) | 0.8372 -> 0.8306 (-0.007) |
+| findings | 0.7648 -> 0.7858 (+0.021) | 0.7025 -> 0.7095 (+0.007) |
+| actions | 0.5035 -> 0.5121 (+0.009) | 0.3650 -> 0.3868 (+0.022) |
+| s3 (progress/value) | 0.4503 -> 0.8122 (+0.362) | 0.1678 -> 0.8222 (+0.654) |
+| dangerous_false_pass tripped | 3 -> 0 | 8 -> 6 |
+| alarmist_false_fail tripped | 17 -> 17 | 4 -> 8 |
+
+The agentic runs repeat the API-run pattern: large `percent_complete`
+schema-clarity recovery, slight decision dip, small aggregate gain. Sonnet 5
+posts the strongest naturalized full-suite reward (0.7815) and is the only
+model with zero dangerous false passes on the naturalized catalog.
+
+Naturalized-catalog leaderboard (mean reward, full suite unless noted):
+
+| Model | Harness | Mean reward |
+|---|---|---:|
+| Sonnet 5 | Harbor / claude-code | 0.7815 |
+| GPT-5.5 | Harbor / codex (OpenAI direct) | 0.7562 |
+| Gemini 3.5 Flash | Vertex API | 0.7468 |
+| GLM 5.2 (text only) | OpenRouter API | 0.7499 |
+| DeepSeek v4 Pro (text only) | OpenRouter API | 0.6806 |
+| Kimi K2.7 Code (text+image) | OpenRouter API | 0.5496 |
+
 ## Reading
 
 1. **The dominant effect is schema clarity, not content difficulty.**
@@ -75,7 +109,7 @@ Kimi K2.7 Code naturalized baseline: 1,255 scored tasks, mean reward 0.5496, 331
 - The comparison joins by `legacy_id`; both catalogs contain the same
   1,299 logical items with identical ground truth, so component
   deltas are attributable to presentation, not item substance.
-- Sonnet 5 and GPT-5.5 do not yet have naturalized-catalog reruns in
-  this registry, so their current leaderboard rows are still coded
-  catalog results.
 - Kimi has no coded-catalog predecessor in this registry.
+- The naturalized Sonnet/GPT runs use the updated task image (claude-code
+  preinstalled) and current agent CLI versions, so a small part of their
+  deltas may come from agent-version drift rather than catalog wording.

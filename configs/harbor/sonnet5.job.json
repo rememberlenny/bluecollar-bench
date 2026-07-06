@@ -1,0 +1,15 @@
+{
+  "job_name": "sonnet5_natural_<date>",
+  "n_concurrent_trials": 48,
+  "agents": [
+    {
+      "name": "claude-code",
+      "model_name": "claude-sonnet-5"
+    }
+  ],
+  "datasets": [
+    {
+      "path": "tasks"
+    }
+  ]
+}
