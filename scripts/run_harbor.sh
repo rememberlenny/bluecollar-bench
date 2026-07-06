@@ -17,7 +17,7 @@ EOF
 AGENT=""
 MODEL=""
 TASK_ID=""
-N_CONCURRENT="4"
+N_CONCURRENT="48"
 EXTRA_ARGS=()
 
 while [[ $# -gt 0 ]]; do

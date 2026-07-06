@@ -30,6 +30,9 @@ COMPONENT_KEYS = [
 ANSWER_KEYS = [
     "decision",
     "risk",
+    "work_stage",
+    "component_conditions",
+    "percent_complete",
     "s1_state",
     "s2_conditions",
     "s3_percent",
@@ -274,6 +277,11 @@ def short_result(row: dict[str, Any]) -> dict[str, Any]:
 
 def run_label(run_id: str) -> str:
     lowered = run_id.lower()
+    suffix = " (naturalized)" if "natural" in lowered else ""
+    return base_run_label(lowered) + suffix
+
+
+def base_run_label(lowered: str) -> str:
     if "gpt55_missing" in lowered or "delta" in lowered:
         return "GPT-5.5 text delta"
     if "gpt55" in lowered and "merged" in lowered:
@@ -292,7 +300,7 @@ def run_label(run_id: str) -> str:
         return "Gemini 3.5 Flash"
     if "codex" in lowered:
         return "Codex GPT-5"
-    return run_id.replace("_", " ")
+    return lowered.replace("_", " ")
 
 
 def difficulty_bucket(reward: Any) -> str:

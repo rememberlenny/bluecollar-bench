@@ -1,9 +1,9 @@
 {
-  "catalog_sha256": "d2fd79b23d2469a36d6a19eb8348db11a2658f9cd3118f79dcf1e5ab17b2a98e",
-  "collected_at": "2026-07-06T19:31:51+00:00",
-  "git_commit": "e03b014dd883fd37c4e45cad33bcecbcb4e4462f",
-  "path": "benchmark/runs/gpt55_full_20260706_c48_openai_merged",
-  "run": "gpt55_full_20260706_c48_openai_merged",
-  "source_runs_dir": "jobs/gpt55_full_20260705_5b2c706 + jobs/gpt55_missing_text_rebalance_20260706_c48_openai",
+  "catalog_sha256": "aa0631b805deaf095fb665a82992fb11102cba6e1c7b38752726b5d3d2f8cb77",
+  "collected_at": "2026-07-06T21:13:34+00:00",
+  "git_commit": "b5736b9f5eb40f21d9344c69cebf46f6a4e1dc34",
+  "path": "benchmark/runs/glm52_natural_20260706",
+  "run": "glm52_natural_20260706",
+  "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/openrouter_glm52_natural_20260706",
   "tasks_scored": 1299
 }

@@ -65,7 +65,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--collect-run", help="Also collect raw rewards into benchmark/runs/<name>")
     parser.add_argument("--overwrite", action="store_true", help="Replace an existing raw run directory")
     parser.add_argument("--skip-existing", action="store_true", help="Skip tasks that already have reward.json")
-    parser.add_argument("--n-concurrent", "-n", type=int, default=1, help="Parallel OpenRouter requests")
+    parser.add_argument("--n-concurrent", "-n", type=int, default=48, help="Parallel OpenRouter requests")
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--max-tokens", type=int, default=1200)
     parser.add_argument("--timeout", type=float, default=180.0, help="HTTP timeout in seconds")
