@@ -272,7 +272,7 @@ def vertex_model_path(model: str, args: argparse.Namespace) -> str:
 def endpoint(model: str, args: argparse.Namespace, key: str | None = None) -> str:
     if args.backend == "vertex":
         quoted_model = urllib.parse.quote(vertex_model_path(model, args), safe="/")
-        host = f"https://{args.location}-aiplatform.googleapis.com"
+        host = "https://aiplatform.googleapis.com" if args.location == "global" else f"https://{args.location}-aiplatform.googleapis.com"
         return f"{host}/{VERTEX_API_VERSION}/{quoted_model}:generateContent"
 
     quoted_model = urllib.parse.quote(developer_model_path(model), safe="/")

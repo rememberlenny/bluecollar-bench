@@ -192,8 +192,8 @@ python3 scripts/run_gemini.py \
   --backend vertex \
   --auth oauth \
   --google-cloud-project "$GOOGLE_CLOUD_PROJECT" \
-  --location us-central1 \
-  --model gemini-2.5-pro \
+  --location global \
+  --model gemini-3.5-flash \
   --task v2-cpm-trap-001
 ```
 
@@ -219,8 +219,8 @@ python3 scripts/run_gemini.py \
   --backend vertex \
   --auth oauth \
   --google-cloud-project "$GOOGLE_CLOUD_PROJECT" \
-  --location us-central1 \
-  --model gemini-2.5-pro \
+  --location global \
+  --model gemini-3.5-flash \
   --all \
   --n-concurrent 4
 ```
