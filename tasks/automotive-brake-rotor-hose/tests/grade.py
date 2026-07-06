@@ -13,6 +13,9 @@ Changes vs. v1:
   alarmist_false_fail (item=pass, answer=fail) are scored separately.
 - Empty s2_expected means the answer's s2_conditions should also be empty.
 - s3 percent scored with +/-15 point tolerance when the item provides it.
+- Answers use the natural field names work_stage / component_conditions /
+  percent_complete; the legacy names s1_state / s2_conditions / s3_percent
+  are still accepted.
 """
 from __future__ import annotations
 
@@ -31,6 +34,20 @@ METRIC_KEYS = [
     "findings", "actions", "forbidden_clean",
     "dangerous_false_pass", "alarmist_false_fail",
 ]
+
+
+ANSWER_ALIASES = {
+    "work_stage": ("work_stage", "s1_state"),
+    "component_conditions": ("component_conditions", "s2_conditions"),
+    "percent_complete": ("percent_complete", "s3_percent"),
+}
+
+
+def answer_field(answer: dict, field: str, default: object = None) -> object:
+    for key in ANSWER_ALIASES.get(field, (field,)):
+        if key in answer:
+            return answer[key]
+    return default
 
 
 def normalize(value: object) -> str:
@@ -125,7 +142,7 @@ def main() -> int:
     mode = item.get("findings_mode", "all")
 
     # --- schema ---
-    schema_fields = ["decision", "risk", "s1_state", "s2_conditions", "s3_percent", "findings", "actions"]
+    schema_fields = ["decision", "risk", "work_stage", "component_conditions", "percent_complete", "findings", "actions"]
     for expected_key, answer_key in [
         ("expected_value", "value"),
         ("expected_rate", "rate"),
@@ -135,7 +152,7 @@ def main() -> int:
     ]:
         if expected_key in item:
             schema_fields.append(answer_key)
-    schema = sum(1 for f in schema_fields if f in answer) / len(schema_fields)
+    schema = sum(1 for f in schema_fields if any(k in answer for k in ANSWER_ALIASES.get(f, (f,)))) / len(schema_fields)
 
     # --- decision ---
     item_decision = normalize(item.get("decision", "fail"))
@@ -159,11 +176,11 @@ def main() -> int:
         risk = 0.0
 
     # --- S1 ---
-    s1 = 1.0 if normalize(item.get("s1_state", "")) == normalize(answer.get("s1_state", "")) else 0.0
+    s1 = 1.0 if normalize(item.get("s1_state", "")) == normalize(answer_field(answer, "work_stage", "")) else 0.0
 
     # --- S2 (empty expected => answer should also be empty) ---
     expected_s2 = {normalize(x) for x in item.get("s2_expected", [])}
-    ans_s2 = {normalize(x) for x in (answer.get("s2_conditions") or []) if isinstance(x, str)}
+    ans_s2 = {normalize(x) for x in (answer_field(answer, "component_conditions") or []) if isinstance(x, str)}
     if not expected_s2:
         s2 = 1.0 if not ans_s2 else max(0.0, 1.0 - 0.5 * len(ans_s2))
     else:
@@ -174,7 +191,8 @@ def main() -> int:
     # --- S3 percent or modality-native scalar/temporal answers ---
     progress_s3 = 1.0
     if isinstance(item.get("s3_percent"), (int, float)):
-        progress_s3 = 1.0 if isinstance(answer.get("s3_percent"), (int, float)) and abs(item["s3_percent"] - answer["s3_percent"]) <= 15 else 0.0
+        ans_percent = answer_field(answer, "percent_complete")
+        progress_s3 = 1.0 if isinstance(ans_percent, (int, float)) and abs(item["s3_percent"] - ans_percent) <= 15 else 0.0
 
     s3_parts: list[float] = []
     if isinstance(item.get("expected_value"), (int, float)):
@@ -202,7 +220,7 @@ def main() -> int:
     scoped = normalize({
         "findings": answer.get("findings"),
         "actions": answer.get("actions"),
-        "s2_conditions": answer.get("s2_conditions"),
+        "component_conditions": answer_field(answer, "component_conditions"),
     })
     full = normalize(answer)
 

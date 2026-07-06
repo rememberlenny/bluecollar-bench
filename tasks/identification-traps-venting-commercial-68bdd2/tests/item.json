@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "flat/horizontal vent below flood rim",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-201 Traps & venting",
+  "element_code": "P-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "identification-traps-venting-commercial-68bdd2",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-p-201-id-traps-venting",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "trap",
+      "vent",
+      "ipc"
+    ],
+    [
+      "siphon",
+      "sewer",
+      "gas",
+      "seal"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Traps & venting, part of the Piping & Plumbing scope. The observed field condition is: flat/horizontal vent below flood rim. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: IPC/UPC.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IPC/UPC"
+  ],
+  "subcategory": "2.2.2 Plumbing - DWV (T2/T3)",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T2",
+  "title": "Identification: Traps & venting (commercial project)"
+}

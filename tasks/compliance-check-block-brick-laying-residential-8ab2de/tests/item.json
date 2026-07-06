@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "head joints unfilled (visible voids)",
+  "discipline": "2.5 Concrete & Masonry",
+  "discipline_code": "2.5",
+  "element": "C-301 Block/brick laying",
+  "element_code": "C-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-block-brick-laying-residential-8ab2de",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-c-301-cc-block-brick-laying",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "tms",
+      "joint",
+      "reinforcement"
+    ],
+    [
+      "penetration",
+      "water",
+      "cracking",
+      "bond"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Block/brick laying, part of the Concrete & Masonry scope. The observed field condition is: head joints unfilled (visible voids). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: TMS 402/602.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "TMS 402/602"
+  ],
+  "subcategory": "2.5.3 Masonry",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T3",
+  "title": "Compliance check: Block/brick laying (residential job)"
+}

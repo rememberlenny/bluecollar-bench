@@ -356,7 +356,7 @@ def prompt_for(task_type: str) -> str:
         "TS": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
         "HAZ": "Identify the safety hazards, their severity, and the immediate controls required.",
         "ME": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
-        "PA": "Assess lifecycle state, percent complete, defects, and remaining work.",
+        "PA": "Assess how far along the work is, the percent complete, any defects, and the remaining work.",
         "DOC": "Compare the field condition against the referenced document, tag, drawing, or standard.",
         "TRD": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
         "RES": "Assess the disrupted lookahead schedule: what can proceed, what is delayed, and which recovery plan is valid.",

@@ -1,0 +1,61 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-201 EMT bending & installation",
+  "element_code": "E-201",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "measurement-check-emt-bending-installation-industrial-384cdc",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-me-t1-e-201-002",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "tolerance"
+    ],
+    [
+      "verified"
+    ],
+    [
+      "acceptable"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The measurement record for EMT bending & installation shows the as-left reading inside the posted limit. The gauge or scale is readable, the setup is stable, and the same value is entered on the inspection form. Reference material on hand: NEC Art. 358, Ch. 9 (fill).",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 358",
+    "Ch. 9 (fill)"
+  ],
+  "subcategory": "2.1.2 Raceway",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T1",
+  "title": "Measurement check: EMT bending & installation (industrial site)"
+}

@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "trench box void behind shield",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-101 Trench protection",
+  "element_code": "U-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-trench-protection-commercial-c1a4c2",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-u-101-doc-trench-protection",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "subpart",
+      "p",
+      "protective"
+    ],
+    [
+      "collapse",
+      "engulfment",
+      "fatality",
+      "cave"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Trench protection, part of the Sitework & Utilities scope. The observed field condition is: trench box void behind shield. The work is through its testing or inspection step. Reference material on hand: OSHA 1926 Subpart P. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart P"
+  ],
+  "subcategory": "2.11.1 Excavation & Trenching",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "Document check: Trench protection (commercial project)"
+}

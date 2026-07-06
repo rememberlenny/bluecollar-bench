@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "arc-flash rating below task category (label vs",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-105 PPE selection",
+  "element_code": "X-105",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-ppe-selection-service-414bf7",
+  "leakage_ratio": 0.57,
+  "legacy_id": "t4-x-105-ts-ppe-selection",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "70e",
+      "category",
+      "class"
+    ],
+    [
+      "arc",
+      "flash",
+      "exposure",
+      "inadequate"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is PPE selection, part of the Safety & Rigging scope. The observed field condition is: arc-flash rating below task category (label vs. clothing - DOC+ID). The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: NFPA 70E, OSHA 1910 Subpart I.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "NFPA 70E",
+    "OSHA 1910 Subpart I"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T4",
+  "title": "Tool and material selection: PPE selection (service call)"
+}

@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "missing jack studs",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-101 Structural framing",
+  "element_code": "F-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-structural-framing-residential-f7e314",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-f-101-doc-structural-framing",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "irc",
+      "span",
+      "load"
+    ],
+    [
+      "deflection",
+      "capacity",
+      "sag",
+      "failure"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Structural framing, part of the Carpentry & Finishes scope. The observed field condition is: missing jack studs. The work is through its testing or inspection step. Reference material on hand: IRC R502, R602. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R502",
+    "R602"
+  ],
+  "subcategory": "2.6.1 Rough Framing",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T3",
+  "title": "Document check: Structural framing (residential job)"
+}

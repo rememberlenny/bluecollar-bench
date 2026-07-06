@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "disconnect not within sight",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-105 Motor circuits & disconnects",
+  "element_code": "E-105",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-motor-circuits-disconnects-production-7b99ca",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t5-e-105-cc-motor-circuits-disconnects",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "430",
+      "overload",
+      "disconnect"
+    ],
+    [
+      "maintenance",
+      "unexpected",
+      "start",
+      "burnout"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Motor circuits & disconnects, part of the Electrical scope. The observed field condition is: disconnect not within sight. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: NEC Art. 430.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 430"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T5",
+  "title": "Compliance check: Motor circuits & disconnects (production floor)"
+}

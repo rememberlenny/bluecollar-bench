@@ -1,0 +1,69 @@
+{
+  "decision": "fail",
+  "defect": "meter jaws burned/corroded",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-101 Service entrance & metering",
+  "element_code": "E-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-service-entrance-metering-residential-c964ea",
+  "leakage_ratio": 0.33,
+  "legacy_id": "t3-e-101-doc-service-entrance-metering",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "service",
+      "230"
+    ],
+    [
+      "water",
+      "intrusion",
+      "overheat",
+      "utility"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Service entrance & metering, part of the Electrical scope. The observed field condition is: meter jaws burned/corroded. The work is through its testing or inspection step. Reference material on hand: NEC Art. 230. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 230"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T3",
+  "title": "Document check: Service entrance & metering (residential job)"
+}

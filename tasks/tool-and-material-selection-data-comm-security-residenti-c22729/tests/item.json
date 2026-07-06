@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "untwisted pairs at termination >\u00bd in.",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-702 Data/comm & security",
+  "element_code": "E-702",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-data-comm-security-residenti-c22729",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-e-702-ts-data-comm-security",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "568",
+      "category",
+      "plenum"
+    ],
+    [
+      "crosstalk",
+      "performance",
+      "smoke",
+      "toxicity"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Data/comm & security, part of the Electrical scope. The observed field condition is: untwisted pairs at termination >\u00bd in.. The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: TIA-568, NEC 800.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "TIA-568",
+    "NEC 800"
+  ],
+  "subcategory": "2.1.7 Low Voltage & Specialty",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T3",
+  "title": "Tool and material selection: Data/comm & security (residential job)"
+}

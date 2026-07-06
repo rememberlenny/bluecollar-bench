@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "no bushing on RMC where required",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-202 Rigid & PVC conduit",
+  "element_code": "E-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-rigid-pvc-conduit-commercial-2dcf83",
+  "leakage_ratio": 0.38,
+  "legacy_id": "t2-e-202-ts-rigid-pvc-conduit",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "352",
+      "344",
+      "expansion",
+      "bushing"
+    ],
+    [
+      "separation",
+      "abrasion",
+      "joint",
+      "failure"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Rigid & PVC conduit, part of the Electrical scope. The observed field condition is: no bushing on RMC where required. The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: NEC Art. 344, 352.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 344",
+    "352"
+  ],
+  "subcategory": "2.1.2 Raceway",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T2",
+  "title": "Tool and material selection: Rigid & PVC conduit (commercial project)"
+}

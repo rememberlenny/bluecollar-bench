@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "alignment done before final pipe connection (pipe strain - SEQ/TRD)",
+  "discipline": "2.7 Equipment & Machinery",
+  "discipline_code": "2.7",
+  "element": "M-201 Shaft alignment",
+  "element_code": "M-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-shaft-alignment-production-51fc2a",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t5-m-201-doc-shaft-alignment",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "tolerance",
+      "soft",
+      "foot"
+    ],
+    [
+      "vibration",
+      "coupling",
+      "bearing",
+      "wear"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Shaft alignment, part of the Equipment & Machinery scope. The observed field condition is: alignment done before final pipe connection (pipe strain - SEQ/TRD). The work is through its testing or inspection step. Reference material on hand: API 686, laser system manuals. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "API 686",
+    "laser system manuals"
+  ],
+  "subcategory": "2.7.2 Alignment",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T5",
+  "title": "Document check: Shaft alignment (production floor)"
+}

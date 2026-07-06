@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "missing guides near expansion loops",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-103 Hangers & supports",
+  "element_code": "P-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "fault-diagnosis-hangers-supports-industrial-9dadf7",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t1-p-103-fd-bf-002-hangers-supports",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "support",
+      "travel",
+      "guide"
+    ],
+    [
+      "stress",
+      "sag",
+      "vibration",
+      "load"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Hangers & supports, part of the Piping & Plumbing scope. The observed field condition is: missing guides near expansion loops. The work is in service as an operating asset. Reference material on hand: project support standards, MSS SP-58.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "project support standards",
+    "MSS SP-58"
+  ],
+  "subcategory": "2.2.1 Process Piping (T1/T2)",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T1",
+  "title": "Fault diagnosis: Hangers & supports (industrial site)"
+}

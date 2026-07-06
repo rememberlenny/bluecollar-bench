@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "pump pumping toward expansion tank (point-of-no-pressure-change violated)",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-401 Boiler & pump piping",
+  "element_code": "P-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-boiler-pump-piping-commercial-dfe006",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-p-401-fd-boiler-pump-piping",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "expansion",
+      "point",
+      "check"
+    ],
+    [
+      "cavitation",
+      "air",
+      "circulation",
+      "gravity"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Boiler & pump piping, part of the Piping & Plumbing scope. The observed field condition is: pump pumping toward expansion tank (point-of-no-pressure-change violated). The work is in service as an operating asset. Reference material on hand: mfr manuals, hydronics references.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr manuals",
+    "hydronics references"
+  ],
+  "subcategory": "2.2.4 Hydronic & Steam",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T2",
+  "title": "Fault diagnosis: Boiler & pump piping (commercial project)"
+}

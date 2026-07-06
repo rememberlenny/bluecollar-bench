@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "no panel schedule",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-102 Panelboard installation & makeup",
+  "element_code": "E-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "progress-assessment-panelboard-installation-makeup-comme-f12c9c",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-e-102-pa-panelboard-installation-makeup",
+  "media": [],
+  "modality": "text",
+  "prompt": "Assess how far along the work is, the percent complete, any defects, and the remaining work.",
+  "required_actions": [
+    [
+      "complete"
+    ],
+    [
+      "remaining"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "408",
+      "listing",
+      "termination"
+    ],
+    [
+      "overheat",
+      "fault",
+      "arc",
+      "misoperation"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Panelboard installation & makeup, part of the Electrical scope. The observed field condition is: no panel schedule. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: NEC Art. 408, 110.26 (working clearance), 200.4. Treat this as roughly 70 percent complete until defects are corrected.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 408",
+    "110.26 (working clearance)",
+    "200.4"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T2",
+  "title": "Progress assessment: Panelboard installation & makeup (commercial project)"
+}

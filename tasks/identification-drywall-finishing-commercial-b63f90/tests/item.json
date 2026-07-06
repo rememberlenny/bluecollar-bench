@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "no gap at floor",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-301 Drywall & finishing",
+  "element_code": "F-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "identification-drywall-finishing-commercial-b63f90",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-f-301-id-drywall-finishing",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "ga-216",
+      "spacing",
+      "rated"
+    ],
+    [
+      "cracking",
+      "sag",
+      "fire",
+      "integrity"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Drywall & finishing, part of the Carpentry & Finishes scope. The observed field condition is: no gap at floor. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: GA-216, IRC.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "GA-216",
+    "IRC"
+  ],
+  "subcategory": "2.6.3 Interior Finish",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T2",
+  "title": "Identification: Drywall & finishing (commercial project)"
+}

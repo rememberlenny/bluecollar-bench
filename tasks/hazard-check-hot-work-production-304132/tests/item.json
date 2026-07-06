@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "combustibles within radius uncovered",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-104 Hot work",
+  "element_code": "X-104",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "hazard-check-hot-work-production-304132",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t5-x-104-haz-hot-work",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "51b",
+      "watch",
+      "permit"
+    ],
+    [
+      "smolder",
+      "ignition",
+      "fire",
+      "combustible"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Hot work, part of the Safety & Rigging scope. The observed field condition is: combustibles within radius uncovered. The work is actively in progress. Reference material on hand: NFPA 51B, OSHA 1926 Subpart J.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "NFPA 51B",
+    "OSHA 1926 Subpart J"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T5",
+  "title": "Hazard check: Hot work (production floor)"
+}

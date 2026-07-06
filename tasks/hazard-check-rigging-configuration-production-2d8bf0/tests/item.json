@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "shackle side-loaded",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-301 Rigging configuration",
+  "element_code": "S-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "hazard-check-rigging-configuration-production-2d8bf0",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t5-s-301-haz-rigging-configuration",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "b30",
+      "angle",
+      "rating"
+    ],
+    [
+      "tension",
+      "overload",
+      "capacity",
+      "failure"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Rigging configuration, part of the Structural & Ironwork scope. The observed field condition is: shackle side-loaded. The work is actively in progress. Reference material on hand: ASME B30, OSHA 1926.251.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ASME B30",
+    "OSHA 1926.251"
+  ],
+  "subcategory": "2.4.3 Rigging & Machinery Moving",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T5",
+  "title": "Hazard check: Rigging configuration (production floor)"
+}

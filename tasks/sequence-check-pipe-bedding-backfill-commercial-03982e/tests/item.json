@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "missing tracer wire on non-metallic",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-202 Pipe bedding & backfill",
+  "element_code": "U-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-pipe-bedding-backfill-commercial-03982e",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-u-202-seq-pipe-bedding-backfill",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "bedding",
+      "lift",
+      "compaction"
+    ],
+    [
+      "settlement",
+      "point",
+      "load",
+      "deflection"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Pipe bedding & backfill, part of the Sitework & Utilities scope. The observed field condition is: missing tracer wire on non-metallic. The work is actively in progress. Reference material on hand: project specs, IPC 306.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "project specs",
+    "IPC 306"
+  ],
+  "subcategory": "2.11.2 Underground Utilities",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T2",
+  "title": "Sequence check: Pipe bedding & backfill (commercial project)"
+}

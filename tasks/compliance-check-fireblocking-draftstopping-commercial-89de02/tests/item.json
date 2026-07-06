@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "open stud bays at floor transitions",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-103 Fireblocking & draftstopping",
+  "element_code": "F-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-fireblocking-draftstopping-commercial-89de02",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-f-103-cc-fireblocking-draftstopping",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "302",
+      "fireblocking",
+      "rated"
+    ],
+    [
+      "spread",
+      "chimney",
+      "concealed",
+      "flame"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Fireblocking & draftstopping, part of the Carpentry & Finishes scope. The observed field condition is: open stud bays at floor transitions. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: IRC R302.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R302"
+  ],
+  "subcategory": "2.6.1 Rough Framing",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T2",
+  "title": "Compliance check: Fireblocking & draftstopping (commercial project)"
+}

@@ -17,6 +17,7 @@
   "generation": "curated",
   "id": "loto-taped-breaker-no-try",
   "leakage_ratio": 0.0,
+  "legacy_id": "loto-taped-breaker-no-try",
   "media": [],
   "modality": "text",
   "prompt": "Evaluate the LOTO sequence and state the minimum corrections before work can continue.",

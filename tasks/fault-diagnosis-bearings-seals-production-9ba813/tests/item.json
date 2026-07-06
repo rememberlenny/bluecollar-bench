@@ -1,0 +1,61 @@
+{
+  "decision": "fail",
+  "discipline": "2.7 Equipment & Machinery",
+  "discipline_code": "2.7",
+  "element": "M-301 Bearings & seals",
+  "element_code": "M-301",
+  "expected_sound_source": [
+    "bearing",
+    "bearing housing",
+    "conveyor bearing"
+  ],
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "immediate",
+      "shutdown"
+    ]
+  ],
+  "generation": "synthetic-audio-v2",
+  "id": "fault-diagnosis-bearings-seals-production-9ba813",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-audio-bearing-004",
+  "media": [
+    "audio_bearing_004.wav"
+  ],
+  "modality": "audio",
+  "prompt": "Diagnose the rotating-element condition from the sound. Pay attention to whether the machine bed noise is clean, impact-like, or rough, then give urgency and disposition.",
+  "reduction_test": "The answer depends on transient ticks/growl over rotating-machine hum; text cannot preserve onset rate or severity.",
+  "required_actions": [
+    [
+      "schedule",
+      "plan",
+      "vibration",
+      "trend"
+    ]
+  ],
+  "required_findings": [
+    [
+      "tick",
+      "periodic",
+      "early",
+      "faint"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "worn"
+  ],
+  "s3_percent": 100,
+  "scenario": "The audio clip is a stethoscope-style recording at the bearing housing of a slow-turning conveyor drive running at constant speed.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "SKF/Timken guides"
+  ],
+  "subcategory": "2.7.3 Rotating Equipment",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis (audio)",
+  "tier": "T5",
+  "title": "Fault diagnosis: Bearings & seals (audio, production floor)"
+}

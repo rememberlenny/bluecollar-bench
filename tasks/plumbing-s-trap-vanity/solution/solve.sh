@@ -6,12 +6,12 @@ cat > "$APP_DIR/answer.json" <<'JSON'
 {
   "decision": "fail",
   "risk": "high",
-  "s1_state": "rough-complete",
-  "s2_conditions": [
+  "work_stage": "rough-complete",
+  "component_conditions": [
     "installed-defective",
     "non-compliant"
   ],
-  "s3_percent": 70,
+  "percent_complete": 70,
   "findings": [
     "s-trap",
     "siphon trap seal",

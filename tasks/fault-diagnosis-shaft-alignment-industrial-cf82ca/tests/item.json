@@ -1,0 +1,62 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.7 Equipment & Machinery",
+  "discipline_code": "2.7",
+  "element": "M-201 Shaft alignment",
+  "element_code": "M-201",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "fault-diagnosis-shaft-alignment-industrial-cf82ca",
+  "leakage_ratio": 0.33,
+  "legacy_id": "v2-text-nmi-fd-t1-m-201-007",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "ambiguous"
+    ],
+    [
+      "test"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-service",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "Shaft alignment is reported as intermittent, but the clip starts after the symptom has stopped. No trend log, load reading, or repeat test is included, so the failure mode cannot be separated from normal cycling. Reference material on hand: API 686, laser system manuals.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "API 686",
+    "laser system manuals"
+  ],
+  "subcategory": "2.7.2 Alignment",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T1",
+  "title": "Fault diagnosis: Shaft alignment (industrial site)"
+}

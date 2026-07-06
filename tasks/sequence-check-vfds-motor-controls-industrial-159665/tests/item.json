@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "wrong overload class setting",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-403 VFDs & motor controls",
+  "element_code": "E-403",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-vfds-motor-controls-industrial-159665",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t1-e-403-seq-vfds-motor-controls",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "430",
+      "reactor",
+      "separation"
+    ],
+    [
+      "reflected",
+      "interference",
+      "insulation",
+      "nuisance"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is VFDs & motor controls, part of the Electrical scope. The observed field condition is: wrong overload class setting. The work is actively in progress. Reference material on hand: NEC 430, mfr manuals.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 430",
+    "mfr manuals"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T1",
+  "title": "Sequence check: VFDs & motor controls (industrial site)"
+}

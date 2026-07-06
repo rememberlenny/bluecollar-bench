@@ -1,0 +1,63 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-201 EMT bending & installation",
+  "element_code": "E-201",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "progress-assessment-emt-bending-installation-commercial-1233cc",
+  "leakage_ratio": 0.25,
+  "legacy_id": "v2-text-nmi-pa-t2-e-201-011",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "quantity",
+      "unknown"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "Photos of EMT bending & installation show several completed pieces, but the area count and remaining scope are not listed. The submitted package does not include the quantity takeoff needed to score the checkpoint. Reference material on hand: NEC Art. 358, Ch. 9 (fill).",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 358",
+    "Ch. 9 (fill)"
+  ],
+  "subcategory": "2.1.2 Raceway",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T2",
+  "title": "Progress assessment: EMT bending & installation (commercial project)"
+}

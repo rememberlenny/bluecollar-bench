@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "shims missing under base plate",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-101 Column/beam erection & plumb",
+  "element_code": "S-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "hazard-check-column-beam-erection-plumb-commercial-02cbc2",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-s-101-haz-column-beam-erection-plumb",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "stability",
+      "bracing",
+      "plumb"
+    ],
+    [
+      "collapse",
+      "buckling",
+      "load",
+      "path"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Column/beam erection & plumb, part of the Structural & Ironwork scope. The observed field condition is: shims missing under base plate. The work is actively in progress. Reference material on hand: AISC 303, OSHA 1926 Subpart R.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "AISC 303",
+    "OSHA 1926 Subpart R"
+  ],
+  "subcategory": "2.4.1 Steel Erection",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T2",
+  "title": "Hazard check: Column/beam erection & plumb (commercial project)"
+}

@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "AFCI nuisance-trip diagnosis (shared neutral)",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-402 GFCI/AFCI function & troubleshooting",
+  "element_code": "E-402",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-gfci-afci-function-troubleshooting-servic-93f886",
+  "leakage_ratio": 0.38,
+  "legacy_id": "t4-e-402-seq-gfci-afci-function-troubleshooti",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "210.8",
+      "210.12",
+      "line",
+      "load"
+    ],
+    [
+      "protection",
+      "downstream",
+      "nuisance",
+      "shock"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is GFCI/AFCI function & troubleshooting, part of the Electrical scope. The observed field condition is: AFCI nuisance-trip diagnosis (shared neutral). The work is actively in progress. Reference material on hand: NEC 210.8, 210.12.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 210.8",
+    "210.12"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T4",
+  "title": "Sequence check: GFCI/AFCI function & troubleshooting (service call)"
+}

@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "floating floor without expansion gap (buckling - FD)",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-302 Trim, cabinets, flooring",
+  "element_code": "F-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "measurement-check-trim-cabinets-flooring-residential-d6a0af",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t3-f-302-me-trim-cabinets-flooring",
+  "media": [],
+  "modality": "text",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "expansion",
+      "substrate",
+      "fastening"
+    ],
+    [
+      "buckling",
+      "deflection",
+      "pullout",
+      "movement"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Trim, cabinets, flooring, part of the Carpentry & Finishes scope. The observed field condition is: floating floor without expansion gap (buckling - FD). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: mfr instructions, TCNA. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr instructions",
+    "TCNA"
+  ],
+  "subcategory": "2.6.3 Interior Finish",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T3",
+  "title": "Measurement check: Trim, cabinets, flooring (residential job)"
+}

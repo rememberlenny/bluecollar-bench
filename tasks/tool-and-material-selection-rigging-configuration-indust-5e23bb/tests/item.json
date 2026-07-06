@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "hook latch missing/tied back",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-301 Rigging configuration",
+  "element_code": "S-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-rigging-configuration-indust-5e23bb",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t1-s-301-ts-rigging-configuration",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "b30",
+      "angle",
+      "rating"
+    ],
+    [
+      "tension",
+      "overload",
+      "capacity",
+      "failure"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Rigging configuration, part of the Structural & Ironwork scope. The observed field condition is: hook latch missing/tied back. The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: ASME B30, OSHA 1926.251.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ASME B30",
+    "OSHA 1926.251"
+  ],
+  "subcategory": "2.4.3 Rigging & Machinery Moving",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T1",
+  "title": "Tool and material selection: Rigging configuration (industrial site)"
+}

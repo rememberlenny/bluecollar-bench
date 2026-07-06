@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "brake hose twisted",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-201 Brakes",
+  "element_code": "A-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-brakes-service-787f4c",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t4-a-201-fd-brakes",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "minimum",
+      "specification",
+      "torque"
+    ],
+    [
+      "fade",
+      "pulsation",
+      "runout",
+      "distortion"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Brakes, part of the Automotive & Powertrain scope. The observed field condition is: brake hose twisted. The work is in service as an operating asset. Reference material on hand: OEM specs, FMVSS-adjacent shop practice.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM specs",
+    "FMVSS-adjacent shop practice"
+  ],
+  "subcategory": "2.9.2 Chassis",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "Fault diagnosis: Brakes (service call)"
+}

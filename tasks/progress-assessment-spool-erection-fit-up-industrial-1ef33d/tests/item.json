@@ -1,0 +1,61 @@
+{
+  "decision": "pass",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-101 Spool erection & fit-up",
+  "element_code": "P-101",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "progress-assessment-spool-erection-fit-up-industrial-1ef33d",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-pa-t1-p-101-005",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "milestone"
+    ],
+    [
+      "substantially"
+    ],
+    [
+      "ready"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Progress photos for Spool erection & fit-up show the current checkpoint scope finished for this area. The remaining visible work is cleanup, labeling, or follow-on finish work outside the checkpoint being scored. Reference material on hand: ASME B31.3, project iso drawings.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ASME B31.3",
+    "project iso drawings"
+  ],
+  "subcategory": "2.2.1 Process Piping (T1/T2)",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T1",
+  "title": "Progress assessment: Spool erection & fit-up (industrial site)"
+}

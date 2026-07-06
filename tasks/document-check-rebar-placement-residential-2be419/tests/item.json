@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "wrong bar size vs",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-201 Rebar placement",
+  "element_code": "S-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-rebar-placement-residential-2be419",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-s-201-doc-rebar-placement",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "aci",
+      "cover",
+      "development"
+    ],
+    [
+      "corrosion",
+      "bond",
+      "capacity",
+      "spall"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Rebar placement, part of the Structural & Ironwork scope. The observed field condition is: wrong bar size vs. schedule (deformation count/size - ID+DOC). The work is through its testing or inspection step. Reference material on hand: ACI 318, ACI 117, placing drawings. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ACI 318",
+    "ACI 117",
+    "placing drawings"
+  ],
+  "subcategory": "2.4.2 Reinforcing",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T3",
+  "title": "Document check: Rebar placement (residential job)"
+}

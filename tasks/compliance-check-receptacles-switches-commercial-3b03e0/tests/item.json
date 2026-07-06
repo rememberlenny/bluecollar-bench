@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "reversed polarity",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-401 Receptacles & switches",
+  "element_code": "E-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-receptacles-switches-commercial-3b03e0",
+  "leakage_ratio": 0.43,
+  "legacy_id": "t2-e-401-cc-receptacles-switches",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "406",
+      "210.8",
+      "gfci"
+    ],
+    [
+      "shock",
+      "polarity",
+      "ground",
+      "protection"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Receptacles & switches, part of the Electrical scope. The observed field condition is: reversed polarity. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: NEC 210.8, 406.4, 406.9.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 210.8",
+    "406.4",
+    "406.9"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T2",
+  "title": "Compliance check: Receptacles & switches (commercial project)"
+}

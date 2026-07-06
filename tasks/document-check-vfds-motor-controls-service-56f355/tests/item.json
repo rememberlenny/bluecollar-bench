@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "control wiring in same raceway as power",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-403 VFDs & motor controls",
+  "element_code": "E-403",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-vfds-motor-controls-service-56f355",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t4-e-403-doc-vfds-motor-controls",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "430",
+      "reactor",
+      "separation"
+    ],
+    [
+      "reflected",
+      "interference",
+      "insulation",
+      "nuisance"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is VFDs & motor controls, part of the Electrical scope. The observed field condition is: control wiring in same raceway as power. The work is through its testing or inspection step. Reference material on hand: NEC 430, mfr manuals. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 430",
+    "mfr manuals"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T4",
+  "title": "Document check: VFDs & motor controls (service call)"
+}

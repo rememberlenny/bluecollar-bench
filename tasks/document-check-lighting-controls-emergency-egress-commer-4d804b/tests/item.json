@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "3-way miswire diagnosis",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-502 Lighting controls & emergency egress",
+  "element_code": "E-502",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-lighting-controls-emergency-egress-commer-4d804b",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-e-502-doc-lighting-controls-emergency-egre",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "700",
+      "egress",
+      "unswitched"
+    ],
+    [
+      "outage",
+      "evacuation",
+      "life",
+      "safety"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Lighting controls & emergency egress, part of the Electrical scope. The observed field condition is: 3-way miswire diagnosis. The work is through its testing or inspection step. Reference material on hand: NEC 700, NFPA 101. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 700",
+    "NFPA 101"
+  ],
+  "subcategory": "2.1.5 Lighting",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "Document check: Lighting controls & emergency egress (commercial project)"
+}

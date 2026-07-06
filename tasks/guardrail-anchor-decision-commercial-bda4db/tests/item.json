@@ -1,0 +1,57 @@
+{
+  "decision": "fail",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-102 Fall protection",
+  "element_code": "X-102",
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "acceptable",
+      "for",
+      "short"
+    ]
+  ],
+  "generation": "curated-v2-trd",
+  "id": "guardrail-anchor-decision-commercial-bda4db",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-trd-x102-t2-guardrail-tieoff",
+  "media": [],
+  "modality": "text",
+  "prompt": "Judge whether this tie-off is acceptable for a five-minute task. Address the difference between guardrail strength and anchorage requirements.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "relocate",
+      "engineered",
+      "proper"
+    ]
+  ],
+  "required_findings": [
+    [
+      "not rated anchorage"
+    ],
+    [
+      "tie off unacceptable"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "non-compliant"
+  ],
+  "s3_percent": 40,
+  "scenario": "A worker leaning over a roof edge to fasten trim has clipped a lanyard to the top rail of a temporary guardrail, explaining that the nearest engineered anchor is forty feet away and the task takes five minutes. The guardrail is built to standard guardrail strength requirements, not personal fall arrest anchorage ratings.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1926.502"
+  ],
+  "subcategory": "2.12 Cross-cutting",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T2",
+  "title": "Guardrail anchor decision (commercial project)"
+}

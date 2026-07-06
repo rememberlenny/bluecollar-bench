@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "aux heat locked on",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-401 Thermostats & sequences",
+  "element_code": "H-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-thermostats-sequences-residential-ea00d5",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-h-401-doc-thermostats-sequences",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "configuration",
+      "sequence",
+      "terminal"
+    ],
+    [
+      "reversed",
+      "aux",
+      "comfort",
+      "efficiency"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Thermostats & sequences, part of the HVAC-R scope. The observed field condition is: aux heat locked on. The work is through its testing or inspection step. Reference material on hand: mfr manuals. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr manuals"
+  ],
+  "subcategory": "2.3.4 Controls",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T3",
+  "title": "Document check: Thermostats & sequences (residential job)"
+}

@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "plenum vs",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-702 Data/comm & security",
+  "element_code": "E-702",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "measurement-check-data-comm-security-commercial-3581ae",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-e-702-me-data-comm-security",
+  "media": [],
+  "modality": "text",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "568",
+      "category",
+      "plenum"
+    ],
+    [
+      "crosstalk",
+      "performance",
+      "smoke",
+      "toxicity"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Data/comm & security, part of the Electrical scope. The observed field condition is: plenum vs. riser cable in wrong space. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: TIA-568, NEC 800. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "TIA-568",
+    "NEC 800"
+  ],
+  "subcategory": "2.1.7 Low Voltage & Specialty",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T2",
+  "title": "Measurement check: Data/comm & security (commercial project)"
+}

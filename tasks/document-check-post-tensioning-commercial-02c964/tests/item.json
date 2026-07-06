@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "elongation record vs",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-202 Post-tensioning",
+  "element_code": "S-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-post-tensioning-commercial-02c964",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-s-202-doc-post-tensioning",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "pti",
+      "strength",
+      "elongation"
+    ],
+    [
+      "ejection",
+      "anchorage",
+      "strand",
+      "failure"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Post-tensioning, part of the Structural & Ironwork scope. The observed field condition is: elongation record vs. calculated mismatch (DOC). The work is through its testing or inspection step. Reference material on hand: PTI. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "PTI"
+  ],
+  "subcategory": "2.4.2 Reinforcing",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "Document check: Post-tensioning (commercial project)"
+}

@@ -1,0 +1,61 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-303 Terminations & splices",
+  "element_code": "E-303",
+  "expected_sound_source": [
+    "electrical panel",
+    "panel",
+    "termination"
+  ],
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "de",
+      "energize"
+    ],
+    [
+      "arcing"
+    ]
+  ],
+  "generation": "synthetic-audio-v2",
+  "id": "fault-diagnosis-terminations-splices-commercial-ecdebe",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-audio-hum-004",
+  "media": [
+    "audio_hum_004.wav"
+  ],
+  "modality": "audio",
+  "prompt": "Evaluate the panel sound and decide whether it can remain in service or requires immediate electrical isolation. Give the safety disposition.",
+  "reduction_test": "The answer depends on steady harmonic hum versus irregular broadband crackle; a transcript loses the spectral and temporal cue.",
+  "required_actions": [
+    [
+      "no",
+      "monitor",
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "steady",
+      "hum",
+      "magnetic",
+      "normal"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-service",
+  "s2_expected": [],
+  "s3_percent": 100,
+  "scenario": "The audio clip was recorded at a closed electrical panel after an occupant reported a buzzing sound.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 110.14"
+  ],
+  "subcategory": "2.1.3 Wire & Cable",
+  "task_type": "FD",
+  "task_type_name": "Hazard identification (audio)",
+  "tier": "T2",
+  "title": "Fault diagnosis: Terminations & splices (audio, commercial project)"
+}

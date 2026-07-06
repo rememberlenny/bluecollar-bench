@@ -17,6 +17,7 @@
   "generation": "curated",
   "id": "ev-service-disconnect-gloves",
   "leakage_ratio": 0.7,
+  "legacy_id": "ev-service-disconnect-gloves",
   "media": [],
   "modality": "text",
   "prompt": "Evaluate whether the high-voltage work can proceed and identify the required safety steps.",

@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "breaker/conductor ampacity mismatch",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-103 Overcurrent device selection & coordination",
+  "element_code": "E-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-overcurrent-device-selection-5025b2",
+  "leakage_ratio": 0.33,
+  "legacy_id": "t4-e-103-ts-overcurrent-device-selection-coo",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "240",
+      "ampacity",
+      "protection"
+    ],
+    [
+      "overload",
+      "overheat",
+      "fire"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Overcurrent device selection & coordination, part of the Electrical scope. The observed field condition is: breaker/conductor ampacity mismatch. The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: NEC 240, 210.8, 210.12, 110.14(C) termination temp ratings.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 240",
+    "210.8",
+    "210.12",
+    "110.14(C) termination temp ratings"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T4",
+  "title": "Tool and material selection: Overcurrent device selection & coordination (service call)"
+}

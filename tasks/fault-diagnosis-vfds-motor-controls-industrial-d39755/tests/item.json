@@ -1,0 +1,61 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-403 VFDs & motor controls",
+  "element_code": "E-403",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "fault-diagnosis-vfds-motor-controls-industrial-d39755",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-fd-t1-e-403-002",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "normal"
+    ],
+    [
+      "serviceable"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-service",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "VFDs & motor controls is observed during operation after the reported concern was checked. Readings are steady, no abnormal sound or heat is noted, and the maintenance log shows the standard functional check was completed with no open punch note. Reference material on hand: NEC 430, mfr manuals.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 430",
+    "mfr manuals"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T1",
+  "title": "Fault diagnosis: VFDs & motor controls (industrial site)"
+}

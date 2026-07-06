@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "glove class wrong or test date expired (ID from stamp)",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-401 High-voltage safety",
+  "element_code": "A-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "hazard-check-high-voltage-safety-service-49f738",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t4-a-401-haz-high-voltage-safety",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "class",
+      "rated",
+      "verification"
+    ],
+    [
+      "voltage",
+      "arc",
+      "electrocution",
+      "stored"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is High-voltage safety, part of the Automotive & Powertrain scope. The observed field condition is: glove class wrong or test date expired (ID from stamp). The work is actively in progress. Reference material on hand: OEM HV procedures, NFPA 70E-adjacent.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM HV procedures",
+    "NFPA 70E-adjacent"
+  ],
+  "subcategory": "2.9.4 EV & A/C Systems",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T4",
+  "title": "Hazard check: High-voltage safety (service call)"
+}

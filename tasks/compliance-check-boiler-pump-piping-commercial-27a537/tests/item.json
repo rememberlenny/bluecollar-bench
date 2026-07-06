@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "defect": "air separator in wrong location",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-401 Boiler & pump piping",
+  "element_code": "P-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-boiler-pump-piping-commercial-27a537",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-p-401-cc-boiler-pump-piping",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "expansion",
+      "point",
+      "check"
+    ],
+    [
+      "cavitation",
+      "air",
+      "circulation",
+      "gravity"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Boiler & pump piping, part of the Piping & Plumbing scope. The observed field condition is: air separator in wrong location. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: mfr manuals, hydronics references.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr manuals",
+    "hydronics references"
+  ],
+  "subcategory": "2.2.4 Hydronic & Steam",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T2",
+  "title": "Compliance check: Boiler & pump piping (commercial project)"
+}

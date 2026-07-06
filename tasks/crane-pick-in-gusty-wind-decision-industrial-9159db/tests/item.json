@@ -1,0 +1,53 @@
+{
+  "decision": "fail",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-302 Crane operations",
+  "element_code": "S-302",
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "proceed",
+      "with",
+      "lift"
+    ]
+  ],
+  "generation": "curated-v2-trd",
+  "id": "crane-pick-in-gusty-wind-decision-industrial-9159db",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-trd-s302-t1-wind-pick",
+  "media": [],
+  "modality": "text",
+  "prompt": "Make the go/no-go call. Weigh the schedule pressure explicitly and state the conditions under which the lift could proceed.",
+  "required_actions": [
+    [
+      "postpone",
+      "delay",
+      "no",
+      "go"
+    ]
+  ],
+  "required_findings": [
+    [
+      "weather limit exceeded"
+    ],
+    [
+      "delay lift"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "planned",
+  "s2_expected": [],
+  "s3_percent": 0,
+  "scenario": "A vessel lift calculates to 92 percent of chart capacity at the working radius. Site wind is averaging 18 mph with gusts to 28 mph against a manufacturer wind limit of 20 mph for this boom configuration. The schedule shows the crane demobilizes tomorrow and the next window costs a week of standby.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926.1400",
+    "load charts"
+  ],
+  "subcategory": "2.4.3 Rigging & Machinery Moving",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T1",
+  "title": "Crane pick in gusty wind decision (industrial site)"
+}

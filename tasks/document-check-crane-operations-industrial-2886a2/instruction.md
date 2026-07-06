@@ -1,0 +1,60 @@
+# Document check: Crane operations (industrial site)
+
+You are assessing real trade work the way a competent tradesperson or inspector would.
+Read the situation below and write your conclusions to `/app/answer.json`.
+
+## Context
+
+- Setting: a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits
+- Trade: Structural & Ironwork
+- Scope under review: Crane operations
+- Your task: compare the work against the controlling document
+- Stage of the work when observed: `tested/inspected` (through its testing or inspection step)
+- Component condition categories that may apply: `installed-defective`
+
+## Scenario
+
+You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Crane operations, part of the Structural & Ironwork scope. The observed field condition is: load + rigging vs. load chart at radius (DOC+ME). The work is through its testing or inspection step. Reference material on hand: OSHA 1926.1400, load charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.
+
+## Task
+
+Compare the field condition against the referenced document, tag, drawing, or standard.
+
+## Required output
+
+Write valid JSON to `/app/answer.json` with this shape:
+
+```json
+{
+  "decision": "pass | fail | needs_more_info",
+  "risk": "low | medium | high | critical",
+  "work_stage": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
+  "component_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],
+  "percent_complete": 0,
+  "value": 0,
+  "sound_source": "component or source of the sound, when asked",
+  "confidence": 0.0,
+  "event_time": 0.0,
+  "rate": 0.0,
+  "order": ["step-id", "..."],
+  "workable": ["activity ID", "..."],
+  "findings": ["short defect or hazard finding", "..."],
+  "actions": ["immediate corrective action", "..."],
+  "rationale": "brief explanation",
+  "references": ["code or standard anchors you relied on"]
+}
+```
+
+Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.
+`work_stage` is how far the work has progressed; `percent_complete` is your numeric estimate of overall progress.
+`component_conditions` lists the condition categories that apply to the component; use an empty list if none apply.
+Use `value` for the numeric reading or computed quantity when the task asks for one.
+Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.
+Use `workable` for a list of activity IDs when the task asks what work can still start.
+
+## Reference material
+
+Apply these to the scenario rather than quoting them mechanically.
+
+- OSHA 1926.1400
+- load charts

@@ -1,0 +1,56 @@
+{
+  "decision": "pass",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-301 Brazing & evacuation",
+  "element_code": "H-301",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "re",
+      "evacuate"
+    ],
+    [
+      "stop",
+      "work"
+    ]
+  ],
+  "generation": "curated-v2-control",
+  "id": "brazing-and-evacuation-review-service-52f7e7",
+  "leakage_ratio": 0.67,
+  "legacy_id": "v2-pass-h301-t4-evacuation-correct",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate whether the documented procedure was performed correctly and in the right order.",
+  "required_actions": [
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "nitrogen"
+    ],
+    [
+      "micron"
+    ],
+    [
+      "core"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "tested/inspected",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "A line-set replacement is documented with photos: a nitrogen regulator connected and flowing during each braze, Schrader cores removed and set aside before evacuation, and a micron gauge at the far port reading 320 microns. The tech's log shows the system isolated from the pump and holding below 500 microns for fifteen minutes before charging began.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "EPA 608",
+    "mfr specs"
+  ],
+  "subcategory": "2.3.3 Refrigeration Circuit",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T4",
+  "title": "Brazing and evacuation review (service call)"
+}

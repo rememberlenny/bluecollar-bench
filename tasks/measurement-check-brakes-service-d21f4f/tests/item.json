@@ -1,0 +1,54 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-201 Brakes",
+  "element_code": "A-201",
+  "expected_value": 24.97,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "release"
+    ]
+  ],
+  "generation": "synthetic-media-v2",
+  "id": "measurement-check-brakes-service-d21f4f",
+  "leakage_ratio": 0.25,
+  "legacy_id": "v2-media-rotor-013",
+  "media": [
+    "rotor_013.png"
+  ],
+  "modality": "image",
+  "prompt": "Read the measurement and the stamped minimum from the image. Report the measured thickness in the `value` field (mm) and decide whether the rotor may remain in service.",
+  "required_actions": [
+    [
+      "specification",
+      "spec",
+      "lookup",
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "illegible",
+      "unreadable",
+      "unknown",
+      "stamp"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The image shows a digital micrometer reading taken on a front brake rotor and the specification stamp on the rotor hat.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM specs"
+  ],
+  "subcategory": "2.9.2 Chassis",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T4",
+  "title": "Measurement check: Brakes (photo, service call)",
+  "value_tolerance": 0.05
+}

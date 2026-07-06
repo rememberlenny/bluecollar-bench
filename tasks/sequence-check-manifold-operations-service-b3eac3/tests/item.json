@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "3/5-valve manifold sequence wrong (equalize before opening HP side - pure SEQ item, one right order)",
+  "discipline": "2.8 Instrumentation & Controls",
+  "discipline_code": "2.8",
+  "element": "I-102 Manifold operations",
+  "element_code": "I-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-manifold-operations-service-b3eac3",
+  "leakage_ratio": 0.43,
+  "legacy_id": "t4-i-102-seq-manifold-operations",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "equalize",
+      "sequence",
+      "manifold"
+    ],
+    [
+      "overrange",
+      "zero",
+      "shift",
+      "release"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Manifold operations, part of the Instrumentation & Controls scope. The observed field condition is: 3/5-valve manifold sequence wrong (equalize before opening HP side - pure SEQ item, one right order). The work is actively in progress. Reference material on hand: mfr procedures.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "mfr procedures"
+  ],
+  "subcategory": "2.8.1 Field Instruments",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T4",
+  "title": "Sequence check: Manifold operations (service call)"
+}

@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "hot work over sewer/drain",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-104 Hot work",
+  "element_code": "X-104",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-hot-work-industrial-c3d5c2",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t1-x-104-seq-hot-work",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "51b",
+      "watch",
+      "permit"
+    ],
+    [
+      "smolder",
+      "ignition",
+      "fire",
+      "combustible"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Hot work, part of the Safety & Rigging scope. The observed field condition is: hot work over sewer/drain. The work is actively in progress. Reference material on hand: NFPA 51B, OSHA 1926 Subpart J.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "NFPA 51B",
+    "OSHA 1926 Subpart J"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T1",
+  "title": "Sequence check: Hot work (industrial site)"
+}

@@ -1,0 +1,75 @@
+{
+  "decision": "fail",
+  "defect": "neutrals & grounds mixed in subpanel",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-102 Panelboard installation & makeup",
+  "element_code": "E-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "hazard-check-panelboard-installation-makeup-commercial-f14bb5",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-e-102-haz-panelboard-installation-makeup",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "408",
+      "listing",
+      "termination"
+    ],
+    [
+      "overheat",
+      "fault",
+      "arc",
+      "misoperation"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Panelboard installation & makeup, part of the Electrical scope. The observed field condition is: neutrals & grounds mixed in subpanel. The work is actively in progress. Reference material on hand: NEC Art. 408, 110.26 (working clearance), 200.4.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 408",
+    "110.26 (working clearance)",
+    "200.4"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T2",
+  "title": "Hazard check: Panelboard installation & makeup (commercial project)"
+}

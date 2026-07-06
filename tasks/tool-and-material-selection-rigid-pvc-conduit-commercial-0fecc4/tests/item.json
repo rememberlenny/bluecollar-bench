@@ -1,0 +1,63 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-202 Rigid & PVC conduit",
+  "element_code": "E-202",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "tool-and-material-selection-rigid-pvc-conduit-commercial-0fecc4",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-nmi-ts-t2-e-202-011",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "specification",
+      "missing"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "Parts for Rigid & PVC conduit are staged in sealed packaging with the rating side turned away. The drawing calls for a specific size or class, but the submitted evidence does not show that marking. Reference material on hand: NEC Art. 344, 352.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 344",
+    "352"
+  ],
+  "subcategory": "2.1.2 Raceway",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T2",
+  "title": "Tool and material selection: Rigid & PVC conduit (commercial project)"
+}

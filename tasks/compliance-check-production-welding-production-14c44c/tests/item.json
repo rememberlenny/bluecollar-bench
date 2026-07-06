@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "defect": "missed weld per drawing (DOC)",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-102 Production welding",
+  "element_code": "B-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-production-welding-production-14c44c",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t5-b-102-cc-production-welding",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "wps",
+      "parameter",
+      "gauge"
+    ],
+    [
+      "fusion",
+      "undersize",
+      "strength",
+      "reject"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Production welding, part of the Assembly & Fabrication scope. The observed field condition is: missed weld per drawing (DOC). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: AWS D1.1/D1.3, shop WPS.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "AWS D1.1/D1.3",
+    "shop WPS"
+  ],
+  "subcategory": "2.10.1 Fastening & Joining",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T5",
+  "title": "Compliance check: Production welding (production floor)"
+}

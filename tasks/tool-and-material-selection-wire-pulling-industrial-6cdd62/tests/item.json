@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "no lubricant on long pull",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-304 Wire pulling (feeders & branch)",
+  "element_code": "E-304",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-wire-pulling-industrial-6cdd62",
+  "leakage_ratio": 0.43,
+  "legacy_id": "t1-e-304-ts-wire-pulling-feeders-branch",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "identification",
+      "200.6",
+      "pull"
+    ],
+    [
+      "damage",
+      "insulation",
+      "phase",
+      "confusion"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Wire pulling (feeders & branch), part of the Electrical scope. The observed field condition is: no lubricant on long pull. The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: NEC 200.6, 210.5 (identification).",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 200.6",
+    "210.5 (identification)"
+  ],
+  "subcategory": "2.1.3 Wire & Cable",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T1",
+  "title": "Tool and material selection: Wire pulling (feeders & branch) (industrial site)"
+}

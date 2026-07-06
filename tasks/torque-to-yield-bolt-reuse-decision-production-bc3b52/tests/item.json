@@ -1,0 +1,56 @@
+{
+  "decision": "fail",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-101 Torque & threaded fastening",
+  "element_code": "B-101",
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "reuse",
+      "acceptable"
+    ]
+  ],
+  "generation": "curated-v2-trd",
+  "id": "torque-to-yield-bolt-reuse-decision-production-bc3b52",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-trd-b101-t5-tty-reuse",
+  "media": [],
+  "modality": "text",
+  "prompt": "Judge the operator's reasoning against the specification. State the correct disposition and the cost-versus-risk tradeoff involved.",
+  "required_actions": [
+    [
+      "replace",
+      "new"
+    ],
+    [
+      "andon",
+      "stop",
+      "hold"
+    ]
+  ],
+  "required_findings": [
+    [
+      "one time fastener"
+    ],
+    [
+      "reuse unacceptable"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "non-compliant"
+  ],
+  "s3_percent": 60,
+  "scenario": "During a line-side rework, an operator reinstalls the same stretch bolts that were removed an hour earlier, reasoning that they were only torqued once and the replacement kit would stop the line for twenty minutes. The engineering spec marks these fasteners single-use with an angle-tightening step.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "engineering specs"
+  ],
+  "subcategory": "2.10.1 Fastening & Joining",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T5",
+  "title": "Torque-to-yield bolt reuse decision (production floor)"
+}

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+APP_DIR="${BLUECOLLAR_APP_DIR:-/app}"
+mkdir -p "$APP_DIR"
+cat > "$APP_DIR/answer.json" <<'JSON'
+{
+  "decision": "fail",
+  "risk": "medium",
+  "work_stage": "tested/inspected",
+  "component_conditions": [
+    "installed-defective"
+  ],
+  "percent_complete": 85,
+  "findings": [
+    "700 egress unswitched",
+    "outage evacuation life safety"
+  ],
+  "actions": [
+    "compare",
+    "correct",
+    "document"
+  ],
+  "rationale": "The scenario contains visible defects or hazards that make the work unacceptable until corrected.",
+  "references": [
+    "NEC 700",
+    "NFPA 101"
+  ]
+}
+JSON

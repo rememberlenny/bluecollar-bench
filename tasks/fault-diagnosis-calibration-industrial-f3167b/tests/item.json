@@ -1,0 +1,61 @@
+{
+  "decision": "pass",
+  "discipline": "2.8 Instrumentation & Controls",
+  "discipline_code": "2.8",
+  "element": "I-201 Calibration",
+  "element_code": "I-201",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "fault-diagnosis-calibration-industrial-f3167b",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-fd-t1-i-201-010",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "normal"
+    ],
+    [
+      "serviceable"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-service",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Calibration is observed during operation after the reported concern was checked. Readings are steady, no abnormal sound or heat is noted, and the maintenance log shows the standard functional check was completed with no open punch note. Reference material on hand: ISA standards, site QC.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "ISA standards",
+    "site QC"
+  ],
+  "subcategory": "2.8.2 Calibration & Loop Checks",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T1",
+  "title": "Fault diagnosis: Calibration (industrial site)"
+}

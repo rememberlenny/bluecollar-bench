@@ -60,7 +60,7 @@ def main() -> None:
     for item in items:
         if PLACEHOLDER not in item.get("scenario", ""):
             continue
-        rec = orig.get(item["id"])
+        rec = orig.get(item["id"]) or orig.get(item.get("legacy_id", ""))
         if not rec or not rec.get("defect"):
             no_orig.append(item["id"])
             continue

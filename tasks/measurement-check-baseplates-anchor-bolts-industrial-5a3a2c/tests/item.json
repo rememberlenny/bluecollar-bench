@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "grout without vent holes (voids - sounding test)",
+  "discipline": "2.7 Equipment & Machinery",
+  "discipline_code": "2.7",
+  "element": "M-101 Baseplates & anchor bolts",
+  "element_code": "M-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "measurement-check-baseplates-anchor-bolts-industrial-5a3a2c",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t1-m-101-me-baseplates-anchor-bolts",
+  "media": [],
+  "modality": "text",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "686",
+      "grout",
+      "projection"
+    ],
+    [
+      "vibration",
+      "loosening",
+      "resonance",
+      "movement"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Baseplates & anchor bolts, part of the Equipment & Machinery scope. The observed field condition is: grout without vent holes (voids - sounding test). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: API RP 686. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "API RP 686"
+  ],
+  "subcategory": "2.7.1 Setting & Grouting",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T1",
+  "title": "Measurement check: Baseplates & anchor bolts (industrial site)"
+}

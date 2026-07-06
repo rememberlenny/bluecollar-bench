@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "missing end-of-line resistor",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-701 Fire alarm devices & circuits",
+  "element_code": "E-701",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-fire-alarm-devices-circuits-commercial-8a2937",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-e-701-doc-fire-alarm-devices-circuits",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "nfpa",
+      "72",
+      "supervision"
+    ],
+    [
+      "undetected",
+      "trouble",
+      "notification",
+      "life"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Fire alarm devices & circuits, part of the Electrical scope. The observed field condition is: missing end-of-line resistor. The work is through its testing or inspection step. Reference material on hand: NFPA 72. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NFPA 72"
+  ],
+  "subcategory": "2.1.7 Low Voltage & Specialty",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "Document check: Fire alarm devices & circuits (commercial project)"
+}

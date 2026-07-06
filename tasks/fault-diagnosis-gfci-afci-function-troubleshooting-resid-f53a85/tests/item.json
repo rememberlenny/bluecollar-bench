@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "defect": "line/load reversed on GFCI",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-402 GFCI/AFCI function & troubleshooting",
+  "element_code": "E-402",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-gfci-afci-function-troubleshooting-resid-f53a85",
+  "leakage_ratio": 0.5,
+  "legacy_id": "t3-e-402-fd-gfci-afci-function-troubleshooti",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "210.8",
+      "210.12",
+      "line",
+      "load"
+    ],
+    [
+      "protection",
+      "downstream",
+      "nuisance",
+      "shock"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is GFCI/AFCI function & troubleshooting, part of the Electrical scope. The observed field condition is: line/load reversed on GFCI. The work is in service as an operating asset. Reference material on hand: NEC 210.8, 210.12.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 210.8",
+    "210.12"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T3",
+  "title": "Fault diagnosis: GFCI/AFCI function & troubleshooting (residential job)"
+}

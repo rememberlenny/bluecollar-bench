@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "inadequate ventilation clearance",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-104 Transformers (dry-type & pad-mount)",
+  "element_code": "E-104",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-transformers-industrial-36c44d",
+  "leakage_ratio": 0.17,
+  "legacy_id": "t1-e-104-seq-transformers-dry-type-pad-mount",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "450",
+      "separately",
+      "derived"
+    ],
+    [
+      "fault",
+      "return",
+      "overheat"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Transformers (dry-type & pad-mount), part of the Electrical scope. The observed field condition is: inadequate ventilation clearance. The work is actively in progress. Reference material on hand: NEC Art. 450, 250.30.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 450",
+    "250.30"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T1",
+  "title": "Sequence check: Transformers (dry-type & pad-mount) (industrial site)"
+}

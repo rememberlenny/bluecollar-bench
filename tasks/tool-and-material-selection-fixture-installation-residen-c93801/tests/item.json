@@ -1,0 +1,62 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-501 Fixture installation",
+  "element_code": "E-501",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "tool-and-material-selection-fixture-installation-residen-c93801",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-nmi-ts-t3-e-501-023",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "specification",
+      "missing"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "Parts for Fixture installation are staged in sealed packaging with the rating side turned away. The drawing calls for a specific size or class, but the submitted evidence does not show that marking. Reference material on hand: NEC 410.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 410"
+  ],
+  "subcategory": "2.1.5 Lighting",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T3",
+  "title": "Tool and material selection: Fixture installation (residential job)"
+}

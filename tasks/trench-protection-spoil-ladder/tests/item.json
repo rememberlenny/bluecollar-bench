@@ -17,6 +17,7 @@
   "generation": "curated",
   "id": "trench-protection-spoil-ladder",
   "leakage_ratio": 0.0,
+  "legacy_id": "trench-protection-spoil-ladder",
   "media": [],
   "modality": "text",
   "prompt": "Identify the hazards and state whether work may continue.",

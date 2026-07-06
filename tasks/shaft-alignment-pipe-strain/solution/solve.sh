@@ -6,11 +6,11 @@ cat > "$APP_DIR/answer.json" <<'JSON'
 {
   "decision": "fail",
   "risk": "medium",
-  "s1_state": "in-progress",
-  "s2_conditions": [
+  "work_stage": "in-progress",
+  "component_conditions": [
     "installed-defective"
   ],
-  "s3_percent": 45,
+  "percent_complete": 45,
   "findings": [
     "aligned before piping",
     "pipe strain",

@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "cabinets not hitting studs (screw pattern - ME)",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-302 Trim, cabinets, flooring",
+  "element_code": "F-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-trim-cabinets-flooring-resid-2ebf3c",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t3-f-302-ts-trim-cabinets-flooring",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "expansion",
+      "substrate",
+      "fastening"
+    ],
+    [
+      "buckling",
+      "deflection",
+      "pullout",
+      "movement"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Trim, cabinets, flooring, part of the Carpentry & Finishes scope. The observed field condition is: cabinets not hitting studs (screw pattern - ME). The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: mfr instructions, TCNA.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr instructions",
+    "TCNA"
+  ],
+  "subcategory": "2.6.3 Interior Finish",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T3",
+  "title": "Tool and material selection: Trim, cabinets, flooring (residential job)"
+}

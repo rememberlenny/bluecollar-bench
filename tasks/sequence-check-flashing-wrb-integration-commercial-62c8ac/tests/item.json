@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "reverse-lapped WRB (upper layer behind lower)",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-201 Flashing & WRB integration",
+  "element_code": "F-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-flashing-wrb-integration-commercial-62c8ac",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-f-201-seq-flashing-wrb-integration",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "shingle",
+      "lap",
+      "sequence"
+    ],
+    [
+      "intrusion",
+      "drainage",
+      "rot",
+      "behind"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Flashing & WRB integration, part of the Carpentry & Finishes scope. The observed field condition is: reverse-lapped WRB (upper layer behind lower). The work is actively in progress. Reference material on hand: IRC R703, mfr instructions.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R703",
+    "mfr instructions"
+  ],
+  "subcategory": "2.6.2 Exterior Envelope",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T2",
+  "title": "Sequence check: Flashing & WRB integration (commercial project)"
+}

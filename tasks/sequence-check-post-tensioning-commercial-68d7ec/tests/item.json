@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "stressing before concrete strength verified",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-202 Post-tensioning",
+  "element_code": "S-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-post-tensioning-commercial-68d7ec",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-s-202-seq-post-tensioning",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "pti",
+      "strength",
+      "elongation"
+    ],
+    [
+      "ejection",
+      "anchorage",
+      "strand",
+      "failure"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Post-tensioning, part of the Structural & Ironwork scope. The observed field condition is: stressing before concrete strength verified. The work is actively in progress. Reference material on hand: PTI.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "PTI"
+  ],
+  "subcategory": "2.4.2 Reinforcing",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T2",
+  "title": "Sequence check: Post-tensioning (commercial project)"
+}

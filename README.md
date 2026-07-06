@@ -24,7 +24,8 @@ The uploaded v0.1 taxonomy docs are preserved under `docs/source/`. The executab
 - `scripts/gen_audio_items.py` deterministically renders synthetic audio fixtures and emits `audio_items_v2.json`.
 - `scripts/gen_text_rebalance_items.py` deterministically emits text-only pass/NMI controls for decision rebalance.
 - `scripts/restore_scenarios.py` restores auto-item evidence and re-keys findings to interpretation vocabulary before leakage auditing.
-- `scripts/generate_tasks_v2.py` merges v2 controls, image media, CPM, audio, and text-rebalance items, restores scenarios, runs leakage auditing, and regenerates all Harbor tasks with `grade_v2`.
+- `scripts/naturalize_items.py` rewrites item ids, titles, and scenario wrappers into standalone natural language (no internal tier/element/task-type codes) and writes `benchmark/items/id_map.json` mapping legacy ids to current ids.
+- `scripts/generate_tasks_v2.py` merges v2 controls, image media, CPM, audio, and text-rebalance items, restores scenarios, naturalizes ids and model-visible text, runs leakage auditing, and regenerates all Harbor tasks with `grade_v2`.
 - `scripts/collect_run_results.py` harvests Harbor verifier rewards into versioned run directories pinned to the catalog hash.
 - `scripts/compare_runs.py` compares two collected runs across shared tasks and aggregate axes.
 - `scripts/grade_v2.py` is the current deterministic verifier template used in generated tasks.
@@ -268,9 +269,9 @@ Agents must write valid JSON to `/app/answer.json`:
 {
   "decision": "pass | fail | needs_more_info",
   "risk": "low | medium | high | critical",
-  "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
-  "s2_conditions": ["installed-defective", "non-compliant"],
-  "s3_percent": 70,
+  "work_stage": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",
+  "component_conditions": ["installed-defective", "non-compliant"],
+  "percent_complete": 70,
   "value": 0,
   "sound_source": "component or source of the sound, when asked",
   "confidence": 0.0,

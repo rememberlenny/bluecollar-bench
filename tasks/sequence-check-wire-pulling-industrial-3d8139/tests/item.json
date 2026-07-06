@@ -1,0 +1,63 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-304 Wire pulling (feeders & branch)",
+  "element_code": "E-304",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "sequence-check-wire-pulling-industrial-3d8139",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-nmi-seq-t1-e-304-003",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "sequence",
+      "unknown"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "The current photo set for Wire pulling (feeders & branch) shows the work after a hold point, but the earlier prerequisite step is not shown and no signoff page is attached. Reference material on hand: NEC 200.6, 210.5 (identification).",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 200.6",
+    "210.5 (identification)"
+  ],
+  "subcategory": "2.1.3 Wire & Cable",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T1",
+  "title": "Sequence check: Wire pulling (feeders & branch) (industrial site)"
+}

@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "unblocked soffits",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-103 Fireblocking & draftstopping",
+  "element_code": "F-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "identification-fireblocking-draftstopping-residential-bf4f23",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-f-103-id-fireblocking-draftstopping",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "302",
+      "fireblocking",
+      "rated"
+    ],
+    [
+      "spread",
+      "chimney",
+      "concealed",
+      "flame"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Fireblocking & draftstopping, part of the Carpentry & Finishes scope. The observed field condition is: unblocked soffits. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: IRC R302.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R302"
+  ],
+  "subcategory": "2.6.1 Rough Framing",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T3",
+  "title": "Identification: Fireblocking & draftstopping (residential job)"
+}

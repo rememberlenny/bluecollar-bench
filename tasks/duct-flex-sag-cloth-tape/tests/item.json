@@ -19,6 +19,7 @@
   "generation": "curated",
   "id": "duct-flex-sag-cloth-tape",
   "leakage_ratio": 0.75,
+  "legacy_id": "duct-flex-sag-cloth-tape",
   "media": [],
   "modality": "text",
   "prompt": "Assess the installation quality and name the defects.",

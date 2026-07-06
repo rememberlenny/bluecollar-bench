@@ -17,6 +17,7 @@
   "generation": "curated",
   "id": "flanged-joint-bolts-witness",
   "leakage_ratio": 0.78,
+  "legacy_id": "flanged-joint-bolts-witness",
   "media": [],
   "modality": "text",
   "prompt": "Determine whether this joint is ready for test and what must be corrected.",

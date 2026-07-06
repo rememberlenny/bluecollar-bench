@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "wrong oil for compressor type",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-402 A/C service",
+  "element_code": "A-402",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "fault-diagnosis-a-c-service-production-ad3bbd",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t5-a-402-fd-bf-015-a-c-service",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "609",
+      "recovery",
+      "specification"
+    ],
+    [
+      "venting",
+      "contamination",
+      "compressor",
+      "pressure"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is A/C service, part of the Automotive & Powertrain scope. The observed field condition is: wrong oil for compressor type. The work is in service as an operating asset. Reference material on hand: EPA 609, OEM specs.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "EPA 609",
+    "OEM specs"
+  ],
+  "subcategory": "2.9.4 EV & A/C Systems",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T5",
+  "title": "Fault diagnosis: A/C service (production floor)"
+}

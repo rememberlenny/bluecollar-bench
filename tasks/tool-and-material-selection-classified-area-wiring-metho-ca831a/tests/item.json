@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "non-rated fixture in Class I Div 2",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-801 Classified-area wiring methods",
+  "element_code": "E-801",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-classified-area-wiring-metho-ca831a",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t1-e-801-ts-classified-area-wiring-methods",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "500",
+      "seal",
+      "classified"
+    ],
+    [
+      "ignition",
+      "vapor",
+      "migration",
+      "explosion"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Classified-area wiring methods, part of the Electrical scope. The observed field condition is: non-rated fixture in Class I Div 2. The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: NEC 500-516.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 500-516"
+  ],
+  "subcategory": "2.1.8 Hazardous Locations (T1 overlay)",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T1",
+  "title": "Tool and material selection: Classified-area wiring methods (industrial site)"
+}

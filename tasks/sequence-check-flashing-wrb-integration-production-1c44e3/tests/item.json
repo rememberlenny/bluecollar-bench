@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "kick-out flashing missing at roof-wall",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-201 Flashing & WRB integration",
+  "element_code": "F-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "sequence-check-flashing-wrb-integration-production-1c44e3",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t5-f-201-seq-bf-003-flashing-wrb-integration",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "shingle",
+      "lap",
+      "sequence"
+    ],
+    [
+      "intrusion",
+      "drainage",
+      "rot",
+      "behind"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Flashing & WRB integration, part of the Carpentry & Finishes scope. The observed field condition is: kick-out flashing missing at roof-wall. The work is actively in progress. Reference material on hand: IRC R703, mfr instructions.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R703",
+    "mfr instructions"
+  ],
+  "subcategory": "2.6.2 Exterior Envelope",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T5",
+  "title": "Sequence check: Flashing & WRB integration (production floor)"
+}

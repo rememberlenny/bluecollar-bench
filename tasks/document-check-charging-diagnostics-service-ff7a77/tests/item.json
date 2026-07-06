@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "sight-glass bubbles misread",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-302 Charging & diagnostics",
+  "element_code": "H-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-charging-diagnostics-service-ff7a77",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t4-h-302-doc-charging-diagnostics",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "subcool",
+      "superheat",
+      "chart"
+    ],
+    [
+      "overcharge",
+      "undercharge",
+      "flood",
+      "starve"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Charging & diagnostics, part of the HVAC-R scope. The observed field condition is: sight-glass bubbles misread. The work is through its testing or inspection step. Reference material on hand: mfr charging charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr charging charts"
+  ],
+  "subcategory": "2.3.3 Refrigeration Circuit",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T4",
+  "title": "Document check: Charging & diagnostics (service call)"
+}

@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "missing load reactor on long motor leads",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-403 VFDs & motor controls",
+  "element_code": "E-403",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-vfds-motor-controls-service-6875ca",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t4-e-403-fd-vfds-motor-controls",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "430",
+      "reactor",
+      "separation"
+    ],
+    [
+      "reflected",
+      "interference",
+      "insulation",
+      "nuisance"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is VFDs & motor controls, part of the Electrical scope. The observed field condition is: missing load reactor on long motor leads. The work is in service as an operating asset. Reference material on hand: NEC 430, mfr manuals.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 430",
+    "mfr manuals"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "Fault diagnosis: VFDs & motor controls (service call)"
+}

@@ -18,6 +18,7 @@
   "generation": "curated",
   "id": "automotive-brake-rotor-hose",
   "leakage_ratio": 0.6,
+  "legacy_id": "automotive-brake-rotor-hose",
   "media": [],
   "modality": "text",
   "prompt": "Decide if the repair passes quality control and list the defects that matter.",

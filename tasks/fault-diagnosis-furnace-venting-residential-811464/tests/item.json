@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "single-wall vent clearance to combustibles",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-102 Furnace & venting",
+  "element_code": "H-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-furnace-venting-residential-811464",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-h-102-fd-furnace-venting",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "venting",
+      "combustion",
+      "category"
+    ],
+    [
+      "carbon",
+      "monoxide",
+      "backdraft",
+      "spillage"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Furnace & venting, part of the HVAC-R scope. The observed field condition is: single-wall vent clearance to combustibles. The work is in service as an operating asset. Reference material on hand: IRC M1801, NFPA 54.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC M1801",
+    "NFPA 54"
+  ],
+  "subcategory": "2.3.1 Equipment Installation",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T3",
+  "title": "Fault diagnosis: Furnace & venting (residential job)"
+}

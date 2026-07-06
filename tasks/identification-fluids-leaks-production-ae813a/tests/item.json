@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "milkshake oil cap (FD)",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-102 Fluids & leaks",
+  "element_code": "A-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "identification-fluids-leaks-production-ae813a",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t5-a-102-id-bf-001-fluids-leaks",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "specification",
+      "level",
+      "source"
+    ],
+    [
+      "contamination",
+      "starvation",
+      "aeration",
+      "failure"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Fluids & leaks, part of the Automotive & Powertrain scope. The observed field condition is: milkshake oil cap (FD). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: OEM specs.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM specs"
+  ],
+  "subcategory": "2.9.1 Engine & Drivetrain",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T5",
+  "title": "Identification: Fluids & leaks (production floor)"
+}

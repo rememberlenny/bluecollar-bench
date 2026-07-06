@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "caliper/mic misread (photo of scale - pure ME)",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-201 Gauging & GD&T basics",
+  "element_code": "B-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-gauging-gd-t-basics-production-9a5019",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t5-b-201-doc-gauging-gd-t-basics",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "datum",
+      "specification",
+      "y14.5"
+    ],
+    [
+      "undersize",
+      "oversize",
+      "reject",
+      "tolerance"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Gauging & GD&T basics, part of the Assembly & Fabrication scope. The observed field condition is: caliper/mic misread (photo of scale - pure ME). The work is through its testing or inspection step. Reference material on hand: ASME Y14.5 (basic), gauge instructions. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "ASME Y14.5 (basic)",
+    "gauge instructions"
+  ],
+  "subcategory": "2.10.2 Fitment & Tolerance",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T5",
+  "title": "Document check: Gauging & GD&T basics (production floor)"
+}

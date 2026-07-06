@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "vacuum not held at target microns (decay test - read the gauge, FD)",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-301 Brazing & evacuation",
+  "element_code": "H-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-brazing-evacuation-commercial-85ecb0",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-h-301-cc-brazing-evacuation",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "nitrogen",
+      "micron",
+      "evacuation"
+    ],
+    [
+      "oxide",
+      "moisture",
+      "acid",
+      "contamination"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Brazing & evacuation, part of the HVAC-R scope. The observed field condition is: vacuum not held at target microns (decay test - read the gauge, FD). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: mfr specs, ACCA, EPA 608.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr specs",
+    "ACCA",
+    "EPA 608"
+  ],
+  "subcategory": "2.3.3 Refrigeration Circuit",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T2",
+  "title": "Compliance check: Brazing & evacuation (commercial project)"
+}

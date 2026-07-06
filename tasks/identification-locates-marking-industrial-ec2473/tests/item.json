@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-201 Locates & marking",
+  "element_code": "U-201",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "identification-locates-marking-industrial-ec2473",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-id-t1-u-201-009",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "recognized"
+    ],
+    [
+      "serviceable"
+    ],
+    [
+      "undamaged"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "A field review of Locates & marking shows the expected unit in the intended location. Nameplates and orientation marks can be read, the housing and adjacent work show no damage, and the item matches the referenced detail for this stage. Reference material on hand: 811/CGA best practices.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "811/CGA best practices"
+  ],
+  "subcategory": "2.11.2 Underground Utilities",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T1",
+  "title": "Identification: Locates & marking (industrial site)"
+}

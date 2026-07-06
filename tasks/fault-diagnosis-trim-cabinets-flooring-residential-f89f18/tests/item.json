@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "tile on single-layer subfloor deflection",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-302 Trim, cabinets, flooring",
+  "element_code": "F-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-trim-cabinets-flooring-residential-f89f18",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-f-302-fd-trim-cabinets-flooring",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "expansion",
+      "substrate",
+      "fastening"
+    ],
+    [
+      "buckling",
+      "deflection",
+      "pullout",
+      "movement"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Trim, cabinets, flooring, part of the Carpentry & Finishes scope. The observed field condition is: tile on single-layer subfloor deflection. The work is in service as an operating asset. Reference material on hand: mfr instructions, TCNA.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr instructions",
+    "TCNA"
+  ],
+  "subcategory": "2.6.3 Interior Finish",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T3",
+  "title": "Fault diagnosis: Trim, cabinets, flooring (residential job)"
+}

@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "pipe boot cracked (T4 FD)",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-202 Roofing",
+  "element_code": "F-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "measurement-check-roofing-service-1b6f88",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t4-f-202-me-bf-004-roofing",
+  "media": [],
+  "modality": "text",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "905",
+      "fastening",
+      "underlayment"
+    ],
+    [
+      "uplift",
+      "blowoff",
+      "intrusion",
+      "ice"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Roofing, part of the Carpentry & Finishes scope. The observed field condition is: pipe boot cracked. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: IRC R905, mfr specs. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R905",
+    "mfr specs"
+  ],
+  "subcategory": "2.6.2 Exterior Envelope",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T4",
+  "title": "Measurement check: Roofing (service call)"
+}

@@ -1,0 +1,55 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "RES Schedule & constraint reasoning",
+  "element_code": "RES-001",
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "delay",
+      "is",
+      "exactly"
+    ]
+  ],
+  "generation": "synthetic-cpm-v2",
+  "id": "schedule-impact-assessment-commercial-7237ae",
+  "leakage_ratio": 0.75,
+  "legacy_id": "v2-cpm-nmi-001",
+  "media": [
+    "cpm_nmi_001.png"
+  ],
+  "modality": "image",
+  "prompt": "Determine the project delay caused by the disruption, or state precisely what information is missing and what you need to compute it.",
+  "required_actions": [
+    [
+      "obtain",
+      "confirm",
+      "verify",
+      "request"
+    ]
+  ],
+  "required_findings": [
+    [
+      "illegible",
+      "missing",
+      "unknown",
+      "duration"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 40,
+  "scenario": "The image shows the lookahead schedule, but one duration is illegible, and a disruption affects that same activity.",
+  "source_file": "docs/source/expansion-plan-four-tracks-v0.1.md",
+  "source_refs": [
+    "CPM computed ground truth",
+    "expansion-plan track 3"
+  ],
+  "subcategory": "Cross-trade sequencing",
+  "task_type": "RES",
+  "task_type_name": "Resource & constraint reasoning",
+  "tier": "T2",
+  "title": "Schedule impact assessment (photo, commercial project)"
+}

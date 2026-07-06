@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-203 Cable tray",
+  "element_code": "E-203",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "compliance-check-cable-tray-industrial-a680e7",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-cc-t1-e-203-006",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "conforming"
+    ],
+    [
+      "ready"
+    ],
+    [
+      "acceptance"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Closeout photos for Cable tray show the installed work following the referenced detail. Clearances, labels, supports, and terminations shown for this element are in place, and the inspection card has no open correction note. Reference material on hand: NEC Art. 392.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 392"
+  ],
+  "subcategory": "2.1.2 Raceway",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T1",
+  "title": "Compliance check: Cable tray (industrial site)"
+}

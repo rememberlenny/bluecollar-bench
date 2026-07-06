@@ -1,0 +1,53 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/tool-and-material-selection-wire-pulling-commercial-e780ad"
+description = "Tool and material selection: Wire pulling (feeders & branch) (commercial project)"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t2", "ts", "2-1"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "tool-and-material-selection-wire-pulling-commercial-e780ad"
+tier = "T2"
+discipline = "2.1 Electrical"
+element = "E-304 Wire pulling (feeders & branch)"
+task_type = "TS"
+task_type_name = "Tool & material selection"
+s1_state = "staged"
+s3_percent = 90.0
+expected_decision = "pass"
+expected_risk = "low"
+modality = "text"
+media = []
+expected_value_present = false
+expected_value = 0.0
+value_tolerance = 0.0
+expected_rate_present = false
+expected_rate = 0.0
+rate_tolerance = 0.0
+expected_event_time_present = false
+expected_event_time = 0.0
+event_time_tolerance = 0.0
+expected_order = []
+expected_sound_source = ""
+confusable_with = ""
+reduction_test = ""
+generation = "synthetic-text-rebalance-v2"
+source_refs = ["NEC 200.6", "210.5 (identification)"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

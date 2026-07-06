@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "protecting downstream vs",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-402 GFCI/AFCI function & troubleshooting",
+  "element_code": "E-402",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "judgment-call-gfci-afci-function-troubleshooting-residen-d6ad68",
+  "leakage_ratio": 0.38,
+  "legacy_id": "t3-e-402-trd-gfci-afci-function-troubleshooti",
+  "media": [],
+  "modality": "text",
+  "prompt": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
+  "required_actions": [
+    [
+      "reject",
+      "shortcut"
+    ],
+    [
+      "follow"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "210.8",
+      "210.12",
+      "line",
+      "load"
+    ],
+    [
+      "protection",
+      "downstream",
+      "nuisance",
+      "shock"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is GFCI/AFCI function & troubleshooting, part of the Electrical scope. The observed field condition is: protecting downstream vs. single-location wiring. The work is actively in progress. Reference material on hand: NEC 210.8, 210.12.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 210.8",
+    "210.12"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T3",
+  "title": "Judgment call: GFCI/AFCI function & troubleshooting (residential job)"
+}

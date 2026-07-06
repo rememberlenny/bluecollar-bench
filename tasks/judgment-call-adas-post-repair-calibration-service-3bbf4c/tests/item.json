@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-302 ADAS & post-repair calibration",
+  "element_code": "A-302",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "judgment-call-adas-post-repair-calibration-service-3bbf4c",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-trd-t4-a-302-033",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "proceed"
+    ]
+  ],
+  "required_findings": [
+    [
+      "permissible"
+    ],
+    [
+      "preference"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "A crew used a field method for ADAS & post-repair calibration that is less tidy than the preferred shop approach but still matches the listed product instructions and the project requirement. No local amendment or drawing note forbids it. Reference material on hand: OEM position statements.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM position statements"
+  ],
+  "subcategory": "2.9.3 Electrical & Electronics",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T4",
+  "title": "Judgment call: ADAS & post-repair calibration (service call)"
+}

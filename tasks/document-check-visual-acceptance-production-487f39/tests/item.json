@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "missed flash/burr on molded parts",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-401 Visual acceptance",
+  "element_code": "B-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-visual-acceptance-production-487f39",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t5-b-401-doc-visual-acceptance",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "boundary",
+      "standard",
+      "drawing"
+    ],
+    [
+      "reject",
+      "nonconforming",
+      "classification",
+      "criteria"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Visual acceptance, part of the Assembly & Fabrication scope. The observed field condition is: missed flash/burr on molded parts. The work is through its testing or inspection step. Reference material on hand: site visual standards, AIAG PPAP. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "site visual standards",
+    "AIAG PPAP"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T5",
+  "title": "Document check: Visual acceptance (production floor)"
+}

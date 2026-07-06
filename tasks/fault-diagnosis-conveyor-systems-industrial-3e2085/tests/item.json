@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "belt mistracking causes (loading off-center vs",
+  "discipline": "2.7 Equipment & Machinery",
+  "discipline_code": "2.7",
+  "element": "M-401 Conveyor systems",
+  "element_code": "M-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-conveyor-systems-industrial-3e2085",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t1-m-401-fd-conveyor-systems",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "cema",
+      "guarding",
+      "tracking"
+    ],
+    [
+      "nip",
+      "entanglement",
+      "spillage",
+      "amputation"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Conveyor systems, part of the Equipment & Machinery scope. The observed field condition is: belt mistracking causes (loading off-center vs. idler skew - FD). The work is in service as an operating asset. Reference material on hand: CEMA, OSHA 1910.212.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "CEMA",
+    "OSHA 1910.212"
+  ],
+  "subcategory": "2.7.4 Conveyors",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T1",
+  "title": "Fault diagnosis: Conveyor systems (industrial site)"
+}

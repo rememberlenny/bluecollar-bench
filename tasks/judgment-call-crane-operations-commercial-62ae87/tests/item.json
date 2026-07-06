@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "defect": "power line clearance",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-302 Crane operations",
+  "element_code": "S-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "judgment-call-crane-operations-commercial-62ae87",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t2-s-302-trd-crane-operations",
+  "media": [],
+  "modality": "text",
+  "prompt": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
+  "required_actions": [
+    [
+      "reject",
+      "shortcut"
+    ],
+    [
+      "follow"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "chart",
+      "radius",
+      "configuration"
+    ],
+    [
+      "tip",
+      "overload",
+      "stability",
+      "contact"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Crane operations, part of the Structural & Ironwork scope. The observed field condition is: power line clearance. The work is actively in progress. Reference material on hand: OSHA 1926.1400, load charts.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926.1400",
+    "load charts"
+  ],
+  "subcategory": "2.4.3 Rigging & Machinery Moving",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T2",
+  "title": "Judgment call: Crane operations (commercial project)"
+}

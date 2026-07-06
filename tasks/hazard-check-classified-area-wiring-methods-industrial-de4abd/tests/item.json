@@ -1,0 +1,62 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-801 Classified-area wiring methods",
+  "element_code": "E-801",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "hazard-check-classified-area-wiring-methods-industrial-de4abd",
+  "leakage_ratio": 0.25,
+  "legacy_id": "v2-text-nmi-haz-t1-e-801-003",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "exposure",
+      "unknown"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "The view of Classified-area wiring methods cuts off the area where the exposure control would be visible. The crew location and energy or fall-protection boundary cannot be determined from the provided frame. Reference material on hand: NEC 500-516.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 500-516"
+  ],
+  "subcategory": "2.1.8 Hazardous Locations (T1 overlay)",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T1",
+  "title": "Hazard check: Classified-area wiring methods (industrial site)"
+}

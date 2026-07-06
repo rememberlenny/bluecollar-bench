@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "box fill exceeded (calculable from photo!)",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-204 Boxes, fittings & fill",
+  "element_code": "E-204",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-boxes-fittings-fill-residential-eeff4f",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t3-e-204-cc-boxes-fittings-fill",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "314",
+      "fill",
+      "volume"
+    ],
+    [
+      "overheat",
+      "damage",
+      "splice",
+      "accessibility"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Boxes, fittings & fill, part of the Electrical scope. The observed field condition is: box fill exceeded (calculable from photo!). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: NEC 314.16, 300.14, 314.28 (pull box sizing).",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 314.16",
+    "300.14",
+    "314.28 (pull box sizing)"
+  ],
+  "subcategory": "2.1.2 Raceway",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T3",
+  "title": "Compliance check: Boxes, fittings & fill (residential job)"
+}

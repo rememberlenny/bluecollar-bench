@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-101 Trench protection",
+  "element_code": "U-101",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "document-check-trench-protection-commercial-bb20dc",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-doc-t2-u-101-018",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "traceable"
+    ],
+    [
+      "consistent"
+    ],
+    [
+      "approved"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "tested/inspected",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The field condition for Trench protection is compared with the referenced drawing or manufacturer sheet. Tags, ratings, and layout callouts line up with the installed work, and the revision block shown is current. Reference material on hand: OSHA 1926 Subpart P.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart P"
+  ],
+  "subcategory": "2.11.1 Excavation & Trenching",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "Document check: Trench protection (commercial project)"
+}

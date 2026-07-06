@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "load + rigging vs",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-302 Crane operations",
+  "element_code": "S-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-crane-operations-commercial-d54b51",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-s-302-doc-crane-operations",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "chart",
+      "radius",
+      "configuration"
+    ],
+    [
+      "tip",
+      "overload",
+      "stability",
+      "contact"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Crane operations, part of the Structural & Ironwork scope. The observed field condition is: load + rigging vs. load chart at radius (DOC+ME). The work is through its testing or inspection step. Reference material on hand: OSHA 1926.1400, load charts. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926.1400",
+    "load charts"
+  ],
+  "subcategory": "2.4.3 Rigging & Machinery Moving",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "Document check: Crane operations (commercial project)"
+}

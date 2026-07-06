@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "defect": "frayed/burned webbing",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-102 Fall protection",
+  "element_code": "X-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "compliance-check-fall-protection-service-a7b14d",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t4-x-102-cc-bf-001-fall-protection",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "anchorage",
+      "5000",
+      "inspection"
+    ],
+    [
+      "arrest",
+      "fall",
+      "deployment",
+      "fatality"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Fall protection, part of the Safety & Rigging scope. The observed field condition is: frayed/burned webbing. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: OSHA 1926 Subpart M, 1910.140.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart M",
+    "1910.140"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T4",
+  "title": "Compliance check: Fall protection (service call)"
+}

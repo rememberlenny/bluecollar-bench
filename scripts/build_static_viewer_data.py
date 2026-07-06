@@ -451,7 +451,14 @@ def build_payload() -> dict[str, Any]:
     repo = github_repo()
     ref = current_ref()
     compact_items = [
-        compact_item(item, results_by_task.get(item["id"], {}), default_run, repo, ref)
+        # Runs collected before the id naturalization are keyed by legacy ids.
+        compact_item(
+            item,
+            results_by_task.get(item["id"]) or results_by_task.get(item.get("legacy_id", ""), {}),
+            default_run,
+            repo,
+            ref,
+        )
         for item in sorted(items, key=lambda entry: entry["id"])
     ]
     tasks_with_results = sum(1 for item in compact_items if item["results"])

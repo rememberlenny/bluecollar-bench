@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.8 Instrumentation & Controls",
+  "discipline_code": "2.8",
+  "element": "I-102 Manifold operations",
+  "element_code": "I-102",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "sequence-check-manifold-operations-industrial-6ba76d",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-seq-t1-i-102-014",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "sequenced"
+    ],
+    [
+      "prerequisites"
+    ],
+    [
+      "ready"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The crew log for Manifold operations shows the required preparatory steps finished before the current operation. Hold points are signed, materials are staged in order, and no skipped step is visible in the photo set. Reference material on hand: mfr procedures.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "mfr procedures"
+  ],
+  "subcategory": "2.8.1 Field Instruments",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T1",
+  "title": "Sequence check: Manifold operations (industrial site)"
+}

@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "mixed old/new belts on multi-groove",
+  "discipline": "2.7 Equipment & Machinery",
+  "discipline_code": "2.7",
+  "element": "M-302 Belts, sheaves & couplings",
+  "element_code": "M-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-belts-sheaves-couplings-service-adbbe5",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t4-m-302-fd-belts-sheaves-couplings",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "tension",
+      "alignment",
+      "match"
+    ],
+    [
+      "slip",
+      "wear",
+      "vibration",
+      "throw"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Belts, sheaves & couplings, part of the Equipment & Machinery scope. The observed field condition is: mixed old/new belts on multi-groove. The work is in service as an operating asset. Reference material on hand: mfr guides.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "mfr guides"
+  ],
+  "subcategory": "2.7.3 Rotating Equipment",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "Fault diagnosis: Belts, sheaves & couplings (service call)"
+}

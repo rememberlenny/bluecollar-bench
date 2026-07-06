@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "no spotter while backing near trench",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-301 Equipment safety",
+  "element_code": "U-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "judgment-call-equipment-safety-industrial-c4e37f",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t1-u-301-trd-equipment-safety",
+  "media": [],
+  "modality": "text",
+  "prompt": "Resolve the field tradeoff: distinguish common shortcuts from acceptable journeyman practice.",
+  "required_actions": [
+    [
+      "reject",
+      "shortcut"
+    ],
+    [
+      "follow"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "swing",
+      "spotter",
+      "radius"
+    ],
+    [
+      "struck",
+      "crush",
+      "caught",
+      "backing"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Equipment safety, part of the Sitework & Utilities scope. The observed field condition is: no spotter while backing near trench. The work is actively in progress. Reference material on hand: OSHA 1926 Subpart O.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart O"
+  ],
+  "subcategory": "2.11.3 Heavy Equipment Operation",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T1",
+  "title": "Judgment call: Equipment safety (industrial site)"
+}

@@ -1,0 +1,61 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-502 Lighting controls & emergency egress",
+  "element_code": "E-502",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "document-check-lighting-controls-emergency-egress-commer-dc8ead",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-doc-t2-e-502-016",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "traceable"
+    ],
+    [
+      "consistent"
+    ],
+    [
+      "approved"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "tested/inspected",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The field condition for Lighting controls & emergency egress is compared with the referenced drawing or manufacturer sheet. Tags, ratings, and layout callouts line up with the installed work, and the revision block shown is current. Reference material on hand: NEC 700, NFPA 101.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 700",
+    "NFPA 101"
+  ],
+  "subcategory": "2.1.5 Lighting",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T2",
+  "title": "Document check: Lighting controls & emergency egress (commercial project)"
+}

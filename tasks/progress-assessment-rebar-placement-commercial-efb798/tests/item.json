@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "missing chairs/supports (mat on dirt)",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-201 Rebar placement",
+  "element_code": "S-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "progress-assessment-rebar-placement-commercial-efb798",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-s-201-pa-rebar-placement",
+  "media": [],
+  "modality": "text",
+  "prompt": "Assess how far along the work is, the percent complete, any defects, and the remaining work.",
+  "required_actions": [
+    [
+      "complete"
+    ],
+    [
+      "remaining"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "aci",
+      "cover",
+      "development"
+    ],
+    [
+      "corrosion",
+      "bond",
+      "capacity",
+      "spall"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Rebar placement, part of the Structural & Ironwork scope. The observed field condition is: missing chairs/supports (mat on dirt). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: ACI 318, ACI 117, placing drawings. Treat this as roughly 70 percent complete until defects are corrected.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ACI 318",
+    "ACI 117",
+    "placing drawings"
+  ],
+  "subcategory": "2.4.2 Reinforcing",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T2",
+  "title": "Progress assessment: Rebar placement (commercial project)"
+}

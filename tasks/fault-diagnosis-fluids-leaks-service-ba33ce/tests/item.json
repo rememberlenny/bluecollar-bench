@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "leak source identification by color/location (trans red, coolant green/orange, oil...)",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-102 Fluids & leaks",
+  "element_code": "A-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-fluids-leaks-service-ba33ce",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t4-a-102-fd-fluids-leaks",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "specification",
+      "level",
+      "source"
+    ],
+    [
+      "contamination",
+      "starvation",
+      "aeration",
+      "failure"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Fluids & leaks, part of the Automotive & Powertrain scope. The observed field condition is: leak source identification by color/location (trans red, coolant green/orange, oil...). The work is in service as an operating asset. Reference material on hand: OEM specs.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM specs"
+  ],
+  "subcategory": "2.9.1 Engine & Drivetrain",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "Fault diagnosis: Fluids & leaks (service call)"
+}

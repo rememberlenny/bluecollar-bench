@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "open ground",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-401 Receptacles & switches",
+  "element_code": "E-401",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "identification-receptacles-switches-residential-d9dad0",
+  "leakage_ratio": 0.43,
+  "legacy_id": "t3-e-401-id-receptacles-switches",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "406",
+      "210.8",
+      "gfci"
+    ],
+    [
+      "shock",
+      "polarity",
+      "ground",
+      "protection"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Receptacles & switches, part of the Electrical scope. The observed field condition is: open ground. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: NEC 210.8, 406.4, 406.9.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 210.8",
+    "406.4",
+    "406.9"
+  ],
+  "subcategory": "2.1.4 Devices & Equipment",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T3",
+  "title": "Identification: Receptacles & switches (residential job)"
+}

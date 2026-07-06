@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "blowout evidence",
+  "discipline": "2.5 Concrete & Masonry",
+  "discipline_code": "2.5",
+  "element": "C-101 Form build & bracing",
+  "element_code": "C-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "measurement-check-form-build-bracing-industrial-03b2a0",
+  "leakage_ratio": 0.43,
+  "legacy_id": "t1-c-101-me-bf-010-form-build-bracing",
+  "media": [],
+  "modality": "text",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "347",
+      "bracing",
+      "pressure"
+    ],
+    [
+      "blowout",
+      "collapse",
+      "deflection",
+      "failure"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Form build & bracing, part of the Concrete & Masonry scope. The observed field condition is: blowout evidence. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: ACI 347. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ACI 347"
+  ],
+  "subcategory": "2.5.1 Formwork",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T1",
+  "title": "Measurement check: Form build & bracing (industrial site)"
+}

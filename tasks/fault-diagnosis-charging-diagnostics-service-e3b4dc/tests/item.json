@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "charged to \"beer-can cold\" instead of subcool/superheat targets",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-302 Charging & diagnostics",
+  "element_code": "H-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-charging-diagnostics-service-e3b4dc",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t4-h-302-fd-charging-diagnostics",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "subcool",
+      "superheat",
+      "chart"
+    ],
+    [
+      "overcharge",
+      "undercharge",
+      "flood",
+      "starve"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Charging & diagnostics, part of the HVAC-R scope. The observed field condition is: charged to \"beer-can cold\" instead of subcool/superheat targets. The work is in service as an operating asset. Reference material on hand: mfr charging charts.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr charging charts"
+  ],
+  "subcategory": "2.3.3 Refrigeration Circuit",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "Fault diagnosis: Charging & diagnostics (service call)"
+}

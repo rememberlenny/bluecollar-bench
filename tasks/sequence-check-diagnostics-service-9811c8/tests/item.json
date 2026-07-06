@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "replacing parts on codes without testing (P0420 \u2192 cat vs",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-301 Diagnostics",
+  "element_code": "A-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "sequence-check-diagnostics-service-9811c8",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t4-a-301-seq-diagnostics",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "test",
+      "verify",
+      "data"
+    ],
+    [
+      "misdiagnosis",
+      "parts",
+      "unnecessary",
+      "root"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Diagnostics, part of the Automotive & Powertrain scope. The observed field condition is: replacing parts on codes without testing (P0420 \u2192 cat vs. O2 sensor - the canonical TRD/FD item). The work is actively in progress. Reference material on hand: OEM service info, OBD-II standards.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM service info",
+    "OBD-II standards"
+  ],
+  "subcategory": "2.9.3 Electrical & Electronics",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T4",
+  "title": "Sequence check: Diagnostics (service call)"
+}

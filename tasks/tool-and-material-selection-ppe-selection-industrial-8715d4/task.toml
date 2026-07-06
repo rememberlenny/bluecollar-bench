@@ -1,0 +1,53 @@
+schema_version = "1.3"
+
+[task]
+name = "bluecollar-bench/tool-and-material-selection-ppe-selection-industrial-8715d4"
+description = "Tool and material selection: PPE selection (industrial site)"
+authors = [{ name = "Blue-Collar Benchmark Maintainers" }]
+keywords = ["blue-collar", "trades", "t1", "ts", "2-12"]
+
+[metadata]
+benchmark = "blue-collar-benchmark"
+benchmark_version = "0.1"
+item_id = "tool-and-material-selection-ppe-selection-industrial-8715d4"
+tier = "T1"
+discipline = "2.12 Safety & Rigging"
+element = "X-105 PPE selection"
+task_type = "TS"
+task_type_name = "Tool & material selection"
+s1_state = "staged"
+s3_percent = 50.0
+expected_decision = "needs_more_info"
+expected_risk = "medium"
+modality = "text"
+media = []
+expected_value_present = false
+expected_value = 0.0
+value_tolerance = 0.0
+expected_rate_present = false
+expected_rate = 0.0
+rate_tolerance = 0.0
+expected_event_time_present = false
+expected_event_time = 0.0
+event_time_tolerance = 0.0
+expected_order = []
+expected_sound_source = ""
+confusable_with = ""
+reduction_test = ""
+generation = "synthetic-text-rebalance-v2"
+source_refs = ["NFPA 70E", "OSHA 1910 Subpart I"]
+
+[agent]
+timeout_sec = 300.0
+user = "agent"
+
+[verifier]
+timeout_sec = 120.0
+user = "root"
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048

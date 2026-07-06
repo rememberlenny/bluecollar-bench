@@ -1,0 +1,62 @@
+{
+  "decision": "fail",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-101 Timing & mechanical",
+  "element_code": "A-101",
+  "expected_sound_source": [
+    "engine",
+    "engine idle",
+    "four cylinder engine"
+  ],
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "healthy",
+      "idle"
+    ]
+  ],
+  "generation": "synthetic-audio-v2",
+  "id": "fault-diagnosis-timing-mechanical-service-dff980",
+  "leakage_ratio": 0.25,
+  "legacy_id": "v2-audio-engine-004",
+  "media": [
+    "audio_engine_004.wav"
+  ],
+  "modality": "audio",
+  "prompt": "Listen to the idle cadence. Classify the condition from the rhythm, identify the likely fault pattern if one is present, and give the disposition.",
+  "reduction_test": "The answer depends on the rhythm and regularity of firing events; a transcript loses the repeating or irregular gaps.",
+  "required_actions": [
+    [
+      "cylinder",
+      "identify",
+      "coil",
+      "plug",
+      "test"
+    ]
+  ],
+  "required_findings": [
+    [
+      "single",
+      "one",
+      "regular",
+      "repeating"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded"
+  ],
+  "s3_percent": 100,
+  "scenario": "The audio clip is a 5-second recording of a warm 4-cylinder engine at idle, taken at the fender with a phone.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM service info"
+  ],
+  "subcategory": "2.9.1 Engine & Drivetrain",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis (audio)",
+  "tier": "T4",
+  "title": "Fault diagnosis: Timing & mechanical (audio, service call)"
+}

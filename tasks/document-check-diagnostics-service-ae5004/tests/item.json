@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "freeze-frame interpretation (DOC: read the scan tool screenshot)",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-301 Diagnostics",
+  "element_code": "A-301",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "document-check-diagnostics-service-ae5004",
+  "leakage_ratio": 0.0,
+  "legacy_id": "t4-a-301-doc-diagnostics",
+  "media": [],
+  "modality": "text",
+  "prompt": "Compare the field condition against the referenced document, tag, drawing, or standard.",
+  "required_actions": [
+    [
+      "compare"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "test",
+      "verify",
+      "data"
+    ],
+    [
+      "misdiagnosis",
+      "parts",
+      "unnecessary",
+      "root"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 85,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Diagnostics, part of the Automotive & Powertrain scope. The observed field condition is: freeze-frame interpretation (DOC: read the scan tool screenshot). The work is through its testing or inspection step. Reference material on hand: OEM service info, OBD-II standards. A drawing, inspection checklist, equipment tag, or manufacturer instruction is available for comparison.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM service info",
+    "OBD-II standards"
+  ],
+  "subcategory": "2.9.3 Electrical & Electronics",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T4",
+  "title": "Document check: Diagnostics (service call)"
+}

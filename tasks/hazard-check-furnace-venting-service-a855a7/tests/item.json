@@ -1,0 +1,74 @@
+{
+  "decision": "fail",
+  "defect": "PVC flue slope back-pitched (condensing)",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-102 Furnace & venting",
+  "element_code": "H-102",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "hazard-check-furnace-venting-service-a855a7",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t4-h-102-haz-furnace-venting",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the safety hazards, their severity, and the immediate controls required.",
+  "required_actions": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "control",
+      "hazard"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "venting",
+      "combustion",
+      "category"
+    ],
+    [
+      "carbon",
+      "monoxide",
+      "backdraft",
+      "spillage"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Furnace & venting, part of the HVAC-R scope. The observed field condition is: PVC flue slope back-pitched (condensing). The work is actively in progress. Reference material on hand: IRC M1801, NFPA 54.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC M1801",
+    "NFPA 54"
+  ],
+  "subcategory": "2.3.1 Equipment Installation",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T4",
+  "title": "Hazard check: Furnace & venting (service call)"
+}

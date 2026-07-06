@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "no attendant posted",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-103 Confined space",
+  "element_code": "X-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-confined-space-service-87c160",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t4-x-103-fd-confined-space",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "1910.146",
+      "permit",
+      "atmosphere"
+    ],
+    [
+      "asphyxiation",
+      "toxic",
+      "flammable",
+      "rescue"
+    ]
+  ],
+  "risk": "critical",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Confined space, part of the Safety & Rigging scope. The observed field condition is: no attendant posted. The work is in service as an operating asset. Reference material on hand: OSHA 1910.146.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1910.146"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "Fault diagnosis: Confined space (service call)"
+}

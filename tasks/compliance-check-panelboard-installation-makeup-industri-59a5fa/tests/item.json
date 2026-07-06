@@ -1,0 +1,62 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-102 Panelboard installation & makeup",
+  "element_code": "E-102",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "compliance-check-panelboard-installation-makeup-industri-59a5fa",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-pass-cc-t1-e-102-000",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "conforming"
+    ],
+    [
+      "ready"
+    ],
+    [
+      "acceptance"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Closeout photos for Panelboard installation & makeup show the installed work following the referenced detail. Clearances, labels, supports, and terminations shown for this element are in place, and the inspection card has no open correction note. Reference material on hand: NEC Art. 408, 110.26 (working clearance), 200.4.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 408",
+    "110.26 (working clearance)",
+    "200.4"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T1",
+  "title": "Compliance check: Panelboard installation & makeup (industrial site)"
+}

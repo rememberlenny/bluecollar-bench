@@ -4,8 +4,8 @@ Total items: 1299
 
 | Bucket | Items |
 |---|---:|
-| clean (<40%) | 1124 |
-| partial (40-79%) | 175 |
+| clean (<40%) | 1125 |
+| partial (40-79%) | 174 |
 | leaked (>=80%) | 0 |
 
 Leaked items reward scenario-echoing. Remediation: rewrite scenarios as

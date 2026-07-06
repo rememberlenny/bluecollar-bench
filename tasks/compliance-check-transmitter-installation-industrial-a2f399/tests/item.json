@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "defect": "DP impulse lines sloped wrong for service (gas taps below pipe / liquid taps on top - the classic)",
+  "discipline": "2.8 Instrumentation & Controls",
+  "discipline_code": "2.8",
+  "element": "I-101 Transmitter installation",
+  "element_code": "I-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-transmitter-installation-industrial-a2f399",
+  "leakage_ratio": 0.43,
+  "legacy_id": "t1-i-101-cc-transmitter-installation",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "551",
+      "impulse",
+      "orientation"
+    ],
+    [
+      "error",
+      "gas",
+      "condensate",
+      "reading"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Transmitter installation, part of the Instrumentation & Controls scope. The observed field condition is: DP impulse lines sloped wrong for service (gas taps below pipe / liquid taps on top - the classic). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: API RP 551, mfr manuals.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "API RP 551",
+    "mfr manuals"
+  ],
+  "subcategory": "2.8.1 Field Instruments",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T1",
+  "title": "Compliance check: Transmitter installation (industrial site)"
+}

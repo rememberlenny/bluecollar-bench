@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "bend radius violations",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-702 Data/comm & security",
+  "element_code": "E-702",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "identification-data-comm-security-commercial-b11837",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t2-e-702-id-data-comm-security",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify the component or condition shown, and name the visible defect cues.",
+  "required_actions": [
+    [
+      "identify"
+    ],
+    [
+      "document"
+    ],
+    [
+      "inspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "568",
+      "category",
+      "plenum"
+    ],
+    [
+      "crosstalk",
+      "performance",
+      "smoke",
+      "toxicity"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Data/comm & security, part of the Electrical scope. The observed field condition is: bend radius violations. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: TIA-568, NEC 800.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "TIA-568",
+    "NEC 800"
+  ],
+  "subcategory": "2.1.7 Low Voltage & Specialty",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T2",
+  "title": "Identification: Data/comm & security (commercial project)"
+}

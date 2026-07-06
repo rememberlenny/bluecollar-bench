@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "timing marks misaligned by a tooth (photo of marks - ME/ID)",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-101 Timing & mechanical",
+  "element_code": "A-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "measurement-check-timing-mechanical-production-412510",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t5-a-101-me-bf-016-timing-mechanical",
+  "media": [],
+  "modality": "text",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "oem",
+      "alignment",
+      "specification"
+    ],
+    [
+      "timing",
+      "interference",
+      "misfire",
+      "damage"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a manufacturing or assembly floor running standard work with quality gates. The work under review is Timing & mechanical, part of the Automotive & Powertrain scope. The observed field condition is: timing marks misaligned by a tooth (photo of marks - ME/ID). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: OEM service info. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM service info"
+  ],
+  "subcategory": "2.9.1 Engine & Drivetrain",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T5",
+  "title": "Measurement check: Timing & mechanical (production floor)"
+}

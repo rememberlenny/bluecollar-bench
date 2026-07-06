@@ -282,9 +282,9 @@ Agents must write JSON to `/app/answer.json`. The core slots are:
 |---|---|
 | `decision` | `pass`, `fail`, or `needs_more_info` |
 | `risk` | `low`, `medium`, `high`, or `critical` |
-| `s1_state` | Work lifecycle state |
-| `s2_conditions` | Component or compliance condition tags |
-| `s3_percent` | Progress estimate, reused for some numeric grading |
+| `work_stage` | Work lifecycle state (legacy answers may still use `s1_state`) |
+| `component_conditions` | Component or compliance condition tags (legacy `s2_conditions`) |
+| `percent_complete` | Progress estimate, reused for some numeric grading (legacy `s3_percent`) |
 | `value`, `sound_source`, `event_time`, `rate`, `order` | Modality-specific expected outputs |
 | `findings` | Defect, hazard, or condition findings |
 | `actions` | Corrective or escalation actions |

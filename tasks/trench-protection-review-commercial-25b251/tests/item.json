@@ -1,0 +1,57 @@
+{
+  "decision": "pass",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-101 Trench protection",
+  "element_code": "U-101",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "evacuate"
+    ],
+    [
+      "stop",
+      "work"
+    ]
+  ],
+  "generation": "curated-v2-control",
+  "id": "trench-protection-review-commercial-25b251",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-pass-u101-t2-trench-correct",
+  "media": [],
+  "modality": "text",
+  "prompt": "Identify any hazards requiring immediate control, or confirm the protective system is adequate as observed.",
+  "required_actions": [
+    [
+      "monitor"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "protective system present"
+    ],
+    [
+      "safe access present"
+    ],
+    [
+      "edge setback acceptable"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "A 6-foot-deep utility trench has workers inside a trench shield whose certification plate and tabulated data are visible. Shield walls extend above grade, the spoil pile sits roughly four feet back from the edge, and an extension ladder inside the shield extends three rungs above grade about ten feet from the workers. A competent-person daily inspection log dated today is shown.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart P"
+  ],
+  "subcategory": "2.11.1 Excavation & Trenching",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T2",
+  "title": "Trench protection review (commercial project)"
+}

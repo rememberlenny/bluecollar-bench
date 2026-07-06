@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "pad not level (oil return)",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-101 Condenser/heat pump setting",
+  "element_code": "H-101",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "measurement-check-condenser-heat-pump-setting-residentia-5da517",
+  "leakage_ratio": 0.57,
+  "legacy_id": "t3-h-101-me-condenser-heat-pump-setting",
+  "media": [],
+  "modality": "text",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "clearance",
+      "manufacturer",
+      "level"
+    ],
+    [
+      "airflow",
+      "efficiency",
+      "oil",
+      "return"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Condenser/heat pump setting, part of the HVAC-R scope. The observed field condition is: pad not level (oil return). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: mfr install manual, IMC/IRC M1401. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "mfr install manual",
+    "IMC/IRC M1401"
+  ],
+  "subcategory": "2.3.1 Equipment Installation",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T3",
+  "title": "Measurement check: Condenser/heat pump setting (residential job)"
+}

@@ -1,0 +1,73 @@
+{
+  "decision": "fail",
+  "defect": ">360\u00b0 of bends between pull points",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-201 EMT bending & installation",
+  "element_code": "E-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "compliance-check-emt-bending-installation-commercial-a4bbfe",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-e-201-cc-emt-bending-installation",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "358",
+      "raceway",
+      "support"
+    ],
+    [
+      "pull",
+      "damage",
+      "insulation",
+      "capacity"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is EMT bending & installation, part of the Electrical scope. The observed field condition is: >360\u00b0 of bends between pull points. The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: NEC Art. 358, Ch. 9 (fill).",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 358",
+    "Ch. 9 (fill)"
+  ],
+  "subcategory": "2.1.2 Raceway",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T2",
+  "title": "Compliance check: EMT bending & installation (commercial project)"
+}

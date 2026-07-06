@@ -1,0 +1,64 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-102 Panelboard installation & makeup",
+  "element_code": "E-102",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "judgment-call-panelboard-installation-makeup-commercial-ea0e4b",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-nmi-trd-t2-e-102-023",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "constraint",
+      "unknown"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "The crew proposes a shortcut for Panelboard installation & makeup, but the submittal omits the product listing page and project note that would decide whether the shortcut is allowed here. Reference material on hand: NEC Art. 408, 110.26 (working clearance), 200.4.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 408",
+    "110.26 (working clearance)",
+    "200.4"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T2",
+  "title": "Judgment call: Panelboard installation & makeup (commercial project)"
+}

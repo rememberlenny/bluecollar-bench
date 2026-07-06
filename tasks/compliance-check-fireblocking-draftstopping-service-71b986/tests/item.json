@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "foam where fire-rated sealant required (ID by color/label)",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-103 Fireblocking & draftstopping",
+  "element_code": "F-103",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "compliance-check-fireblocking-draftstopping-service-71b986",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t4-f-103-cc-bf-002-fireblocking-draftstoppi",
+  "media": [],
+  "modality": "text",
+  "prompt": "Determine whether the work meets the applicable code, spec, drawing, or manufacturer requirement.",
+  "required_actions": [
+    [
+      "correct"
+    ],
+    [
+      "inspect"
+    ],
+    [
+      "before",
+      "acceptance"
+    ]
+  ],
+  "required_findings": [
+    [
+      "302",
+      "fireblocking",
+      "rated"
+    ],
+    [
+      "spread",
+      "chimney",
+      "concealed",
+      "flame"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective",
+    "non-compliant"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Fireblocking & draftstopping, part of the Carpentry & Finishes scope. The observed field condition is: foam where fire-rated sealant required (ID by color/label). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: IRC R302.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IRC R302"
+  ],
+  "subcategory": "2.6.1 Rough Framing",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T4",
+  "title": "Compliance check: Fireblocking & draftstopping (service call)"
+}

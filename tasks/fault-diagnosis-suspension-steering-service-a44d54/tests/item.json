@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "ball joint play (video item - pry test)",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-202 Suspension & steering",
+  "element_code": "A-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-suspension-steering-service-a44d54",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t4-a-202-fd-suspension-steering",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "play",
+      "specification",
+      "wear"
+    ],
+    [
+      "alignment",
+      "separation",
+      "control",
+      "camber"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Suspension & steering, part of the Automotive & Powertrain scope. The observed field condition is: ball joint play (video item - pry test). The work is in service as an operating asset. Reference material on hand: OEM, alignment specs.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM",
+    "alignment specs"
+  ],
+  "subcategory": "2.9.2 Chassis",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T4",
+  "title": "Fault diagnosis: Suspension & steering (service call)"
+}

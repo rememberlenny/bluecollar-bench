@@ -1,0 +1,62 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.12 Safety & Rigging",
+  "discipline_code": "2.12",
+  "element": "X-102 Fall protection",
+  "element_code": "X-102",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "identification-fall-protection-industrial-f800a3",
+  "leakage_ratio": 0.0,
+  "legacy_id": "v2-text-nmi-id-t1-x-102-011",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "obscured"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "The only photo of Fall protection is blocked by packaging and glare. The visible outline suggests the right area, but the identifying mark and connection details cannot be read from the provided evidence. Reference material on hand: OSHA 1926 Subpart M, 1910.140.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart M",
+    "1910.140"
+  ],
+  "subcategory": "2.10.4 Quality Inspection",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T1",
+  "title": "Identification: Fall protection (industrial site)"
+}

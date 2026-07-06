@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "sagging flex (>\u00bd in/ft between supports)",
+  "discipline": "2.3 HVAC-R",
+  "discipline_code": "2.3",
+  "element": "H-201 Duct installation",
+  "element_code": "H-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "progress-assessment-duct-installation-industrial-ef1af7",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t1-h-201-pa-bf-002-duct-installation",
+  "media": [],
+  "modality": "text",
+  "prompt": "Assess how far along the work is, the percent complete, any defects, and the remaining work.",
+  "required_actions": [
+    [
+      "complete"
+    ],
+    [
+      "remaining"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "seal",
+      "mastic",
+      "smacna"
+    ],
+    [
+      "leakage",
+      "loss",
+      "efficiency",
+      "pressure"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Duct installation, part of the HVAC-R scope. The observed field condition is: sagging flex (>\u00bd in/ft between supports). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: IMC 603, SMACNA, Manual D. Treat this as roughly 70 percent complete until defects are corrected.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "IMC 603",
+    "SMACNA",
+    "Manual D"
+  ],
+  "subcategory": "2.3.2 Distribution",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T1",
+  "title": "Progress assessment: Duct installation (industrial site)"
+}

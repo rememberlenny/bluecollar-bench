@@ -1,0 +1,70 @@
+{
+  "decision": "fail",
+  "defect": "belt tension off (deflection measurement - ME)",
+  "discipline": "2.7 Equipment & Machinery",
+  "discipline_code": "2.7",
+  "element": "M-302 Belts, sheaves & couplings",
+  "element_code": "M-302",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "tool-and-material-selection-belts-sheaves-couplings-serv-a9ef3d",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t4-m-302-ts-belts-sheaves-couplings",
+  "media": [],
+  "modality": "text",
+  "prompt": "Select the correct tool, material, or replacement approach and explain why the observed choice is wrong.",
+  "required_actions": [
+    [
+      "replace"
+    ],
+    [
+      "select"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "tension",
+      "alignment",
+      "match"
+    ],
+    [
+      "slip",
+      "wear",
+      "vibration",
+      "throw"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "staged",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 15,
+  "scenario": "You are on a field-service visit to an installed, operating asset, working from symptoms, the work order, and OEM service information. The work under review is Belts, sheaves & couplings, part of the Equipment & Machinery scope. The observed field condition is: belt tension off (deflection measurement - ME). The work is staged \u2014 materials, tools, and access are ready, but work has not begun. Reference material on hand: mfr guides.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "mfr guides"
+  ],
+  "subcategory": "2.7.3 Rotating Equipment",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T4",
+  "title": "Tool and material selection: Belts, sheaves & couplings (service call)"
+}

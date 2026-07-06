@@ -10,6 +10,10 @@ import sys
 import textwrap
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import naturalize_items as nat  # noqa: E402
+
 
 ROOT = Path(__file__).resolve().parents[1]
 ITEMS_PATH = ROOT / "benchmark" / "items" / "items.json"
@@ -178,23 +182,24 @@ exit 0
 
 
 def render_instruction(item: dict) -> str:
-    s2 = ", ".join(item["s2_expected"]) or "none"
+    s2 = ", ".join(f"`{c}`" for c in item["s2_expected"]) or "none flagged — judge from the evidence"
     media = item.get("media") or []
+    stage = item["s1_state"]
+    stage_phrase = nat.S1_PHRASE.get(stage, stage)
     lines = [
         f"# {item['title']}",
         "",
-        "You are evaluating a blue-collar trade-work scenario. Produce a concise, inspection-grade answer in `/app/answer.json`.",
+        "You are assessing real trade work the way a competent tradesperson or inspector would.",
+        "Read the situation below and write your conclusions to `/app/answer.json`.",
         "",
-        "## Item metadata",
+        "## Context",
         "",
-        f"- ID: `{item['id']}`",
-        f"- Tier: `{item['tier']}`",
-        f"- Discipline: `{item['discipline']}`",
-        f"- Element: `{item['element']}`",
-        f"- Task type: `{item['task_type']}`",
-        f"- Expected lifecycle state to assess: `{item['s1_state']}`",
-        f"- Relevant S2 condition classes: `{s2}`",
-        f"- Modality: `{item.get('modality', 'text')}`",
+        f"- Setting: {nat.TIER_SETTING[item['tier']]}",
+        f"- Trade: {nat.discipline_name(item)}",
+        f"- Scope under review: {nat.element_name(item)}",
+        f"- Your task: {nat.TASK_PHRASE[item['task_type']]}",
+        f"- Stage of the work when observed: `{stage}` ({stage_phrase})",
+        f"- Component condition categories that may apply: {s2}",
         "",
         "## Scenario",
         "",
@@ -231,9 +236,9 @@ def render_instruction(item: dict) -> str:
             "{",
             '  "decision": "pass | fail | needs_more_info",',
             '  "risk": "low | medium | high | critical",',
-            '  "s1_state": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",',
-            '  "s2_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],',
-            '  "s3_percent": 0,',
+            '  "work_stage": "planned | staged | in-progress | rough-complete | tested/inspected | rework | accepted | in-service",',
+            '  "component_conditions": ["installed-defective", "non-compliant", "worn", "degraded", "failed"],',
+            '  "percent_complete": 0,',
             '  "value": 0,',
             '  "sound_source": "component or source of the sound, when asked",',
             '  "confidence": 0.0,',
@@ -249,17 +254,25 @@ def render_instruction(item: dict) -> str:
             "```",
             "",
             "Do not write prose outside the JSON file. If the work is dangerous or non-compliant, `decision` must be `fail`.",
+            "`work_stage` is how far the work has progressed; `percent_complete` is your numeric estimate of overall progress.",
+            "`component_conditions` lists the condition categories that apply to the component; use an empty list if none apply.",
             "Use `value` for the numeric reading or computed quantity when the task asks for one.",
             "Use `sound_source`, `event_time`, `rate`, and `order` for audio/video-native tasks when requested.",
             "Use `workable` for a list of activity IDs when the task asks what work can still start.",
-            "",
-            "## Source anchors",
-            "",
-            "These anchors are provided for context; apply them to the scenario rather than quoting them mechanically.",
-            "",
         ]
     )
-    lines.extend(f"- {ref}" for ref in item["source_refs"])
+    refs = nat.external_refs(item)
+    if refs:
+        lines.extend(
+            [
+                "",
+                "## Reference material",
+                "",
+                "Apply these to the scenario rather than quoting them mechanically.",
+                "",
+            ]
+        )
+        lines.extend(f"- {ref}" for ref in refs)
     return "\n".join(lines) + "\n"
 
 
@@ -275,9 +288,9 @@ def render_solution(item: dict) -> str:
     answer = {
         "decision": decision,
         "risk": item["risk"],
-        "s1_state": item["s1_state"],
-        "s2_conditions": item["s2_expected"],
-        "s3_percent": item.get("s3_percent"),
+        "work_stage": item["s1_state"],
+        "component_conditions": item["s2_expected"],
+        "percent_complete": item.get("s3_percent"),
         "findings": [" ".join(group) for group in item["required_findings"]],
         "actions": [" ".join(group) for group in item["required_actions"]],
         "rationale": rationale,

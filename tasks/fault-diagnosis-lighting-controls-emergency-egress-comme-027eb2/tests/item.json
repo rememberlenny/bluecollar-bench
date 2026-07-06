@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "exit sign dead battery (test-button item)",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-502 Lighting controls & emergency egress",
+  "element_code": "E-502",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "fault-diagnosis-lighting-controls-emergency-egress-comme-027eb2",
+  "leakage_ratio": 0.29,
+  "legacy_id": "t2-e-502-fd-lighting-controls-emergency-egre",
+  "media": [],
+  "modality": "text",
+  "prompt": "Diagnose the most likely fault or failure mode and explain what evidence supports it.",
+  "required_actions": [
+    [
+      "diagnose"
+    ],
+    [
+      "repair"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "700",
+      "egress",
+      "unswitched"
+    ],
+    [
+      "outage",
+      "evacuation",
+      "life",
+      "safety"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-service",
+  "s2_expected": [
+    "degraded",
+    "failed"
+  ],
+  "s3_percent": 100,
+  "scenario": "You are on a commercial construction project governed by building codes, submittals, and third-party inspections. The work under review is Lighting controls & emergency egress, part of the Electrical scope. The observed field condition is: exit sign dead battery (test-button item). The work is in service as an operating asset. Reference material on hand: NEC 700, NFPA 101.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 700",
+    "NFPA 101"
+  ],
+  "subcategory": "2.1.5 Lighting",
+  "task_type": "FD",
+  "task_type_name": "Fault diagnosis",
+  "tier": "T2",
+  "title": "Fault diagnosis: Lighting controls & emergency egress (commercial project)"
+}

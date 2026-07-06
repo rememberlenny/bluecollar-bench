@@ -1,0 +1,71 @@
+{
+  "decision": "fail",
+  "defect": "troweling bleed water back in (dusting/scaling later - FD from failed-surface photos)",
+  "discipline": "2.5 Concrete & Masonry",
+  "discipline_code": "2.5",
+  "element": "C-202 Finishing & curing",
+  "element_code": "C-202",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "matrix-backfill",
+  "id": "sequence-check-finishing-curing-industrial-4efdb1",
+  "leakage_ratio": 0.43,
+  "legacy_id": "t1-c-202-seq-bf-012-finishing-curing",
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the procedure sequence and state what must happen before work can continue.",
+  "required_actions": [
+    [
+      "stop"
+    ],
+    [
+      "resequence"
+    ],
+    [
+      "verify"
+    ]
+  ],
+  "required_findings": [
+    [
+      "308",
+      "cure",
+      "timing"
+    ],
+    [
+      "dusting",
+      "scaling",
+      "cracking",
+      "shrinkage"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 45,
+  "scenario": "You are on a heavy-industrial construction or process site where work follows engineered drawings, specifications, and permits. The work under review is Finishing & curing, part of the Concrete & Masonry scope. The observed field condition is: troweling bleed water back in (dusting/scaling later - FD from failed-surface photos). The work is actively in progress. Reference material on hand: ACI 302, 308.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ACI 302",
+    "308"
+  ],
+  "subcategory": "2.5.2 Placement & Finishing",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T1",
+  "title": "Sequence check: Finishing & curing (industrial site)"
+}

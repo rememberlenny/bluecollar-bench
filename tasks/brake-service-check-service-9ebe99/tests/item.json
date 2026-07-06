@@ -1,0 +1,58 @@
+{
+  "decision": "pass",
+  "discipline": "2.9 Automotive & Powertrain",
+  "discipline_code": "2.9",
+  "element": "A-201 Brakes",
+  "element_code": "A-201",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "replace",
+      "rotor"
+    ],
+    [
+      "stop",
+      "work"
+    ]
+  ],
+  "generation": "curated-v2-control",
+  "id": "brake-service-check-service-9ebe99",
+  "leakage_ratio": 0.67,
+  "legacy_id": "v2-pass-a201-t4-brakes-correct",
+  "media": [],
+  "modality": "text",
+  "prompt": "Verify the measurements against specification and determine whether this work is acceptable for release.",
+  "required_actions": [
+    [
+      "release"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "rotor"
+    ],
+    [
+      "minimum"
+    ],
+    [
+      "torque"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "tested/inspected",
+  "s2_expected": [],
+  "s3_percent": 95,
+  "scenario": "A completed front brake job is documented. The micrometer reads 28.4 mm on a rotor stamped MIN TH 26.0 mm. New pads are seated with hardware and shims, caliper guide pins show fresh silicone lube on the boots, and the work order records lug nuts torqued to 103 ft-lb in a star pattern with a torque wrench pictured on the wheel. Road test noted normal pedal.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "OEM specs"
+  ],
+  "subcategory": "2.9.2 Chassis",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T4",
+  "title": "Brake service check (service call)"
+}

@@ -50,7 +50,9 @@ def media_paths(item: dict) -> list[str]:
 
 def merged_items() -> list[dict]:
     items = [normalize_item(item) for item in json.loads(ITEMS.read_text(encoding="utf-8"))]
-    by_id = {i["id"]: i for i in items}
+    # Source item files keep their original ids; the catalog may already be
+    # naturalized, so dedupe on legacy_id when present.
+    by_id = {i.get("legacy_id", i["id"]): i for i in items}
     added = 0
     for src in (CONTROL, MEDIA_ITEMS, CPM_ITEMS, AUDIO_ITEMS, TEXT_REBALANCE_ITEMS):
         if not src.exists():
@@ -71,6 +73,7 @@ def main() -> None:
     restore_script = ROOT / "scripts" / "restore_scenarios.py"
     if restore_script.exists():
         subprocess.run([sys.executable, str(restore_script)], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "naturalize_items.py")], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(ROOT / "scripts" / "leakage_audit.py")], cwd=ROOT, check=True)
     items = json.loads(ITEMS.read_text(encoding="utf-8"))
     catalog.write_coverage(items, catalog.parse_elements())

@@ -1,0 +1,72 @@
+{
+  "decision": "fail",
+  "defect": "lap splice too short (count bar diameters - ME)",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-201 Rebar placement",
+  "element_code": "S-201",
+  "evidence_present": true,
+  "findings_mode": "any_per_group",
+  "forbidden": [
+    [
+      "pass"
+    ],
+    [
+      "accept"
+    ],
+    [
+      "safe",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "auto",
+  "id": "measurement-check-rebar-placement-residential-f46776",
+  "leakage_ratio": 0.14,
+  "legacy_id": "t3-s-201-me-rebar-placement",
+  "media": [],
+  "modality": "text",
+  "prompt": "Estimate or interpret the measurable condition and state why it is out of tolerance.",
+  "required_actions": [
+    [
+      "measure"
+    ],
+    [
+      "correct"
+    ],
+    [
+      "reinspect"
+    ]
+  ],
+  "required_findings": [
+    [
+      "aci",
+      "cover",
+      "development"
+    ],
+    [
+      "corrosion",
+      "bond",
+      "capacity",
+      "spall"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [
+    "installed-defective"
+  ],
+  "s3_percent": 70,
+  "scenario": "You are on a residential job \u2014 a service call, remodel, or homeowner installation with prescriptive code and manufacturer instructions. The work under review is Rebar placement, part of the Structural & Ironwork scope. The observed field condition is: lap splice too short (count bar diameters - ME). The work is roughed in \u2014 installed or assembled, but not yet closed out. Reference material on hand: ACI 318, ACI 117, placing drawings. The measurable cue is visible enough to estimate whether the condition is within tolerance.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ACI 318",
+    "ACI 117",
+    "placing drawings"
+  ],
+  "subcategory": "2.4.2 Reinforcing",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T3",
+  "title": "Measurement check: Rebar placement (residential job)"
+}
