@@ -61,9 +61,11 @@ def load_answer_json(path: Path) -> Any | None:
         return None
 
 
-def compact_text(value: Any, limit: int = 420) -> str:
+def compact_text(value: Any, limit: int | None = None) -> str:
     text = str(value)
     text = re.sub(r"\s+", " ", text).strip()
+    if limit is None:
+        return text
     if len(text) <= limit:
         return text
     return text[: limit - 1].rstrip() + "..."
@@ -80,13 +82,11 @@ def compact_answer(value: Any) -> dict[str, Any] | None:
         if isinstance(item, str):
             answer[key] = compact_text(item)
         elif isinstance(item, list):
-            answer[key] = [compact_text(entry, 240) for entry in item[:8]]
-            if len(item) > 8:
-                answer[key].append(f"... {len(item) - 8} more")
+            answer[key] = [compact_text(entry) for entry in item]
         elif isinstance(item, (int, float, bool)) or item is None:
             answer[key] = item
         else:
-            answer[key] = compact_text(json.dumps(item, sort_keys=True), 240)
+            answer[key] = compact_text(json.dumps(item, sort_keys=True))
     return answer or None
 
 
