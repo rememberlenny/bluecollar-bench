@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-301 Conductor selection & sizing",
+  "element_code": "E-301",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-trd-t2-e-301-024",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "proceed"
+    ]
+  ],
+  "required_findings": [
+    [
+      "permissible"
+    ],
+    [
+      "preference"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "A crew used a field method for E-301 Conductor selection & sizing that is less tidy than the preferred shop approach but still matches the listed product instructions and the project requirement. No local amendment or drawing note forbids it. Source anchors for review: NEC 310, Table 310.16.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 310",
+    "Table 310.16"
+  ],
+  "subcategory": "2.1.3 Wire & Cable",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T2",
+  "title": "T2 E-301 Compliant Tradeoff judgment"
+}

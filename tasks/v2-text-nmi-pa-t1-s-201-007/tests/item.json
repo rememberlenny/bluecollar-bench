@@ -1,0 +1,63 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-201 Rebar placement",
+  "element_code": "S-201",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-nmi-pa-t1-s-201-007",
+  "leakage_ratio": 0.25,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "quantity",
+      "unknown"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "Photos of S-201 Rebar placement show several completed pieces, but the area count and remaining scope are not listed. The submitted package does not include the quantity takeoff needed to score the checkpoint. Source anchors for review: ACI 318, ACI 117, placing drawings.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ACI 318",
+    "ACI 117",
+    "placing drawings"
+  ],
+  "subcategory": "2.4.2 Reinforcing",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T1",
+  "title": "T1 S-201 Insufficient evidence Progress assessment"
+}

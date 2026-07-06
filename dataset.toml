@@ -4175,6 +4175,1006 @@ name = "bluecollar-bench/v2-pass-x102-t2-harness-correct"
 digest = "sha256:1fe607f66b8b47ce9e2cfe0eb65ca33a2bed644dd2f1cc4cefb96b47dc3a49b0"
 
 [[tasks]]
+name = "bluecollar-bench/v2-text-nmi-cc-t1-e-105-003"
+digest = "sha256:40c7fd2f9a470f78442072851dd7986d3920a352065cda00408cb6b35b8a9f46"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-cc-t1-e-204-007"
+digest = "sha256:e9333e01d444bc6736ab91ddb7a86d924c43a2082ede1fcfbab1e33a2342c64b"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-cc-t1-e-602-011"
+digest = "sha256:72ac5c01156f8cfc257f704273979ab85ee5351354326cd4f3b99a268e829391"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-cc-t1-u-201-015"
+digest = "sha256:74ff2dd5c3fbaa66a54a883f5fb15d605a0b43e6d3d8f8533b2e6d6dd6ee92d7"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-cc-t1-x-104-019"
+digest = "sha256:58ce2fc35b03c0d984276dcfcc5da18d40ef47804be0cba57f2bf27b7b6e1807"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-doc-t1-i-201-011"
+digest = "sha256:5a5d69e082e83f41cf9f165fa557af3eb7bb20ba9ef78a07edb3b8f1bca4e903"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-doc-t1-s-103-007"
+digest = "sha256:23f972934b6cad40fc8540f8335627a03880e801e5bd3d54fca1e9f93c10c820"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-doc-t1-u-101-003"
+digest = "sha256:4c6e1d2e96c3810f79143d1996d524abc4db2f7e6c9359d87320539cf53845f3"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-doc-t2-e-105-015"
+digest = "sha256:36bf2779d56a5577be0f2b63facd7e907d0d6722d323159fe10e4f9acb0e6346"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-doc-t2-p-104-019"
+digest = "sha256:2862b56d9e58322049cf91598f7239f50669694b250444ca2c1d1721703ee95b"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-fd-t1-e-703-003"
+digest = "sha256:fc1be0d162c714652a1016b80930001deaac7955c1b8f1246cdc28fa15b2fe60"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-fd-t1-m-201-007"
+digest = "sha256:cd4f2b68c5e3bb0d80ced4547dbcb27aab7d0d53fb4604f2963818af4f85518f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-fd-t2-e-105-011"
+digest = "sha256:c929508da4bac34d042129be6b146fd1a0e550921f72ffbb7594780293dc1ccf"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-haz-t1-c-201-015"
+digest = "sha256:26b9bf87dfbf6705955101768624e021a25195f5e6ca59b87e0360032d265ba8"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-haz-t1-e-801-003"
+digest = "sha256:2a0b10940702c8ec8eb1cd45d6c4510641e227d1a8c14c8777d0787f65daebbc"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-haz-t1-s-101-011"
+digest = "sha256:f7b41d39ee5f3216fef23c53ca8c99ffc2efe823fa5694bbc122db27e9fe791d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-haz-t1-x-102-007"
+digest = "sha256:9c68cd2010120439c0341a67a63330f0bce1a39d630831d8d7af6b23e772542a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-haz-t2-e-302-019"
+digest = "sha256:5b0b69188d97503cb6b6a428e8f7de2a15e4296c118eac54cd4a445a85250331"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-id-t1-e-204-003"
+digest = "sha256:4bf4bbe01b42a928692e638ff7de11983fb4571e454a2f6cabf81ea34d38861d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-id-t1-e-602-007"
+digest = "sha256:8bf79895e897a0574771da618396940c17905e5e82948aac7f23615afbc9b255"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-id-t1-i-101-019"
+digest = "sha256:d63fdd26c628356f2370220ff872aff2ed3cce74846a06b2f64d5ea48a4ff76d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-id-t1-p-103-015"
+digest = "sha256:4bfd2be136b42db6796bec40c854c347a1b49048365ae57c666e5688f44d58f5"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-id-t1-x-102-011"
+digest = "sha256:2f331fa60ea2a5455f00e2d8c17268fa88c9c902749454cbfb0f7531a6a67d6a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-me-t1-e-203-003"
+digest = "sha256:1253b0f097de4fc4653507d03fac0cff4e92d7e09df9ed010188acc7cc348120"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-me-t1-e-601-007"
+digest = "sha256:47bc354c69ebe1e279b1fbb0ba782b0e92f2a0def8869efcbc78d11cb8f9b5bd"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-me-t1-p-101-011"
+digest = "sha256:9583599b97f7b8a39261c106e13a7841ad6fc0377cd162b120871b10b273d52b"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t1-e-201-023"
+digest = "sha256:a81dc30aca1fd6896bb8626d502154cbd6b9e4d6ab2b1e2f40705cabdc1892b3"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t1-e-304-003"
+digest = "sha256:51f063d512292182e617bff81414d29332086c972f9185f0b1800f2904cb2939"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t1-i-202-031"
+digest = "sha256:27797e70fbb396e327d0d6da6ea21e8e19f0c06deb0d157121ab4ba4072ddcb1"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t1-p-101-027"
+digest = "sha256:000d25af0cb3a8136bb758a2b6984344140aedc22746d77eea3f7fd32237da1c"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t1-s-201-007"
+digest = "sha256:f05051dc9ce8c5b9863b8e6d726050491856423c68d5ab726169d9e59415451b"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t2-e-201-011"
+digest = "sha256:56b1fe7000992062963b7f3a97c99fc6af6e0f968ddce4d14cdc11f43a662183"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t2-h-201-035"
+digest = "sha256:bbc59b74663024bc70dfe5bf9f3621f3815c1c182c6d7709b2a8e399b90e1305"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t2-s-201-015"
+digest = "sha256:5cca3d93b43adccfc0593a2c4cc1c1a591229bef63ca17cd4e02adf9f5014b6c"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t3-e-102-039"
+digest = "sha256:ecbf079495ed6ddc9564fb7508b615c724cf61033f81808fee74174039c879a0"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t3-s-201-019"
+digest = "sha256:4e5b59939d15abcc49b30c751e071fb08d196eae12bca6bc01f5c397b902a99d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-pa-t5-b-301-043"
+digest = "sha256:a356369ecec34c684ea5f3a11622c1790532f3d462670f9eb1ca4253844e6145"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-seq-t1-c-201-011"
+digest = "sha256:a9f567f492d86a5a0c50ca2a1e678ee419c4de66003d60f0ac524fce7eb2725e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-seq-t1-e-304-003"
+digest = "sha256:1781cf25f5f81641f83938edf3098f073e113c48da7dd792b252b6b19bd6468d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-seq-t1-x-103-007"
+digest = "sha256:68dd6f7e85dac2560eba8ed06eefaa8e60803e038c5c9a58f8910c89328bb52d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-seq-t2-e-104-015"
+digest = "sha256:83c8de1f57e86b8e9736f240aea9af728d52ec104c00fc7f7d947aed7bb8405a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-seq-t2-e-701-019"
+digest = "sha256:bdffa6abd935877e9f50b8ef0579deaf4fd987064718b464cbf089c2209a5576"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t1-e-102-019"
+digest = "sha256:c2d6457e94f2705911d38e651b1292623efa28c6249c945be82e5c5099f2b69c"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t1-e-301-039"
+digest = "sha256:f631b0902c163408867ad04c05f8240b58d10ea04ac02c66f3408c81d62e84fc"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t1-s-302-003"
+digest = "sha256:220c4f8333a3471b0a9b4ee9daae88e1b4b5433716c50bf22ee7c2294b1b922a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t2-e-102-023"
+digest = "sha256:58e4c15e52d6f31cf23a5bd8de88bab5281887595e405bfcc48e461cd2b29797"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t2-e-301-043"
+digest = "sha256:4546513858c67e337fbf6f5892eaf25452f20afc11ba440d3b6a0b9d982559a5"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t2-s-302-007"
+digest = "sha256:f4a3f92851037620cf8131740ab5e565b6715aebd3f3d5f0c50d7866b126cd00"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t3-e-102-027"
+digest = "sha256:7bb4d5f9749201295cd9a1daa5a286cc50f328ee07d0b233b0a7e4c6b766feb2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t3-e-301-047"
+digest = "sha256:80e5798b6f9387ad4d46166575187ff6e32dbc1b3ab7a17395898667a328d341"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t4-e-301-011"
+digest = "sha256:deb4bb34e99d1efdee6ad5eab51ad70333af7e4b311ee0a2b50fd9dbd054bd80"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t4-e-402-031"
+digest = "sha256:aaa308e6c13435d647c0a1c1f53464d2055d2c9aa98ab09ff12ab6ebda9ab3ed"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t5-b-101-035"
+digest = "sha256:14f1398b0febf6a6d7b28ff0352b552c14f8f3c9d30f6af0b42bfbcc50f57d9d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-trd-t5-e-301-015"
+digest = "sha256:741d869c8049644b3634e7c890592500af85215ef914d3c08659465d91b3248e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-ts-t1-e-301-003"
+digest = "sha256:84d3b1ce64542146f60833c5616e87774e2f5f0701776547d87cac449db4a673"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-ts-t1-x-105-007"
+digest = "sha256:25193993c5325cff4d8b500dcc85a496b7414a55e750bfbb3d9a4e59f4aa8aa2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-ts-t2-e-202-011"
+digest = "sha256:c39954fda824ec25b8f813a68946a890cf30cba48d3c34a89d04dcb5af9a2e89"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-ts-t2-e-501-015"
+digest = "sha256:31be55d4ff6f9c7353db682d9903e1965e1c37dd6cfe4afdfc6ab6d6d60cb912"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-ts-t2-f-102-019"
+digest = "sha256:52aa3e83821913eb539df0eb1043d6fce31f789a269ad9d08a8bc0686e948a4e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-ts-t3-e-501-023"
+digest = "sha256:dc2c156f6693c26bba52f4ce5ce8bc39e2625829371dbc21741122457800605d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-nmi-ts-t3-p-303-027"
+digest = "sha256:0ef3c619ceee998e080b6f747ead259a68a7c3c90d8919c2bd2643afd4475bcd"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-102-000"
+digest = "sha256:3d4cd39698b6dce003ec0eb8bd6ece9b628ad2992e6197c0b91ca64c4ca8189c"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-103-001"
+digest = "sha256:536bb0ae476b07f0a9f998959688dd3e66635310fdc5727c028c0da30f36bfdd"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-104-002"
+digest = "sha256:302c05e661ebf40199c738d41f55dfa140d43ae277170e7243cb4cc5e61f6ea9"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-201-004"
+digest = "sha256:162f62f019d96d02284e85c17f969ae63f009765014d7f8e9cae8fcaabef5af2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-202-005"
+digest = "sha256:8426c7e049a9f4fe06a9d3a74d429f4e52c0dd69df34f177c8ebc9cdc582b75d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-203-006"
+digest = "sha256:7ea3172e91a3918b24648709e765dde5adfe058c9f1a35fd097a528e69923cfd"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-301-008"
+digest = "sha256:86caf9c1855b082bc50f56e6f302c0675ed4bdefb12ba25b567a0f074a238f94"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-303-009"
+digest = "sha256:cac402ef609e7907eb037fde01850e619e3caeb6e6cd29618280f5fb6ca031ae"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-601-010"
+digest = "sha256:6ae2589fc8e494d1b0b0ed35603e6417d83e23893bfe703a721da01f2ff24990"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-703-012"
+digest = "sha256:0d8707e8464ba383ecf3c725a42cd5a18b9e42626b97ea4111dd19df9b807e13"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-e-801-013"
+digest = "sha256:d173907d2a821acfdc0096cdf37fa886da7b5c34e0b9ea0acf7f90d8dacb9b3d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-u-101-014"
+digest = "sha256:f3e702e8be6e01fd5c55bd021579f8f3f06972fb406658a7cf48d1deea28f222"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-u-202-016"
+digest = "sha256:fba89a320b4107386dc6a7f908131196e4cd8e714b5629f99c0dc1ac6f00c03a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-x-101-017"
+digest = "sha256:2d3e23c55fb130efe81b21cde84bbccd0203fcfa9f8575d2ef0848206ba30631"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-cc-t1-x-102-018"
+digest = "sha256:4fa497e6c0b61a4e551cf153a119e8b7a4428b94cff118953ca8124c636abea0"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-e-103-000"
+digest = "sha256:8ad653faa598cf3984669e681d469fd3990dbbc7322999f5a192513a0620a9f3"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-e-105-001"
+digest = "sha256:d21ad27c936b2cee5af5b410ff831844777eeec6614ae34f1fe3cd7b55c86239"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-e-403-002"
+digest = "sha256:40e0e07e0c9dfdd6a834fa225afeb01c30f172aba339b5db2f8520c9acff37bf"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-i-202-012"
+digest = "sha256:28844032a96851276e9b48106b3eea246374d2e2269f1b838ead8739198576b1"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-m-201-010"
+digest = "sha256:67366f387f398ce5ab6a98643147f1002a41c886f6fe8193dc0c8979ea5093fe"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-p-101-005"
+digest = "sha256:ac20b3600d4d04003eb6b6821d0cb670e22d61bf6a31895144d52d512e4cf0a2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-p-104-006"
+digest = "sha256:7ea9378df7c355c75cef1537f94c719ea02f598fb3139ebebae6f9ecc124c2bb"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-s-201-008"
+digest = "sha256:19f2049c2d2ebb0b8eee189fe9dc2d0d48483f25bbfaa32f09c0dac9c7bda71e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-s-302-009"
+digest = "sha256:ad68ec3f038a63ce8e9879f14d6adb894215c3eac1c59b8f1613f12b97b014c0"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t1-x-103-004"
+digest = "sha256:52d32604bbef204f688b1d6dc16833ff2b05204f5bba60beb732f361d1be1080"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t2-e-101-013"
+digest = "sha256:6975baabf045e3511cca36068b4bbef263cf4aaaa036ca9849b76f7d605ed1f5"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t2-e-103-014"
+digest = "sha256:91b024446abd985346dd914ef263fea6b5db468c7f3d44d10b4ec4497d2b3f71"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t2-e-502-016"
+digest = "sha256:9366f14d096dbc28eded3976062c6565ca00e6591460d7b85d5e16fb7dacdcb7"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t2-e-701-017"
+digest = "sha256:cb0fab34dc5f51decb1200b3d54fc4279e791065ca7c1ff9ed91fab2107b418a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-doc-t2-u-101-018"
+digest = "sha256:deb54d36e7e068fadf8b7784d3e6597ca34bd265ccd64b4c4a05e434ca0d420c"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-c-201-006"
+digest = "sha256:9ad8bc90dbf445ba8010cbfae92a24fa19683cd04715b2fe19213cae2b134258"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-e-105-000"
+digest = "sha256:3c964c6c308167d30f00132f6c36a19c601f44df39f6495ee013418175c02303"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-e-303-001"
+digest = "sha256:b775f877350d9f1298b87fcb6f8c74878efda40c194b3596c149acfc04bb407d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-e-403-002"
+digest = "sha256:a542b365a6ac2d1c3ea4e46e76aea35ccfd12b6175b69ca083fa175fc278461a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-i-101-009"
+digest = "sha256:be1f2c4a14f1e2e5a4e7de2042ee35f20f46d10b8e8193c471e8e7a2daa44317"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-i-201-010"
+digest = "sha256:921c18b838036d715b1d4a005fd3ecf0aaf34f0091213a5d2b9ed1bb539bc5cf"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-m-401-008"
+digest = "sha256:2ac3ad32ffeb859376723ecb104bd8a79b7075cb4b845029c1d4332cdc3855e1"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-p-103-005"
+digest = "sha256:1c6a9ff7e8118aa4ee30a72c073a0e4b6633eee5c1f9a067419f95f4ab5050e3"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-fd-t1-x-103-004"
+digest = "sha256:c0ae492c5c7e76a0a22cacca80525a9ad7be74a48e495a02932ff6e148981f54"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-c-101-014"
+digest = "sha256:19c66d50cd5edce08c3ffab74fbe1b137997f7beffa57a77635c7158a7e8a112"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-e-102-000"
+digest = "sha256:a6b44ae1cc1b51851e2cd629d849438ac0724d798c74803291990e5486f17b05"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-e-203-001"
+digest = "sha256:2be0521287e9006528a0b0e5d54cbbbd9ba54a615f48fe847c6457fc0ccbb5d3"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-e-602-002"
+digest = "sha256:ccb4b544ec0eb2e18050e4761d0501a1b0739134d587b6af88210c0cebef7276"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-m-401-016"
+digest = "sha256:68b0f4e8179d5ff3d7d3e86d663888b986f0417d26d00ab7f2659b92d10c7dd2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-p-104-010"
+digest = "sha256:a3740dc26732d524794e06274040849115db1383c9d11d986b5b528d325f02b7"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-s-301-012"
+digest = "sha256:77f5c7f456ad8812a47680602b8722c6ed7a6f7308f6dcb5508fdfb4f81efcfa"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-s-302-013"
+digest = "sha256:acdd5b55ab60c545c021f7607700f7fd0e6672681156288fd2f8c49692a8abbf"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-u-101-004"
+digest = "sha256:9c67c9a5b230738598f04dac4eead2ac1988419f27ac6c170b720a49de522aaa"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-u-301-005"
+digest = "sha256:db7974532f33eb79b8f050bb1d69a98885d6f1a8de90f4d479aa5b965e0363cc"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-x-101-006"
+digest = "sha256:ed12a2f04d60ec8eed4f313a55193153ce4c7fd1a8331bc8babe492e446f47fc"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-x-104-008"
+digest = "sha256:b2586dbbda5394e4e352f0946cf618da73cb65d7157ff5ed28ebcc72a113881d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t1-x-106-009"
+digest = "sha256:729fc88b6436438b551b35e62732f60de0781304eda8334084053245dde68c77"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t2-e-101-017"
+digest = "sha256:c0a5b039e4de140e56643fc17ab4e2a882cee827f34e75533fca22f923fe1382"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-haz-t2-e-102-018"
+digest = "sha256:6bb401eb974efed9fc1dda572e22e7aa901b7c79408c9c79c9d964028c9cbe47"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-c-201-018"
+digest = "sha256:77c439c3303103c7cd1aaceb41d99fa850a20deb85f76dc35fa9d0fb6a600852"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-e-102-000"
+digest = "sha256:ce10dcac11c9d06a6fcebce6b10a89d13ae8a2e9967161dfb27d911a4a2b1125"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-e-104-001"
+digest = "sha256:a1eb1198c9ea49ed17a163ff8a0c483b1f8a91fb72a8e5047f7f8663e4fbe884"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-e-201-002"
+digest = "sha256:498d214dae01a3176d023f95fbccceb020f25d65879827c1a8aa3e058de4afe8"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-e-303-004"
+digest = "sha256:1c3cbdfaaf89aa0e02aaeeabe403d0a6c9160e895b323d9bf8a0b45ecd73e0d9"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-e-403-005"
+digest = "sha256:f66652900aa857c5b640bedf6e97860f35722c668f7cf505b65976fc3595b55e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-e-601-006"
+digest = "sha256:875dcf4eeb62e1d4c100883001ea2263108dc8048afd22258fca1715454b4320"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-e-801-008"
+digest = "sha256:184a04fe2fc85d58d385d7138b4b76768fbb994afa92e64b7a1c29fadc656c84"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-p-101-013"
+digest = "sha256:3149a89a507245b498baf27c3817ad72468d463d3b5570d5664248d203e126e8"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-p-102-014"
+digest = "sha256:9cd98e1863bd1ec2500e02fb4e90fd837298247808ad08fe93337e8fbba41b19"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-s-102-016"
+digest = "sha256:ea6b27f52e5a3ecf77d22a42a015f40c1beec304ab9a00c448ac28a06378402d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-s-103-017"
+digest = "sha256:817df3165082c5c071535f36a507df607a1d24cb72871ebbbfadd496cc2a3d96"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-u-201-009"
+digest = "sha256:c683e6f97cc78870ef51210db125bf6992e96d9d792637207657780dd5898c66"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-x-101-010"
+digest = "sha256:fb10b6ad7c885c22ca306082755f9e69d81827c9c7dfbbe58a0c6afdd5f1df37"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-id-t1-x-105-012"
+digest = "sha256:28a1937fc923b225871ef41c31717174735c099ac36f073ace3d439c0a99933a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-e-103-000"
+digest = "sha256:c9ddc821050c1c6928dabdc3136bba38afe7f3bff632f2a54bada07ca26ee178"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-e-104-001"
+digest = "sha256:17d4a825fbfd855f64157ed87be0c3ff0641f42267313b3950c796b67d134963"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-e-201-002"
+digest = "sha256:37e1b5a12a79fcbff115299c1846beea0c0dd5713184cbdaf3c0fe7a2f9404c6"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-e-204-004"
+digest = "sha256:9db49abe3b5838377033031ec89d0b036a7dbc124e813b5e246bcb54666bd587"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-e-301-005"
+digest = "sha256:860478dca859fb568c643eb7338885902e38e981d3e830a82f64faf15cc0d94f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-e-304-006"
+digest = "sha256:830d72303bf9398a341aa99b4cfbc70cec53be2935cf6579aa3a411c7a5026eb"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-s-101-012"
+digest = "sha256:4887be6c400b01fd186edbb91c0801d0101be2abbb10f817441b1cf34e5ef01f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-s-102-013"
+digest = "sha256:56c35fea98a2e324a57defc2ee9333155de2a6a313d6e7c38e59fbd95d4abca8"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-u-101-008"
+digest = "sha256:38a77b4773a83981ed01e91eba4b18e262cb9d11d1cd963ccafd2cba6a1b60ac"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-u-202-009"
+digest = "sha256:b3517560d57d28142d4521cf7ac1b74e1561d2c8297bc6365b3fe00edff62b91"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-me-t1-x-102-010"
+digest = "sha256:6da73e0f03819674e4e86be7b4f141226376bfb3355436c8417826547b218f8f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-c-101-008"
+digest = "sha256:9bde7c3b54350fd9e4fcd396f58867d9843ac28a5bdccd280eec41e83faa4567"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-c-101-030"
+digest = "sha256:a6190661fff5c6876b25f156e330bfa013f7b982694afeeb1ce1da21e5ce6e39"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-102-000"
+digest = "sha256:a21753701e3533cd6429680bdb80ea4c1d26deb343f804be65b00c63d8331e22"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-102-022"
+digest = "sha256:db8428111d5aa71e0e926b73a5bf428730c224e80a2fcd58456b161f178183ac"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-102-044"
+digest = "sha256:b7d3c3ee5378e253ce82c77f9e124667d1334cc8d634d2ac51e0db7cd723d229"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-201-001"
+digest = "sha256:eea66fff1f6ea44d9cb23728e07c86501770be41e353730f218dcbdf6fd79aa2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-203-002"
+digest = "sha256:10717b2985a59c65797ccbe1b3622a779078949f1df4bc297d2c8f497d943136"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-203-024"
+digest = "sha256:094745feb71b4c251b0e55fe87829bd8b2d36137065e8075040bc7e61af80e88"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-304-025"
+digest = "sha256:77c4dc55110f97f0560516eb6b701b17500cdbeeb1bab40f05e40d8024ffc18d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-703-004"
+digest = "sha256:7d313ebe94babbe5afa7ba349cb20efd65ff264ce8e9975386d39795eb9fd5d3"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-e-703-026"
+digest = "sha256:f506fb9b2d671dc83f87ef582a6018dc0eee8225af4376bd836aa852b90a621e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-i-202-009"
+digest = "sha256:657834de01d606b54454051db82c9cfc5308232b7672af3ef55f97ea5248023b"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-p-101-005"
+digest = "sha256:9225d18642a23df7f1083e5d4b58f09386c5b61f9d0a87564f7a90f7fbb7289d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-s-101-006"
+digest = "sha256:98c94688ddf4a3f25b594a79567085523de0782f1cc41c60c2cb37c91eb6def9"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-s-101-028"
+digest = "sha256:642b518336433eaada403e2bd54757db8a4c9412fd4c2027b1daef7200af21c9"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t1-s-201-029"
+digest = "sha256:e67f636f604f449ae912b25c230909eb34e7f39b18e6eaed3cb51becc03ed254"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-c-101-016"
+digest = "sha256:caefb1e24d1355143992a25f30d1e3bd32c9aaa644e821954b1da2ea5bb7327c"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-c-101-038"
+digest = "sha256:c3a11f0bdcf046d64dc393537de02df46dd976d8ad6ddd2a697b03cf7c0595f4"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-e-102-010"
+digest = "sha256:4aa0bdb68a4fb6c9e272a31826d3e469757b6595ec3d10a3eb7348217126ec9a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-e-102-032"
+digest = "sha256:5fc3cc013463cb28392525af0ae87ba1130e76887929e3644035df233e21291e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-e-201-033"
+digest = "sha256:e120e7939dfd6543426ef11abe4abeee01fab572749fa7c01990caf145a4e38f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-e-304-012"
+digest = "sha256:0e7c23c05c3aeadbf96ec6bad898ee2b428b61bf24e102c736207d2958c0e481"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-e-304-034"
+digest = "sha256:9ffeb91f68c617cc2b6fff35eedf56ab053cd25f3c1c1161f0eabf86ff42692f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-h-201-013"
+digest = "sha256:b0543876ca6ac89881d03df8aa7346918c65bf1a791b7dc2a8ff3b9f1e443712"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-s-101-014"
+digest = "sha256:c0ec2f132653db6e33a33d70d73f5860b9b4dc053da5d535bd0a9380875016c4"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-s-101-036"
+digest = "sha256:3355f31195c164b8a14808541049ad181f7f6ac04d3de8162c76b35588ca717a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t2-s-201-037"
+digest = "sha256:5eaf5afbfc5253384779050b4b07dbead31b0ffde64bf39235fc3afa4852c941"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t3-c-101-020"
+digest = "sha256:4e9de80735ed1009b0a3bc639d2fb2b9fda4715baca1fa3e94fef6339144b21f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t3-c-101-042"
+digest = "sha256:f4d6d4d68b39f08cb7a262829ae2fd3141c4081928d4862f5dfd7597eab315de"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t3-e-102-017"
+digest = "sha256:f8ce392da607e40f8605c7812655506aec522443538d8bda24cc4fc600151d98"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t3-h-201-018"
+digest = "sha256:f449dd8d9f74d86690b5e559dfb0d155c9d3b7320661a8068020bdeb72877418"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t3-h-201-040"
+digest = "sha256:ffe499745d564bfcbabbdf0b2faa5139b8ed14a7b888e6d437ae1c33591fc59d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t3-s-201-041"
+digest = "sha256:5ba513681189cc710a28c4f5fbe6ad5444aeba40fbb9cad6267fd5b5ce166a6f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-pa-t5-b-301-021"
+digest = "sha256:bbcbb02b5267f97e8aef36e15b94e43491ab9f3978cca3ff10f307bd312a523e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-e-104-000"
+digest = "sha256:6aabc111941ebfb1a5346a33ed4840361e849249023d4908b04e84f7b696acec"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-e-201-001"
+digest = "sha256:659d5c4a291ff6811442bcfe70fc9c0db4b8ae135931ea4e5acdecff52644fe8"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-e-202-002"
+digest = "sha256:5e97bded2296769b37622163ba78ff6a2e036fdf2d9a6ce335f27b00983aa35d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-e-403-004"
+digest = "sha256:fa4bf8773b4332df0d37d7e71df64f44d8989cb9a50eabf9aaf2a571395d9ab4"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-i-102-014"
+digest = "sha256:25241fd1ff199f269eddb412e1e13aca20535f2830c4903a168b34c118d7ca91"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-m-101-012"
+digest = "sha256:9c8bdab443e1c462af818ff019870b47d55308939fc08567665723f58faacce1"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-m-201-013"
+digest = "sha256:cd8d0cf79425db37c95c32b5e8253ae1c6a3c42a25c2c2dff24df0b810668378"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-p-102-009"
+digest = "sha256:0762fa0ddcf03fbe631f5bedbf673c04db2da370145bc896ea3f8ff1402cd497"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-p-104-010"
+digest = "sha256:ca67bd5174782a495347b8344ca313471e90cc6ab92821e46ad8fadbdf054375"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-u-202-005"
+digest = "sha256:1ab8e875facdfe95c64b84d63843c9d2752682d37a4556589999a24ac0ad1cd2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-x-101-006"
+digest = "sha256:994e6c6221d576278a0b46f21946d2ebe80faee810c94c4f6302d14e80d2ce20"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t1-x-104-008"
+digest = "sha256:f1aa366da7d1effb8db59b837c2defd7e1c1a948838f56c71fd9ed5e6148f4ef"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t2-e-201-016"
+digest = "sha256:5f122491811aaad18c83f85817a4d5cc010bfc9c4b4623ab6dd7dcf8bcd7dc7c"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t2-e-202-017"
+digest = "sha256:b560f701e984c90d336dfa5a22664ee8f374c7404181520e379170eb34d578b2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-seq-t2-e-304-018"
+digest = "sha256:508b9db7e1d09dda6e03d8a067bfc584311c81dfdf68f8d5cef735356bac938b"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-e-102-000"
+digest = "sha256:ec6d67624ae4d97ae295186d367cb6accc3a3d57f467ec5ac3f3c53f9d8054d5"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-e-102-038"
+digest = "sha256:c8fce0297f44e7d86d2a829ab90a23c5be29574495646f5f415d99a8f0badfee"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-e-301-001"
+digest = "sha256:36da64023da41f07d54705ee94bc516396ae781a55d3fdc4c517c016db202cc0"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-e-301-020"
+digest = "sha256:cae78d915322939950f0175e9bb07fdad23691cac06f876a68e3079bec5719d7"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-s-302-022"
+digest = "sha256:2aca4d2175caced283536cd61609f86882523d5dba0fd529174a8620b9208c9d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-s-302-041"
+digest = "sha256:0227024d2056b3623884a77ef816d21d2f09379c5b8b46657c0cbc7ff65e9854"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-u-301-002"
+digest = "sha256:6180f13164c563ac90b478444b60a8aa48af50146616416fffbb0988992d6372"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-u-301-021"
+digest = "sha256:4d6a92b9991612dc01163ab603258d60837c6205b5eabf573929230e3c41f490"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t1-u-301-040"
+digest = "sha256:3d5d424fdeef797fa771df0591486598eb279874d7b50c4a62f688387d29c1ff"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-e-102-004"
+digest = "sha256:69984e248a6fd5767756e74ef5fef10f90fd1eaad89cdc56273a5310100b8f40"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-e-102-042"
+digest = "sha256:cc10148992aa1364766e32e750e28302ec1e008440471fd9dc1d7e10c559ff0a"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-e-301-005"
+digest = "sha256:497c41b74c35b9f5ceda8301ad20c093160cda4620c837f5afdb70abb4b5670f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-e-301-024"
+digest = "sha256:cb4a9c5f5a4bf2911f2110ca68927dcd541218d2695678929699a307bd9d8b70"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-s-302-026"
+digest = "sha256:a29d1500f83a87acc3df59a00055d389da8dc86c15cee2f4f4759f3d8a809e3d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-s-302-045"
+digest = "sha256:00815a899a2d46844efd5bda22611ad17b655bf7e14718a1ab7f38e5e19a9654"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-u-301-006"
+digest = "sha256:0ffedfccc68372c13f007977c0d5fb7d2cda6fa0bc2053e5a7f290d04c5fdbcd"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-u-301-025"
+digest = "sha256:60a7c22373c8c75682897565f98d913c93d8b4c0f4b37d6fc56f8e5cf269104b"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t2-u-301-044"
+digest = "sha256:47abfb463b6468dabdc835ea5d90aaef6f124570c03054b89d0ff60401d189dc"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t3-e-102-008"
+digest = "sha256:965ea74e37e6e430644244b639bcbca75ab12458b01423db90e2c64cf1811588"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t3-e-102-046"
+digest = "sha256:c4e257a7a7d49a25b64ea308c09800ccda41ea7bec92d7f353d265857bbe653c"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t3-e-301-009"
+digest = "sha256:14d983c9bdc0b68b3a61fc310c6e5aedde83e6995c5b47c3045be6612b519211"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t3-e-301-028"
+digest = "sha256:cff7f99542e6f72f69a55dc96bf507e31f8ed974494d4ff05719f32c5ff06fc4"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t3-e-402-010"
+digest = "sha256:b7ee98df799acd2b14d83d5e04a64fc54525472c5404206b96451fe0602d2467"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t3-e-402-029"
+digest = "sha256:a4a7087843745a168a2586dfb6920f268507f5e9520e75a8ba91f6a1abcc89e7"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t3-e-402-048"
+digest = "sha256:339066fa994854df08f342736da5e8bbde837cc902399c35bbc1d120cc99637e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t4-a-302-014"
+digest = "sha256:9eaafe896b2677a780615fdbea41d11d91487b1bc3ff30374f1c1cce43698117"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t4-a-302-033"
+digest = "sha256:e660102ecded35cbab04db8aeedb3424406b753537427fb3a9f4d03da6932615"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t4-b-101-013"
+digest = "sha256:582ce9905b6cc04610add36dfa5a251e59670e23c8819975b186921e611b14db"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t4-b-101-032"
+digest = "sha256:d64b4c87c5cfaed0877dd9329b3d2cf3b46bd7291c2b7fcdb967ca0d330bb357"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t4-e-301-030"
+digest = "sha256:6229e9805e47bddd6d1f923aa328e3841edb77b49a490bee2b7dd6cba96f0705"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t4-e-402-012"
+digest = "sha256:e207d8b3e65754d146b697cd0bf9a50abf817a59bc7e6b7408a8ac60c1f919d2"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t5-b-101-016"
+digest = "sha256:c109e8fd5bf0cba703356e3aa44d71d324b9e6f05bf0907715453c3e6accd87e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t5-b-301-017"
+digest = "sha256:f9983e6c895abb1d24219ab8eed3361ca9a5d333b57e751cf9691dbe9cdf4593"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t5-b-301-036"
+digest = "sha256:7598c760c51d4c96c84f8c0a46b3940956b69972225c0c24eef57b8cd28c6d2f"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t5-b-302-018"
+digest = "sha256:29bf54fbeffc10efe4422beb861e446f12bc8c233c0fd9a052d04270dca8eb79"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t5-b-302-037"
+digest = "sha256:17720e2ba4d0e89ec245dcf141b4b92c9fc5f2491138d77fcf45ce884bbd4ef9"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-trd-t5-e-301-034"
+digest = "sha256:d1a5eac3243adc8671e00c3fff9bba27c82d746b9afebcc5bdbee7ca03a2f9ae"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t1-e-103-000"
+digest = "sha256:d47fb317ad88363f20d5ec60d75e8c920f33e87b2b5bd41d9057828beb5ff165"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t1-e-105-001"
+digest = "sha256:b7a0bf05aad8f5767642b6cc8386705f055994570a759e21d65b738ce30eb1df"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t1-e-202-002"
+digest = "sha256:0f00e4c86c5d27db82575a8e30d14e91aacbfdf8f48966775fb46edcc1bb3a69"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t1-e-303-004"
+digest = "sha256:64c86e1c54bb4f993ddb165d19584ec34d42296c9d8bcacb9d0a658892658960"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t1-e-304-005"
+digest = "sha256:240a32b617fdf60929a0eb02bda8eea79281c361fdec81f730c369cfcfc27f58"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t1-e-801-006"
+digest = "sha256:2332a924d273a4f45c54c2a16fe9473e7610d5dc229bd533b887637da8560844"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t1-s-301-008"
+digest = "sha256:16db4754dc7123f27d52e63c496a362542d5d13daad779768e18935a352de000"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t2-e-103-009"
+digest = "sha256:ab153eed984060504e3748dcead4b7e157c4289f07ca801dce642883ed98dd35"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t2-e-105-010"
+digest = "sha256:093fd39e19c7e2e62c961383ebd7ada0ae2977cc6a3cad2eff551d353eea7e2e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t2-e-301-012"
+digest = "sha256:b5a94b77a13d2469a399fd65d0e2edf257466cc73d1748432f4191b721ef04df"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t2-e-303-013"
+digest = "sha256:ab876980fe2d505df81d7e59dc42f66d75a2469004c38dd9ab7b73f121687b65"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t2-e-304-014"
+digest = "sha256:7cf0c94fd4e3e8cbe480a810532b5a229f37323ce634f17179d9b32799439c27"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t2-e-702-016"
+digest = "sha256:da5346969a10a88e1714228d1915becb00425cb20c9e848aca1454cda98b34c8"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t2-s-301-018"
+digest = "sha256:d42224caafdc4dfc1527eb5ba4ea9ee4c01712e94c730e9163708a37cadbd6a4"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t2-x-105-017"
+digest = "sha256:974ed05096936f12f09379f32a7b925e77c09f2e0a2847ddc6a2651e4b4af086"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t3-e-103-020"
+digest = "sha256:9dffaf83fb57f16b29dbfa2d471efb24a749825cd3ecc5703bbce5e4879e6ec7"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t3-e-301-021"
+digest = "sha256:9dc1a07ca986bb52ecd33a86613b771731d46d69653176db0a173bc672e2dc04"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t3-e-303-022"
+digest = "sha256:c036360f7eae07934b509f7e9108f2eb289ba9397c3b9c595960c669e560b39e"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t3-e-702-024"
+digest = "sha256:8401f2de291cf84e3fe82ac04faf82eae4493e1ef2813319ff6c0c870c20183d"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t3-f-102-028"
+digest = "sha256:d02e38a3164c8d53785e0bc999d2d729992f694151ee8711abe844495b490fc6"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t3-f-302-029"
+digest = "sha256:27b71abc77ef776554b5221a1a415d7102e7185331501bd99c3826e8e4b025b0"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t3-p-203-026"
+digest = "sha256:7593b7f5f8bf58c7df2aa2499e2e21f1bab824cb57d656db01f5de1505d0d293"
+
+[[tasks]]
+name = "bluecollar-bench/v2-text-pass-ts-t3-x-105-025"
+digest = "sha256:467b44e8a7d7ff594adabccb342f88b7c7deabe49b471db647be35bfd8f5f40a"
+
+[[tasks]]
 name = "bluecollar-bench/v2-trap-a102-t4-oil-seep"
 digest = "sha256:322fa8b02d8ab56b05969069a97bf3d2e88ce08f24b19c44480132a2f3a7f26e"
 

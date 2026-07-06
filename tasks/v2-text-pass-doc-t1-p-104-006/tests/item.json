@@ -1,0 +1,59 @@
+{
+  "decision": "pass",
+  "discipline": "2.2 Mechanical - Piping & Plumbing",
+  "discipline_code": "2.2",
+  "element": "P-104 Pressure testing",
+  "element_code": "P-104",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-doc-t1-p-104-006",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "traceable"
+    ],
+    [
+      "consistent"
+    ],
+    [
+      "approved"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "tested/inspected",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The field condition for P-104 Pressure testing is compared with the referenced drawing or manufacturer sheet. Tags, ratings, and layout callouts line up with the installed work, and the revision block shown is current. Source anchors for review: ASME B31.3 \u00a7345.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "ASME B31.3 \u00a7345"
+  ],
+  "subcategory": "2.2.1 Process Piping (T1/T2)",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T1",
+  "title": "T1 P-104 Compliant Document interpretation"
+}

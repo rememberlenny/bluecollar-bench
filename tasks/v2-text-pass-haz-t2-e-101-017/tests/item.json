@@ -1,0 +1,59 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-101 Service entrance & metering",
+  "element_code": "E-101",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-haz-t2-e-101-017",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "monitor"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "controlled"
+    ],
+    [
+      "authorized"
+    ],
+    [
+      "protected"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Pre-task photos for E-101 Service entrance & metering show the exposure area set up with the planned guards, access control, and crew protection in place. The daily briefing form is signed and no active exposure is visible. Source anchors for review: NEC Art. 230.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 230"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T2",
+  "title": "T2 E-101 Compliant Hazard spotting"
+}

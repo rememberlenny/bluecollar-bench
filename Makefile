@@ -2,6 +2,7 @@
 
 generate:
 	python3 scripts/build_item_catalog.py
+	python3 scripts/gen_text_rebalance_items.py
 	python3 scripts/generate_tasks_v2.py
 
 media:

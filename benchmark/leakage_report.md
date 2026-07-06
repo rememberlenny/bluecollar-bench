@@ -1,10 +1,10 @@
 # Leakage Audit
 
-Total items: 1049
+Total items: 1299
 
 | Bucket | Items |
 |---|---:|
-| clean (<40%) | 874 |
+| clean (<40%) | 1124 |
 | partial (40-79%) | 175 |
 | leaked (>=80%) | 0 |
 

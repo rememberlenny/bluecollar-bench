@@ -1,9 +1,9 @@
 {
-  "catalog_sha256": "3d917f30ba6d3ee7811c082f3839aa0e2c3cc9e42578b1b7320a058b68901373",
-  "collected_at": "2026-07-05T23:21:23+00:00",
-  "git_commit": "5b2c706b62f28fee8bf1f7dd3e7232256fcacc3d",
-  "path": "benchmark/runs/gpt55_full_20260705_5b2c706",
-  "run": "gpt55_full_20260705_5b2c706",
-  "source_runs_dir": "/root/spaceship/bluecollar-bench/jobs/gpt55_full_20260705_5b2c706",
-  "tasks_scored": 1049
+  "catalog_sha256": "d2fd79b23d2469a36d6a19eb8348db11a2658f9cd3118f79dcf1e5ab17b2a98e",
+  "collected_at": "2026-07-06T15:48:45+00:00",
+  "git_commit": "59a5bcde52633b523e1742f139cbd90d335c1534",
+  "path": "benchmark/runs/sonnet5_20260706_064841",
+  "run": "sonnet5_20260706_064841",
+  "source_runs_dir": "/root/spaceship/bluecollar-bench/jobs/sonnet5_20260706_064841",
+  "tasks_scored": 1299
 }

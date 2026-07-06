@@ -1,0 +1,61 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-201 Locates & marking",
+  "element_code": "U-201",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-nmi-cc-t1-u-201-015",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "missing",
+      "record"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "The work around U-201 Locates & marking is photographed from one angle only. The critical label, torque sheet, or clearance dimension needed for the referenced requirement is outside the frame. Source anchors for review: 811/CGA best practices.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "811/CGA best practices"
+  ],
+  "subcategory": "2.11.2 Underground Utilities",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T1",
+  "title": "T1 U-201 Insufficient evidence Code/spec compliance"
+}

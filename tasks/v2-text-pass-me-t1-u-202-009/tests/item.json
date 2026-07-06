@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-202 Pipe bedding & backfill",
+  "element_code": "U-202",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-me-t1-u-202-009",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "tolerance"
+    ],
+    [
+      "verified"
+    ],
+    [
+      "acceptable"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The measurement record for U-202 Pipe bedding & backfill shows the as-left reading inside the posted limit. The gauge or scale is readable, the setup is stable, and the same value is entered on the inspection form. Source anchors for review: project specs, IPC 306.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "project specs",
+    "IPC 306"
+  ],
+  "subcategory": "2.11.2 Underground Utilities",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T1",
+  "title": "T1 U-202 Compliant Measurement & estimation"
+}

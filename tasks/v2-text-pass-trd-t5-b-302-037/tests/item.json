@@ -1,0 +1,59 @@
+{
+  "decision": "pass",
+  "discipline": "2.10 Assembly & Fabrication",
+  "discipline_code": "2.10",
+  "element": "B-302 Andon & quality response",
+  "element_code": "B-302",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-trd-t5-b-302-037",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "proceed"
+    ]
+  ],
+  "required_findings": [
+    [
+      "permissible"
+    ],
+    [
+      "preference"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "A crew used a field method for B-302 Andon & quality response that is less tidy than the preferred shop approach but still matches the listed product instructions and the project requirement. No local amendment or drawing note forbids it. Source anchors for review: site quality procedures.",
+  "source_file": "docs/source/element-trees-industrial-service-v0.1.md",
+  "source_refs": [
+    "site quality procedures"
+  ],
+  "subcategory": "2.10.3 Line Operations",
+  "task_type": "TRD",
+  "task_type_name": "Tradeoff judgment",
+  "tier": "T5",
+  "title": "T5 B-302 Compliant Tradeoff judgment"
+}

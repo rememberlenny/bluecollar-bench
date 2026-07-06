@@ -1,0 +1,59 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-601 Grounding electrode system",
+  "element_code": "E-601",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-id-t1-e-601-006",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "recognized"
+    ],
+    [
+      "serviceable"
+    ],
+    [
+      "undamaged"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "A field review of E-601 Grounding electrode system shows the expected unit in the intended location. Nameplates and orientation marks can be read, the housing and adjacent work show no damage, and the item matches the referenced detail for this stage. Source anchors for review: NEC 250.50-250.68.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 250.50-250.68"
+  ],
+  "subcategory": "2.1.6 Grounding & Bonding",
+  "task_type": "ID",
+  "task_type_name": "Identification",
+  "tier": "T1",
+  "title": "T1 E-601 Compliant Identification"
+}

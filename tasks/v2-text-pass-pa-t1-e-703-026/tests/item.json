@@ -1,0 +1,59 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-703 Heat trace",
+  "element_code": "E-703",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-pa-t1-e-703-026",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "milestone"
+    ],
+    [
+      "substantially"
+    ],
+    [
+      "ready"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Progress photos for E-703 Heat trace show the current checkpoint scope finished for this area. The remaining visible work is cleanup, labeling, or follow-on finish work outside the checkpoint being scored. Source anchors for review: NEC 427.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 427"
+  ],
+  "subcategory": "2.1.7 Low Voltage & Specialty",
+  "task_type": "PA",
+  "task_type_name": "Progress assessment",
+  "tier": "T1",
+  "title": "T1 E-703 Compliant Progress assessment"
+}

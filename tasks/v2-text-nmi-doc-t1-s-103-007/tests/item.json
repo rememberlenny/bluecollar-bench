@@ -1,0 +1,61 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-103 Structural welding",
+  "element_code": "S-103",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-nmi-doc-t1-s-103-007",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "document",
+      "missing"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "tested/inspected",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "The field photo for S-103 Structural welding is paired with a cropped sheet excerpt. The title block, revision, and matching callout are not visible, so the installed condition cannot be tied to the controlling page. Source anchors for review: AWS D1.1.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "AWS D1.1"
+  ],
+  "subcategory": "2.4.1 Steel Erection",
+  "task_type": "DOC",
+  "task_type_name": "Document interpretation",
+  "tier": "T1",
+  "title": "T1 S-103 Insufficient evidence Document interpretation"
+}

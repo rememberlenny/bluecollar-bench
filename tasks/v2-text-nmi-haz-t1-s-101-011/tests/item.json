@@ -1,0 +1,62 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-101 Column/beam erection & plumb",
+  "element_code": "S-101",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-nmi-haz-t1-s-101-011",
+  "leakage_ratio": 0.25,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "exposure",
+      "unknown"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "high",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "The view of S-101 Column/beam erection & plumb cuts off the area where the exposure control would be visible. The crew location and energy or fall-protection boundary cannot be determined from the provided frame. Source anchors for review: AISC 303, OSHA 1926 Subpart R.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "AISC 303",
+    "OSHA 1926 Subpart R"
+  ],
+  "subcategory": "2.4.1 Steel Erection",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T1",
+  "title": "T1 S-101 Insufficient evidence Hazard spotting"
+}

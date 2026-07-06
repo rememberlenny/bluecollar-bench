@@ -1,0 +1,59 @@
+{
+  "decision": "pass",
+  "discipline": "2.11 Sitework & Utilities",
+  "discipline_code": "2.11",
+  "element": "U-301 Equipment safety",
+  "element_code": "U-301",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-haz-t1-u-301-005",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "monitor"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "controlled"
+    ],
+    [
+      "authorized"
+    ],
+    [
+      "protected"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Pre-task photos for U-301 Equipment safety show the exposure area set up with the planned guards, access control, and crew protection in place. The daily briefing form is signed and no active exposure is visible. Source anchors for review: OSHA 1926 Subpart O.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "OSHA 1926 Subpart O"
+  ],
+  "subcategory": "2.11.3 Heavy Equipment Operation",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T1",
+  "title": "T1 U-301 Compliant Hazard spotting"
+}

@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.4 Structural & Ironwork",
+  "discipline_code": "2.4",
+  "element": "S-101 Column/beam erection & plumb",
+  "element_code": "S-101",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-me-t1-s-101-012",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "tolerance"
+    ],
+    [
+      "verified"
+    ],
+    [
+      "acceptable"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The measurement record for S-101 Column/beam erection & plumb shows the as-left reading inside the posted limit. The gauge or scale is readable, the setup is stable, and the same value is entered on the inspection form. Source anchors for review: AISC 303, OSHA 1926 Subpart R.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "AISC 303",
+    "OSHA 1926 Subpart R"
+  ],
+  "subcategory": "2.4.1 Steel Erection",
+  "task_type": "ME",
+  "task_type_name": "Measurement & estimation",
+  "tier": "T1",
+  "title": "T1 S-101 Compliant Measurement & estimation"
+}

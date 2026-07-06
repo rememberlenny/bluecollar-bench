@@ -22,8 +22,9 @@ The uploaded v0.1 taxonomy docs are preserved under `docs/source/`. The executab
 - `scripts/build_item_catalog.py` parses the source docs and builds the comprehensive item catalog.
 - `scripts/gen_media_items.py` deterministically renders synthetic media fixtures and emits `media_items_v2.json`.
 - `scripts/gen_audio_items.py` deterministically renders synthetic audio fixtures and emits `audio_items_v2.json`.
+- `scripts/gen_text_rebalance_items.py` deterministically emits text-only pass/NMI controls for decision rebalance.
 - `scripts/restore_scenarios.py` restores auto-item evidence and re-keys findings to interpretation vocabulary before leakage auditing.
-- `scripts/generate_tasks_v2.py` merges v2 controls, image media, CPM, and audio items, restores scenarios, runs leakage auditing, and regenerates all Harbor tasks with `grade_v2`.
+- `scripts/generate_tasks_v2.py` merges v2 controls, image media, CPM, audio, and text-rebalance items, restores scenarios, runs leakage auditing, and regenerates all Harbor tasks with `grade_v2`.
 - `scripts/collect_run_results.py` harvests Harbor verifier rewards into versioned run directories pinned to the catalog hash.
 - `scripts/compare_runs.py` compares two collected runs across shared tasks and aggregate axes.
 - `scripts/grade_v2.py` is the current deterministic verifier template used in generated tasks.
@@ -31,7 +32,7 @@ The uploaded v0.1 taxonomy docs are preserved under `docs/source/`. The executab
 - `scripts/run_harbor.sh` runs either one task or the full Harbor dataset.
 - `docs/source/modality-native-task-categories-v0.1.md` defines audio-only and video-only task categories where the modality is the signal.
 
-Current generated size: 1049 Harbor tasks from 95 source elements, 12 curated seeds, 21 v2 control items, 56 synthetic instrument/media items, 28 synthetic CPM/resource-constraint items, 44 synthetic audio fault-signature items, 651 direct source-derived items, and 237 matrix backfill items. The v2.1/v2.2/v2.3 catalog adds image and audio evidence with deterministic ground truth, but the benchmark is still fail-heavy overall; see `GAP_ANALYSIS_v2.md` before treating aggregate scores as final. The source taxonomy still needs SME red-team validation before claims should be treated as authoritative.
+Current generated size: 1299 Harbor tasks from 95 source elements, 12 curated seeds, 21 v2 control items, 56 synthetic instrument/media items, 28 synthetic CPM/resource-constraint items, 44 synthetic audio fault-signature items, 250 synthetic text rebalance items, 651 direct source-derived items, and 237 matrix backfill items. The v2.1-v2.5 catalog adds image, audio, and pass/NMI text evidence with deterministic ground truth, bringing pass/needs_more_info coverage to 326/1299 items. See `GAP_ANALYSIS_v2.md` for the remaining leakage, SME-review, and aggregate-score caveats. The source taxonomy still needs SME red-team validation before claims should be treated as authoritative.
 
 ## Key Links
 

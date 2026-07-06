@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-104 Transformers (dry-type & pad-mount)",
+  "element_code": "E-104",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-cc-t1-e-104-002",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "conforming"
+    ],
+    [
+      "ready"
+    ],
+    [
+      "acceptance"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "rough-complete",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Closeout photos for E-104 Transformers (dry-type & pad-mount) show the installed work following the referenced detail. Clearances, labels, supports, and terminations shown for this element are in place, and the inspection card has no open correction note. Source anchors for review: NEC Art. 450, 250.30.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC Art. 450",
+    "250.30"
+  ],
+  "subcategory": "2.1.1 Power Distribution",
+  "task_type": "CC",
+  "task_type_name": "Code/spec compliance",
+  "tier": "T1",
+  "title": "T1 E-104 Compliant Code/spec compliance"
+}

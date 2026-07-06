@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.6 Carpentry & Finishes",
+  "discipline_code": "2.6",
+  "element": "F-102 Connectors & fasteners",
+  "element_code": "F-102",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-ts-t3-f-102-028",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "document"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "required_findings": [
+    [
+      "suitable"
+    ],
+    [
+      "compatible"
+    ],
+    [
+      "approved"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "staged",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "The selected tool and material package for F-102 Connectors & fasteners matches the size, rating, and application shown on the referenced sheet. The staged parts are clean, intact, and sized for the work shown. Source anchors for review: Simpson catalogs, IRC.",
+  "source_file": "docs/source/element-trees-construction-v0.1.md",
+  "source_refs": [
+    "Simpson catalogs",
+    "IRC"
+  ],
+  "subcategory": "2.6.1 Rough Framing",
+  "task_type": "TS",
+  "task_type_name": "Tool & material selection",
+  "tier": "T3",
+  "title": "T3 F-102 Compliant Tool & material selection"
+}

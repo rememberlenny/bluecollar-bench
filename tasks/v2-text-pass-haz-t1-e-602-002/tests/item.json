@@ -1,0 +1,60 @@
+{
+  "decision": "pass",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-602 Equipment bonding",
+  "element_code": "E-602",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "stop",
+      "work"
+    ],
+    [
+      "rework"
+    ],
+    [
+      "reject"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-pass-haz-t1-e-602-002",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "monitor"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "controlled"
+    ],
+    [
+      "authorized"
+    ],
+    [
+      "protected"
+    ]
+  ],
+  "risk": "low",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 90,
+  "scenario": "Pre-task photos for E-602 Equipment bonding show the exposure area set up with the planned guards, access control, and crew protection in place. The daily briefing form is signed and no active exposure is visible. Source anchors for review: NEC 250.104, 250.30.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NEC 250.104",
+    "250.30"
+  ],
+  "subcategory": "2.1.6 Grounding & Bonding",
+  "task_type": "HAZ",
+  "task_type_name": "Hazard spotting",
+  "tier": "T1",
+  "title": "T1 E-602 Compliant Hazard spotting"
+}

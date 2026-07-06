@@ -1,0 +1,61 @@
+{
+  "decision": "needs_more_info",
+  "discipline": "2.1 Electrical",
+  "discipline_code": "2.1",
+  "element": "E-701 Fire alarm devices & circuits",
+  "element_code": "E-701",
+  "findings_mode": "all",
+  "forbidden": [
+    [
+      "guess"
+    ],
+    [
+      "accept",
+      "as",
+      "is"
+    ]
+  ],
+  "generation": "synthetic-text-rebalance-v2",
+  "id": "v2-text-nmi-seq-t2-e-701-019",
+  "leakage_ratio": 0.0,
+  "media": [],
+  "modality": "text",
+  "prompt": "Evaluate the described field condition and return the appropriate decision with supporting observations.",
+  "required_actions": [
+    [
+      "request"
+    ],
+    [
+      "verify"
+    ],
+    [
+      "document"
+    ]
+  ],
+  "required_findings": [
+    [
+      "unverified"
+    ],
+    [
+      "sequence",
+      "unknown"
+    ],
+    [
+      "confirm"
+    ]
+  ],
+  "risk": "medium",
+  "s1_state": "in-progress",
+  "s2_expected": [],
+  "s3_percent": 50,
+  "scenario": "The current photo set for E-701 Fire alarm devices & circuits shows the work after a hold point, but the earlier prerequisite step is not shown and no signoff page is attached. Source anchors for review: NFPA 72.",
+  "source_file": "docs/source/electrical-element-tree-v0.1.md",
+  "source_refs": [
+    "NFPA 72"
+  ],
+  "subcategory": "2.1.7 Low Voltage & Specialty",
+  "task_type": "SEQ",
+  "task_type_name": "Procedure sequencing",
+  "tier": "T2",
+  "title": "T2 E-701 Insufficient evidence Procedure sequencing"
+}

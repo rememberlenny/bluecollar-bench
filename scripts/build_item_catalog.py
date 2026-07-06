@@ -567,21 +567,31 @@ def write_coverage(items: list[dict], elements: list[Element]) -> None:
     by_tier = Counter(item["tier"] for item in items)
     by_task = Counter(item["task_type"] for item in items)
     by_cell = Counter((item["discipline_code"], item["tier"]) for item in items)
+    by_generation = Counter(item.get("generation", "unknown") for item in items)
 
     lines = [
         "# Blue-Collar Benchmark Coverage Report",
         "",
         f"- Source elements parsed: {len(elements)}",
         f"- Runnable items generated: {len(items)}",
-        f"- Curated items: {sum(1 for item in items if item.get('generation') == 'curated')}",
-        f"- Auto-generated items: {sum(1 for item in items if item.get('generation') == 'auto')}",
-        f"- Matrix backfill items: {sum(1 for item in items if item.get('generation') == 'matrix-backfill')}",
+        "",
+        "## By Generation",
+        "",
+        "| Generation | Items |",
+        "|---|---:|",
+    ]
+    for generation, count in sorted(by_generation.items()):
+        lines.append(f"| {generation} | {count} |")
+
+    lines.extend(
+        [
         "",
         "## By Discipline",
         "",
         "| Discipline | Items | Source elements |",
         "|---|---:|---:|",
-    ]
+        ]
+    )
     element_counts = Counter(element.discipline_code for element in elements)
     for code, name in DISCIPLINES.items():
         lines.append(f"| {code} {name} | {by_disc[code]} | {element_counts[code]} |")
