@@ -30,6 +30,8 @@ The uploaded v0.1 taxonomy docs are preserved under `docs/source/`. The executab
 - `scripts/grade_v2.py` is the current deterministic verifier template used in generated tasks.
 - `scripts/validate_tasks.py` runs local oracle/verifier checks without Docker.
 - `scripts/run_harbor.sh` runs either one task or the full Harbor dataset.
+- `scripts/run_openrouter.py` runs tasks directly against OpenRouter and reuses the local task verifier.
+- `scripts/run_gemini.py` runs tasks directly against Google Gemini and reuses the local task verifier.
 - `docs/source/modality-native-task-categories-v0.1.md` defines audio-only and video-only task categories where the modality is the signal.
 
 Current generated size: 1299 Harbor tasks from 95 source elements, 12 curated seeds, 21 v2 control items, 56 synthetic instrument/media items, 28 synthetic CPM/resource-constraint items, 44 synthetic audio fault-signature items, 250 synthetic text rebalance items, 651 direct source-derived items, and 237 matrix backfill items. The v2.1-v2.5 catalog adds image, audio, and pass/NMI text evidence with deterministic ground truth, bringing pass/needs_more_info coverage to 326/1299 items. See `GAP_ANALYSIS_v2.md` for the remaining leakage, SME-review, and aggregate-score caveats. The source taxonomy still needs SME red-team validation before claims should be treated as authoritative.
@@ -76,6 +78,8 @@ Main workflow scripts:
 - [Grade template](scripts/grade_v2.py)
 - [Validate generated tasks](scripts/validate_tasks.py)
 - [Run Harbor](scripts/run_harbor.sh)
+- [Run OpenRouter](scripts/run_openrouter.py)
+- [Run Gemini](scripts/run_gemini.py)
 - [Collect run results](scripts/collect_run_results.py)
 - [Compare collected runs](scripts/compare_runs.py)
 - [Plot run results](scripts/plot_run_results.py)
@@ -144,6 +148,84 @@ You can also run directly with Harbor:
 ```bash
 harbor run -p . --agent codex --model openai/gpt-5 --n-concurrent 8
 ```
+
+Run one task directly with OpenRouter:
+
+```bash
+export OPENROUTER_API_KEY="sk-or-v1-..."
+python3 scripts/run_openrouter.py \
+  --model openai/gpt-5.2 \
+  --task v2-cpm-trap-001
+```
+
+The OpenRouter harness writes raw per-task artifacts under `runs/openrouter_<model>_<timestamp>/`, including `request.json`, `response.json`, `answer.json`, and `logs/verifier/reward.json`. It supports text, PNG image, and WAV audio items through OpenRouter chat completions. To collect a run into the immutable benchmark registry:
+
+```bash
+python3 scripts/run_openrouter.py \
+  --model openai/gpt-5.2 \
+  --task v2-cpm-trap-001 \
+  --collect-run openrouter_gpt52_smoke_2026-07-06
+```
+
+Full-suite OpenRouter runs are explicit because they incur provider cost:
+
+```bash
+python3 scripts/run_openrouter.py --model openai/gpt-5.2 --all --n-concurrent 4
+```
+
+Run one task directly with Google Gemini:
+
+```bash
+export GEMINI_API_KEY="..."
+python3 scripts/run_gemini.py \
+  --model gemini-2.5-pro \
+  --task v2-cpm-trap-001
+```
+
+If API keys are disallowed, authenticate with Google Cloud Application Default Credentials and run through the Google Cloud Vertex/Model API endpoint:
+
+```bash
+export GOOGLE_CLOUD_PROJECT="<your-project-id>"
+bash <(curl -sSL https://storage.googleapis.com/cloud-samples-data/adc/setup_adc.sh)
+gcloud auth application-default set-quota-project "$GOOGLE_CLOUD_PROJECT"
+python3 scripts/run_gemini.py \
+  --backend vertex \
+  --auth oauth \
+  --google-cloud-project "$GOOGLE_CLOUD_PROJECT" \
+  --location us-central1 \
+  --model gemini-2.5-pro \
+  --task v2-cpm-trap-001
+```
+
+The Gemini harness writes raw per-task artifacts under `runs/gemini_<model>_<timestamp>/`, including `request.json`, `response.json`, `answer.json`, and `logs/verifier/reward.json`. It supports text, PNG image, and WAV audio items through Gemini `generateContent` with inline media parts and `responseMimeType: application/json`. To collect a run into the immutable benchmark registry:
+
+```bash
+python3 scripts/run_gemini.py \
+  --model gemini-2.5-pro \
+  --task v2-cpm-trap-001 \
+  --collect-run gemini_25_pro_smoke_2026-07-06
+```
+
+Full-suite Gemini runs are explicit because they incur provider cost:
+
+```bash
+python3 scripts/run_gemini.py --model gemini-2.5-pro --all --n-concurrent 4
+```
+
+For keyless full-suite runs, use the same Vertex flags:
+
+```bash
+python3 scripts/run_gemini.py \
+  --backend vertex \
+  --auth oauth \
+  --google-cloud-project "$GOOGLE_CLOUD_PROJECT" \
+  --location us-central1 \
+  --model gemini-2.5-pro \
+  --all \
+  --n-concurrent 4
+```
+
+`--model` is intentionally not allowlisted. Pass any Gemini model alias available to your account, including future aliases such as `gemini-3.5-flash`; a Developer API resource path such as `models/<model>`; or, for Vertex, a publisher/model path such as `google/<model>`, `publishers/google/models/<model>`, or a full `projects/<project>/locations/<location>/...` resource path.
 
 Collect and version run results:
 

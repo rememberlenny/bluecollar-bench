@@ -1,0 +1,14 @@
+{
+  "catalog_items": 1299,
+  "catalog_sha256": "d2fd79b23d2469a36d6a19eb8348db11a2658f9cd3118f79dcf1e5ab17b2a98e",
+  "catalog_sha256_16": "d2fd79b23d2469a3",
+  "collected_at": "2026-07-06T18:26:26+00:00",
+  "git_branch": "master",
+  "git_commit": "feebf70331a827aedaf55eebfa017e3e64a34295",
+  "git_dirty": true,
+  "path": "benchmark/runs/deepseek_v4_pro_text_20260706_182042",
+  "run": "deepseek_v4_pro_text_20260706_182042",
+  "schema_version": 1,
+  "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/openrouter_deepseek-v4-pro_text_20260706_182042",
+  "tasks_scored": 1171
+}

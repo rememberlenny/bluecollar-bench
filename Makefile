@@ -1,4 +1,4 @@
-.PHONY: generate media audio restore validate dataset collect-run compare-runs harbor-run-one clean
+.PHONY: generate media audio restore validate dataset collect-run compare-runs harbor-run-one openrouter-run-one gemini-run-one clean
 
 generate:
 	python3 scripts/build_item_catalog.py
@@ -41,6 +41,16 @@ harbor-run-one:
 	@test -n "$(MODEL)" || (echo "MODEL is required" >&2; exit 2)
 	@test -n "$(TASK)" || (echo "TASK is required" >&2; exit 2)
 	scripts/run_harbor.sh --agent "$(AGENT)" --model "$(MODEL)" --task "$(TASK)"
+
+openrouter-run-one:
+	@test -n "$(MODEL)" || (echo "MODEL is required" >&2; exit 2)
+	@test -n "$(TASK)" || (echo "TASK is required" >&2; exit 2)
+	python3 scripts/run_openrouter.py --model "$(MODEL)" --task "$(TASK)"
+
+gemini-run-one:
+	@test -n "$(MODEL)" || (echo "MODEL is required" >&2; exit 2)
+	@test -n "$(TASK)" || (echo "TASK is required" >&2; exit 2)
+	python3 scripts/run_gemini.py --model "$(MODEL)" --task "$(TASK)"
 
 clean:
 	rm -rf .harbor runs results
