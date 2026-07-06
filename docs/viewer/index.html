@@ -671,6 +671,21 @@
     .run-row.active { background: var(--accent); }
     .run-row strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+    .harness-badge {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      vertical-align: 1px;
+    }
+
+    .harness-badge.agent { background: #efe4f7; color: #6b3fa0; border: 1px solid #d9c2ec; }
+    .harness-badge.api { background: #e3eef8; color: #2b5d8c; border: 1px solid #c4daee; }
+
     .run-answer {
       display: flex;
       flex-wrap: wrap;
@@ -1051,6 +1066,23 @@
       return runById(runId)?.label || runId;
     }
 
+    function harnessBadge(run) {
+      if (!run.harness_kind) return "";
+      const text = run.harness_kind === "agent" ? "agent" : "API";
+      return ` <em class="harness-badge ${esc(run.harness_kind)}">${text}</em>`;
+    }
+
+    function runTooltip(run) {
+      const parts = [];
+      if (run.model) parts.push(run.model);
+      if (run.harness) parts.push(run.harness);
+      if (run.catalog) parts.push(`${run.catalog} catalog`);
+      if (typeof run.cost_usd === "number") {
+        parts.push(`run cost ~$${run.cost_usd.toFixed(2)}${run.cost_basis === "estimate" ? " (est.)" : ""}`);
+      }
+      return parts.join(" · ");
+    }
+
     function shortRunLabel(run) {
       const label = run.label || run.run;
       if (label.includes("2026-07-05")) return "G5.5 7/05";
@@ -1135,7 +1167,7 @@
       fillSelect(filterControls.generation, uniqueValues("generation"), "All generations");
       fillSelect(filterControls.difficulty, ["hard", "medium", "light", "solved", "unscored"], "All results");
       activeRun.innerHTML = `<option value="__all__">All models</option>` + (state.data.runs || [])
-        .map(run => `<option value="${esc(run.run)}">${esc(run.label)} (${esc(fmt(run.mean_reward))})</option>`)
+        .map(run => `<option value="${esc(run.run)}">${esc(run.label)} [${run.harness_kind === "agent" ? "agent" : "API"}] (${esc(fmt(run.mean_reward))})</option>`)
         .join("");
 
       Object.entries(filterControls).forEach(([key, control]) => {
@@ -1523,8 +1555,8 @@
             const result = item.results?.[run.run];
             const active = state.activeRun === run.run ? "active" : "";
             return `
-              <button class="run-row ${active}" data-run="${esc(run.run)}">
-                <strong>${esc(run.label)}</strong>
+              <button class="run-row ${active}" data-run="${esc(run.run)}" title="${esc(runTooltip(run))}">
+                <strong>${esc(run.label)}${harnessBadge(run)}</strong>
                 <span>${esc(result ? fmt(result.reward) : "-")}</span>
                 <span class="pill ${difficultyClass(result?.difficulty || "unscored")}">${esc(result?.difficulty || "unscored")}</span>
                 <span class="run-answer">${runAnswerPills(result)}</span>

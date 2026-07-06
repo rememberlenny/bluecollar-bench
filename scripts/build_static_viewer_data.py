@@ -275,6 +275,41 @@ def short_result(row: dict[str, Any]) -> dict[str, Any]:
     return result
 
 
+# Harness, model, catalog vintage, and observed run cost per collected run.
+# Harness matters when reading scores: agentic Harbor runs give the model an
+# agent loop (self-checking, file tools) and cost ~25-30x more per task than
+# one-shot API runs. Costs are total USD for the run; "exact" means billed or
+# CLI-reported, "estimate" means tokens x list price.
+RUN_META = {
+    "gpt55_full_20260705_5b2c706": {"harness": "agentic: Harbor + codex", "model": "gpt-5.5", "catalog": "coded"},
+    "gpt55_full_20260706_c48_openai_merged": {"harness": "agentic: Harbor + codex", "model": "gpt-5.5", "catalog": "coded"},
+    "gpt55_missing_text_rebalance_20260706_c48_openai_delta": {"harness": "agentic: Harbor + codex", "model": "gpt-5.5", "catalog": "coded"},
+    "sonnet5_20260706_064841": {"harness": "agentic: Harbor + claude-code", "model": "claude-sonnet-5", "catalog": "coded"},
+    "gemini35_flash_full_20260706_185933": {"harness": "API: Vertex", "model": "gemini-3.5-flash", "catalog": "coded"},
+    "openrouter_glm52_2026-07-06": {"harness": "API: OpenRouter", "model": "z-ai/glm-5.2", "catalog": "coded"},
+    "deepseek_v4_pro_text_20260706_182042": {"harness": "API: OpenRouter", "model": "deepseek/deepseek-v4-pro", "catalog": "coded"},
+    "gpt55_natural_20260706": {"harness": "agentic: Harbor + codex", "model": "gpt-5.5", "catalog": "naturalized", "cost_usd": 117.0, "cost_basis": "estimate"},
+    "sonnet5_natural_20260706": {"harness": "agentic: Harbor + claude-code", "model": "claude-sonnet-5", "catalog": "naturalized", "cost_usd": 104.76, "cost_basis": "exact"},
+    "gemini35_flash_natural_20260706": {"harness": "API: Vertex", "model": "gemini-3.5-flash", "catalog": "naturalized", "cost_usd": 5.30, "cost_basis": "estimate"},
+    "glm52_natural_20260706": {"harness": "API: OpenRouter", "model": "z-ai/glm-5.2", "catalog": "naturalized", "cost_usd": 3.17, "cost_basis": "exact"},
+    "deepseek_v4_pro_text_natural_20260706": {"harness": "API: OpenRouter", "model": "deepseek/deepseek-v4-pro", "catalog": "naturalized", "cost_usd": 2.81, "cost_basis": "exact"},
+    "kimi_k27_code_natural_20260706": {"harness": "API: OpenRouter", "model": "moonshotai/kimi-k2.7-code", "catalog": "naturalized", "cost_usd": 3.91, "cost_basis": "exact"},
+}
+
+
+def run_meta(run_id: str) -> dict[str, Any]:
+    meta = dict(RUN_META.get(run_id, {}))
+    if "harness" not in meta:
+        lowered = run_id.lower()
+        if "codex" in lowered or "sonnet" in lowered or "gpt" in lowered:
+            meta["harness"] = "agentic: Harbor"
+        else:
+            meta["harness"] = "API"
+    meta.setdefault("catalog", "naturalized" if "natural" in run_id.lower() else "coded")
+    meta["harness_kind"] = "agent" if meta["harness"].startswith("agentic") else "api"
+    return meta
+
+
 def run_label(run_id: str) -> str:
     lowered = run_id.lower()
     suffix = " (naturalized)" if "natural" in lowered else ""
@@ -396,6 +431,7 @@ def run_summary(metadata: dict[str, Any], rows: list[dict[str, Any]]) -> dict[st
     return {
         "run": run_id,
         "label": run_label(run_id),
+        **run_meta(run_id),
         "path": metadata.get("path", ""),
         "collected_at": metadata.get("collected_at", ""),
         "git_commit": metadata.get("git_commit", ""),
