@@ -447,10 +447,10 @@ def run_one(task: TaskSpec, raw_dir: Path, args: argparse.Namespace, key: str | 
         return TaskResult(task.task_id, False, 0.0, task_out, error=error)
 
 
-def prepare_raw_dir(raw_dir: Path, overwrite: bool) -> None:
+def prepare_raw_dir(raw_dir: Path, overwrite: bool, skip_existing: bool) -> None:
     if raw_dir.exists() and overwrite:
         shutil.rmtree(raw_dir)
-    if raw_dir.exists() and any(raw_dir.iterdir()) and not overwrite:
+    if raw_dir.exists() and any(raw_dir.iterdir()) and not overwrite and not skip_existing:
         raise SystemExit(f"{raw_dir} already exists and is not empty; pass --overwrite or choose --raw-run-dir")
     raw_dir.mkdir(parents=True, exist_ok=True)
 
@@ -467,7 +467,7 @@ def main() -> int:
     args = parse_args()
     specs = selected_tasks(args)
     raw_dir = (args.raw_run_dir or default_raw_dir(args.model)).resolve()
-    prepare_raw_dir(raw_dir, args.overwrite)
+    prepare_raw_dir(raw_dir, args.overwrite, args.skip_existing)
     key = api_key(args) if args.auth == "api-key" else None
     token = oauth_token(args) if args.auth == "oauth" else None
 

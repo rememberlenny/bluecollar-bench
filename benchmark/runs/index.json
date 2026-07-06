@@ -1,5 +1,5 @@
 {
-  "latest": "openrouter_glm52_2026-07-06",
+  "latest": "gemini35_flash_full_20260706_185933",
   "runs": [
     {
       "catalog_sha256": "3d917f30ba6d3ee7811c082f3839aa0e2c3cc9e42578b1b7320a058b68901373",
@@ -35,6 +35,15 @@
       "path": "benchmark/runs/openrouter_glm52_2026-07-06",
       "run": "openrouter_glm52_2026-07-06",
       "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/openrouter_z-ai-glm-5.2_20260706_182123",
+      "tasks_scored": 1299
+    },
+    {
+      "catalog_sha256": "d2fd79b23d2469a36d6a19eb8348db11a2658f9cd3118f79dcf1e5ab17b2a98e",
+      "collected_at": "2026-07-06T19:06:55+00:00",
+      "git_commit": "9d099a9c84f4331abc4d19a9865a01aa1efb4710",
+      "path": "benchmark/runs/gemini35_flash_full_20260706_185933",
+      "run": "gemini35_flash_full_20260706_185933",
+      "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/gemini_35_flash_full_20260706_185933",
       "tasks_scored": 1299
     }
   ],
