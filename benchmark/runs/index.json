@@ -1,5 +1,5 @@
 {
-  "latest": "glm52_natural_20260706",
+  "latest": "kimi_k27_code_natural_20260706",
   "runs": [
     {
       "catalog_sha256": "3d917f30ba6d3ee7811c082f3839aa0e2c3cc9e42578b1b7320a058b68901373",
@@ -81,6 +81,24 @@
       "run": "glm52_natural_20260706",
       "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/openrouter_glm52_natural_20260706",
       "tasks_scored": 1299
+    },
+    {
+      "catalog_sha256": "aa0631b805deaf095fb665a82992fb11102cba6e1c7b38752726b5d3d2f8cb77",
+      "collected_at": "2026-07-06T21:28:07+00:00",
+      "git_commit": "4b26b50fafb12109aa5593b2475c0bacf777059f",
+      "path": "benchmark/runs/deepseek_v4_pro_text_natural_20260706",
+      "run": "deepseek_v4_pro_text_natural_20260706",
+      "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/openrouter_deepseek_v4_pro_text_natural_20260706",
+      "tasks_scored": 1171
+    },
+    {
+      "catalog_sha256": "aa0631b805deaf095fb665a82992fb11102cba6e1c7b38752726b5d3d2f8cb77",
+      "collected_at": "2026-07-06T21:30:06+00:00",
+      "git_commit": "4b26b50fafb12109aa5593b2475c0bacf777059f",
+      "path": "benchmark/runs/kimi_k27_code_natural_20260706",
+      "run": "kimi_k27_code_natural_20260706",
+      "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/openrouter_kimi_k27_code_natural_20260706",
+      "tasks_scored": 1255
     }
   ],
   "schema_version": 1

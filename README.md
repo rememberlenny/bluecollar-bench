@@ -67,9 +67,12 @@ Generated benchmark artifacts:
 
 Run results and analysis:
 
+- [Static task/result viewer](https://rememberlenny.github.io/bluecollar-bench/) - GitHub Pages viewer with filters, task detail, per-model scores, and extracted model answers.
 - [Run index](benchmark/runs/index.json) - versioned run registry.
 - [Latest run pointer](benchmark/runs/latest.json) - current latest collected run metadata.
-- [Latest collected analysis](benchmark/runs/gpt55_full_20260705_5b2c706/analysis.md) - collected run scoreboard and axis rollups.
+- [Model results summary](benchmark/runs/model_results_summary_20260706.md) - current model ranking, naturalized-run results, modality notes, and collection caveats.
+- [Naturalization comparison](benchmark/runs/naturalization_comparison_20260706.md) - pre/post naturalized-catalog comparison for Gemini, GLM, and DeepSeek plus Kimi baseline notes.
+- [Latest collected analysis](benchmark/runs/kimi_k27_code_natural_20260706/analysis.md) - latest collected run scoreboard and axis rollups.
 - [Prior full-suite run report](benchmark/runs/codex_full_suite_2026-07-04.md) - earlier full-suite run summary.
 
 Main workflow scripts:
