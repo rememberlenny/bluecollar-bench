@@ -379,7 +379,17 @@ def extract_trace_from_trial(trial_dir: Path) -> dict[str, Any] | None:
     return None
 
 
-def write_trace_for_row(run_id: str, row: dict[str, Any]) -> str | None:
+def trace_preview(trace: dict[str, Any]) -> dict[str, Any] | None:
+    events = trace.get("events") or []
+    pick = next((e for e in events if e.get("kind") == "thinking"), None)
+    if pick is None:
+        pick = next((e for e in events if e.get("kind") == "message"), None)
+    if pick is None or not pick.get("text"):
+        return None
+    return {"kind": pick["kind"], "text": clip(pick["text"], 360)}
+
+
+def write_trace_for_row(run_id: str, row: dict[str, Any]) -> dict[str, Any] | None:
     trial_dir = trial_dir_from_reward_path(row.get("reward_path", ""))
     if not trial_dir:
         return None
@@ -389,7 +399,15 @@ def write_trace_for_row(run_id: str, row: dict[str, Any]) -> str | None:
     out = TRACES_DIR / run_id / f"{row['task']}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(trace, ensure_ascii=False, sort_keys=True), encoding="utf-8")
-    return f"data/traces/{run_id}/{row['task']}.json"
+    info: dict[str, Any] = {
+        "trace": f"data/traces/{run_id}/{row['task']}.json",
+        "trace_steps": len(trace.get("events") or []),
+        "trace_source": trace.get("source", ""),
+    }
+    preview = trace_preview(trace)
+    if preview:
+        info["trace_preview"] = preview
+    return info
 
 
 def git_output(args: list[str]) -> str:
@@ -650,9 +668,9 @@ def discover_runs() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[st
         for row in rows:
             result = short_result(row)
             if capture_traces:
-                trace_path = write_trace_for_row(run_id, row)
-                if trace_path:
-                    result["trace"] = trace_path
+                trace_info = write_trace_for_row(run_id, row)
+                if trace_info:
+                    result.update(trace_info)
             results_by_task.setdefault(row["task"], {})[run_id] = result
 
     runs.sort(key=lambda run: (run.get("collected_at") or "", run["run"]))

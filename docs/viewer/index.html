@@ -762,6 +762,23 @@
     .trace-ev.thinking pre { background: #f6f2fa; border-color: #e2d5ee; color: #4b3a61; font-style: italic; }
     .trace-ev.tool pre, .trace-ev.tool_result pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f4f6f8; }
 
+    .trace-preview { margin-top: 8px; }
+    .trace-preview .trace-ev-label { display: block; }
+
+    .trace-preview pre {
+      margin: 2px 0 0;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      word-break: break-word;
+      border: 1px solid #e7ebe6;
+      background: #fff;
+    }
+
+    .trace-preview.thinking pre { background: #f6f2fa; border-color: #e2d5ee; color: #4b3a61; font-style: italic; }
+
     .run-answer {
       display: flex;
       flex-wrap: wrap;
@@ -1634,8 +1651,17 @@
 
     function traceSection(result) {
       if (!result.trace) return "";
+      const preview = result.trace_preview;
+      const previewHtml = preview ? `
+        <div class="trace-preview ${esc(preview.kind)}">
+          <span class="trace-ev-label">${preview.kind === "thinking" ? "model reasoning" : "model response"}</span>
+          <pre>${esc(preview.text)}</pre>
+        </div>
+      ` : "";
+      const steps = result.trace_steps ? ` (${result.trace_steps} steps)` : "";
       return `
-        <button class="trace-toggle" data-trace="${esc(result.trace)}">Show trace &amp; reasoning</button>
+        ${previewHtml}
+        <button class="trace-toggle" data-trace="${esc(result.trace)}">Show full trace${esc(steps)}</button>
         <div class="trace-body" hidden></div>
       `;
     }
@@ -1652,9 +1678,9 @@
       if (stats.promptTokenCount) statBits.push(`${stats.promptTokenCount.toLocaleString()} in`);
       if (stats.candidatesTokenCount) statBits.push(`${stats.candidatesTokenCount.toLocaleString()} out`);
       const head = `<div class="trace-stats">${esc(trace.source || "")}${statBits.length ? " · " + esc(statBits.join(" · ")) : ""}</div>`;
-      const body = (trace.events || []).map(event => `
+      const body = (trace.events || []).map((event, index) => `
         <div class="trace-ev ${esc(event.kind)}">
-          <span class="trace-ev-label">${esc(event.label)}</span>
+          <span class="trace-ev-label">${index + 1} · ${esc(event.label)}</span>
           ${event.text ? `<pre>${esc(event.text)}</pre>` : ""}
         </div>
       `).join("");
@@ -1663,31 +1689,44 @@
 
     const traceCache = {};
 
+    async function openTrace(button) {
+      const body = button.nextElementSibling;
+      const url = button.dataset.trace;
+      try {
+        if (!traceCache[url]) {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          traceCache[url] = await response.json();
+        }
+        body.innerHTML = renderTrace(traceCache[url]);
+      } catch (error) {
+        body.innerHTML = `<div class="trace-stats">Trace failed to load: ${esc(error.message)}</div>`;
+      }
+      body.hidden = false;
+      button.dataset.open = "1";
+      button.textContent = "Hide trace";
+    }
+
     function bindTraceToggles(container) {
       container.querySelectorAll(".trace-toggle").forEach(button => {
-        button.addEventListener("click", async event => {
+        button.addEventListener("click", event => {
           event.stopPropagation();
           const body = button.nextElementSibling;
           if (!body.hidden) {
             body.hidden = true;
-            button.textContent = "Show trace & reasoning";
+            delete button.dataset.open;
+            button.textContent = button.dataset.label || "Show full trace";
             return;
           }
-          const url = button.dataset.trace;
-          try {
-            if (!traceCache[url]) {
-              const response = await fetch(url);
-              if (!response.ok) throw new Error(`HTTP ${response.status}`);
-              traceCache[url] = await response.json();
-            }
-            body.innerHTML = renderTrace(traceCache[url]);
-          } catch (error) {
-            body.innerHTML = `<div class="trace-stats">Trace failed to load: ${esc(error.message)}</div>`;
-          }
-          body.hidden = false;
-          button.textContent = "Hide trace";
+          openTrace(button);
         });
+        button.dataset.label = button.textContent;
       });
+      // When one model is selected, its trace is the point — open it.
+      if (state.activeRun !== "__all__") {
+        const active = container.querySelector(".answer-card.active .trace-toggle");
+        if (active) openTrace(active);
+      }
     }
 
     function renderModelAnswers(item) {
