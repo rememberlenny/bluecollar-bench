@@ -1,5 +1,5 @@
 {
-  "latest": "gemini35_flash_full_20260706_185933",
+  "latest": "gpt55_full_20260706_c48_openai_merged",
   "runs": [
     {
       "catalog_sha256": "3d917f30ba6d3ee7811c082f3839aa0e2c3cc9e42578b1b7320a058b68901373",
@@ -44,6 +44,24 @@
       "path": "benchmark/runs/gemini35_flash_full_20260706_185933",
       "run": "gemini35_flash_full_20260706_185933",
       "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/gemini_35_flash_full_20260706_185933",
+      "tasks_scored": 1299
+    },
+    {
+      "catalog_sha256": "d2fd79b23d2469a36d6a19eb8348db11a2658f9cd3118f79dcf1e5ab17b2a98e",
+      "collected_at": "2026-07-06T19:31:51+00:00",
+      "git_commit": "e03b014dd883fd37c4e45cad33bcecbcb4e4462f",
+      "path": "benchmark/runs/gpt55_missing_text_rebalance_20260706_c48_openai_delta",
+      "run": "gpt55_missing_text_rebalance_20260706_c48_openai_delta",
+      "source_runs_dir": "/root/spaceship/bluecollar-bench/jobs/gpt55_missing_text_rebalance_20260706_c48_openai",
+      "tasks_scored": 250
+    },
+    {
+      "catalog_sha256": "d2fd79b23d2469a36d6a19eb8348db11a2658f9cd3118f79dcf1e5ab17b2a98e",
+      "collected_at": "2026-07-06T19:31:51+00:00",
+      "git_commit": "e03b014dd883fd37c4e45cad33bcecbcb4e4462f",
+      "path": "benchmark/runs/gpt55_full_20260706_c48_openai_merged",
+      "run": "gpt55_full_20260706_c48_openai_merged",
+      "source_runs_dir": "jobs/gpt55_full_20260705_5b2c706 + jobs/gpt55_missing_text_rebalance_20260706_c48_openai",
       "tasks_scored": 1299
     }
   ],
