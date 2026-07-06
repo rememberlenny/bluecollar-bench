@@ -133,6 +133,19 @@ def pct(numerator: int, denominator: int) -> str:
     return f"{100 * numerator / denominator:.1f}%"
 
 
+def quantile(values: list[float], q: float) -> float:
+    ordered = sorted(values)
+    if not ordered:
+        return 0.0
+    if len(ordered) == 1:
+        return ordered[0]
+    position = (len(ordered) - 1) * q
+    lower = int(position)
+    upper = min(lower + 1, len(ordered) - 1)
+    fraction = position - lower
+    return ordered[lower] + (ordered[upper] - ordered[lower]) * fraction
+
+
 def rel_task_link(task: str) -> str:
     return f"[`{task}`](../../../../tasks/{task}/task.toml)"
 
@@ -178,6 +191,11 @@ def group_stats(rows: list[dict], key: str) -> list[dict]:
                 "group": group,
                 "n": len(group_rows),
                 "mean": statistics.fmean(rewards),
+                "min": min(rewards),
+                "p25": quantile(rewards, 0.25),
+                "median": quantile(rewards, 0.5),
+                "p75": quantile(rewards, 0.75),
+                "max": max(rewards),
                 "low": low,
                 "high": high,
                 "rows": group_rows,
@@ -223,6 +241,35 @@ def example_table(rows: list[dict], heading: str | None = None, limit: int = 5) 
     return "\n".join(lines)
 
 
+def nearest_example(rows: list[dict], target: float) -> dict:
+    return min(rows, key=lambda row: (abs(row["reward"] - target), row["task"]))
+
+
+def spread_examples_table(stats: list[dict]) -> str:
+    lines = [
+        "| task type | low example | median-ish example | high example |",
+        "|---|---|---|---|",
+    ]
+    for item in stats:
+        rows = item["rows"]
+        low = min(rows, key=lambda row: (row["reward"], row["task"]))
+        mid = nearest_example(rows, item["median"])
+        high = max(rows, key=lambda row: (row["reward"], row["task"]))
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    item["group"],
+                    f"{rel_task_link(low['task'])} ({fmt(low['reward'])})",
+                    f"{rel_task_link(mid['task'])} ({fmt(mid['reward'])})",
+                    f"{rel_task_link(high['task'])} ({fmt(high['reward'])})",
+                ]
+            )
+            + " |"
+        )
+    return "\n".join(lines)
+
+
 def stats_table(stats: list[dict], label: str = "group") -> str:
     lines = [
         f"| {label} | n | mean reward | <=0.50 | >=0.90 |",
@@ -233,6 +280,22 @@ def stats_table(stats: list[dict], label: str = "group") -> str:
             f"| {item['group']} | {item['n']} | {fmt(item['mean'])} | "
             f"{item['low']} ({pct(item['low'], item['n'])}) | "
             f"{item['high']} ({pct(item['high'], item['n'])}) |"
+        )
+    return "\n".join(lines)
+
+
+def spread_table(stats: list[dict], label: str = "group") -> str:
+    lines = [
+        f"| {label} | n | min | p25 | median | p75 | max | mean | spread |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for item in stats:
+        spread = item["max"] - item["min"]
+        lines.append(
+            f"| {item['group']} | {item['n']} | {fmt(item['min'])} | "
+            f"{fmt(item['p25'])} | {fmt(item['median'])} | "
+            f"{fmt(item['p75'])} | {fmt(item['max'])} | "
+            f"{fmt(item['mean'])} | {fmt(spread)} |"
         )
     return "\n".join(lines)
 
@@ -314,6 +377,22 @@ def build_task_types(rows: list[dict]) -> str:
         "",
         "Task type is the clearest performance separator in this run.",
         "The model succeeds most on structured safety, sequencing, and selection tasks; it fails most on exact identification and high-variance diagnosis.",
+        "",
+        "## Reward spread by task type",
+        "",
+        "The chart below is better than a mean-only view because it shows both center and breadth. The line is min-to-max, the filled band is p25-to-p75, the dark tick is the median, and the open circle is the mean.",
+        "",
+        "![Task type reward spread](task_type_reward_spread.svg)",
+        "",
+        spread_table(sorted(stats, key=lambda item: (item["median"], item["mean"]), reverse=True), "task type"),
+        "",
+        "## Spread examples",
+        "",
+        "These examples anchor each distribution: the lowest-scoring task, a task nearest the median, and the highest-scoring task for that type.",
+        "",
+        spread_examples_table(sorted(stats, key=lambda item: (item["median"], item["mean"]), reverse=True)),
+        "",
+        "## Mean and tail summary",
         "",
         stats_table(stats, "task type"),
         "",
@@ -519,6 +598,85 @@ def build_example_index(rows: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def build_task_type_spread_svg(wiki_dir: Path, rows: list[dict]) -> None:
+    stats = sorted(
+        group_stats(rows, "task_type"),
+        key=lambda item: (item["median"], item["mean"]),
+        reverse=True,
+    )
+    row_h = 42
+    margin_left = 96
+    margin_right = 36
+    margin_top = 58
+    margin_bottom = 54
+    chart_w = 760
+    width = margin_left + chart_w + margin_right
+    height = margin_top + row_h * len(stats) + margin_bottom
+
+    def x(value: float) -> float:
+        return margin_left + value * chart_w
+
+    palette = {
+        "range": "#9fb4c4",
+        "iqr": "#2f7d7b",
+        "median": "#24313a",
+        "mean": "#ffffff",
+        "mean_stroke": "#bf5b3f",
+        "grid": "#dce5eb",
+        "text": "#24313a",
+        "muted": "#60727f",
+    }
+    lines = [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="920" height="'
+        + str(height)
+        + '" viewBox="0 0 920 '
+        + str(height)
+        + '" role="img" aria-labelledby="title desc">',
+        "<title id=\"title\">Task type reward spread</title>",
+        "<desc id=\"desc\">Min, p25, median, p75, max, and mean reward by task type.</desc>",
+        '<rect width="100%" height="100%" fill="#ffffff"/>',
+        f'<text x="{margin_left}" y="28" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="{palette["text"]}">Reward spread by task type</text>',
+        f'<text x="{margin_left}" y="48" font-family="system-ui, sans-serif" font-size="12" fill="{palette["muted"]}">Line: min-to-max. Band: p25-to-p75. Dark tick: median. Open circle: mean.</text>',
+    ]
+    for tick in [0, 0.25, 0.5, 0.75, 1.0]:
+        xt = x(tick)
+        lines.append(
+            f'<line x1="{xt:.1f}" y1="{margin_top - 8}" x2="{xt:.1f}" y2="{height - margin_bottom + 8}" stroke="{palette["grid"]}" stroke-width="1"/>'
+        )
+        lines.append(
+            f'<text x="{xt:.1f}" y="{height - 22}" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="{palette["muted"]}">{tick:.2f}</text>'
+        )
+
+    for index, item in enumerate(stats):
+        cy = margin_top + index * row_h + row_h / 2
+        task_type = html.escape(item["group"])
+        lines.extend(
+            [
+                f'<text x="{margin_left - 14}" y="{cy + 4:.1f}" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="{palette["text"]}">{task_type}</text>',
+                f'<line x1="{x(item["min"]):.1f}" y1="{cy:.1f}" x2="{x(item["max"]):.1f}" y2="{cy:.1f}" stroke="{palette["range"]}" stroke-width="3" stroke-linecap="round"/>',
+                f'<rect x="{x(item["p25"]):.1f}" y="{cy - 8:.1f}" width="{max(2, x(item["p75"]) - x(item["p25"])):.1f}" height="16" rx="3" fill="{palette["iqr"]}" opacity="0.88"/>',
+                f'<line x1="{x(item["median"]):.1f}" y1="{cy - 13:.1f}" x2="{x(item["median"]):.1f}" y2="{cy + 13:.1f}" stroke="{palette["median"]}" stroke-width="3"/>',
+                f'<circle cx="{x(item["mean"]):.1f}" cy="{cy:.1f}" r="5" fill="{palette["mean"]}" stroke="{palette["mean_stroke"]}" stroke-width="2"/>',
+            ]
+        )
+
+    legend_y = height - 6
+    lines.extend(
+        [
+            f'<line x1="{margin_left}" y1="{legend_y}" x2="{margin_left + 34}" y2="{legend_y}" stroke="{palette["range"]}" stroke-width="3"/>',
+            f'<text x="{margin_left + 42}" y="{legend_y + 4}" font-family="system-ui, sans-serif" font-size="11" fill="{palette["muted"]}">min-max</text>',
+            f'<rect x="{margin_left + 112}" y="{legend_y - 7}" width="28" height="14" rx="3" fill="{palette["iqr"]}" opacity="0.88"/>',
+            f'<text x="{margin_left + 148}" y="{legend_y + 4}" font-family="system-ui, sans-serif" font-size="11" fill="{palette["muted"]}">p25-p75</text>',
+            f'<line x1="{margin_left + 218}" y1="{legend_y - 10}" x2="{margin_left + 218}" y2="{legend_y + 10}" stroke="{palette["median"]}" stroke-width="3"/>',
+            f'<text x="{margin_left + 228}" y="{legend_y + 4}" font-family="system-ui, sans-serif" font-size="11" fill="{palette["muted"]}">median</text>',
+            f'<circle cx="{margin_left + 294}" cy="{legend_y}" r="5" fill="{palette["mean"]}" stroke="{palette["mean_stroke"]}" stroke-width="2"/>',
+            f'<text x="{margin_left + 306}" y="{legend_y + 4}" font-family="system-ui, sans-serif" font-size="11" fill="{palette["muted"]}">mean</text>',
+            "</svg>",
+        ]
+    )
+    (wiki_dir / "task_type_reward_spread.svg").write_text("\n".join(lines), encoding="utf-8")
+
+
 def build_html_index(wiki_dir: Path, readme_body: str) -> None:
     cards = [
         ("Task Types", "task-types.md", "Which task formats succeed or fail."),
@@ -593,6 +751,7 @@ def build_wiki(run_dir: Path) -> Path:
 
     for filename, (title, body) in pages.items():
         write_page(wiki_dir / filename, title, body)
+    build_task_type_spread_svg(wiki_dir, rows)
     build_html_index(wiki_dir, readme)
     return wiki_dir
 

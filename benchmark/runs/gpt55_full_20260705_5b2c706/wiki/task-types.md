@@ -5,6 +5,46 @@
 Task type is the clearest performance separator in this run.
 The model succeeds most on structured safety, sequencing, and selection tasks; it fails most on exact identification and high-variance diagnosis.
 
+## Reward spread by task type
+
+The chart below is better than a mean-only view because it shows both center and breadth. The line is min-to-max, the filled band is p25-to-p75, the dark tick is the median, and the open circle is the mean.
+
+![Task type reward spread](task_type_reward_spread.svg)
+
+| task type | n | min | p25 | median | p75 | max | mean | spread |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| TS | 50 | 0.388 | 0.825 | 0.863 | 0.919 | 0.975 | 0.841 | 0.587 |
+| HAZ | 92 | 0.400 | 0.850 | 0.850 | 0.900 | 0.950 | 0.828 | 0.550 |
+| RES | 28 | 0.000 | 0.800 | 0.850 | 0.950 | 1.000 | 0.794 | 1.000 |
+| SEQ | 108 | 0.388 | 0.775 | 0.825 | 0.875 | 0.925 | 0.827 | 0.538 |
+| PA | 35 | 0.438 | 0.775 | 0.825 | 0.825 | 0.925 | 0.792 | 0.488 |
+| CC | 209 | 0.000 | 0.750 | 0.800 | 0.850 | 0.950 | 0.760 | 0.950 |
+| ME | 147 | 0.000 | 0.725 | 0.775 | 0.825 | 1.000 | 0.752 | 1.000 |
+| TRD | 31 | 0.350 | 0.700 | 0.750 | 0.800 | 0.950 | 0.752 | 0.600 |
+| FD | 149 | 0.000 | 0.650 | 0.750 | 0.875 | 1.000 | 0.730 | 1.000 |
+| DOC | 74 | 0.312 | 0.675 | 0.725 | 0.819 | 1.000 | 0.735 | 0.688 |
+| ID | 126 | 0.338 | 0.675 | 0.725 | 0.775 | 0.950 | 0.709 | 0.612 |
+
+## Spread examples
+
+These examples anchor each distribution: the lowest-scoring task, a task nearest the median, and the highest-scoring task for that type.
+
+| task type | low example | median-ish example | high example |
+|---|---|---|---|
+| TS | [`t5-e-105-ts-motor-circuits-disconnects`](../../../../tasks/t5-e-105-ts-motor-circuits-disconnects/task.toml) (0.388) | [`t1-e-202-ts-rigid-pvc-conduit`](../../../../tasks/t1-e-202-ts-rigid-pvc-conduit/task.toml) (0.875) | [`t4-e-103-ts-overcurrent-device-selection-coo`](../../../../tasks/t4-e-103-ts-overcurrent-device-selection-coo/task.toml) (0.975) |
+| HAZ | [`t3-c-101-haz-form-build-bracing`](../../../../tasks/t3-c-101-haz-form-build-bracing/task.toml) (0.400) | [`t1-c-101-haz-bf-000-form-build-bracing`](../../../../tasks/t1-c-101-haz-bf-000-form-build-bracing/task.toml) (0.850) | [`t5-x-101-haz-bf-006-lockout-tagout`](../../../../tasks/t5-x-101-haz-bf-006-lockout-tagout/task.toml) (0.950) |
+| RES | [`v2-cpm-delay-001`](../../../../tasks/v2-cpm-delay-001/task.toml) (0.000) | [`v2-cpm-delay-000`](../../../../tasks/v2-cpm-delay-000/task.toml) (0.850) | [`v2-cpm-delay-007`](../../../../tasks/v2-cpm-delay-007/task.toml) (1.000) |
+| SEQ | [`t5-m-101-seq-bf-005-baseplates-anchor-bolts`](../../../../tasks/t5-m-101-seq-bf-005-baseplates-anchor-bolts/task.toml) (0.388) | [`shaft-alignment-pipe-strain`](../../../../tasks/shaft-alignment-pipe-strain/task.toml) (0.825) | [`t5-m-301-seq-bf-002-bearings-seals`](../../../../tasks/t5-m-301-seq-bf-002-bearings-seals/task.toml) (0.925) |
+| PA | [`t1-e-703-pa-heat-trace`](../../../../tasks/t1-e-703-pa-heat-trace/task.toml) (0.438) | [`t1-c-101-pa-bf-005-form-build-bracing`](../../../../tasks/t1-c-101-pa-bf-005-form-build-bracing/task.toml) (0.825) | [`t5-p-101-pa-bf-000-spool-erection-fit-up`](../../../../tasks/t5-p-101-pa-bf-000-spool-erection-fit-up/task.toml) (0.925) |
+| CC | [`t1-e-303-cc-terminations-splices`](../../../../tasks/t1-e-303-cc-terminations-splices/task.toml) (0.000) | [`flanged-joint-bolts-witness`](../../../../tasks/flanged-joint-bolts-witness/task.toml) (0.800) | [`v2-trap-f301-t3-screw-pops`](../../../../tasks/v2-trap-f301-t3-screw-pops/task.toml) (0.950) |
+| ME | [`v2-media-sling-004`](../../../../tasks/v2-media-sling-004/task.toml) (0.000) | [`t1-e-201-me-emt-bending-installation`](../../../../tasks/t1-e-201-me-emt-bending-installation/task.toml) (0.775) | [`v2-media-sling-008`](../../../../tasks/v2-media-sling-008/task.toml) (1.000) |
+| TRD | [`v2-trd-s302-t1-wind-pick`](../../../../tasks/v2-trd-s302-t1-wind-pick/task.toml) (0.350) | [`t1-s-302-trd-crane-operations`](../../../../tasks/t1-s-302-trd-crane-operations/task.toml) (0.750) | [`t4-a-302-trd-adas-post-repair-calibration`](../../../../tasks/t4-a-302-trd-adas-post-repair-calibration/task.toml) (0.950) |
+| FD | [`v2-audio-hammer-000`](../../../../tasks/v2-audio-hammer-000/task.toml) (0.000) | [`t1-e-105-fd-motor-circuits-disconnects`](../../../../tasks/t1-e-105-fd-motor-circuits-disconnects/task.toml) (0.750) | [`v2-media-micron-012`](../../../../tasks/v2-media-micron-012/task.toml) (1.000) |
+| DOC | [`t5-e-105-doc-motor-circuits-disconnects`](../../../../tasks/t5-e-105-doc-motor-circuits-disconnects/task.toml) (0.312) | [`t1-e-105-doc-motor-circuits-disconnects`](../../../../tasks/t1-e-105-doc-motor-circuits-disconnects/task.toml) (0.725) | [`v2-media-gasmeter-013`](../../../../tasks/v2-media-gasmeter-013/task.toml) (1.000) |
+| ID | [`t2-e-602-id-equipment-bonding`](../../../../tasks/t2-e-602-id-equipment-bonding/task.toml) (0.338) | [`t1-p-103-id-hangers-supports`](../../../../tasks/t1-p-103-id-hangers-supports/task.toml) (0.725) | [`v2-trap-c301-t2-efflorescence`](../../../../tasks/v2-trap-c301-t2-efflorescence/task.toml) (0.950) |
+
+## Mean and tail summary
+
 | task type | n | mean reward | <=0.50 | >=0.90 |
 |---|---:|---:|---:|---:|
 | ID | 126 | 0.709 | 12 (9.5%) | 1 (0.8%) |

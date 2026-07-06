@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="574" viewBox="0 0 920 574" role="img" aria-labelledby="title desc">
+<title id="title">Task type reward spread</title>
+<desc id="desc">Min, p25, median, p75, max, and mean reward by task type.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="96" y="28" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#24313a">Reward spread by task type</text>
+<text x="96" y="48" font-family="system-ui, sans-serif" font-size="12" fill="#60727f">Line: min-to-max. Band: p25-to-p75. Dark tick: median. Open circle: mean.</text>
+<line x1="96.0" y1="50" x2="96.0" y2="528" stroke="#dce5eb" stroke-width="1"/>
+<text x="96.0" y="552" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">0.00</text>
+<line x1="286.0" y1="50" x2="286.0" y2="528" stroke="#dce5eb" stroke-width="1"/>
+<text x="286.0" y="552" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">0.25</text>
+<line x1="476.0" y1="50" x2="476.0" y2="528" stroke="#dce5eb" stroke-width="1"/>
+<text x="476.0" y="552" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">0.50</text>
+<line x1="666.0" y1="50" x2="666.0" y2="528" stroke="#dce5eb" stroke-width="1"/>
+<text x="666.0" y="552" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">0.75</text>
+<line x1="856.0" y1="50" x2="856.0" y2="528" stroke="#dce5eb" stroke-width="1"/>
+<text x="856.0" y="552" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">1.00</text>
+<text x="82" y="83.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">TS</text>
+<line x1="390.5" y1="79.0" x2="837.0" y2="79.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="723.0" y="71.0" width="71.2" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="751.5" y1="66.0" x2="751.5" y2="92.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="735.0" cy="79.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="125.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">HAZ</text>
+<line x1="400.0" y1="121.0" x2="818.0" y2="121.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="742.0" y="113.0" width="38.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="742.0" y1="108.0" x2="742.0" y2="134.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="725.3" cy="121.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="167.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">RES</text>
+<line x1="96.0" y1="163.0" x2="856.0" y2="163.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="704.0" y="155.0" width="114.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="742.0" y1="150.0" x2="742.0" y2="176.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="699.2" cy="163.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="209.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">SEQ</text>
+<line x1="390.5" y1="205.0" x2="799.0" y2="205.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="685.0" y="197.0" width="76.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="723.0" y1="192.0" x2="723.0" y2="218.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="724.7" cy="205.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="251.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">PA</text>
+<line x1="428.5" y1="247.0" x2="799.0" y2="247.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="685.0" y="239.0" width="38.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="723.0" y1="234.0" x2="723.0" y2="260.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="698.3" cy="247.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="293.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">CC</text>
+<line x1="96.0" y1="289.0" x2="818.0" y2="289.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="666.0" y="281.0" width="76.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="704.0" y1="276.0" x2="704.0" y2="302.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="673.3" cy="289.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="335.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">ME</text>
+<line x1="96.0" y1="331.0" x2="856.0" y2="331.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="647.0" y="323.0" width="76.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="685.0" y1="318.0" x2="685.0" y2="344.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="667.7" cy="331.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="377.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">TRD</text>
+<line x1="362.0" y1="373.0" x2="818.0" y2="373.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="628.0" y="365.0" width="76.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="666.0" y1="360.0" x2="666.0" y2="386.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="667.2" cy="373.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="419.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">FD</text>
+<line x1="96.0" y1="415.0" x2="856.0" y2="415.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="590.0" y="407.0" width="171.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="666.0" y1="402.0" x2="666.0" y2="428.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="651.1" cy="415.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="461.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">DOC</text>
+<line x1="333.5" y1="457.0" x2="856.0" y2="457.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="609.0" y="449.0" width="109.2" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="647.0" y1="444.0" x2="647.0" y2="470.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="654.6" cy="457.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="82" y="503.0" text-anchor="end" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#24313a">ID</text>
+<line x1="352.5" y1="499.0" x2="818.0" y2="499.0" stroke="#9fb4c4" stroke-width="3" stroke-linecap="round"/>
+<rect x="609.0" y="491.0" width="76.0" height="16" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<line x1="647.0" y1="486.0" x2="647.0" y2="512.0" stroke="#24313a" stroke-width="3"/>
+<circle cx="634.6" cy="499.0" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<line x1="96" y1="568" x2="130" y2="568" stroke="#9fb4c4" stroke-width="3"/>
+<text x="138" y="572" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">min-max</text>
+<rect x="208" y="561" width="28" height="14" rx="3" fill="#2f7d7b" opacity="0.88"/>
+<text x="244" y="572" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">p25-p75</text>
+<line x1="314" y1="558" x2="314" y2="578" stroke="#24313a" stroke-width="3"/>
+<text x="324" y="572" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">median</text>
+<circle cx="390" cy="568" r="5" fill="#ffffff" stroke="#bf5b3f" stroke-width="2"/>
+<text x="402" y="572" font-family="system-ui, sans-serif" font-size="11" fill="#60727f">mean</text>
+</svg>
