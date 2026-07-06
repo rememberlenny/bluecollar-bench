@@ -33,17 +33,67 @@ The uploaded v0.1 taxonomy docs are preserved under `docs/source/`. The executab
 
 Current generated size: 1049 Harbor tasks from 95 source elements, 12 curated seeds, 21 v2 control items, 56 synthetic instrument/media items, 28 synthetic CPM/resource-constraint items, 44 synthetic audio fault-signature items, 651 direct source-derived items, and 237 matrix backfill items. The v2.1/v2.2/v2.3 catalog adds image and audio evidence with deterministic ground truth, but the benchmark is still fail-heavy overall; see `GAP_ANALYSIS_v2.md` before treating aggregate scores as final. The source taxonomy still needs SME red-team validation before claims should be treated as authoritative.
 
+## Key Links
+
+Start here:
+
+- [Eval structure wiki](docs/eval-structure-wiki.md) - role families, trade jobs, role tasks, stages/states, modalities, scoring, and run workflow.
+- [Eval structure DAG](docs/eval-structure-dag.mmd) - graph of the domain model plus source, build, validation, Harbor run, collection, and comparison flow.
+- [Gap analysis](GAP_ANALYSIS_v2.md) - current benchmark-health caveats and priority fixes before treating aggregate scores as final.
+- [Post-merge eval report](EVAL_v2.4.md) - v2.4 repair notes, run validity caveats, and recommended next evaluation order.
+
+Source taxonomy and roadmap:
+
+- [Source-doc index](docs/source/README.md) - entrypoint for the original taxonomy and expansion docs.
+- [Benchmark taxonomy v0.1](docs/source/blue-collar-benchmark-taxonomy-v0.1.md) - tiers, disciplines, task types, and unified S1/S2/S3 state model.
+- [Electrical element tree](docs/source/electrical-element-tree-v0.1.md) - detailed electrical source elements.
+- [Construction element trees](docs/source/element-trees-construction-v0.1.md) - construction trade source elements.
+- [Industrial service element trees](docs/source/element-trees-industrial-service-v0.1.md) - industrial/service source elements.
+- [Modality-native task categories](docs/source/modality-native-task-categories-v0.1.md) - audio/video-native task design.
+- [Four-track expansion plan](docs/source/expansion-plan-v0.1-four-new-capability-tracks.md) - roadmap for synthetic-parametric expansion.
+
+Generated benchmark artifacts:
+
+- [Generated item catalog](benchmark/items/items.json) - full machine-readable catalog used to generate tasks.
+- [Normalized taxonomy](benchmark/taxonomy.json) - generated axes, state model, media schema, and coverage matrix.
+- [Coverage report](benchmark/coverage_report.md) - item counts by discipline, tier, task type, and matrix cell.
+- [Leakage report](benchmark/leakage_report.md) - answer-token leakage buckets and remediation notes.
+- [Restore report](benchmark/restore_report.md) - evidence restoration and residual partial-leak summary.
+- [Harbor dataset manifest](dataset.toml) - published dataset/task manifest.
+
+Run results and analysis:
+
+- [Run index](benchmark/runs/index.json) - versioned run registry.
+- [Latest run pointer](benchmark/runs/latest.json) - current latest collected run metadata.
+- [Latest collected analysis](benchmark/runs/gpt55_full_20260705_5b2c706/analysis.md) - collected run scoreboard and axis rollups.
+- [Prior full-suite run report](benchmark/runs/codex_full_suite_2026-07-04.md) - earlier full-suite run summary.
+
+Main workflow scripts:
+
+- [Build item catalog](scripts/build_item_catalog.py)
+- [Generate v2 tasks](scripts/generate_tasks_v2.py)
+- [Grade template](scripts/grade_v2.py)
+- [Validate generated tasks](scripts/validate_tasks.py)
+- [Run Harbor](scripts/run_harbor.sh)
+- [Collect run results](scripts/collect_run_results.py)
+- [Compare collected runs](scripts/compare_runs.py)
+- [Plot run results](scripts/plot_run_results.py)
+
 ## Repository Layout
 
 ```text
 benchmark/items/        Machine-readable benchmark item catalog
 benchmark/taxonomy.json Normalized axes, state model, and coverage matrix
 benchmark/coverage_report.md
+docs/eval-structure-wiki.md
+docs/eval-structure-dag.mmd
 docs/source/            Uploaded v0.1 source taxonomy and element trees
 scripts/                Generator, local validation, and Harbor run helper
 tasks/                  Generated Harbor task directories
 dataset.toml            Harbor dataset manifest
 ```
+
+For the overall eval architecture, read `docs/eval-structure-wiki.md`. For a graph-only view of the build, validation, Harbor run, and result-collection flow, render `docs/eval-structure-dag.mmd`.
 
 Each Harbor task follows the current Harbor task structure:
 

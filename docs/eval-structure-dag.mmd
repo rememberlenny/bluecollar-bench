@@ -1,0 +1,127 @@
+flowchart TD
+  subgraph domain["Domain organization"]
+    role_family["Work setting / role family<br/>T1 industrial, T2 commercial, T3 residential, T4 service, T5 manufacturing"]
+    trade_job["Trade job / discipline<br/>electrical, plumbing, HVAC-R, ironwork, concrete, carpentry, millwright, instrumentation, automotive, assembly, sitework, safety"]
+    role_task["Task done in the role<br/>ID, FD, CC, SEQ, TS, HAZ, ME, PA, DOC, TRD, RES"]
+    work_stage["Stage and condition<br/>S1 lifecycle, S2 component state, S3 progress/value"]
+    evidence["Evidence modality<br/>text, image, audio, future video/document fixtures"]
+    answer_contract["Expected answer<br/>decision, risk, state, findings, actions, modality fields"]
+    scored_item["One eval item<br/>role family x trade job x role task x stage x evidence"]
+
+    role_family --> scored_item
+    trade_job --> scored_item
+    role_task --> scored_item
+    work_stage --> scored_item
+    evidence --> scored_item
+    scored_item --> answer_contract
+  end
+
+  subgraph sources["Source and catalog inputs"]
+    source_docs["docs/source/*.md<br/>taxonomy and element trees"]
+    seed_items["benchmark/items/seed_items.json<br/>curated seeds"]
+    control_items["benchmark/items/control_items_v2.json<br/>controls, NMI, traps, tradeoffs"]
+    media_generators["scripts/gen_media_items.py<br/>scripts/gen_audio_items.py<br/>scripts/gen_cpm_items.py"]
+    media_items["benchmark/items/media_items_v2.json<br/>benchmark/items/audio_items_v2.json<br/>benchmark/items/cpm_items_v2.json"]
+    media_fixtures["benchmark/media/<br/>PNG and WAV fixtures"]
+    original_scenarios["benchmark/items/original_scenarios.json"]
+    interpretation_map["benchmark/items/interpretation_map.json"]
+  end
+
+  subgraph build["Build and audit"]
+    build_catalog["scripts/build_item_catalog.py"]
+    taxonomy_json["benchmark/taxonomy.json"]
+    base_catalog["benchmark/items/items.json<br/>base source catalog"]
+    coverage_report["benchmark/coverage_report.md"]
+    merge_v2["scripts/generate_tasks_v2.py<br/>merge v2 sources"]
+    restore["scripts/restore_scenarios.py"]
+    leakage["scripts/leakage_audit.py"]
+    restore_report["benchmark/restore_report.md"]
+    leakage_report["benchmark/leakage_report.md"]
+    final_catalog["benchmark/items/items.json<br/>final executable catalog"]
+  end
+
+  subgraph task_surface["Generated Harbor task surface"]
+    grader_template["scripts/grade_v2.py"]
+    task_renderer["scripts/generate_tasks.py<br/>render helpers"]
+    tasks["tasks/<item-id>/<br/>instruction, task.toml, solution, tests, Dockerfile"]
+    dataset_manifest["dataset.toml<br/>Harbor dataset manifest"]
+  end
+
+  subgraph validation["Local validation"]
+    local_validate["scripts/validate_tasks.py<br/>make validate"]
+    oracle_answer["solution/solve.sh<br/>oracle answer"]
+    task_grader["tests/grade.py<br/>copied deterministic grader"]
+    validation_reward["/logs/verifier/reward.json<br/>local oracle reward"]
+  end
+
+  subgraph run_and_results["Run, collect, compare"]
+    harbor_runner["scripts/run_harbor.sh<br/>Harbor run"]
+    agent_answer["/app/answer.json<br/>agent answer"]
+    harbor_rewards["Harbor run directories<br/>trial reward.json files"]
+    collector["scripts/collect_run_results.py<br/>make collect-run"]
+    run_dir["benchmark/runs/<run-name>/"]
+    manifest["manifest.json"]
+    metrics["metrics.json"]
+    analysis["analysis.md"]
+    catalog_snapshot["catalog.snapshot.json"]
+    run_index["benchmark/runs/index.json<br/>benchmark/runs/latest.json"]
+    compare["scripts/compare_runs.py<br/>make compare-runs"]
+    comparison_report["comparison report<br/>stdout or benchmark/runs/*.md"]
+  end
+
+  source_docs --> role_family
+  source_docs --> trade_job
+  source_docs --> role_task
+  source_docs --> work_stage
+
+  source_docs --> build_catalog
+  seed_items --> build_catalog
+  build_catalog --> taxonomy_json
+  build_catalog --> base_catalog
+  build_catalog --> coverage_report
+
+  media_generators --> media_items
+  media_generators --> media_fixtures
+  base_catalog --> merge_v2
+  control_items --> merge_v2
+  media_items --> merge_v2
+  media_fixtures --> merge_v2
+  merge_v2 --> restore
+  original_scenarios --> restore
+  interpretation_map --> restore
+  restore --> restore_report
+  restore --> leakage
+  leakage --> leakage_report
+  leakage --> final_catalog
+
+  scored_item --> final_catalog
+  final_catalog --> tasks
+  answer_contract --> tasks
+  grader_template --> tasks
+  task_renderer --> tasks
+  media_fixtures --> tasks
+  tasks --> dataset_manifest
+
+  tasks --> local_validate
+  oracle_answer --> local_validate
+  task_grader --> local_validate
+  local_validate --> validation_reward
+
+  dataset_manifest --> harbor_runner
+  tasks --> harbor_runner
+  harbor_runner --> agent_answer
+  agent_answer --> task_grader
+  task_grader --> harbor_rewards
+
+  harbor_rewards --> collector
+  final_catalog --> collector
+  collector --> run_dir
+  run_dir --> manifest
+  run_dir --> metrics
+  run_dir --> analysis
+  run_dir --> catalog_snapshot
+  collector --> run_index
+
+  metrics --> compare
+  catalog_snapshot --> compare
+  compare --> comparison_report
