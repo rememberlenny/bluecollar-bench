@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -513,7 +514,7 @@ def base_run_label(lowered: str) -> str:
     if "gemini35" in lowered or "gemini_35" in lowered:
         return "Gemini 3.5 Flash"
     if "kimi" in lowered:
-        return "Kimi K2.7 code"
+        return "Kimi K2.7 Code"
     if "codex" in lowered:
         return "Codex GPT-5"
     return lowered.replace("_", " ")
@@ -625,6 +626,31 @@ def run_summary(metadata: dict[str, Any], rows: list[dict[str, Any]]) -> dict[st
     }
 
 
+def current_catalog_sha256() -> str:
+    path = ROOT / "benchmark/items/items.json"
+    return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else ""
+
+
+def superseded_run_ids(candidates: dict[str, dict[str, Any]]) -> set[str]:
+    """Runs folded into a later merged run (per source_runs_dir) are stale
+    references: their rows are already part of the merged run, so keeping them
+    would double-count the model. Detected from metadata, not hardcoded ids."""
+    sources = {
+        run_id: str(meta.get("source_runs_dir", ""))
+        for run_id, meta in candidates.items()
+    }
+    superseded = set()
+    for run_id, source in sources.items():
+        base = source.rstrip("/").split("/")[-1]
+        if not base:
+            continue
+        for other_id, other_source in sources.items():
+            if other_id != run_id and " + " in other_source and base in other_source:
+                superseded.add(run_id)
+                break
+    return superseded
+
+
 def discover_runs() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[str, dict[str, dict[str, Any]]]]:
     if TRACES_DIR.exists():
         shutil.rmtree(TRACES_DIR)
@@ -648,6 +674,8 @@ def discover_runs() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[st
             },
         )
 
+    superseded = superseded_run_ids(candidates)
+    current_catalog = current_catalog_sha256()
     runs: list[dict[str, Any]] = []
     skipped: list[dict[str, Any]] = []
     results_by_task: dict[str, dict[str, dict[str, Any]]] = {}
@@ -658,6 +686,15 @@ def discover_runs() -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[st
         metrics = load_json(ROOT / run_path / "metrics.json", {})
         rows = metrics.get("rows", [])
         summary = run_summary(metadata, rows)
+        if run_id in superseded:
+            skipped.append({**summary, "skip_reason": "superseded by merged run"})
+            continue
+        # Runs graded against an older task catalog carry stale task ids that
+        # no longer match items.json, so their rows cannot attach to tasks.
+        run_catalog = str(metadata.get("catalog_sha256", ""))
+        if current_catalog and run_catalog and run_catalog != current_catalog:
+            skipped.append({**summary, "skip_reason": "catalog mismatch with current items.json"})
+            continue
         if not rows:
             skipped.append({**summary, "skip_reason": "no metric rows"})
             continue

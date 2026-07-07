@@ -5,7 +5,7 @@ Static GitHub Pages viewer for quickly inspecting benchmark sections, tasks, exp
 Current committed snapshot:
 
 - 1,299 tasks
-- 9 compatible model runs in the viewer payload
+- 6 naturalized-catalog model runs in the viewer payload (superseded and stale coded-catalog runs are excluded)
 - 2,670 scored result entries
 - 2,492 extracted model-answer payloads
 

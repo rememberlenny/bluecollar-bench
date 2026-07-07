@@ -432,6 +432,9 @@
       cursor: pointer;
     }
 
+    th[data-dir="asc"]::after { content: " \25B4"; }
+    th[data-dir="desc"]::after { content: " \25BE"; }
+
     td {
       padding: 9px 8px;
       border-bottom: 1px solid var(--line);
@@ -521,6 +524,7 @@
     .model-score.hard { border-color: var(--danger-border); background: var(--danger-bg); color: var(--danger-text); }
     .model-score.medium { border-color: var(--warning-border); background: var(--warning-bg); color: var(--warning-text); }
     .model-score.solved { border-color: var(--success-border); background: var(--success-bg); color: var(--success-text); }
+    .model-score.unscored { opacity: 0.55; }
 
     .detail {
       position: sticky;
@@ -659,7 +663,7 @@
 
     .run-row {
       display: grid;
-      grid-template-columns: minmax(104px, 1fr) 50px 70px 76px;
+      grid-template-columns: minmax(96px, 1.3fr) 44px 68px minmax(88px, 1fr);
       gap: 8px;
       align-items: center;
       padding: 8px 10px;
@@ -683,8 +687,8 @@
       vertical-align: 1px;
     }
 
-    .harness-badge.agent { background: #efe4f7; color: #6b3fa0; border: 1px solid #d9c2ec; }
-    .harness-badge.api { background: #e3eef8; color: #2b5d8c; border: 1px solid #c4daee; }
+    .harness-badge.agent { background: var(--violet-bg); color: var(--violet-text); border: 1px solid var(--violet-border); }
+    .harness-badge.api { background: var(--info-bg); color: var(--info-text); border: 1px solid var(--info-border); }
 
     .component-scores {
       display: flex;
@@ -698,14 +702,14 @@
       padding: 2px 6px;
       border-radius: 4px;
       border: 1px solid var(--line);
-      background: #fff;
+      background: var(--card);
       white-space: nowrap;
     }
 
-    .component-cell.good { border-color: #abd4bd; background: #effaf3; color: #2c6b45; }
-    .component-cell.mid { border-color: #e1c392; background: #fff8eb; color: #8a6215; }
-    .component-cell.bad { border-color: #e3b7b2; background: #fff4f2; color: #a33f34; }
-    .component-cell.gate { border-color: #a33f34; background: #a33f34; color: #fff; font-weight: 700; }
+    .component-cell.good { border-color: var(--success-border); background: var(--success-bg); color: var(--success-text); }
+    .component-cell.mid { border-color: var(--warning-border); background: var(--warning-bg); color: var(--warning-text); }
+    .component-cell.bad { border-color: var(--danger-border); background: var(--danger-bg); color: var(--danger-text); }
+    .component-cell.gate { border-color: var(--destructive); background: var(--destructive); color: var(--destructive-foreground); font-weight: 700; }
 
     .trace-toggle {
       margin-top: 8px;
@@ -713,11 +717,11 @@
       font-size: 11px;
       border: 1px solid var(--line);
       border-radius: 6px;
-      background: #fff;
+      background: var(--card);
       cursor: pointer;
     }
 
-    .trace-toggle:hover { background: #f2f5f1; }
+    .trace-toggle:hover { background: var(--accent); }
 
     .trace-body {
       margin-top: 8px;
@@ -726,12 +730,12 @@
       padding: 8px 10px;
       max-height: 420px;
       overflow-y: auto;
-      background: #fbfcfa;
+      background: var(--muted);
     }
 
     .trace-stats {
       font-size: 10.5px;
-      color: #67706a;
+      color: var(--muted-foreground);
       margin-bottom: 6px;
     }
 
@@ -743,7 +747,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: #67706a;
+      color: var(--muted-foreground);
       margin-bottom: 2px;
     }
 
@@ -755,12 +759,12 @@
       line-height: 1.45;
       white-space: pre-wrap;
       word-break: break-word;
-      background: #fff;
-      border: 1px solid #e7ebe6;
+      background: var(--card);
+      border: 1px solid var(--border);
     }
 
-    .trace-ev.thinking pre { background: #f6f2fa; border-color: #e2d5ee; color: #4b3a61; font-style: italic; }
-    .trace-ev.tool pre, .trace-ev.tool_result pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f4f6f8; }
+    .trace-ev.thinking pre { background: var(--violet-bg); border-color: var(--violet-border); color: var(--violet-text); font-style: italic; }
+    .trace-ev.tool pre, .trace-ev.tool_result pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--secondary); }
 
     .trace-preview { margin-top: 8px; }
     .trace-preview .trace-ev-label { display: block; }
@@ -773,18 +777,18 @@
       line-height: 1.45;
       white-space: pre-wrap;
       word-break: break-word;
-      border: 1px solid #e7ebe6;
-      background: #fff;
+      border: 1px solid var(--border);
+      background: var(--card);
     }
 
-    .trace-preview.thinking pre { background: #f6f2fa; border-color: #e2d5ee; color: #4b3a61; font-style: italic; }
+    .trace-preview.thinking pre { background: var(--violet-bg); border-color: var(--violet-border); color: var(--violet-text); font-style: italic; }
 
     .answer-json {
       margin-top: 8px;
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
-      background: #fbfcfa;
+      background: var(--muted);
     }
 
     .answer-json-head {
@@ -794,14 +798,14 @@
       gap: 8px;
       padding: 5px 10px;
       border-bottom: 1px solid var(--line);
-      background: #f2f5f1;
+      background: var(--secondary);
     }
 
     .answer-json-head .answer-label { margin: 0; }
 
     .answer-source {
       font-size: 10px;
-      color: #8a938c;
+      color: var(--muted-foreground);
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -820,11 +824,11 @@
       overflow-y: auto;
     }
 
-    .j-key { color: #2b5d8c; font-weight: 600; }
-    .j-str { color: #2c6b45; }
-    .j-num { color: #a35d0f; }
-    .j-bool { color: #6b3fa0; font-weight: 600; }
-    .j-null { color: #a33f34; }
+    .j-key { color: var(--info-text); font-weight: 600; }
+    .j-str { color: var(--success-text); }
+    .j-num { color: var(--warning-text); }
+    .j-bool { color: var(--violet-text); font-weight: 600; }
+    .j-null { color: var(--danger-text); }
 
     .run-answer {
       display: flex;
@@ -1059,6 +1063,10 @@
                   <select id="activeRun"></select>
                 </div>
                 <div>
+                  <label for="catalog">Catalog</label>
+                  <select id="catalog"></select>
+                </div>
+                <div>
                   <label for="tier">Tier</label>
                   <select id="tier"></select>
                 </div>
@@ -1158,6 +1166,9 @@
       },
       groupAxis: "task_type",
       activeRun: "__all__",
+      runCatalog: "",
+      shortLabels: {},
+      superseded: new Set(),
       sort: { key: "reward", dir: "asc" },
       selected: ""
     };
@@ -1175,6 +1186,7 @@
 
     const groupAxis = document.getElementById("groupAxis");
     const activeRun = document.getElementById("activeRun");
+    const catalogSelect = document.getElementById("catalog");
     const stats = document.getElementById("stats");
     const groups = document.getElementById("groups");
     const taskRows = document.getElementById("taskRows");
@@ -1198,12 +1210,42 @@
       return typeof value === "number" ? `${Math.round(value * 100)}%` : "0%";
     }
 
+    function pretty(value) {
+      return String(value ?? "").replaceAll("_", " ");
+    }
+
+    function clampText(value, limit = 26) {
+      const text = String(value ?? "");
+      return text.length <= limit ? text : text.slice(0, limit - 1).trimEnd() + "\u2026";
+    }
+
     function runById(runId) {
       return (state.data.runs || []).find(run => run.run === runId);
     }
 
-    function runLabel(runId) {
-      return runById(runId)?.label || runId;
+    function visibleRuns() {
+      return (state.data.runs || []).filter(run => !state.runCatalog || run.catalog === state.runCatalog);
+    }
+
+    // Runs folded into a later merged run (per source_runs_dir) stay selectable
+    // in the dropdown but are excluded from aggregates and per-task strips so
+    // the same model result is never counted twice.
+    function scoreboardRuns() {
+      return visibleRuns().filter(run => !state.superseded.has(run.run));
+    }
+
+    function computeSuperseded(runs) {
+      const superseded = new Set();
+      runs.forEach(run => {
+        const base = String(run.source_runs_dir || "").split("/").pop();
+        if (!base) return;
+        const merged = runs.some(other =>
+          other.run !== run.run
+          && String(other.source_runs_dir || "").includes(" + ")
+          && String(other.source_runs_dir || "").includes(base));
+        if (merged) superseded.add(run.run);
+      });
+      return superseded;
     }
 
     function harnessBadge(run) {
@@ -1217,26 +1259,67 @@
       if (run.model) parts.push(run.model);
       if (run.harness) parts.push(run.harness);
       if (run.catalog) parts.push(`${run.catalog} catalog`);
+      if (state.superseded.has(run.run)) parts.push("superseded by a merged run");
       if (typeof run.cost_usd === "number") {
         parts.push(`run cost ~$${run.cost_usd.toFixed(2)}${run.cost_basis === "estimate" ? " (est.)" : ""}`);
       }
       return parts.join(" · ");
     }
 
+    const MODEL_SHORT = {
+      "gpt-5.5": "GPT-5.5",
+      "claude-sonnet-5": "Sonnet 5",
+      "gemini-3.5-flash": "Gemini 3.5",
+      "z-ai/glm-5.2": "GLM 5.2",
+      "deepseek/deepseek-v4-pro": "DeepSeek v4",
+      "moonshotai/kimi-k2.7-code": "Kimi K2.7",
+    };
+
+    function runVariant(run) {
+      const label = String(run.label || "");
+      const keyword = label.match(/\b(delta|merged|full)\b/i)?.[1]?.toLowerCase();
+      if (keyword && keyword !== "full") return keyword;
+      const date = label.match(/\b\d{4}-(\d{2})-(\d{2})\b/);
+      if (date) return `${+date[1]}/${date[2]}`;
+      if (keyword) return keyword;
+      const collected = String(run.collected_at || "").match(/-(\d{2})-(\d{2})T/);
+      return collected ? `${+collected[1]}/${collected[2]}` : "";
+    }
+
+    // Short pill labels derived from model + catalog so every view names runs
+    // the same way; a uniqueness pass keeps same-model runs distinguishable.
+    function computeShortLabels(runs) {
+      const multiCatalog = new Set(runs.map(run => run.catalog)).size > 1;
+      const baseOf = run => (MODEL_SHORT[run.model] || String(run.model || run.run).split("/").pop())
+        + (multiCatalog && run.catalog === "naturalized" ? " \u00b7nat" : "");
+      const counts = {};
+      runs.forEach(run => {
+        const base = baseOf(run);
+        counts[base] = (counts[base] || 0) + 1;
+      });
+      const labels = {};
+      const used = new Set();
+      runs.forEach(run => {
+        let label = baseOf(run);
+        if (counts[baseOf(run)] > 1) {
+          const variant = runVariant(run);
+          if (variant) label += ` ${variant}`;
+        }
+        while (used.has(label)) label += "*";
+        used.add(label);
+        labels[run.run] = label;
+      });
+      return labels;
+    }
+
     function shortRunLabel(run) {
-      const label = run.label || run.run;
-      if (label.includes("2026-07-05")) return "G5.5 7/05";
-      if (label.includes("full merged")) return "G5.5 full";
-      if (label.includes("text delta")) return "G5.5 delta";
-      if (label.includes("DeepSeek")) return "DS v4";
-      if (label.includes("Gemini")) return "Gemini";
-      if (label.includes("Sonnet")) return "Sonnet";
-      if (label.includes("GLM")) return "GLM";
-      return label.replace("GPT-5.5", "G5.5");
+      return state.shortLabels[run.run] || run.label || run.run;
     }
 
     function resultValues(item) {
-      return Object.values(item.results || {}).filter(result => typeof result.reward === "number");
+      return scoreboardRuns()
+        .map(run => item.results?.[run.run])
+        .filter(result => result && typeof result.reward === "number");
     }
 
     function resultOf(item) {
@@ -1297,18 +1380,39 @@
         .join("");
     }
 
+    function runOption(run) {
+      const kind = run.harness_kind === "agent" ? "agent" : "API";
+      const note = state.superseded.has(run.run) ? " \u2014 superseded" : "";
+      return `<option value="${esc(run.run)}">${esc(run.label)}${note} [${kind}] (${esc(fmt(run.mean_reward))})</option>`;
+    }
+
+    function fillRunSelect() {
+      const groups = new Map();
+      visibleRuns().forEach(run => {
+        const key = run.catalog === "naturalized" ? "Naturalized catalog" : "Coded catalog";
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(run);
+      });
+      activeRun.innerHTML = `<option value="__all__">All models (mean)</option>` +
+        [...groups.entries()].map(([key, runs]) =>
+          `<optgroup label="${esc(key)}">${runs.map(runOption).join("")}</optgroup>`).join("");
+      activeRun.value = state.activeRun;
+    }
+
     function setupControls() {
       fillSelect(filterControls.tier, uniqueValues("tier"), "All tiers");
       fillSelect(filterControls.task_type, uniqueValues("task_type"), "All types",
         state.data.taxonomy?.task_types || {});
       fillSelect(filterControls.discipline, uniqueValues("discipline"), "All disciplines");
       fillSelect(filterControls.modality, uniqueValues("modality"), "All modalities");
-      fillSelect(filterControls.decision, uniqueValues("decision"), "All decisions");
+      fillSelect(filterControls.decision, uniqueValues("decision"), "All decisions",
+        Object.fromEntries(uniqueValues("decision").map(value => [value, pretty(value)])));
       fillSelect(filterControls.generation, uniqueValues("generation"), "All generations");
       fillSelect(filterControls.difficulty, ["hard", "medium", "light", "solved", "unscored"], "All results");
-      activeRun.innerHTML = `<option value="__all__">All models</option>` + (state.data.runs || [])
-        .map(run => `<option value="${esc(run.run)}">${esc(run.label)} [${run.harness_kind === "agent" ? "agent" : "API"}] (${esc(fmt(run.mean_reward))})</option>`)
-        .join("");
+      const catalogs = [...new Set((state.data.runs || []).map(run => run.catalog).filter(Boolean))];
+      fillSelect(catalogSelect, catalogs, "All catalogs");
+      if (catalogs.length < 2) catalogSelect.parentElement.hidden = true;
+      fillRunSelect();
 
       Object.entries(filterControls).forEach(([key, control]) => {
         control.addEventListener(key === "query" ? "input" : "change", () => {
@@ -1320,6 +1424,14 @@
         state.activeRun = activeRun.value;
         render();
       });
+      catalogSelect.addEventListener("change", () => {
+        state.runCatalog = catalogSelect.value;
+        if (state.activeRun !== "__all__" && !visibleRuns().some(run => run.run === state.activeRun)) {
+          state.activeRun = "__all__";
+        }
+        fillRunSelect();
+        render();
+      });
       groupAxis.addEventListener("change", () => {
         state.groupAxis = groupAxis.value;
         render();
@@ -1329,14 +1441,23 @@
         Object.entries(filterControls).forEach(([key, control]) => control.value = state.filters[key]);
         state.groupAxis = "task_type";
         groupAxis.value = state.groupAxis;
+        state.runCatalog = "";
+        catalogSelect.value = "";
         state.activeRun = "__all__";
-        activeRun.value = state.activeRun;
+        fillRunSelect();
         render();
       });
-      document.getElementById("copyLink").addEventListener("click", async () => {
+      const copyLink = document.getElementById("copyLink");
+      copyLink.addEventListener("click", async () => {
         const url = new URL(location.href);
         if (state.selected) url.hash = state.selected;
-        await navigator.clipboard?.writeText(url.toString());
+        try {
+          await navigator.clipboard.writeText(url.toString());
+          copyLink.textContent = "Copied";
+        } catch (error) {
+          copyLink.textContent = "Copy failed";
+        }
+        setTimeout(() => { copyLink.textContent = "Copy link"; }, 1200);
       });
       document.querySelectorAll("th[data-sort]").forEach(th => {
         th.addEventListener("click", () => {
@@ -1397,9 +1518,9 @@
         ["Visible tasks", items.length],
         [state.activeRun === "__all__" ? "Scored results" : "Scored tasks", scored.length],
         ["Mean reward", fmt(mean)],
-        ["Models", state.data.runs?.length || 0],
+        ["Model runs", scoreboardRuns().length],
         ["Hard", hard],
-        ["False-pass gates", gates]
+        ["False-pass trips", gates]
       ].map(([label, value]) => `
         <div class="stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>
       `).join("");
@@ -1425,14 +1546,21 @@
       });
     }
 
+    function stripClass(reward) {
+      const bucket = difficultyBucket(reward);
+      return bucket === "light" ? "solved" : bucket;
+    }
+
     function renderModelStrip(item) {
-      const runs = state.data.runs || [];
+      const runs = scoreboardRuns();
       if (!runs.length) return `<span class="pill blue">no runs</span>`;
       return runs.map(run => {
         const result = item.results?.[run.run];
         const label = shortRunLabel(run);
-        if (!result) return `<span class="model-score"><b>${esc(label)}</b> -</span>`;
-        return `<span class="model-score ${barClass(result.reward)}"><b>${esc(label)}</b> ${esc(fmt(result.reward))}</span>`;
+        if (!result || typeof result.reward !== "number") {
+          return `<span class="model-score unscored" title="${esc(run.label)} \u2014 no result"><b>${esc(label)}</b> -</span>`;
+        }
+        return `<span class="model-score ${stripClass(result.reward)}" title="${esc(run.label)} \u2014 reward ${esc(fmt(result.reward))}"><b>${esc(label)}</b> ${esc(fmt(result.reward))}</span>`;
       }).join("");
     }
 
@@ -1467,6 +1595,10 @@
 
     function renderRows(items) {
       document.getElementById("taskCount").textContent = `${items.length} tasks`;
+      document.querySelectorAll("th[data-sort]").forEach(th => {
+        if (th.dataset.sort === state.sort.key) th.dataset.dir = state.sort.dir;
+        else delete th.dataset.dir;
+      });
       const rows = sortedItems(items);
       if (!rows.some(item => item.id === state.selected)) {
         state.selected = rows[0]?.id || "";
@@ -1495,7 +1627,7 @@
             </td>
             <td>
               <div class="pill-row">
-                <span class="pill ${item.decision === "fail" ? "red" : item.decision === "pass" ? "green" : "amber"}">${esc(item.decision)}</span>
+                <span class="pill ${item.decision === "fail" ? "red" : item.decision === "pass" ? "green" : "amber"}">${esc(pretty(item.decision))}</span>
                 <span class="pill ${item.risk === "critical" || item.risk === "high" ? "red" : item.risk === "medium" ? "amber" : "green"}">${esc(item.risk)}</span>
               </div>
             </td>
@@ -1595,8 +1727,8 @@
       return keys
         .filter(key => answer[key] !== undefined && answer[key] !== null && answerValue(answer[key]) !== "")
         .map(key => `
-          <span class="pill ${answerPillClass(key, answer[key])}">
-            ${esc(key.replaceAll("_", " "))}: ${esc(answerValue(answer[key]))}
+          <span class="pill ${answerPillClass(key, answer[key])}" title="${esc(answerValue(answer[key]))}">
+            ${esc(key.replaceAll("_", " "))}: ${esc(clampText(pretty(answerValue(answer[key])), 60))}
           </span>
         `).join("");
     }
@@ -1607,7 +1739,7 @@
       const keys = ["decision", "risk"].filter(key => answer[key] !== undefined && answer[key] !== null);
       if (!keys.length) return `<span class="pill green">answer</span>`;
       return keys.map(key => `
-        <span class="pill ${answerPillClass(key, answer[key])}">${esc(answerValue(answer[key]))}</span>
+        <span class="pill ${answerPillClass(key, answer[key])}" title="${esc(answerValue(answer[key]))}">${esc(clampText(pretty(answerValue(answer[key]))))}</span>
       `).join("");
     }
 
@@ -1825,7 +1957,7 @@
 
     function renderModelAnswers(item) {
       const runs = state.activeRun === "__all__"
-        ? (state.data.runs || [])
+        ? scoreboardRuns()
         : (state.data.runs || []).filter(run => run.run === state.activeRun);
       if (!runs.length) return `<p class="text-block">No model runs loaded.</p>`;
       return `
@@ -1836,7 +1968,10 @@
     }
 
     function renderRunResults(item) {
-      const runs = state.data.runs || [];
+      let runs = scoreboardRuns();
+      if (state.activeRun !== "__all__" && !runs.some(run => run.run === state.activeRun)) {
+        runs = [...runs, runById(state.activeRun)].filter(Boolean);
+      }
       if (!runs.length) return `<p class="text-block">No model runs loaded.</p>`;
       return `
         <div class="run-table">
@@ -1876,7 +2011,7 @@
               <span class="pill ${difficultyClass(result.difficulty)}">${esc(result.difficulty)}</span>
               <span class="pill blue">${state.activeRun === "__all__" ? "mean" : "reward"} ${esc(fmt(result.reward))}</span>
               ${result.aggregate && result.scored_count ? `<span class="pill violet">${esc(result.scored_count)} models</span>` : ""}
-              <span class="pill ${item.decision === "fail" ? "red" : item.decision === "pass" ? "green" : "amber"}">${esc(item.decision)}</span>
+              <span class="pill ${item.decision === "fail" ? "red" : item.decision === "pass" ? "green" : "amber"}">${esc(pretty(item.decision))}</span>
               <span class="pill ${item.risk === "critical" || item.risk === "high" ? "red" : item.risk === "medium" ? "amber" : "green"}">${esc(item.risk)}</span>
             </div>
           </div>
@@ -1953,14 +2088,18 @@
       const response = await fetch("data/viewer-data.json");
       if (!response.ok) throw new Error(`Failed to load viewer data: ${response.status}`);
       state.data = await response.json();
+      state.superseded = computeSuperseded(state.data.runs || []);
+      state.shortLabels = computeShortLabels(state.data.runs || []);
       state.selected = decodeURIComponent(location.hash.replace(/^#/, "")) || "";
 
       const runCount = state.data.runs?.length || 0;
+      const activeCount = (state.data.runs || []).filter(run => !state.superseded.has(run.run)).length;
       const resultCount = state.data.summary?.result_count || 0;
       document.getElementById("runMeta").textContent =
-        `${runCount} model runs | ${resultCount} scored results`;
+        `${runCount === activeCount ? `${runCount} model runs` : `${runCount} collected runs (${activeCount} compared)`} | ${resultCount} scored results`;
+      const catalogs = [...new Set((state.data.runs || []).map(run => run.catalog).filter(Boolean))];
       document.getElementById("subtitle").textContent =
-        `Comparing ${runCount} collected model runs across the task catalog.`;
+        `Comparing ${activeCount} model runs across the ${catalogs.join(" and ") || "task"} catalog${catalogs.length > 1 ? "s" : ""}.`;
       document.getElementById("dataMeta").textContent =
         `Generated ${state.data.generated_at || "unknown"} from ${state.data.repo || "local repo"} ${state.data.ref || ""}.`;
       if (state.data.repo) {

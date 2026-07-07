@@ -1,6 +1,6 @@
 # Model Results Summary - 2026-07-06
 
-Scope: collected benchmark runs under `benchmark/runs/` after the naturalized-catalog reruns. The registry currently contains 11 collected runs. The static viewer snapshot contains 9 compatible runs and 2,670 scored result entries because it only includes runs aligned with the committed viewer catalog.
+Scope: collected benchmark runs under `benchmark/runs/` after the naturalized-catalog reruns. The registry currently contains 13 collected runs. The static viewer snapshot contains the 6 naturalized-catalog runs and 7,622 scored result entries; superseded and stale coded-catalog runs are excluded because their task ids no longer match the current catalog.
 
 ## Current Collected Runs
 
@@ -16,7 +16,7 @@ Scope: collected benchmark runs under `benchmark/runs/` after the naturalized-ca
 | DeepSeek v4 Pro (`deepseek_v4_pro_text_20260706_182042`) | coded | text | 1,171 | 0.669 | 11 | 64 | 63 | 64 |
 | Kimi K2.7 Code (`kimi_k27_code_natural_20260706`) | naturalized | text+image | 1,255 | 0.550 | 101 | 331 | 265 | 266 |
 
-Older GPT-5.5 partial runs are still retained in the registry:
+Older GPT-5.5 partial runs are still retained in the registry but excluded from the static viewer as superseded:
 
 - `gpt55_full_20260705_5b2c706`: 1,049 scored, mean 0.765, pre-merge full-run subset.
 - `gpt55_missing_text_rebalance_20260706_c48_openai_delta`: 250 scored, mean 0.640, direct-OpenAI text-rebalance delta.
