@@ -15,6 +15,7 @@ Regenerate the embedded data snapshot after catalog or run updates:
 
 ```bash
 python3 scripts/build_static_viewer_data.py
+python3 scripts/build_taxonomy_page.py
 ```
 
 The source viewer entrypoint is:
@@ -22,6 +23,15 @@ The source viewer entrypoint is:
 ```text
 docs/viewer/index.html
 ```
+
+A companion taxonomy map lives at `docs/viewer/taxonomy.html` (linked from the
+viewer header): a force-directed graph of discipline → element → task with
+tier/modality coloring, task-type filters, and a per-task detail sidebar showing
+the expected answer plus model results. It embeds the graph structure and slim
+scores inline (so it also works standalone) and fetches `data/viewer-data.json`
+for full answers and reasoning traces when served next to it. It deep-links with
+the same `#task-id` hash scheme as the main viewer. After data updates, re-run
+`scripts/build_taxonomy_page.py` to refresh its embedded snapshot.
 
 The deployed GitHub Pages URL is:
 
