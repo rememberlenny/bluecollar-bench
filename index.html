@@ -543,7 +543,7 @@
 
     .detail-content {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.48fr);
+      grid-template-columns: minmax(260px, 0.48fr) minmax(0, 1fr);
       gap: 14px;
       align-items: start;
       padding: 14px;
@@ -555,8 +555,8 @@
     }
 
     .context-section {
-      border-left: 1px solid var(--line);
-      padding-left: 14px;
+      border-right: 1px solid var(--line);
+      padding-right: 14px;
     }
 
     .empty {
@@ -652,28 +652,6 @@
       width: 0;
       background: var(--primary);
     }
-
-    .run-table {
-      width: 100%;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      font-size: 12px;
-    }
-
-    .run-row {
-      display: grid;
-      grid-template-columns: minmax(96px, 1.3fr) 44px 68px minmax(88px, 1fr);
-      gap: 8px;
-      align-items: center;
-      padding: 8px 10px;
-      border-bottom: 1px solid var(--line);
-      background: var(--card);
-    }
-
-    .run-row:last-child { border-bottom: 0; }
-    .run-row.active { background: var(--accent); }
-    .run-row strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
     .harness-badge {
       display: inline-block;
@@ -830,14 +808,6 @@
     .j-bool { color: var(--violet-text); font-weight: 600; }
     .j-null { color: var(--danger-text); }
 
-    .run-answer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      justify-content: flex-end;
-      min-width: 0;
-    }
-
     .answer-grid {
       display: grid;
       gap: 10px;
@@ -986,9 +956,11 @@
     @media (max-width: 1450px) {
       .detail-content { grid-template-columns: 1fr; }
       .context-section {
-        border-left: 0;
+        border-right: 0;
+        padding-right: 0;
+      }
+      .answer-section {
         border-top: 1px solid var(--line);
-        padding-left: 0;
         padding-top: 14px;
       }
     }
@@ -1016,11 +988,6 @@
       .score strong { text-align: left; }
       .kv { grid-template-columns: 1fr; }
       .component { grid-template-columns: 92px minmax(0, 1fr) 36px; }
-      .run-row { grid-template-columns: 1fr 54px 64px; }
-      .run-answer {
-        grid-column: 1 / -1;
-        justify-content: flex-start;
-      }
     }
   </style>
 </head>
@@ -1034,6 +1001,7 @@
           <p id="subtitle">Static snapshot for GitHub Pages review.</p>
         </div>
         <nav class="links">
+          <a class="link-button" href="taxonomy.html">Taxonomy map</a>
           <a class="link-button" id="readmeLink" href="../../README.md">README</a>
           <a class="link-button" id="coverageLink" href="../../benchmark/coverage_report.md">Coverage</a>
           <a class="link-button" id="latestLink" href="../../benchmark/runs/latest.json">Latest run</a>
@@ -1217,10 +1185,6 @@
     function clampText(value, limit = 26) {
       const text = String(value ?? "");
       return text.length <= limit ? text : text.slice(0, limit - 1).trimEnd() + "\u2026";
-    }
-
-    function runById(runId) {
-      return (state.data.runs || []).find(run => run.run === runId);
     }
 
     function visibleRuns() {
@@ -1733,16 +1697,6 @@
         `).join("");
     }
 
-    function runAnswerPills(result) {
-      const answer = result?.answer;
-      if (!answerHasValue(answer)) return `<span class="pill">no answer</span>`;
-      const keys = ["decision", "risk"].filter(key => answer[key] !== undefined && answer[key] !== null);
-      if (!keys.length) return `<span class="pill green">answer</span>`;
-      return keys.map(key => `
-        <span class="pill ${answerPillClass(key, answer[key])}" title="${esc(answerValue(answer[key]))}">${esc(clampText(pretty(answerValue(answer[key]))))}</span>
-      `).join("");
-    }
-
     function renderAnswerField(label, value) {
       if (value === undefined || value === null || answerValue(value) === "") return "";
       if (Array.isArray(value)) {
@@ -1768,9 +1722,9 @@
       const active = state.activeRun === run.run ? "active" : "";
       if (!result) {
         return `
-          <div class="answer-card ${active}">
+          <div class="answer-card ${active}" title="${esc(runTooltip(run))}">
             <div class="answer-head">
-              <strong>${esc(run.label)}</strong>
+              <strong>${esc(run.label)}${harnessBadge(run)}</strong>
               <small>unscored</small>
             </div>
             <div class="answer-body"><div class="answer-empty">No result collected for this task.</div></div>
@@ -1779,9 +1733,9 @@
       }
       if (!answerHasValue(answer)) {
         return `
-          <div class="answer-card ${active}">
+          <div class="answer-card ${active}" title="${esc(runTooltip(run))}">
             <div class="answer-head">
-              <strong>${esc(run.label)}</strong>
+              <strong>${esc(run.label)}${harnessBadge(run)}</strong>
               <small>${esc(fmt(result.reward))} ${esc(result.difficulty || "")}</small>
             </div>
             <div class="answer-body"><div class="answer-empty">Score exists, but no answer payload was found in the archived run files.</div></div>
@@ -1789,9 +1743,9 @@
         `;
       }
       return `
-        <div class="answer-card ${active}">
+        <div class="answer-card ${active}" title="${esc(runTooltip(run))}">
           <div class="answer-head">
-            <strong>${esc(run.label)}</strong>
+            <strong>${esc(run.label)}${harnessBadge(run)}</strong>
             <small>${esc(fmt(result.reward))} ${esc(result.difficulty || "")}</small>
           </div>
           <div class="answer-body">
@@ -1967,30 +1921,6 @@
       `;
     }
 
-    function renderRunResults(item) {
-      let runs = scoreboardRuns();
-      if (state.activeRun !== "__all__" && !runs.some(run => run.run === state.activeRun)) {
-        runs = [...runs, runById(state.activeRun)].filter(Boolean);
-      }
-      if (!runs.length) return `<p class="text-block">No model runs loaded.</p>`;
-      return `
-        <div class="run-table">
-          ${runs.map(run => {
-            const result = item.results?.[run.run];
-            const active = state.activeRun === run.run ? "active" : "";
-            return `
-              <button class="run-row ${active}" data-run="${esc(run.run)}" title="${esc(runTooltip(run))}">
-                <strong>${esc(run.label)}${harnessBadge(run)}</strong>
-                <span>${esc(result ? fmt(result.reward) : "-")}</span>
-                <span class="pill ${difficultyClass(result?.difficulty || "unscored")}">${esc(result?.difficulty || "unscored")}</span>
-                <span class="run-answer">${runAnswerPills(result)}</span>
-              </button>
-            `;
-          }).join("")}
-        </div>
-      `;
-    }
-
     function renderDetail() {
       const item = state.data.items.find(candidate => candidate.id === state.selected);
       if (!item) {
@@ -2017,17 +1947,6 @@
           </div>
 
           <div class="detail-content">
-            <div class="answer-section">
-              <h4>Model Answers</h4>
-              ${renderModelAnswers(item)}
-
-              <h4>Model Results</h4>
-              ${renderRunResults(item)}
-
-              <h4>Result Components</h4>
-              ${renderComponents(result)}
-            </div>
-
             <div class="context-section">
               ${renderMedia(item)}
 
@@ -2063,17 +1982,18 @@
                 ${item.links.github_item_json ? `<a class="pill blue" href="${esc(item.links.github_item_json)}">item json</a>` : ""}
               </div>
             </div>
+
+            <div class="answer-section">
+              <h4>Model Answers</h4>
+              ${renderModelAnswers(item)}
+
+              <h4>Result Components</h4>
+              ${renderComponents(result)}
+            </div>
           </div>
         </div>
       `;
       bindTraceToggles(detail);
-      detail.querySelectorAll(".run-row").forEach(row => {
-        row.addEventListener("click", () => {
-          state.activeRun = row.dataset.run;
-          activeRun.value = state.activeRun;
-          render();
-        });
-      });
     }
 
     function render() {
