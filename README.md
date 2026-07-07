@@ -1,133 +1,134 @@
 # Blue-Collar Benchmark
 
-Blue-Collar Benchmark is a Harbor task repository for evaluating whether agents can inspect trade-work scenarios with safety- and code-aware judgment.
+A Harbor benchmark for testing whether AI agents can make practical, safety-aware judgments in trade-work scenarios.
 
-The uploaded v0.1 taxonomy docs are preserved under `docs/source/`. The executable layer parses those element trees, fills the v0.1 Tier x Discipline coverage matrix, and emits deterministic Harbor tasks that require an agent to write `/app/answer.json`; the verifier grades the answer for decision, risk classification, S1/S2 state handling, required findings, corrective actions, and dangerous false passes.
+The benchmark covers electrical, plumbing, HVAC-R, rigging, concrete, carpentry, machinery, instrumentation, automotive, fabrication, sitework, and safety work. Items ask the model to inspect written, image, or audio evidence and return a structured answer that can be graded deterministically.
 
-## Current State
+## Start Here
 
-- `benchmark/taxonomy.json` is the normalized taxonomy and coverage matrix.
-- `benchmark/items/seed_items.json` contains curated hand-authored seed items.
-- `benchmark/items/control_items_v2.json` contains pass, needs-more-info, alarmist-trap, and tradeoff control items.
-- `benchmark/items/media_items_v2.json` contains synthetic image-backed instrument and rigging items.
-- `benchmark/items/audio_items_v2.json` contains synthetic audio-native fault-signature items.
-- `benchmark/items/original_scenarios.json` and `benchmark/items/interpretation_map.json` support v2.4 restoration of placeholder-stripped auto items.
-- `benchmark/media/` contains generated PNG and WAV fixtures copied into media-backed task containers at `/app/media/`.
-- `benchmark/items/items.json` is the generated comprehensive item catalog.
-- `benchmark/coverage_report.md` summarizes coverage by discipline, tier, task type, and matrix cell.
-- `benchmark/leakage_report.md` summarizes answer-token leakage and writes `leakage_ratio` onto each item.
-- `benchmark/restore_report.md` summarizes restored evidence and residual partial leakage for repaired auto items.
-- `dataset.toml` is the Harbor dataset manifest for the full benchmark.
-- `tasks/` contains generated Harbor task directories.
-- `scripts/build_item_catalog.py` parses the source docs and builds the comprehensive item catalog.
-- `scripts/gen_media_items.py` deterministically renders synthetic media fixtures and emits `media_items_v2.json`.
-- `scripts/gen_audio_items.py` deterministically renders synthetic audio fixtures and emits `audio_items_v2.json`.
-- `scripts/gen_text_rebalance_items.py` deterministically emits text-only pass/NMI controls for decision rebalance.
-- `scripts/restore_scenarios.py` restores auto-item evidence and re-keys findings to interpretation vocabulary before leakage auditing.
-- `scripts/naturalize_items.py` rewrites item ids, titles, and scenario wrappers into standalone natural language (no internal tier/element/task-type codes) and writes `benchmark/items/id_map.json` mapping legacy ids to current ids.
-- `scripts/generate_tasks_v2.py` merges v2 controls, image media, CPM, audio, and text-rebalance items, restores scenarios, naturalizes ids and model-visible text, runs leakage auditing, and regenerates all Harbor tasks with `grade_v2`.
-- `scripts/collect_run_results.py` harvests Harbor verifier rewards into versioned run directories pinned to the catalog hash.
-- `scripts/compare_runs.py` compares two collected runs across shared tasks and aggregate axes.
-- `scripts/grade_v2.py` is the current deterministic verifier template used in generated tasks.
-- `scripts/validate_tasks.py` runs local oracle/verifier checks without Docker.
-- `scripts/run_harbor.sh` runs either one task or the full Harbor dataset.
-- `scripts/run_openrouter.py` runs tasks directly against OpenRouter and reuses the local task verifier.
-- `scripts/run_gemini.py` runs tasks directly against Google Gemini and reuses the local task verifier.
-- `docs/source/modality-native-task-categories-v0.1.md` defines audio-only and video-only task categories where the modality is the signal.
+| Need | Read |
+|---|---|
+| Understand what this benchmark measures | [Eval structure wiki](docs/eval-structure-wiki.md) |
+| See the taxonomy and coverage counts | [Coverage report](benchmark/coverage_report.md) |
+| Run the benchmark | [Running benchmarks runbook](docs/running-benchmarks.md) |
+| Browse task/results UI | [Static task/result viewer](https://rememberlenny.github.io/bluecollar-bench/) |
+| Inspect current model results | [Model results summary](benchmark/runs/model_results_summary_20260706.md) |
+| Find the current latest collected run | [Latest run pointer](benchmark/runs/latest.json) |
+| Review known caveats | [Gap analysis](GAP_ANALYSIS_v2.md) and [EVAL v2.4 report](EVAL_v2.4.md) |
 
-Current generated size: 1299 Harbor tasks from 95 source elements, 12 curated seeds, 21 v2 control items, 56 synthetic instrument/media items, 28 synthetic CPM/resource-constraint items, 44 synthetic audio fault-signature items, 250 synthetic text rebalance items, 651 direct source-derived items, and 237 matrix backfill items. The v2.1-v2.5 catalog adds image, audio, and pass/NMI text evidence with deterministic ground truth, bringing pass/needs_more_info coverage to 326/1299 items. See `GAP_ANALYSIS_v2.md` for the remaining leakage, SME-review, and aggregate-score caveats. The source taxonomy still needs SME red-team validation before claims should be treated as authoritative.
+## What Is Being Evaluated
 
-## Key Links
-
-Start here:
-
-- [Eval structure wiki](docs/eval-structure-wiki.md) - role families, trade jobs, role tasks, stages/states, modalities, scoring, and run workflow.
-- [Running benchmarks runbook](docs/running-benchmarks.md) - which harness per provider (GPT goes direct to OpenAI, not OpenRouter), env requirements, Harbor job configs, throughput setup, and known failure signatures.
-- [Eval structure DAG](docs/eval-structure-dag.mmd) - graph of the domain model plus source, build, validation, Harbor run, collection, and comparison flow.
-- [Gap analysis](GAP_ANALYSIS_v2.md) - current benchmark-health caveats and priority fixes before treating aggregate scores as final.
-- [Post-merge eval report](EVAL_v2.4.md) - v2.4 repair notes, run validity caveats, and recommended next evaluation order.
-
-Source taxonomy and roadmap:
-
-- [Source-doc index](docs/source/README.md) - entrypoint for the original taxonomy and expansion docs.
-- [Benchmark taxonomy v0.1](docs/source/blue-collar-benchmark-taxonomy-v0.1.md) - tiers, disciplines, task types, and unified S1/S2/S3 state model.
-- [Electrical element tree](docs/source/electrical-element-tree-v0.1.md) - detailed electrical source elements.
-- [Construction element trees](docs/source/element-trees-construction-v0.1.md) - construction trade source elements.
-- [Industrial service element trees](docs/source/element-trees-industrial-service-v0.1.md) - industrial/service source elements.
-- [Modality-native task categories](docs/source/modality-native-task-categories-v0.1.md) - audio/video-native task design.
-- [Four-track expansion plan](docs/source/expansion-plan-v0.1-four-new-capability-tracks.md) - roadmap for synthetic-parametric expansion.
-
-Generated benchmark artifacts:
-
-- [Generated item catalog](benchmark/items/items.json) - full machine-readable catalog used to generate tasks.
-- [Normalized taxonomy](benchmark/taxonomy.json) - generated axes, state model, media schema, and coverage matrix.
-- [Coverage report](benchmark/coverage_report.md) - item counts by discipline, tier, task type, and matrix cell.
-- [Leakage report](benchmark/leakage_report.md) - answer-token leakage buckets and remediation notes.
-- [Restore report](benchmark/restore_report.md) - evidence restoration and residual partial-leak summary.
-- [Harbor dataset manifest](dataset.toml) - published dataset/task manifest.
-
-Run results and analysis:
-
-- [Static task/result viewer](https://rememberlenny.github.io/bluecollar-bench/) - GitHub Pages viewer with filters, task detail, per-model scores, and extracted model answers.
-- [Run index](benchmark/runs/index.json) - versioned run registry.
-- [Latest run pointer](benchmark/runs/latest.json) - current latest collected run metadata.
-- [Model results summary](benchmark/runs/model_results_summary_20260706.md) - current model ranking, naturalized-run results, modality notes, and collection caveats.
-- [Naturalization comparison](benchmark/runs/naturalization_comparison_20260706.md) - pre/post naturalized-catalog comparison for Gemini, GLM, and DeepSeek plus Kimi baseline notes.
-- [Latest collected analysis](benchmark/runs/kimi_k27_code_natural_20260706/analysis.md) - latest collected run scoreboard and axis rollups.
-- [Prior full-suite run report](benchmark/runs/codex_full_suite_2026-07-04.md) - earlier full-suite run summary.
-
-Main workflow scripts:
-
-- [Build item catalog](scripts/build_item_catalog.py)
-- [Generate v2 tasks](scripts/generate_tasks_v2.py)
-- [Grade template](scripts/grade_v2.py)
-- [Validate generated tasks](scripts/validate_tasks.py)
-- [Run Harbor](scripts/run_harbor.sh)
-- [Run OpenRouter](scripts/run_openrouter.py)
-- [Run Gemini](scripts/run_gemini.py)
-- [Collect run results](scripts/collect_run_results.py)
-- [Compare collected runs](scripts/compare_runs.py)
-- [Plot run results](scripts/plot_run_results.py)
-
-## Repository Layout
+Each item is a trade-work situation:
 
 ```text
-benchmark/items/        Machine-readable benchmark item catalog
-benchmark/taxonomy.json Normalized axes, state model, and coverage matrix
-benchmark/coverage_report.md
-docs/eval-structure-wiki.md
-docs/eval-structure-dag.mmd
-docs/source/            Uploaded v0.1 source taxonomy and element trees
-scripts/                Generator, local validation, and Harbor run helper
-tasks/                  Generated Harbor task directories
-dataset.toml            Harbor dataset manifest
+role family / work setting
+  -> trade job or discipline
+  -> task the role actually performs
+  -> work stage and component condition
+  -> evidence modality
+  -> expected answer and deterministic scoring
 ```
 
-For the overall eval architecture, read `docs/eval-structure-wiki.md`. For a graph-only view of the build, validation, Harbor run, and result-collection flow, render `docs/eval-structure-dag.mmd`.
+The model must write `/app/answer.json` with a decision, risk level, work stage, component conditions, progress/value fields when relevant, findings, corrective actions, rationale, and references.
 
-Each Harbor task follows the current Harbor task structure:
+The grader scores the answer for:
 
-```text
-instruction.md
-task.toml
-environment/Dockerfile
-solution/solve.sh
-tests/test.sh
-tests/grade.py
-tests/item.json
+- correct `pass`, `fail`, or `needs_more_info` decision
+- risk classification
+- work-stage and component-condition handling
+- measured values, progress, event ordering, or sound source when relevant
+- required findings and corrective actions
+- schema validity
+- dangerous false passes and alarmist false fails
+
+## Current Benchmark Shape
+
+Current generated catalog:
+
+| Surface | Count |
+|---|---:|
+| Harbor task directories | 1299 |
+| Catalog items | 1299 |
+| Source elements parsed into the base catalog | 95 |
+| Text-only items | 1171 |
+| Image-backed items | 84 |
+| Audio-native items | 44 |
+| Fail-label items | 973 |
+| Pass-label items | 252 |
+| Needs-more-info items | 74 |
+
+Coverage by role family:
+
+| Tier | Role family | Items |
+|---|---|---:|
+| T1 | Heavy industrial craft / field engineer / inspector | 397 |
+| T2 | Commercial construction trade / inspector | 323 |
+| T3 | Residential trade / DIY / remodel context | 203 |
+| T4 | Field service technician / mechanic | 204 |
+| T5 | Manufacturing / assembly / quality role | 172 |
+
+Coverage by task type:
+
+| Code | Role task | Items |
+|---|---|---:|
+| ID | Identify | 146 |
+| FD | Diagnose | 161 |
+| CC | Check compliance | 229 |
+| SEQ | Sequence work | 128 |
+| TS | Select tool/material | 80 |
+| HAZ | Spot hazards | 112 |
+| ME | Measure/estimate | 161 |
+| PA | Assess progress | 80 |
+| DOC | Interpret documents | 94 |
+| TRD | Make tradeoff judgment | 80 |
+| RES | Recover constraints | 28 |
+
+See [benchmark/coverage_report.md](benchmark/coverage_report.md) for the full Tier x Discipline coverage matrix.
+
+## Repository Map
+
+| Path | Purpose |
+|---|---|
+| [docs/eval-structure-wiki.md](docs/eval-structure-wiki.md) | Human-readable map of the domain model, build flow, scoring contract, and result workflow |
+| [docs/eval-structure-dag.mmd](docs/eval-structure-dag.mmd) | Mermaid graph of the eval stack |
+| [docs/source/](docs/source/) | Source taxonomy, element trees, modality notes, and expansion roadmap |
+| [benchmark/taxonomy.json](benchmark/taxonomy.json) | Normalized taxonomy and coverage matrix |
+| [benchmark/items/items.json](benchmark/items/items.json) | Full generated item catalog |
+| [benchmark/media/](benchmark/media/) | Deterministic PNG and WAV fixtures copied into media-backed tasks |
+| [tasks/](tasks/) | Generated Harbor task directories |
+| [benchmark/runs/](benchmark/runs/) | Immutable collected run results, model summaries, comparisons, and plots |
+| [scripts/](scripts/) | Catalog generation, task generation, local validation, provider harnesses, and result collection |
+| [dataset.toml](dataset.toml) | Harbor dataset manifest |
+
+## Main Workflows
+
+Install Python dependencies:
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -e .
 ```
 
-## Quick Start
+Install Harbor if you will run agentic Harbor tasks:
 
-Regenerate tasks:
+```bash
+uv tool install harbor
+```
+
+Smoke-test the generated benchmark without Docker or provider API keys:
+
+```bash
+make validate
+```
+
+Regenerate all tasks:
 
 ```bash
 make generate
 ```
 
-This rebuilds the 900-item base catalog, merges the v2 controls plus synthetic image, CPM, and audio items, restores placeholder-stripped evidence, tags leakage, copies media fixtures into media-backed tasks, and writes generated tasks with the v2 grader.
-
-Validate the generated tasks locally:
+After regeneration, validate the generated tasks again:
 
 ```bash
 make validate
@@ -142,19 +143,13 @@ scripts/run_harbor.sh \
   --task electrical-panel-subpanel-defects
 ```
 
-Run the full benchmark dataset:
+Run the full Harbor dataset:
 
 ```bash
 scripts/run_harbor.sh --agent codex --model openai/gpt-5 --n-concurrent 8
 ```
 
-You can also run directly with Harbor:
-
-```bash
-harbor run -p . --agent codex --model openai/gpt-5 --n-concurrent 8
-```
-
-Run one task directly with OpenRouter:
+Run one task directly through OpenRouter:
 
 ```bash
 export OPENROUTER_API_KEY="sk-or-v1-..."
@@ -163,22 +158,7 @@ python3 scripts/run_openrouter.py \
   --task v2-cpm-trap-001
 ```
 
-The OpenRouter harness writes raw per-task artifacts under `runs/openrouter_<model>_<timestamp>/`, including `request.json`, `response.json`, `answer.json`, and `logs/verifier/reward.json`. It supports text, PNG image, and WAV audio items through OpenRouter chat completions. To collect a run into the immutable benchmark registry:
-
-```bash
-python3 scripts/run_openrouter.py \
-  --model openai/gpt-5.2 \
-  --task v2-cpm-trap-001 \
-  --collect-run openrouter_gpt52_smoke_2026-07-06
-```
-
-Full-suite OpenRouter runs are explicit because they incur provider cost:
-
-```bash
-python3 scripts/run_openrouter.py --model openai/gpt-5.2 --all --n-concurrent 4
-```
-
-Run one task directly with Google Gemini:
+Run one task directly through Gemini:
 
 ```bash
 export GEMINI_API_KEY="..."
@@ -187,68 +167,11 @@ python3 scripts/run_gemini.py \
   --task v2-cpm-trap-001
 ```
 
-If API keys are disallowed, authenticate with Google Cloud Application Default Credentials and run through the Google Cloud Vertex/Model API endpoint:
-
-```bash
-export GOOGLE_CLOUD_PROJECT="<your-project-id>"
-bash <(curl -sSL https://storage.googleapis.com/cloud-samples-data/adc/setup_adc.sh)
-gcloud auth application-default set-quota-project "$GOOGLE_CLOUD_PROJECT"
-python3 scripts/run_gemini.py \
-  --backend vertex \
-  --auth oauth \
-  --google-cloud-project "$GOOGLE_CLOUD_PROJECT" \
-  --location global \
-  --model gemini-3.5-flash \
-  --task v2-cpm-trap-001
-```
-
-The Gemini harness writes raw per-task artifacts under `runs/gemini_<model>_<timestamp>/`, including `request.json`, `response.json`, `answer.json`, and `logs/verifier/reward.json`. It supports text, PNG image, and WAV audio items through Gemini `generateContent` with inline media parts and `responseMimeType: application/json`. To collect a run into the immutable benchmark registry:
-
-```bash
-python3 scripts/run_gemini.py \
-  --model gemini-2.5-pro \
-  --task v2-cpm-trap-001 \
-  --collect-run gemini_25_pro_smoke_2026-07-06
-```
-
-Full-suite Gemini runs are explicit because they incur provider cost:
-
-```bash
-python3 scripts/run_gemini.py --model gemini-2.5-pro --all --n-concurrent 4
-```
-
-For keyless full-suite runs, use the same Vertex flags:
-
-```bash
-python3 scripts/run_gemini.py \
-  --backend vertex \
-  --auth oauth \
-  --google-cloud-project "$GOOGLE_CLOUD_PROJECT" \
-  --location global \
-  --model gemini-3.5-flash \
-  --all \
-  --n-concurrent 4
-```
-
-`--model` is intentionally not allowlisted. Pass any Gemini model alias available to your account, including future aliases such as `gemini-3.5-flash`; a Developer API resource path such as `models/<model>`; or, for Vertex, a publisher/model path such as `google/<model>`, `publishers/google/models/<model>`, or a full `projects/<project>/locations/<location>/...` resource path.
-
-Collect and version run results:
+Collect and version a completed run:
 
 ```bash
 python3 scripts/collect_run_results.py <harbor-runs-dir> gpt5_2026-07-05
 ```
-
-This writes an immutable run directory:
-
-```text
-benchmark/runs/gpt5_2026-07-05/
-manifest.json
-metrics.json
-analysis.md
-catalog.snapshot.json
-```
-
-It also updates `benchmark/runs/index.json` and `benchmark/runs/latest.json`. Reusing a run name is rejected unless `--overwrite` is passed, so previous measurements are not lost accidentally. Each run stores the full `items.json` snapshot and catalog SHA used at collection time.
 
 Compare two collected runs:
 
@@ -257,13 +180,50 @@ python3 scripts/compare_runs.py gpt5_2026-07-05 gpt5_2026-07-06 \
   --output benchmark/runs/gpt5_2026-07-05_vs_2026-07-06.md
 ```
 
-The comparison report warns if catalog hashes differ, then reports shared-task reward deltas, safety-gate changes, axis rollups, largest regressions, and largest improvements.
+The run collector writes immutable directories under `benchmark/runs/<run-name>/`, stores the catalog snapshot and SHA, updates `benchmark/runs/index.json`, and updates `benchmark/runs/latest.json`.
 
-Install Harbor if needed:
+## Important Files
 
-```bash
-uv tool install harbor
-```
+Source taxonomy and roadmap:
+
+- [Source-doc index](docs/source/README.md)
+- [Benchmark taxonomy v0.1](docs/source/blue-collar-benchmark-taxonomy-v0.1.md)
+- [Electrical element tree](docs/source/electrical-element-tree-v0.1.md)
+- [Construction element trees](docs/source/element-trees-construction-v0.1.md)
+- [Industrial service element trees](docs/source/element-trees-industrial-service-v0.1.md)
+- [Modality-native task categories](docs/source/modality-native-task-categories-v0.1.md)
+- [Four-track expansion plan](docs/source/expansion-plan-v0.1-four-new-capability-tracks.md)
+
+Generated benchmark artifacts:
+
+- [Generated item catalog](benchmark/items/items.json)
+- [Normalized taxonomy](benchmark/taxonomy.json)
+- [Coverage report](benchmark/coverage_report.md)
+- [Leakage report](benchmark/leakage_report.md)
+- [Restore report](benchmark/restore_report.md)
+- [Harbor dataset manifest](dataset.toml)
+
+Run results:
+
+- [Run index](benchmark/runs/index.json)
+- [Latest run pointer](benchmark/runs/latest.json)
+- [Model results summary](benchmark/runs/model_results_summary_20260706.md)
+- [Naturalization comparison](benchmark/runs/naturalization_comparison_20260706.md)
+- [Latest collected analysis in this checkout](benchmark/runs/minimax_m3_natural_20260707/analysis.md)
+- [Prior full-suite run report](benchmark/runs/codex_full_suite_2026-07-04.md)
+
+Core scripts:
+
+- [Build item catalog](scripts/build_item_catalog.py)
+- [Generate v2 tasks](scripts/generate_tasks_v2.py)
+- [Grade template](scripts/grade_v2.py)
+- [Validate generated tasks](scripts/validate_tasks.py)
+- [Run Harbor](scripts/run_harbor.sh)
+- [Run OpenRouter](scripts/run_openrouter.py)
+- [Run Gemini](scripts/run_gemini.py)
+- [Collect run results](scripts/collect_run_results.py)
+- [Compare collected runs](scripts/compare_runs.py)
+- [Plot run results](scripts/plot_run_results.py)
 
 ## Answer Contract
 
@@ -289,28 +249,19 @@ Agents must write valid JSON to `/app/answer.json`:
 }
 ```
 
-The verifier emits `/logs/verifier/reward.json` with component metrics:
+The verifier emits `/logs/verifier/reward.json` with component metrics for decision, risk, S1/S2/S3 state handling, required findings, required actions, schema validity, forbidden-token cleanliness, dangerous false passes, alarmist false fails, and aggregate reward.
 
-- `decision`
-- `risk`
-- `s1`
-- `s2`
-- `s3`
-- `findings`
-- `actions`
-- `schema`
-- `forbidden_clean`
-- `dangerous_false_pass`
-- `alarmist_false_fail`
-- `reward`
+## Adding Items
 
-The two directional safety metrics are intended as headline measures: `dangerous_false_pass` catches passing unsafe/non-compliant work, while `alarmist_false_fail` catches failing compliant controls.
+1. Add a curated object to `benchmark/items/seed_items.json`, or update the Markdown element trees under `docs/source/`.
+2. Run `make generate`.
+3. Run `make validate`.
+4. Inspect `benchmark/leakage_report.md`.
+5. Run `make dataset` if the task set changed and `dataset.toml` needs to be refreshed.
+6. Inspect the generated `tasks/<item-id>/instruction.md`.
+7. Run the task or dataset through Harbor or a direct provider harness.
 
-For image-backed instrument items, `s3` is reused for numeric-value scoring: `value` must be within the item's `value_tolerance` of `expected_value`. For audio/video-native items, the same slot can grade `sound_source`, `event_time`, `rate`, and `order` when corresponding expected fields exist.
-
-## Item Schema
-
-Every item includes `modality` and `media` fields. Current generated items include 921 text-only tasks, 84 `modality: "image"` tasks, and 44 `modality: "audio"` tasks. Image-backed items may include `expected_value` and `value_tolerance` for deterministic grading of readings or computed quantities. Audio-native items may include `expected_sound_source` and `reduction_test`; future video-native items use the same pattern with `expected_event_time`, `expected_rate`, `expected_order`, and `confusable_with`.
+Keep items small and objectively gradable. If an item requires jurisdiction-specific judgment, include the code edition or jurisdiction in the scenario and `source_refs`.
 
 ## Publishing
 
@@ -325,32 +276,11 @@ Then authenticate and publish:
 ```bash
 harbor auth login
 harbor publish tasks --public -t v0.1
-```
-
-Publish the dataset manifest after tasks are published:
-
-```bash
 harbor publish . --public -t v0.1
 ```
 
-The default generated task names use the org `bluecollar-bench`.
+The default generated task org is `bluecollar-bench`.
 
-## Adding Items
+## Caveats
 
-1. Add a curated object to `benchmark/items/seed_items.json`, or update the Markdown element trees under `docs/source/`.
-2. Run `make generate`.
-3. Run `make validate`.
-4. Inspect `benchmark/leakage_report.md` and avoid scenarios that repeat required conclusion tokens verbatim.
-5. Run `make dataset` if the task set changed and you want to refresh `dataset.toml`.
-6. Inspect the generated `tasks/<item-id>/instruction.md`.
-7. Run the task or dataset through Harbor with at least one real agent.
-
-Keep items small and objectively gradable. If an item requires jurisdiction-specific judgment, include the code edition or jurisdiction in the scenario and `source_refs`.
-
-## Roadmap
-
-- Extend synthetic media families: dial indicators, torque wrench/spec plates, panel schedules, P&ID excerpts, and photo-realistic variants seeded from the same ground-truth parameters.
-- Add animated video primitives for drip rate, torque-sequence order, belt drift, and wobble/runout tests.
-- Add SME-reviewed gold labels and jurisdiction/code-edition metadata.
-- Split deterministic grading from optional LLM-judge grading for open-ended hazard lists.
-- Add aggregate reporting by tier, discipline, task type, S1 state, and S2 condition.
+This is still an eval under active development. The source taxonomy and many labels are generated or synthetic and need SME red-team review before the benchmark should be treated as authoritative. Use aggregate model scores as directional evidence, and read the linked reports before making claims from them.

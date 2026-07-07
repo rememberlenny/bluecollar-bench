@@ -43,15 +43,15 @@ As of this checkout:
 
 | Surface | Count |
 |---|---:|
-| Generated Harbor tasks | 1049 |
-| Catalog items | 1049 |
+| Generated Harbor tasks | 1299 |
+| Catalog items | 1299 |
 | Source elements parsed into the base catalog | 95 |
-| Text-only items | 921 |
+| Text-only items | 1171 |
 | Image-backed items | 84 |
 | Audio-native items | 44 |
 | Fail-label items | 973 |
-| Pass-label items | 63 |
-| Needs-more-info items | 13 |
+| Pass-label items | 252 |
+| Needs-more-info items | 74 |
 
 Generation mix:
 
@@ -64,8 +64,9 @@ Generation mix:
 | Synthetic image/media items | 56 |
 | Synthetic CPM/resource-constraint items | 28 |
 | Synthetic audio fault-signature items | 44 |
+| Synthetic text rebalance items | 250 |
 
-The leakage audit currently reports 874 clean, 175 partial, and 0 leaked items. Treat partial-leak items as review targets, not as blocked generated output.
+The leakage audit currently reports 1125 clean, 174 partial, and 0 leaked items. Treat partial-leak items as review targets, not as blocked generated output.
 
 ## Domain Model
 
@@ -75,11 +76,11 @@ The `tier` axis is the role context: it says what kind of worker, documentation,
 
 | Tier | Role family | What the role is usually doing | Items |
 |---|---|---|---:|
-| T1 | Heavy industrial craft / field engineer / inspector | Building or inspecting process-facility work from engineered drawings, specs, permits, and turnover packages | 245 |
-| T2 | Commercial construction trade / inspector | Building or inspecting code-driven institutional and commercial work with submittals and inspections | 270 |
-| T3 | Residential trade / DIY / remodel context | Diagnosing, installing, or inspecting light residential work with prescriptive code and manufacturer instructions | 176 |
-| T4 | Field service technician / mechanic | Diagnosing and repairing installed assets from symptoms, work orders, OEM manuals, and service observations | 196 |
-| T5 | Manufacturing / assembly / quality role | Executing or inspecting fixed-station production work against standard work and quality gates | 162 |
+| T1 | Heavy industrial craft / field engineer / inspector | Building or inspecting process-facility work from engineered drawings, specs, permits, and turnover packages | 397 |
+| T2 | Commercial construction trade / inspector | Building or inspecting code-driven institutional and commercial work with submittals and inspections | 323 |
+| T3 | Residential trade / DIY / remodel context | Diagnosing, installing, or inspecting light residential work with prescriptive code and manufacturer instructions | 203 |
+| T4 | Field service technician / mechanic | Diagnosing and repairing installed assets from symptoms, work orders, OEM manuals, and service observations | 204 |
+| T5 | Manufacturing / assembly / quality role | Executing or inspecting fixed-station production work against standard work and quality gates | 172 |
 
 This axis answers: "What kind of job is this worker in?"
 
@@ -89,18 +90,18 @@ The `discipline` axis is the trade job or work domain.
 
 | Discipline | Typical roles represented | Items |
 |---|---|---:|
-| 2.1 Electrical | Electrician, low-voltage tech, panel/wiring inspector, service troubleshooter | 233 |
-| 2.2 Piping/Plumbing | Pipefitter, plumber, plumbing inspector, hydronic/service tech | 97 |
-| 2.3 HVAC-R | HVAC installer, refrigeration tech, BAS/service tech | 80 |
-| 2.4 Structural & Ironwork | Ironworker, rigger, steel inspector, machinery-moving role | 91 |
-| 2.5 Concrete & Masonry | Concrete finisher, formwork crew, mason, inspection role | 61 |
-| 2.6 Carpentry & Finishes | Framer, finish carpenter, roofer/envelope worker, remodeler | 79 |
-| 2.7 Equipment/Millwright | Millwright, rotating-equipment mechanic, conveyor/service role | 78 |
-| 2.8 Instrumentation & Controls | Instrument tech, calibration tech, controls/loop-check role | 50 |
-| 2.9 Automotive | Automotive technician, diagnostic tech, powertrain/EV service role | 82 |
-| 2.10 Assembly & Fabrication | Assembly operator, welder/fabricator, quality inspector | 30 |
-| 2.11 Sitework & Utilities | Equipment operator, utility crew, excavation/trenching inspector | 51 |
-| 2.12 Safety | Safety lead, competent person, rigging/LOTO/fall-protection reviewer | 117 |
+| 2.1 Electrical | Electrician, low-voltage tech, panel/wiring inspector, service troubleshooter | 360 |
+| 2.2 Mechanical - Piping & Plumbing | Pipefitter, plumber, plumbing inspector, hydronic/service tech | 112 |
+| 2.3 HVAC-R | HVAC installer, refrigeration tech, BAS/service tech | 84 |
+| 2.4 Structural & Ironwork | Ironworker, rigger, steel inspector, machinery-moving role | 119 |
+| 2.5 Concrete & Masonry | Concrete finisher, formwork crew, mason, inspection role | 72 |
+| 2.6 Carpentry & Finishes | Framer, finish carpenter, roofer/envelope worker, remodeler | 82 |
+| 2.7 Equipment & Machinery | Millwright, rotating-equipment mechanic, conveyor/service role | 84 |
+| 2.8 Instrumentation & Controls | Instrument tech, calibration tech, controls/loop-check role | 58 |
+| 2.9 Automotive & Powertrain | Automotive technician, diagnostic tech, powertrain/EV service role | 84 |
+| 2.10 Assembly & Fabrication | Assembly operator, welder/fabricator, quality inspector | 40 |
+| 2.11 Sitework & Utilities | Equipment operator, utility crew, excavation/trenching inspector | 68 |
+| 2.12 Safety & Rigging | Safety lead, competent person, rigging/LOTO/fall-protection reviewer | 136 |
 
 This axis answers: "Which trade job is the model standing in for?"
 
@@ -110,16 +111,16 @@ The `task_type` axis is the role task: what the worker or inspector has to do wi
 
 | Code | Role task | What the model must do | Items |
 |---|---|---|---:|
-| ID | Identify | Name the component, material, tool, system, or condition | 126 |
-| FD | Diagnose | Infer the likely fault from symptoms, photos, sounds, readings, or context | 149 |
-| CC | Check compliance | Decide whether the work meets code, spec, drawing, or manufacturer requirements | 209 |
-| SEQ | Sequence work | Put procedure steps in the right order or identify an order violation | 108 |
-| TS | Select tool/material | Choose the correct wire, fastener, blade, fixture, tool, or method | 50 |
-| HAZ | Spot hazards | Identify unsafe conditions and required immediate controls | 92 |
-| ME | Measure/estimate | Read or estimate dimensions, values, tolerances, torque, levels, or quantities | 147 |
-| PA | Assess progress | Estimate percent complete, lifecycle stage, defects, and remaining work | 35 |
-| DOC | Interpret documents | Read P&IDs, plans, schedules, tags, cut sheets, checklists, or service data | 74 |
-| TRD | Make tradeoff judgment | Choose the practical compliant action when field constraints conflict with ideal procedure | 31 |
+| ID | Identify | Name the component, material, tool, system, or condition | 146 |
+| FD | Diagnose | Infer the likely fault from symptoms, photos, sounds, readings, or context | 161 |
+| CC | Check compliance | Decide whether the work meets code, spec, drawing, or manufacturer requirements | 229 |
+| SEQ | Sequence work | Put procedure steps in the right order or identify an order violation | 128 |
+| TS | Select tool/material | Choose the correct wire, fastener, blade, fixture, tool, or method | 80 |
+| HAZ | Spot hazards | Identify unsafe conditions and required immediate controls | 112 |
+| ME | Measure/estimate | Read or estimate dimensions, values, tolerances, torque, levels, or quantities | 161 |
+| PA | Assess progress | Estimate percent complete, lifecycle stage, defects, and remaining work | 80 |
+| DOC | Interpret documents | Read P&IDs, plans, schedules, tags, cut sheets, checklists, or service data | 94 |
+| TRD | Make tradeoff judgment | Choose the practical compliant action when field constraints conflict with ideal procedure | 80 |
 | RES | Recover constraints | Decide what can proceed, what is blocked, and what recovery plan is valid | 28 |
 
 This axis answers: "What job task is being evaluated?"
@@ -133,13 +134,13 @@ S1 is the work-item stage:
 | Stage | Meaning | Default progress credit | Items |
 |---|---|---:|---:|
 | planned | Scoped but not started | 5% | 31 |
-| staged | Materials, tools, access, or kit are ready | 15% | 50 |
-| in-progress | Physical work or diagnosis is underway | 45% | 254 |
-| rough-complete | Installed or assembled, but not fully closed out | 70% | 484 |
-| tested/inspected | Verification has been performed | 85% | 94 |
+| staged | Materials, tools, access, or kit are ready | 15% | 80 |
+| in-progress | Physical work or diagnosis is underway | 45% | 343 |
+| rough-complete | Installed or assembled, but not fully closed out | 70% | 583 |
+| tested/inspected | Verification has been performed | 85% | 114 |
 | rework | Failed verification and requires correction | 60% | 0 |
 | accepted | Signed off or handed over | 95% | 2 |
-| in-service | Operating asset in the maintenance/service world | 100% | 134 |
+| in-service | Operating asset in the maintenance/service world | 100% | 146 |
 
 S2 is the thing's condition:
 
@@ -163,7 +164,7 @@ The `modality` axis says what evidence the role gets.
 
 | Modality | What it tests | Items |
 |---|---|---:|
-| text | Scenario-only reasoning from written observations | 921 |
+| text | Scenario-only reasoning from written observations | 1171 |
 | image | Visual reading of instruments, rigging, schedules, or work conditions | 84 |
 | audio | Fault-signature recognition where sound is the signal | 44 |
 

@@ -1,9 +1,9 @@
 {
   "catalog_sha256": "aa0631b805deaf095fb665a82992fb11102cba6e1c7b38752726b5d3d2f8cb77",
-  "collected_at": "2026-07-06T23:08:38+00:00",
-  "git_commit": "5a2e08967908d82ad29d9d5188456fed1e6afa79",
-  "path": "benchmark/runs/gpt55_natural_20260706",
-  "run": "gpt55_natural_20260706",
-  "source_runs_dir": "/root/spaceship/bluecollar-bench/jobs/gpt55_natural_20260706",
+  "collected_at": "2026-07-07T16:19:17+00:00",
+  "git_commit": "604e3dc14e5ab83804acf52c1121d8a5e56ff581",
+  "path": "benchmark/runs/minimax_m3_natural_20260707",
+  "run": "minimax_m3_natural_20260707",
+  "source_runs_dir": "/root/spaceship/bluecollar-bench/runs/openrouter_minimax_m3_natural_20260707",
   "tasks_scored": 1299
 }
