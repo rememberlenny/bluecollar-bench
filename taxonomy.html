@@ -1236,7 +1236,8 @@ function runCard(run, ri, ti, expected) {
     }
   } else {
     body += '<p class="d-text" style="margin-top:8px">Decision component ' + fmtR(slim[1])
-      + '. Full answer, component scores, and the reasoning trace are available when this page is served next to <code>data/</code> (GitHub Pages or the repo viewer).</p>';
+      + '. Full answer, component scores, and the reasoning trace can’t load in this embedded copy.'
+      + hostedLink(DATA.t[ti][4], 'View them on the hosted map ↗') + '</p>';
   }
   body += '<div><button class="mv-open" data-ri="' + ri + '">⤢ Open full view</button></div>';
   return '<details class="run-card"><summary><span class="arrow">▶</span><strong>' + esc(run.label) + '</strong>'
@@ -1268,7 +1269,8 @@ function renderDetail() {
   const statusLine = fullStatus === 'ok'
     ? 'Scores, answers &amp; traces from ' + RUNS.length + ' runs'
     : fullStatus === 'loading' ? 'Embedded scores · loading full run data…'
-    : 'Embedded scores · serve next to <code>data/</code> for answers &amp; traces';
+    : 'Embedded scores only' + (IS_HOSTED ? ' (run data failed to load — try reloading)'
+        : ' —' + hostedLink(n.id, 'full results on the hosted map ↗'));
 
   detailInner.innerHTML =
     '<div class="d-head"><div><div class="d-title">' + esc(ctx.t) + '</div>'
@@ -1352,6 +1354,15 @@ detailInner.addEventListener('click', async e => {
    GitHub Pages without shipping the whole task tree in the viewer. */
 const RAW_BASE = 'https://raw.githubusercontent.com/rememberlenny/bluecollar-bench/master/';
 const GH_BLOB = 'https://github.com/rememberlenny/bluecollar-bench/blob/master/';
+const HOSTED_PAGE = 'https://rememberlenny.github.io/bluecollar-bench/taxonomy.html';
+const IS_HOSTED = location.host === 'rememberlenny.github.io';
+/* In sandboxed embeds (e.g. Claude artifacts) every fetch is blocked, so instead
+   of a dead-end note, link the same task on the hosted GitHub Pages copy. */
+function hostedLink(taskId, label) {
+  if (IS_HOSTED) return '';
+  return ' <a href="' + HOSTED_PAGE + '#' + encodeURIComponent(taskId) + '" target="_blank" rel="noopener" style="color:var(--s1)">'
+    + esc(label || 'Open this task on the hosted map ↗') + '</a>';
+}
 const modalEl = document.getElementById('modal');
 const mTitle = document.getElementById('m-title');
 const mSub = document.getElementById('m-sub');
@@ -1454,7 +1465,8 @@ function renderModalAnswer() {
   if (!full) {
     const note = fullStatus === 'loading'
       ? 'Full run data is still loading…'
-      : 'The full answer payload needs <code>data/viewer-data.json</code> next to this page (GitHub Pages or the repo viewer).';
+      : 'This embedded copy can’t load the full answer payload (its sandbox blocks network requests).'
+        + hostedLink(DATA.t[modalState.ti][4], 'View the full answer on the hosted map ↗');
     mBody.innerHTML = (slim ? '<div class="pill-row">'
       + statusPill(slim[4] === ctx.d ? 'st-good' : 'st-crit', 'model decision', slim[4] || '—')
       + statusPill(decisionCls(ctx.d), 'expected', ctx.d)
@@ -1497,7 +1509,8 @@ async function renderModalTrace() {
   if (!full || !full.trace) {
     mBody.innerHTML = '<p class="d-text">' + (fullStatus === 'ok'
       ? 'No trace was archived for this result.'
-      : 'Traces need <code>data/</code> next to this page (GitHub Pages or the repo viewer).') + '</p>';
+      : 'This embedded copy can’t load traces (its sandbox blocks network requests).'
+        + hostedLink(DATA.t[modalState.ti][4], 'View the trace on the hosted map ↗')) + '</p>';
     return;
   }
   if (full.trace_preview && full.trace_preview.text) {
@@ -1532,7 +1545,8 @@ async function loadFileInto(sectionId, url, render) {
   } catch (err) {
     const el = document.getElementById(sectionId);
     if (el) el.querySelector('.m-file-body').innerHTML =
-      '<p class="d-text">Could not load (' + esc(err.message) + ') — use the GitHub link above.</p>';
+      '<p class="d-text">Could not load here (' + esc(err.message) + ') — open it with the GitHub link above'
+      + (IS_HOSTED ? '' : ', or' + hostedLink(DATA.t[modalState.ti][4], 'view it rendered on the hosted map ↗')) + '.</p>';
   }
 }
 
