@@ -779,6 +779,53 @@
 
     .trace-preview.thinking pre { background: #f6f2fa; border-color: #e2d5ee; color: #4b3a61; font-style: italic; }
 
+    .answer-json {
+      margin-top: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fbfcfa;
+    }
+
+    .answer-json-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      padding: 5px 10px;
+      border-bottom: 1px solid var(--line);
+      background: #f2f5f1;
+    }
+
+    .answer-json-head .answer-label { margin: 0; }
+
+    .answer-source {
+      font-size: 10px;
+      color: #8a938c;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 60%;
+    }
+
+    .answer-json pre {
+      margin: 0;
+      padding: 8px 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 340px;
+      overflow-y: auto;
+    }
+
+    .j-key { color: #2b5d8c; font-weight: 600; }
+    .j-str { color: #2c6b45; }
+    .j-num { color: #a35d0f; }
+    .j-bool { color: #6b3fa0; font-weight: 600; }
+    .j-null { color: #a33f34; }
+
     .run-answer {
       display: flex;
       flex-wrap: wrap;
@@ -1618,15 +1665,62 @@
           <div class="answer-body">
             <div class="pill-row">${answerSummaryPills(answer)}</div>
             ${componentScores(result)}
-            ${renderAnswerField("Findings", answer.findings)}
-            ${renderAnswerField("Actions", answer.actions)}
-            ${renderAnswerField("Rationale", answer.rationale)}
-            ${renderAnswerField("References", answer.references)}
-            ${answer.source ? `<div class="answer-field"><div class="answer-label">Source</div><p class="answer-text">${esc(answer.source)}</p></div>` : ""}
+            ${renderAnswerJson(answer)}
             ${traceSection(result)}
           </div>
         </div>
       `;
+    }
+
+    function highlightJson(value) {
+      const json = esc(JSON.stringify(value, null, 2));
+      return json.replace(
+        /(&quot;(?:\\.|(?!&quot;)[^\\])*?&quot;(\s*:)?|\b(?:true|false|null)\b|-?\d+(?:\.\d+)?(?:[eE][+\-]?\d+)?)/g,
+        match => {
+          let cls = "j-num";
+          if (match.startsWith("&quot;")) cls = /:$/.test(match) ? "j-key" : "j-str";
+          else if (match === "true" || match === "false") cls = "j-bool";
+          else if (match === "null") cls = "j-null";
+          return `<span class="${cls}">${match}</span>`;
+        },
+      );
+    }
+
+    // Answer fields ordered for reading: verdict first, evidence, then extras.
+    const ANSWER_KEY_ORDER = [
+      "decision", "risk", "findings", "actions", "rationale", "references",
+      "work_stage", "s1_state", "component_conditions", "s2_conditions",
+      "percent_complete", "s3_percent", "value", "sound_source", "order",
+      "workable", "event_time", "rate", "confidence",
+    ];
+
+    function renderAnswerJson(answer) {
+      const ordered = {};
+      ANSWER_KEY_ORDER.forEach(key => {
+        if (key in answer) ordered[key] = answer[key];
+      });
+      Object.keys(answer).forEach(key => {
+        if (!(key in ordered) && key !== "source") ordered[key] = answer[key];
+      });
+      return `
+        <div class="answer-json">
+          <div class="answer-json-head">
+            <span class="answer-label">answer.json</span>
+            ${answer.source ? `<span class="answer-source" title="Where the answer was recovered from">${esc(answer.source)}</span>` : ""}
+          </div>
+          <pre>${highlightJson(ordered)}</pre>
+        </div>
+      `;
+    }
+
+    function maybeJsonHighlight(text) {
+      const trimmed = String(text).trim();
+      if (trimmed.startsWith("{") || trimmed.startsWith("[")) {
+        try {
+          return highlightJson(JSON.parse(trimmed));
+        } catch (error) { /* not JSON — fall through */ }
+      }
+      return esc(text);
     }
 
     const COMPONENT_LABELS = [
@@ -1681,7 +1775,7 @@
       const body = (trace.events || []).map((event, index) => `
         <div class="trace-ev ${esc(event.kind)}">
           <span class="trace-ev-label">${index + 1} · ${esc(event.label)}</span>
-          ${event.text ? `<pre>${esc(event.text)}</pre>` : ""}
+          ${event.text ? `<pre>${event.kind === "thinking" ? esc(event.text) : maybeJsonHighlight(event.text)}</pre>` : ""}
         </div>
       `).join("");
       return head + (body || `<div class="trace-stats">No trace events extracted.</div>`);
