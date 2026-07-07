@@ -320,8 +320,64 @@
   .trace-ev.thinking pre { font-style: italic; }
   .trace-stats { font-size: 10.5px; color: var(--muted); margin-top: 6px; }
   .d-links { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--border); display: flex; gap: 14px; flex-wrap: wrap; }
-  .d-links a { font-size: 12px; color: var(--s1); text-decoration: none; }
-  .d-links a:hover { text-decoration: underline; }
+  .d-links a, .link-like { font-size: 12px; color: var(--s1); text-decoration: none; }
+  .link-like { appearance: none; background: none; border: 0; padding: 0; font-family: inherit; cursor: pointer; }
+  .d-links a:hover, .link-like:hover { text-decoration: underline; }
+  .link-like:focus-visible { outline: 2px solid var(--s1); outline-offset: 2px; }
+  .mv-open {
+    appearance: none; border: 1px solid var(--border); border-radius: 6px;
+    background: var(--chip-bg); color: var(--ink1); font: inherit; font-size: 11.5px;
+    padding: 3px 10px; cursor: pointer; margin-top: 10px;
+  }
+  .mv-open:hover { border-color: var(--baseline); }
+  .mv-open:focus-visible { outline: 2px solid var(--s1); outline-offset: 1px; }
+
+  /* ---------- result detail modal ---------- */
+  #modal { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; }
+  #modal[hidden] { display: none; }
+  .m-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
+  .m-dialog {
+    position: relative; width: min(960px, 94vw); height: min(86vh, 940px);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .m-head { display: flex; align-items: flex-start; gap: 10px; padding: 14px 16px 10px; }
+  .m-title { font-weight: 650; font-size: 14.5px; text-wrap: balance; }
+  .m-sub { color: var(--muted); font-size: 11.5px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .m-tabs { display: flex; gap: 2px; padding: 0 16px; border-bottom: 1px solid var(--border); }
+  .m-tab {
+    appearance: none; border: 0; background: none; font: inherit; font-size: 12.5px;
+    color: var(--ink2); padding: 6px 12px 9px; cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+  }
+  .m-tab[aria-selected="true"] { color: var(--ink1); font-weight: 600; border-bottom-color: var(--s1); }
+  .m-tab:focus-visible { outline: 2px solid var(--s1); outline-offset: -2px; }
+  .m-body { flex: 1; overflow-y: auto; padding: 14px 18px 28px; font-size: 13px; }
+  .m-file { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+  .m-file > summary {
+    padding: 8px 11px; cursor: pointer; font-size: 12px; list-style: none;
+    display: flex; gap: 8px; align-items: baseline;
+  }
+  .m-file > summary::-webkit-details-marker { display: none; }
+  .m-file > summary:hover { background: var(--chip-bg); }
+  .m-file > summary strong { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; font-weight: 600; }
+  .m-file > summary .ext-link { margin-left: auto; font-size: 11px; color: var(--s1); text-decoration: none; }
+  .m-file > summary .ext-link:hover { text-decoration: underline; }
+  .m-file-body { padding: 2px 11px 12px; border-top: 1px solid var(--border); }
+  .m-media { margin: 8px 0; }
+  .m-media img { max-width: 100%; border-radius: 6px; border: 1px solid var(--border); display: block; }
+  .m-media audio { width: 100%; margin-top: 4px; }
+  /* mini markdown */
+  .md { line-height: 1.55; }
+  .md h1, .md h2, .md h3 { margin: 14px 0 6px; line-height: 1.25; }
+  .md h1 { font-size: 15px; } .md h2 { font-size: 13.5px; } .md h3 { font-size: 12.5px; }
+  .md p { margin: 6px 0; }
+  .md ul, .md ol { margin: 6px 0; padding-left: 20px; }
+  .md li { margin-bottom: 2px; }
+  .md code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; background: var(--chip-bg); border-radius: 3px; padding: 0 4px; }
+  .md pre { margin: 8px 0; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--chip-bg); overflow-x: auto; }
+  .md pre code { background: none; padding: 0; }
 
   @media (max-width: 900px) {
     #detail { position: fixed; right: 0; top: 0; bottom: 0; z-index: 20; box-shadow: -8px 0 24px rgba(0,0,0,0.25); }
@@ -390,6 +446,21 @@
   <aside id="detail" aria-label="Task detail">
     <div id="detail-inner"></div>
   </aside>
+</div>
+
+<div id="modal" hidden>
+  <div class="m-backdrop"></div>
+  <div class="m-dialog" role="dialog" aria-modal="true" aria-label="Result detail">
+    <div class="m-head">
+      <div>
+        <div class="m-title" id="m-title"></div>
+        <div class="m-sub" id="m-sub"></div>
+      </div>
+      <button class="d-close" id="m-close" aria-label="Close dialog">×</button>
+    </div>
+    <div class="m-tabs" role="tablist" id="m-tabs"></div>
+    <div class="m-body" id="m-body"></div>
+  </div>
 </div>
 
 <script>
@@ -1061,7 +1132,11 @@ function closeDetail() {
   history.replaceState(null, '', location.pathname + location.search);
   requestDraw();
 }
-window.addEventListener('keydown', e => { if (e.key === 'Escape' && selTask >= 0) closeDetail(); });
+window.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  if (!modalEl.hidden) closeModal();
+  else if (selTask >= 0) closeDetail();
+});
 
 const STATUS = { good: '#0ca30c', warn: '#fab219', serious: '#ec835a', crit: '#d03b3b' };
 function decisionCls(d) { return d === 'fail' ? 'st-crit' : d === 'pass' ? 'st-good' : 'st-warn'; }
@@ -1163,6 +1238,7 @@ function runCard(run, ri, ti, expected) {
     body += '<p class="d-text" style="margin-top:8px">Decision component ' + fmtR(slim[1])
       + '. Full answer, component scores, and the reasoning trace are available when this page is served next to <code>data/</code> (GitHub Pages or the repo viewer).</p>';
   }
+  body += '<div><button class="mv-open" data-ri="' + ri + '">⤢ Open full view</button></div>';
   return '<details class="run-card"><summary><span class="arrow">▶</span><strong>' + esc(run.label) + '</strong>'
     + matchGlyph + '<span class="rw" style="color:' + rewardColor(reward) + '">' + fmtR(reward) + '</span></summary>'
     + '<div class="run-body">' + body + '</div></details>';
@@ -1224,6 +1300,7 @@ function renderDetail() {
     + rows.map(r => runCard(r.run, r.ri, ti, ctx.d)).join('')
     + '</div>'
     + '<div class="d-links">'
+    + '<button class="link-like" id="d-files">Task files &amp; media ⤢</button>'
     + '<a href="https://rememberlenny.github.io/bluecollar-bench/#' + encodeURIComponent(n.id) + '" target="_blank" rel="noopener">Open in benchmark viewer ↗</a>'
     + '<a href="' + gh + '" target="_blank" rel="noopener">Task on GitHub ↗</a>'
     + '</div>';
@@ -1245,6 +1322,9 @@ function renderTrace(trace) {
 detailInner.addEventListener('click', async e => {
   const closeBtn = e.target.closest('.d-close');
   if (closeBtn) { closeDetail(); return; }
+  const mv = e.target.closest('.mv-open');
+  if (mv) { openModal(selTask - TOFF, +mv.dataset.ri, 'answer'); return; }
+  if (e.target.closest('#d-files')) { openModal(selTask - TOFF, -1, 'files'); return; }
   const btn = e.target.closest('.trace-toggle');
   if (!btn) return;
   const body = btn.nextElementSibling;
@@ -1263,6 +1343,231 @@ detailInner.addEventListener('click', async e => {
   body.hidden = false;
   btn.textContent = btn.textContent.replace('Show', 'Hide');
 });
+
+/* ---------- result detail modal ----------
+   Full-screen view of one model's response: answer payload, the complete
+   reasoning trace, and a renderer for the task's referenced files
+   (instruction.md, tests/item.json, tests/grade.py, media fixtures).
+   Task files are fetched from raw.githubusercontent.com so they work on
+   GitHub Pages without shipping the whole task tree in the viewer. */
+const RAW_BASE = 'https://raw.githubusercontent.com/rememberlenny/bluecollar-bench/master/';
+const GH_BLOB = 'https://github.com/rememberlenny/bluecollar-bench/blob/master/';
+const modalEl = document.getElementById('modal');
+const mTitle = document.getElementById('m-title');
+const mSub = document.getElementById('m-sub');
+const mTabs = document.getElementById('m-tabs');
+const mBody = document.getElementById('m-body');
+const modalState = { ti: -1, ri: -1, tab: 'answer' };
+const fileCache = {};
+
+function fetchCached(url, asJson) {
+  if (!(url in fileCache)) {
+    fileCache[url] = fetch(url).then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return asJson ? r.json() : r.text();
+    }).catch(err => { delete fileCache[url]; throw err; });
+  }
+  return fileCache[url];
+}
+
+/* minimal markdown renderer for instruction.md: headings, lists, code, bold/italic/inline code */
+function renderMarkdown(md) {
+  const inline = s => esc(s)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+    .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<i>$2</i>');
+  const out = [];
+  let list = null, code = null;
+  const closeList = () => { if (list) { out.push('</' + list + '>'); list = null; } };
+  for (const raw of md.split('\n')) {
+    if (code !== null) {
+      if (raw.trim().startsWith('```')) { out.push('<pre><code>' + esc(code.join('\n')) + '</code></pre>'); code = null; }
+      else code.push(raw);
+      continue;
+    }
+    const line = raw.trimEnd();
+    if (line.trim().startsWith('```')) { closeList(); code = []; continue; }
+    const h = line.match(/^(#{1,3})\s+(.*)/);
+    if (h) { closeList(); out.push('<h' + h[1].length + '>' + inline(h[2]) + '</h' + h[1].length + '>'); continue; }
+    const li = line.match(/^\s*[-*]\s+(.*)/);
+    if (li) { if (list !== 'ul') { closeList(); out.push('<ul>'); list = 'ul'; } out.push('<li>' + inline(li[1]) + '</li>'); continue; }
+    const oli = line.match(/^\s*\d+[.)]\s+(.*)/);
+    if (oli) { if (list !== 'ol') { closeList(); out.push('<ol>'); list = 'ol'; } out.push('<li>' + inline(oli[1]) + '</li>'); continue; }
+    closeList();
+    if (line.trim() === '') continue;
+    out.push('<p>' + inline(line) + '</p>');
+  }
+  if (code !== null) out.push('<pre><code>' + esc(code.join('\n')) + '</code></pre>');
+  closeList();
+  return '<div class="md">' + out.join('') + '</div>';
+}
+
+function modalRun() { return modalState.ri >= 0 ? RUNS[modalState.ri] : null; }
+function modalFull() {
+  const run = modalRun();
+  if (!run || fullStatus !== 'ok') return null;
+  return (FULL.get(DATA.t[modalState.ti][4]) || {}).results?.[run.run] || null;
+}
+
+function openModal(ti, ri, tab) {
+  modalState.ti = ti; modalState.ri = ri;
+  modalState.tab = ri < 0 ? 'files' : (tab || 'answer');
+  modalEl.hidden = false;
+  renderModal();
+  document.getElementById('m-close').focus();
+}
+function closeModal() { modalEl.hidden = true; }
+document.getElementById('m-close').addEventListener('click', closeModal);
+modalEl.querySelector('.m-backdrop').addEventListener('click', closeModal);
+
+function renderModal() {
+  const ti = modalState.ti;
+  const ctx = CTX[ti];
+  const run = modalRun();
+  const slim = run ? SLIM[ti][modalState.ri] : null;
+  const full = modalFull();
+  const reward = full ? full.reward : slim ? slim[0] : null;
+  mTitle.textContent = ctx.t;
+  mSub.textContent = run
+    ? run.label + ' · ' + run.model + (reward !== null && reward !== undefined ? ' · reward ' + fmtR(reward) : '')
+    : DATA.t[ti][4];
+  const tabs = [['answer', 'Answer'], ['trace', 'Reasoning trace'], ['files', 'Task files']];
+  mTabs.innerHTML = tabs
+    .filter(([id]) => run || id === 'files')
+    .map(([id, label]) => '<button class="m-tab" role="tab" data-tab="' + id + '" aria-selected="' + (modalState.tab === id) + '">' + label + '</button>')
+    .join('');
+  if (modalState.tab === 'answer') renderModalAnswer();
+  else if (modalState.tab === 'trace') renderModalTrace();
+  else renderModalFiles();
+}
+mTabs.addEventListener('click', e => {
+  const tab = e.target.closest('.m-tab');
+  if (!tab) return;
+  modalState.tab = tab.dataset.tab;
+  renderModal();
+});
+
+function renderModalAnswer() {
+  const full = modalFull();
+  const ctx = CTX[modalState.ti];
+  const slim = SLIM[modalState.ti][modalState.ri];
+  if (!full) {
+    const note = fullStatus === 'loading'
+      ? 'Full run data is still loading…'
+      : 'The full answer payload needs <code>data/viewer-data.json</code> next to this page (GitHub Pages or the repo viewer).';
+    mBody.innerHTML = (slim ? '<div class="pill-row">'
+      + statusPill(slim[4] === ctx.d ? 'st-good' : 'st-crit', 'model decision', slim[4] || '—')
+      + statusPill(decisionCls(ctx.d), 'expected', ctx.d)
+      + '<span class="d-pill">reward: <b>' + fmtR(slim[0]) + '</b></span>'
+      + '</div>' + gateWarns(slim[2], slim[3]) : '')
+      + '<p class="d-text" style="margin-top:10px">' + note + '</p>';
+    return;
+  }
+  const a = full.answer || {};
+  const comps = COMPONENT_LABELS
+    .filter(([k]) => typeof full[k] === 'number')
+    .map(([k, label]) => {
+      const v = full[k];
+      const cls = v >= 0.99 ? 'good' : v >= 0.5 ? 'mid' : 'bad';
+      return '<span class="comp-cell ' + cls + '">' + esc(label) + ' ' + fmtR(v) + '</span>';
+    }).join('');
+  const ordered = {};
+  ANSWER_KEY_ORDER.forEach(k => { if (k in a) ordered[k] = a[k]; });
+  Object.keys(a).forEach(k => { if (!(k in ordered) && k !== 'source') ordered[k] = a[k]; });
+  mBody.innerHTML =
+    '<div class="pill-row">'
+    + (a.decision ? statusPill(a.decision === ctx.d ? 'st-good' : 'st-crit', 'decision', a.decision + (a.decision === ctx.d ? ' · matches expected' : ' · expected ' + ctx.d)) : '')
+    + (a.risk ? statusPill(riskCls(a.risk), 'risk', a.risk) : '')
+    + (typeof a.confidence === 'number' ? '<span class="d-pill">confidence: <b>' + a.confidence + '</b></span>' : '')
+    + (full.difficulty ? '<span class="d-pill">difficulty: <b>' + esc(full.difficulty) + '</b></span>' : '')
+    + '</div>'
+    + gateWarns(full.dangerous_false_pass, full.alarmist_false_fail)
+    + (comps ? '<div class="comp-row">' + comps + '</div>' : '')
+    + answerField('findings', a.findings)
+    + answerField('actions', a.actions)
+    + answerField('rationale', a.rationale)
+    + answerField('references', a.references)
+    + '<div class="answer-field"><div class="answer-label">answer.json'
+    + (a.source ? ' · <span style="text-transform:none;letter-spacing:0">' + esc(a.source) + '</span>' : '') + '</div>'
+    + '<pre class="code">' + highlightJson(ordered) + '</pre></div>';
+}
+
+async function renderModalTrace() {
+  const full = modalFull();
+  if (!full || !full.trace) {
+    mBody.innerHTML = '<p class="d-text">' + (fullStatus === 'ok'
+      ? 'No trace was archived for this result.'
+      : 'Traces need <code>data/</code> next to this page (GitHub Pages or the repo viewer).') + '</p>';
+    return;
+  }
+  if (full.trace_preview && full.trace_preview.text) {
+    mBody.innerHTML = '<div class="trace-ev ' + esc(full.trace_preview.kind) + '"><span class="trace-ev-label">preview</span><pre>'
+      + esc(full.trace_preview.text) + '</pre></div><div class="trace-stats">Loading full trace…</div>';
+  } else {
+    mBody.innerHTML = '<div class="trace-stats">Loading full trace…</div>';
+  }
+  try {
+    const trace = await fetchCached(full.trace, true);
+    if (modalState.tab !== 'trace' || modalEl.hidden) return;
+    mBody.innerHTML = '<div class="d-links" style="margin:0 0 10px;padding:0;border:0">'
+      + '<a href="' + esc(full.trace) + '" target="_blank" rel="noopener">Raw trace JSON ↗</a></div>'
+      + renderTrace(trace);
+  } catch (err) {
+    mBody.innerHTML = '<p class="d-text">Trace failed to load: ' + esc(err.message) + '</p>';
+  }
+}
+
+function fileSection(id, name, ghPath, bodyHtml) {
+  return '<details class="m-file" id="' + id + '" open>'
+    + '<summary><strong>' + esc(name) + '</strong>'
+    + '<a class="ext-link" href="' + GH_BLOB + esc(ghPath) + '" target="_blank" rel="noopener">GitHub ↗</a></summary>'
+    + '<div class="m-file-body">' + bodyHtml + '</div></details>';
+}
+
+async function loadFileInto(sectionId, url, render) {
+  try {
+    const text = await fetchCached(url, false);
+    const el = document.getElementById(sectionId);
+    if (el) el.querySelector('.m-file-body').innerHTML = render(text);
+  } catch (err) {
+    const el = document.getElementById(sectionId);
+    if (el) el.querySelector('.m-file-body').innerHTML =
+      '<p class="d-text">Could not load (' + esc(err.message) + ') — use the GitHub link above.</p>';
+  }
+}
+
+function renderModalFiles() {
+  const id = DATA.t[modalState.ti][4];
+  const base = 'tasks/' + id + '/';
+  const item = fullStatus === 'ok' ? FULL.get(id) : null;
+  const media = (item && item.media) || [];
+  const loading = '<p class="d-text" style="color:var(--muted)">Loading…</p>';
+  let html = '';
+  if (media.length) {
+    html += media.map(m => {
+      const inner = m.type === 'image'
+        ? '<div class="m-media"><img src="' + esc(m.raw_url) + '" alt="' + esc(m.name) + '" loading="lazy"></div>'
+        : m.type === 'audio'
+          ? '<div class="m-media"><audio controls preload="none" src="' + esc(m.raw_url) + '"></audio></div>'
+          : '<p class="d-text"><a href="' + esc(m.raw_url) + '" target="_blank" rel="noopener">' + esc(m.name) + '</a></p>';
+      return '<details class="m-file" open><summary><strong>' + esc(m.name) + '</strong>'
+        + '<a class="ext-link" href="' + esc(m.raw_url) + '" target="_blank" rel="noopener">Raw ↗</a></summary>'
+        + '<div class="m-file-body">' + inner + '</div></details>';
+    }).join('');
+  } else if (fullStatus !== 'ok') {
+    html += '<p class="d-text" style="margin-bottom:10px;color:var(--muted)">Media fixtures (if any) are listed when full run data is available.</p>';
+  }
+  html += fileSection('mf-instruction', 'instruction.md', base + 'instruction.md', loading);
+  html += fileSection('mf-item', 'tests/item.json', base + 'tests/item.json', loading);
+  html += fileSection('mf-grade', 'tests/grade.py', base + 'tests/grade.py', loading);
+  mBody.innerHTML = html;
+  loadFileInto('mf-instruction', RAW_BASE + base + 'instruction.md', renderMarkdown);
+  loadFileInto('mf-item', RAW_BASE + base + 'tests/item.json', text => {
+    try { return '<pre class="code">' + highlightJson(JSON.parse(text)) + '</pre>'; }
+    catch (e) { return '<pre class="code">' + esc(text) + '</pre>'; }
+  });
+  loadFileInto('mf-grade', RAW_BASE + base + 'tests/grade.py', text => '<pre class="code">' + esc(text) + '</pre>');
+}
 
 function centerOnNode(i) {
   const n = nodes[i];
