@@ -9,6 +9,8 @@ Multimodal eval for trades work: electricians, ironworkers, technicians, assembl
 3. **element-trees-construction-v0.1.md** — Disciplines 2.2–2.6 and 2.11: Piping/Plumbing, HVAC-R, Structural/Iron, Concrete/Masonry, Carpentry/Finishes, Sitework.
 4. **element-trees-industrial-service-v0.1.md** — Disciplines 2.7–2.10 and 2.12: Millwright, Instrumentation, Automotive, Assembly/Fab, and the cross-cutting Safety overlay. Ends with the full ~100-element / ~350-defect rollup.
 5. **expansion-plan-v0.1-four-new-capability-tracks.md** — Synthetic-parametric expansion plan for radio communications, progress estimation from frame sequences/video, field-constraint diagnosis, and DIY/building-science reasoning.
+6. **electrical-expansion-v0.2.md** — Electrical deep-dive grounded in a free electrician-training corpus (a national code-training publisher's library plus a CEU trainer's site): electrician process-lifecycle model (P0–P13), quantitative audit of the 2.1 slice, thirteen evaluation-method upgrades, and six new subcategories (2.1.9–2.1.14, 32 elements).
+7. **electrical-expansion-v0.2-task-catalog.json** — 1,000 generated task specs for the v0.2 electrical expansion (312 numerically graded, 58 counterfactual pair families). Regenerate with `scripts/gen_electrical_expansion_specs.py`; needs SME review before promotion into `benchmark/items/`.
 
 ## Status
 
